@@ -1,7 +1,7 @@
 import urllib
 import HTMLParser
 import re
-
+from pygoogle import pygoogle
 
 
 def getLinks(url):
@@ -57,15 +57,20 @@ def isValidUrl(url):
 
 
 
-    
-pagesToVisit = ["http://cis.poly.edu/cs6913"]
-
-while(pagesToVisit):
+query = raw_input("Enter the Query: ")
+noOfPages = input("Enter Number of Pages to be Crawled: ")
+g = pygoogle(query)
+g.pages = 1
+pagesToVisit = g.get_urls()
+count = 0
+while(pagesToVisit or count < noOfPages ):
 	currentLink = pagesToVisit.pop(0)
 	print currentLink
+	count = count + 1
 	html = urllib.urlopen(currentLink)
 	if(html.info().type == "text/html"):
 		pagelinks = getLinks(currentLink)
 		if(pagelinks is not None):
 			pagesToVisit.extend(pagelinks)
+
 
