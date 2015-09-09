@@ -1,13 +1,18 @@
 import urllib
 import HTMLParser
 import re
+import robotparser
+from urlparse import urlparse
 from pygoogle import pygoogle
 
 
-def getLinks(url):
+def getLinks(url,html):
 	try:
+		parsed = urlparse(url)
+		rp = robotparser.RobotFileParser()
+		rp.set_url(parsed.scheme + "://"+parsed.netloc+"/robots.txt")
+		rp.read()
 		links = []
-		print "--->" + url
 		#Define HTML Parser
 		class extractLink(HTMLParser.HTMLParser):
 	        
@@ -15,22 +20,25 @@ def getLinks(url):
 		        if(tag == "a"):
 		        	for attr in attrs:
 		        		if attr[0] == "href":
-		        			if isValidUrl(attr[1]):
-		        				links.append(attr[1])
-		        			else:
-		        				if(url.endswith("/")):
-		        					newurl = url + attr[1]
-		        				else:
-		        					newurl = url + "/" + attr[1]
-		        				if (isValidUrl(newurl)):
-		        					links.append(newurl)
+		        			if rp.can_fetch("*",attr[1]):
+			        			if isValidUrl(attr[1]):
+			        				links.append(attr[1])
+			        			else:
+			        				if(url.endswith("/")):
+			        					newurl = url + attr[1]
+			        				else:
+			        					newurl = url + "/" + attr[1]
+			        				if (isValidUrl(newurl)):
+			        					links.append(newurl)
+			        		else:
+			        			print "Robot.txt disallows crawling url"
 
 		#Create instance of HTML parser
 		lParser = extractLink()
-		lParser.feed(urllib.urlopen(url).read())
+		lParser.feed(html.read())
 		return links 
 	except Exception as e:
-		"Failed to Parse Page : "+str(e)
+		print "Failed to Parse Page : "+str(e)
     	return None
 
 def isRelevant(url,query):
@@ -63,14 +71,15 @@ g = pygoogle(query)
 g.pages = 1
 pagesToVisit = g.get_urls()
 count = 0
-while(pagesToVisit or count < noOfPages ):
+while(pagesToVisit and count < noOfPages ):
 	currentLink = pagesToVisit.pop(0)
 	print currentLink
 	count = count + 1
 	html = urllib.urlopen(currentLink)
 	if(html.info().type == "text/html"):
-		pagelinks = getLinks(currentLink)
+		pagelinks = getLinks(currentLink, html)
 		if(pagelinks is not None):
 			pagesToVisit.extend(pagelinks)
+		
 
 
