@@ -4,6 +4,7 @@ import re
 import robotparser
 from urlparse import urlparse
 from pygoogle import pygoogle
+from __future__ import division
 
 
 def getLinks(url,html):
@@ -41,13 +42,19 @@ def getLinks(url,html):
 		print "Failed to Parse Page : "+str(e)
     	return None
 
-def isRelevant(url,query):
-	text = urllib.urlopen(url).read()
-	print text
-	if (query in text):
-		return True
-	else:
-		return False
+def getScore(html,query):
+	text = html.read()
+	score = 0.0
+	cnt = {}
+	for word in query:
+		cnt[word] = 0
+	words = re.findall('\w+', text.lower())
+	for word in words:
+		if word in query:
+			cnt[word] += 1
+	for word in query:
+		score = score + (cnt[word]/len(words)) 
+	return score
 
 def isValidUrl(url):
 	validUrl = re.compile(
@@ -62,7 +69,6 @@ def isValidUrl(url):
 		return True
 	else:
 		return False
-
 
 
 query = raw_input("Enter the Query: ")
