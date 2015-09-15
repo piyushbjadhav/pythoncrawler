@@ -4,12 +4,12 @@ import HTMLParser
 import re
 import robotparser
 import Queue as Q
+import sys
 from urlparse import urlparse
 from pygoogle import pygoogle
 
 
-
-def getLinks(url, html):
+def getLinks(url, htmltext):
     try:
         parsed = urlparse(url)
         rp = robotparser.RobotFileParser()
@@ -39,24 +39,24 @@ def getLinks(url, html):
 
         # Create instance of HTML parser
         lParser = extractLink()
-        lParser.feed(html.read())
+        lParser.feed(htmltext)
         return links
     except Exception as e:
         print "Failed to Parse Page : " + str(e)
     return None
 
+def getScore(text, query):
 
-def getScore(html, query):
-    text = html.read()
+    queryList = re.compile('\w+').findall(query)
     score = 0.0
     cnt = {}
-    for word in query:
+    for word in queryList:
         cnt[word] = 0
     words = re.findall('\w+', text.lower())
     for word in words:
-        if word in query:
+        if word in queryList:
             cnt[word] += 1
-    for word in query:
+    for word in queryList:
         score = score + (cnt[word] / len(words))
     return score
 
@@ -76,19 +76,29 @@ def isValidUrl(url):
     else:
         return False
 
-
+size = 0
 query = raw_input("Enter the Query: ")
 noOfPages = input("Enter Number of Pages to be Crawled: ")
 g = pygoogle(query)
 g.pages = 1
-pagesToVisit = g.get_urls()
+initialList = g.get_urls()
+pagesToVisit = Q.PriorityQueue()
+for site in initialList:
+    pagesToVisit.put((-10, site))
 count = 0
-while(pagesToVisit and count < noOfPages):
-    currentLink = pagesToVisit.pop(0)
+while((not pagesToVisit.empty()) and count < noOfPages):
+    currentLink = pagesToVisit.get()[1]
     print currentLink
-    count = count + 1
     html = urllib.urlopen(currentLink)
+    count = count + 1
     if(html.info().type == "text/html"):
-        pagelinks = getLinks(currentLink, html)
-        if(pagelinks is not None):
-            pagesToVisit.extend(pagelinks)
+        
+        htmltext = html.read()
+        size = size + sys.getsizeof(htmltext)
+        currentScore = getScore(htmltext, query)
+        pagelinks = getLinks(currentLink, htmltext)
+        if (pagelinks is not None):
+            for link in pagelinks:
+                pagesToVisit.put((currentScore * -1, link))
+
+print "Total size of downloaded Pages ::",(size/1024)," KB"
