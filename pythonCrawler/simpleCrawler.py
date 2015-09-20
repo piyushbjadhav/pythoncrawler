@@ -1,4 +1,5 @@
 from __future__ import division
+from threading import Thread
 import urllib
 import HTMLParser
 import re
@@ -35,7 +36,7 @@ def getLinks(url, htmltext):
                                         newurl = url + "/" + attr[1]
                                     if (isValidUrl(newurl)):
                                         links.append(newurl)
-                    
+
         # Create instance of HTML parser
         lParser = extractLink()
         lParser.feed(htmltext)
@@ -75,7 +76,33 @@ def isValidUrl(url):
         return True
     else:
         return False
-        
+
+def worker():
+    global count
+    global size
+    global completecount
+    while (not pagesToVisit.empty() and count < noOfPages):
+        (qscore, currentLink) = pagesToVisit.get()
+        html = urllib.urlopen(currentLink)
+        count = count + 1
+        if(html.info().type == "text/html"):
+            htmltext = html.read()
+            size = size + sys.getsizeof(htmltext)
+            currentScore = getScore(htmltext, query)
+            d = {'url': currentLink, 'size': size/1024, 'qscore': -qscore}
+            logger.info("", extra=d)
+            pagelinks = getLinks(currentLink, htmltext)
+            if ((pagelinks is not None) and count < noOfPages):
+                for link in pagelinks:
+                    pagesToVisit.put((currentScore * -1, link))
+        pagesToVisit.task_done()
+    print "reaches here !!!!"
+    completecount += 1
+    if(completecount == 8):
+        while(not pagesToVisit.empty()):
+            pagesToVisit.get()
+            pagesToVisit.task_done()
+
 
 FORMAT = '%(asctime)-15s %(url)s %(size)-5.2f kb %(qscore)-10s'
 #logging.basicConfig(format=FORMAT)
@@ -99,7 +126,7 @@ ehdlr.setFormatter(eformatter)
 elogger.setLevel(logging.DEBUG)
 elogger.addHandler(ehdlr)
 
-
+completecount = 0
 size = 0
 query = raw_input("Enter the Query: ")
 noOfPages = input("Enter Number of Pages to be Crawled: ")
@@ -110,19 +137,11 @@ pagesToVisit = Q.PriorityQueue()
 for site in initialList:
     pagesToVisit.put((-10, site))
 count = 0
-while((not pagesToVisit.empty()) and count < noOfPages):
-    (qscore, currentLink) = pagesToVisit.get()
-    html = urllib.urlopen(currentLink)
-    count = count + 1
-    if(html.info().type == "text/html"):
-        htmltext = html.read()
-        size = size + sys.getsizeof(htmltext)
-        currentScore = getScore(htmltext, query)
-        d = {'url': currentLink, 'size': size/1024, 'qscore': -qscore}
-        logger.info("", extra=d)
-        pagelinks = getLinks(currentLink, htmltext)
-        if (pagelinks is not None):
-            for link in pagelinks:
-                pagesToVisit.put((currentScore * -1, link))
 
+for i in range(8):
+     t = Thread(target=worker)
+     t.daemon = True
+     t.start()
+
+pagesToVisit.join()
 print "Total size of downloaded Pages ::", (size / 1024), " KB"
