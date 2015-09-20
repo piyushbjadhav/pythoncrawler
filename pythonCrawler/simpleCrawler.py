@@ -9,10 +9,24 @@ import sys
 import logging
 from urlparse import urlparse
 from pygoogle import pygoogle
+from urlparse import urlsplit, urlunsplit, parse_qsl ,urljoin
+from urllib import urlencode
+import urlnorm
 
+def canonizeurl(url):
+    split = urlsplit(urlnorm.norm(url))
+    path = split[2].split(' ')[0]
+    while path.startswith('/..'):
+        path = path[3:]
+    while path.endswith('%20'):
+        path = path[:-3]
+    #qs = urlencode(sorted(parse_qsl(split.query)))
+    qs = ""
+    return urlunsplit((split.scheme, split.netloc, path, qs, ''))
 
 def getLinks(url, htmltext):
     try:
+        vis = set()
         parsed = urlparse(url)
         rp = robotparser.RobotFileParser()
         rp.set_url(parsed.scheme + "://" + parsed.netloc + "/robots.txt")
@@ -26,16 +40,18 @@ def getLinks(url, htmltext):
                 if(tag == "a"):
                     for attr in attrs:
                         if attr[0] == "href":
-                            if rp.can_fetch("*", attr[1]):
-                                if isValidUrl(attr[1]):
-                                    links.append(attr[1])
-                                else:
-                                    if(url.endswith("/")):
-                                        newurl = url + attr[1]
-                                    else:
-                                        newurl = url + "/" + attr[1]
-                                    if (isValidUrl(newurl)):
-                                        links.append(newurl)
+                            extracted_url = attr[1]
+                            if(not url.endswith("/")):
+                                extracted_url = extracted_url + '/'
+                            joined_url = urljoin(parsed.scheme + "://" + parsed.netloc + "/",extracted_url)
+                            if (isValidUrl(joined_url)):
+                                canurl =  canonizeurl(joined_url)
+                                if rp.can_fetch("*", canurl):
+                                    if(('javascript:void(0)' not in canurl) and (canurl not in vis)):
+                                            #print canurl
+                                            vis.add(canurl)
+                                            links.append(canurl)
+                                
 
         # Create instance of HTML parser
         lParser = extractLink()
@@ -81,27 +97,34 @@ def worker():
     global count
     global size
     global completecount
-    while (not pagesToVisit.empty() and count < noOfPages):
-        (qscore, currentLink) = pagesToVisit.get()
-        html = urllib.urlopen(currentLink)
-        count = count + 1
-        if(html.info().type == "text/html"):
-            htmltext = html.read()
-            size = size + sys.getsizeof(htmltext)
-            currentScore = getScore(htmltext, query)
-            d = {'url': currentLink, 'size': size/1024, 'qscore': -qscore}
-            logger.info("", extra=d)
-            pagelinks = getLinks(currentLink, htmltext)
-            if ((pagelinks is not None) and count < noOfPages):
-                for link in pagelinks:
-                    pagesToVisit.put((currentScore * -1, link))
-        pagesToVisit.task_done()
-    print "reaches here !!!!"
-    completecount += 1
-    if(completecount == 8):
-        while(not pagesToVisit.empty()):
-            pagesToVisit.get()
+    global visitedPages
+    try:
+        while (not pagesToVisit.empty() and count < noOfPages):
+            (qscore, currentLink) = pagesToVisit.get()
+            if(currentLink in visitedPages):
+                continue
+            visitedPages.add(currentLink)
+            html = urllib.urlopen(currentLink)
+            count = count + 1
+            if(html.info().type == "text/html"):
+                htmltext = html.read()
+                size = size + sys.getsizeof(htmltext)
+                currentScore = getScore(htmltext, query)
+                d = {'url': currentLink, 'size': size/1024, 'qscore': -qscore}
+                logger.info("", extra=d)
+                pagelinks = getLinks(currentLink, htmltext)
+                if ((pagelinks is not None) and count < noOfPages):
+                    for link in pagelinks:
+                        pagesToVisit.put((currentScore * -1, link))
             pagesToVisit.task_done()
+        completecount += 1
+        if(completecount == 8):
+            while(not pagesToVisit.empty()):
+                pagesToVisit.get()
+                pagesToVisit.task_done()
+    except Exception as e:
+        elogger.info("Problem Fetching URL : " + str(e))
+
 
 
 FORMAT = '%(asctime)-15s %(url)s %(size)-5.2f kb %(qscore)-10s'
@@ -126,6 +149,7 @@ ehdlr.setFormatter(eformatter)
 elogger.setLevel(logging.DEBUG)
 elogger.addHandler(ehdlr)
 
+visitedPages = set()
 completecount = 0
 size = 0
 query = raw_input("Enter the Query: ")
