@@ -5,6 +5,7 @@ import re
 import robotparser
 import Queue as Q
 import sys
+import logging
 from urlparse import urlparse
 from pygoogle import pygoogle
 
@@ -34,16 +35,15 @@ def getLinks(url, htmltext):
                                         newurl = url + "/" + attr[1]
                                     if (isValidUrl(newurl)):
                                         links.append(newurl)
-                            else:
-                                print "Robot.txt disallows crawling url"
-
+                    
         # Create instance of HTML parser
         lParser = extractLink()
         lParser.feed(htmltext)
         return links
     except Exception as e:
-        print "Failed to Parse Page : " + str(e)
+        elogger.info("Failed to Parse Page : " + str(e))
     return None
+
 
 def getScore(text, query):
 
@@ -75,6 +75,30 @@ def isValidUrl(url):
         return True
     else:
         return False
+        
+
+FORMAT = '%(asctime)-15s %(url)s %(size)-5.2f kb %(qscore)-10s'
+#logging.basicConfig(format=FORMAT)
+logger = logging.getLogger('crawled')
+hdlr = logging.FileHandler('crawl1.log')
+ch = logging.StreamHandler()
+hdlr.setLevel(logging.DEBUG)
+ch.setLevel(logging.DEBUG)
+formatter = logging.Formatter(FORMAT)
+hdlr.setFormatter(formatter)
+ch.setFormatter(formatter)
+logger.setLevel(logging.DEBUG)
+logger.addHandler(hdlr)
+logger.addHandler(ch)
+
+elogger = logging.getLogger('Exceptions')
+ehdlr = logging.FileHandler('errors.log')
+ehdlr.setLevel(logging.DEBUG)
+eformatter = logging.Formatter('')
+ehdlr.setFormatter(eformatter)
+elogger.setLevel(logging.DEBUG)
+elogger.addHandler(ehdlr)
+
 
 size = 0
 query = raw_input("Enter the Query: ")
@@ -87,18 +111,18 @@ for site in initialList:
     pagesToVisit.put((-10, site))
 count = 0
 while((not pagesToVisit.empty()) and count < noOfPages):
-    currentLink = pagesToVisit.get()[1]
-    print currentLink
+    (qscore, currentLink) = pagesToVisit.get()
     html = urllib.urlopen(currentLink)
     count = count + 1
     if(html.info().type == "text/html"):
-        
         htmltext = html.read()
         size = size + sys.getsizeof(htmltext)
         currentScore = getScore(htmltext, query)
+        d = {'url': currentLink, 'size': size/1024, 'qscore': -qscore}
+        logger.info("", extra=d)
         pagelinks = getLinks(currentLink, htmltext)
         if (pagelinks is not None):
             for link in pagelinks:
                 pagesToVisit.put((currentScore * -1, link))
 
-print "Total size of downloaded Pages ::",(size/1024)," KB"
+print "Total size of downloaded Pages ::", (size / 1024), " KB"
