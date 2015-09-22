@@ -1,0 +1,255 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>ADEA PASS MATCH</title>
+    <link href="/applicants2016/newacct.css" rel="stylesheet" type="text/css">
+
+    <link href="/applicants2016/base.css" rel="stylesheet" type="text/css">
+    <link href="/applicants2016/application.css" rel="stylesheet" type="text/css">
+    <link href="/applicants2016/tabbar.css" rel="stylesheet" type="text/css">
+    <link href="/applicants2016/icons.css" rel="stylesheet" type="text/css">
+    <link href="/applicants2016/landing.css" rel="stylesheet" type="text/css">
+    <link href="/applicants2016/styles.css" rel="stylesheet" type="text/css">
+    <link href="/applicants2016/form.css" rel="stylesheet" type="text/css">
+    <link href="/applicants2016/table.css" rel="stylesheet" type="text/css">
+    <script language="JavaScript" src="/applicants2016/scripts/mm_utils.js"></script>
+    <script language="JavaScript" src="/applicants2016/scripts/utilities.js"></script>
+    <script type="text/javascript" src="/applicants2016/scripts/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="/applicants2016/scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="/applicants2016/scripts/cancelButton.js"></script>
+    <script type="text/javascript" src="/applicants2016/scripts/base.newacct.js"></script>
+
+
+    <!--[if lt IE 7]>
+
+      <link href="css/ie.css" rel="stylesheet" type="text/css">
+
+      <script type="text/javascript" src="js/DD_belatedPNG_0.0.6a-min.js"></script>
+      <script type="text/javascript">DD_belatedPNG.fix('.png_bg');</script>
+
+    <![endif]-->
+
+  </head>
+
+  <!-- ADD 'capIcons' CLASS TO BODY FOR BOX HEADER ICONS -->
+  <!-- ADD 'threeCol' CLASS TO BODY FOR THREE COLUMNS -->
+  <body class="capIcons fixedwidth centered oneCol">
+
+  <div class="box mainForm bioForm nowidth">
+
+      <div id="headContainer">
+      <div id="logoContainer">
+        <img src="/applicants2016/images/nmslogohome.jpg" class="png_bg right" />
+        <img src="/applicants2016/images/applicant_logo.jpg" class="png_bg" />
+      </div>
+    </div> 
+
+      <h1>2016 ADEA PASS Application and Match Registration</h1>
+    </div>
+    <div id="bodyContainer">
+
+
+        <div class="box mainForm bioForm nowidth">
+          <div class="errorMsg hide">
+            <h5>Form Errors</h5>
+            <p>Your form has errors.  Please review the form and resubmit with corrections.</p>
+          </div>
+          <div class="Title"><center>Create a New Applicant Account</center></div>
+         <div id="formTopContainer"><div id="requiredFieldNote" class="leftSide"><em>*</em> - Required Information</div><div class="rightSide"><h4><a href="#" onclick="popitup('http://www.adea.org/PASSapp/Instructions/adea-pass-application.aspx')" id="instructionsLink">Instructions for this section</a></h4></div></div>
+         <fieldset>
+          <p>
+          <p class="emphasis">TO COMPLETE AN ADEA PASS APPLICATION AND/OR REGISTER FOR MATCH YOU MUST FIRST CREATE A USER ACCOUNT.  THE PROFILE INFORMATION SUBMITTED ON THIS PAGE WILL BE USED BY ADEA PASS AND/OR MATCH, AS APPROPRIATE.</p>
+
+          <p class="emphasis">IF YOU WILL BE COMPLETING AN ADEA PASS APPLICATION, BE SURE TO USE THE APPROPRIATE CAPITALIZATION. YOUR ADEA PASS APPLICATION DOCUMENTS WILL PRINT IN THE MANNER IN WHICH YOU TYPE THEM ONLINE. (FOR THE MATCH, ALL DATA YOU ENTER EXCEPT THE PASSWORD WILL BE CONVERTED TO UPPER CASE.)</p>
+
+          <p class="emphasis">THE RESPONSE YOU TYPE WILL APPEAR IN YOUR APPLICATION EXACTLY AS YOU TYPE IT. USING ALL CAPITAL LETTERS OR NOT CAPITALIZING PROPERLY DOES NOT PRESENT A PROFESSIONAL IMAGE TO YOUR APPLICATION.</p>
+</p>
+
+          <form method="post" action="/applicants16/newaccount.cgi" name="input_form" id="input_form">
+          <input type="hidden" name="rm" value="save_new_account">
+
+          <h3 class="noIcon alt">User Information</h3> 
+            <ol>
+		  <!-- Begin question title-->
+              <li  id="title_LI">
+                <!-- Can include Error Caption with an h5 -->
+                <label for="title">Title</label>
+                <input type="text" value="" id="title" name="title" maxlength="4" size="10" />
+                <p class="fieldMsg"><small>(Dr., Mr., Ms., etc.)</small></a>
+                
+              </li>
+
+          <!-- End question title -->
+
+          <!-- Begin question firstname -->
+              <li  id="firstname_LI">
+                <!-- Can include Error Caption with an h5 -->
+                <label for="firstname"><em>*</em>First Name</label>
+                <input type="text" Value="" id="firstname" name="firstname" maxlength="20" size="40" />
+                
+              </li>
+          <!-- End question firstname -->
+
+          <!-- Begin question middlename -->
+              <li  id="middlename_LI">
+                <!-- Can include Error Caption with an h5 -->
+                <label for="middlename">Middle Initial</label>
+                <input type="text" Value="" id="middlename" name="middlename" maxlength="1" size="1" />
+                
+              </li>
+          <!-- End question middlename -->
+
+          <!-- Begin question lastname -->
+              <li  id="lastname_LI">
+                <!-- Can include Error Caption with an h5 -->
+                <label for="lastname"><em>*</em>Last Name</label>
+                <input type="text" Value="" id="lastname" name="lastname" maxlength="20" size="40" />
+                
+              </li>
+          <!-- End question lastname -->
+
+          <!-- Begin question suffix -->
+              <li  id="suffix_LI">
+                <!-- Can include Error Caption with an h5 -->
+                <label for="suffix">Suffix</label>
+                <input type="text" value="" id="suffix" name="suffix" maxlength="10" />
+                <p class="fieldMsg"><small>(Jr., IV, etc.)</small></a>
+                
+              </li>
+          <!-- End question suffix -->
+
+          <!-- Begin question dentpin -->
+              <li  id="dentpin_LI">
+                <!-- Can include Error Caption with an h5 -->
+                <label for="dentpin"><em>*</em>DENTal Personal Identifier Number<br/><a href="#" style="background:none;margin:0;padding:0;" onclick="popitup('http://www.ada.org/dentpin.aspx'); return false;">Click here to obtain your DENTPIN&reg;</a></label>
+                <input type="text" value="" id="dentpin" name="dentpin" maxlength="8" size="11" />
+                
+                <p class="fieldMsg"><small>(The DENTPIN&reg; (DENTal Personal Identifier Number) is a unique personal identifier assigned by the American Dental Association to each applicant or student who is involved, or wishes to become involved, with the U.S. dental education system and/or standardized testing programs. The DAT, ADEA AADSAS and Texas application systems, ADEA PASS, Match, ADEA CAAPID, the National Board Dental Exam and the National Board Dental Hygiene Exam programs all use the DENTPIN&reg; for identification of students and test-takers and for the confidential, secure reporting, transmission and tracking of test scores and academic data.)</small></p>
+              </li>
+          <!-- End question dentpin -->
+
+          <!-- Begin question confirm_dentpin -->
+              <li  id="confirm_dentpin_LI">
+                <!-- Can include Error Caption with an h5 -->
+                <label for="confirm_dentpin"><em>*</em>Confirm DENTal Personal Identifier Number</label>
+                <input type="text" value="" id="confirm_dentpin" name="confirm_dentpin" maxlength="8" size="11" />
+                
+              </li>
+          <!-- End question confirm_dentpin -->
+
+
+          <!-- Begin question dob -->
+              <li  id="dob_LI">
+                <!-- Can include Error Caption with an h5 -->
+                <label for="dob"><em>*</em>Date of Birth</label>
+                <input type="text" value="" id="dob" name="dob" maxlength="10" size="11" />
+                
+                <p class="fieldMsg"><small>(MM/DD/YYYY)</small></a>
+              </li>
+          <!-- End question dob -->
+                
+          <!-- Begin question email -->
+              <li  id="email_LI">
+                <!-- Can include Error Caption with an h5 -->
+                <label for="email"><em>*</em>Preferred Email Address<br/>
+                <p style="color: red; font-size: 10px; font-weight: bold;">
+              It is recommended that you do not use an .EDU address when creating your account. Institution filters may prevent important emails from being received.</p>
+                </label>
+                <input type="text" value="" id="email" name="email" maxlength="40" size="40" /><br/>
+                
+              </li>
+          <!-- End question email -->
+
+          <!-- Begin question confirm_email -->
+              <li  id="confirm_email_LI">
+                <!-- Can include Error Caption with an h5 -->
+                <label for="confirm_email"><em>*</em>Confirm Preferred Email Address</label>
+                <input type="text" value="" id="confirm_email" name="confirm_email" maxlength="40" size="40" />
+                
+              </li>
+
+          <!-- End question email -->
+
+          <!-- Begin question admission_release -->
+              <li  id="admission_release_LI">
+                <!-- Can include Error Caption with an h5 -->
+                <label for="admission_release">By checking this box, you authorize ADEA PASS to release your name and contact information to your designated ADEA PASS programs BEFORE you e-submit your final application to ADEA PASS. This will allow your designated programs to send you important information about the local admissions process before you complete your ADEA PASS application.</label>
+                <input name="admission_release" type="checkbox" value="1"/>
+                
+              </li>
+          <!-- End question admission_release -->
+
+             </ol>
+         <ol><li><h3 class="noIcon alt">Account Information</h3></li></ol>
+          <!-- Begin question username -->
+             <ol>
+              <li  id="username_LI">
+                <!-- Can include Error Caption with an h5 -->
+                <label for="username"><em>*</em>User Name</label>
+                <input type="text" value="" id="username" name="username" maxlength="15" size="20" />
+                
+                <p class="fieldMsg"><small>Please choose a username that is between 6 and 15 characters long</small></a>
+              </li>
+          <!-- End question username -->
+ 
+          <!-- Begin question password -->
+              <li  id="password_LI">
+                <!-- Can include Error Caption with an h5 -->
+                <label for="password"><em>*</em>Password</label>
+                <input type="password" value="" id="password" name="password" maxlength="10" size="20" />
+                
+                <p class="fieldMsg"><small>Create a unique password that is 6 to 10 characters long.  Use only letters and numbers (password is case-sensitive). Try to create a password that is easy to remember, but not easily guessed by others.</small></a>
+              </li>
+          <!-- End question password -->
+
+          <!-- Begin question confirm_password -->
+              <li  id="confirm_password_LI">
+                <!-- Can include Error Caption with an h5 -->
+                <label for="confirm_password"><em>*</em>Confirm Password</label>
+                <input type="password" value="" id="confirm_password" name="confirm_password" maxlength="10" size="20" />
+                
+              </li>
+          <!-- End question confirm_password -->
+
+          <!-- Begin question secq -->
+              <li  id="SECQ_LI">
+                <!-- Can include Error Caption with an h5 -->
+                <label for="SECQ"><em>*</em>Security Question</label>
+                <select NAME="SECQ">
+                 
+                  <option>What was the name of your first pet?
+                 
+                  <option>What was your first car?
+                 
+                  <option>On what street did you grow up?
+                 
+                  <option>Who was your favorite teacher in school?
+                 
+                </select>             
+                
+              </li>
+          <!-- End question secq -->
+
+          <!-- Begin question secans -->
+              <li  id="SECANS_LI">
+                <!-- Can include Error Caption with an h5 -->
+                <label for="SECANS"><em>*</em>Security Answer</label>
+                <input name="SECANS" type="text" value="" maxlength="60" />
+                
+              </li>
+             </ol>
+            </fieldset>
+            
+          <!-- End question secans -->
+
+          <!-- PUT BUTTON CONTAINER HERE -->
+          <div class="buttonContainer">
+            <button type="submit" class="" id="submitButton"><img src="/applicants2016/images/accept.png" />Submit</button>
+            <button type="button" class="" id="cancelButton"><img src="/applicants2016/images/cancel.png" />Cancel</button>
+          </div>
+        </form>
+    </div>
+   </div>
+  </body>
+</html>

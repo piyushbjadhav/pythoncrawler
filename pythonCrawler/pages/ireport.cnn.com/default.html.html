@@ -1,0 +1,1105 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>CNN iReport - Share your story, discuss the issues with CNN.com</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+    
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    
+    <!-- remove the Emulate IE7 tag, causing issues with ads and other IE bugs
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	-->
+<link rel="search"
+    href="/opensearch.xml"
+    title="CNN iReport"
+    type="application/opensearchdescription+xml"/>
+
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <link rel="alternate" type="application/rss+xml" title="Latest iReports" href="http://rss.ireport.com/feeds/latest.rss" />
+    <link rel="alternate" type="application/rss+xml" title="Latest iReports on CNN" href="http://rss.ireport.com/feeds/oncnn.rss" />
+    <link rel="alternate" type="application/rss+xml" title="Assignment Desk" href="http://rss.ireport.com/feeds/community/assignment.rss" />
+    <link rel="alternate" type="application/rss+xml" title="iReport Blog" href="http://rss.ireport.com/feeds/blogs/ireport-blog.rss" />
+    
+
+    <link rel="stylesheet" href="/styles/jive-global.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="/styles/jive-external.css" type="text/css" media="screen" />
+
+
+
+    <!--[if IE 6]>
+    <style type="text/css">
+    .ie6png {behavior: url('/themes/custom/resources/png_fix.htc');}
+    </style>
+    <![endif]-->
+
+    
+    
+        <meta name="verify-v1" content="D+5X19Z99rCeeRF19YrsIO9ShQDq+IW+mpEIYWZgD7s=" />
+        <meta name="title" content="Videos, Photos, Community, News - CNN iReport"/>
+        <meta name="description" content="View the latest news, videos, and photo iReports"/>
+        <meta name="keywords" content=""/>
+        
+        <meta name="ir_section" content="home"/>
+    
+    
+    <!-- identify app to facebook insights, This will link ireport.cnn.com to the CNN iReport Facebook Page, Admins for the CNN iReport Facebook will be able to view Facebook Insights for CNN iReport -->
+    <meta property="fb:admins" content="7873709245" />
+    
+    <!-- Tracking values -->
+    <script type="text/javascript">//<![CDATA[
+       var irptPageName = "iReport Home Page";
+       var irptSectionName = "iReport Home Page";
+       var irptTemplateType = "section front";
+       var irptSubsectionType = "irp : ireport homepage";
+    //]]></script>
+
+
+
+        <script type="text/javascript" src="/themes/custom/resources/+global.js?v=B154-12ad847"></script>
+    
+    <script type="text/javascript">
+        var ir_ssoUiUrl = "https://audience.cnn.com/services/cnn/"
+        var ir_loginToUrlBase = "http://ireport.cnn.com";
+        
+        var ir_overlaysShowing = $H();
+        function irShowOverlay(id,show) {
+            (show?Element.show:Element.hide)($(id));
+            if (show) {
+                centerDivOfPage(id);
+                Event.observe(window,'resize',irRecenterOverlaysOnResize);
+                Event.observe(window,'orientationchange',irRecenterOverlaysOnResize);
+            }
+            
+            if (show)
+                ir_overlaysShowing.set(id,$(id));
+            else
+                ir_overlaysShowing.unset(id,$(id));
+            var anyShowing = ir_overlaysShowing.keys().length > 0;
+            
+            var useHTML5Player = /\b(iPad|iPod|iPhone)\b/.test(navigator.userAgent);
+            if (useHTML5Player)
+                $$('.htmlplayer, video, audio').each(anyShowing?Element.hide:Element.show);
+            
+            $$('#ir-sidebar-ad div, .ad-336-280 div, .ad-970-66 div, .ir-entitlement-ad-content div').each(anyShowing?Element.hide:Element.show);
+        }
+        
+        var ir_overlaysRecenterTimeoutId;
+        function irRecenterOverlaysOnResize() {
+            window.clearTimeout(ir_overlaysRecenterTimeoutId);
+            ir_overlaysRecenterTimeoutId = window.setTimeout(irRecenterOverlays,100);
+        }
+        function irRecenterOverlays() {
+            ir_overlaysShowing.each(function(pair) { centerDivOfPage(pair.value); });
+        }
+        
+        // Moved from element-js-2.0-connect-connect-queueConfig.js.
+        function centerDivOfPage(divId) {
+            var div = $(divId);
+            
+            // ----------------------- skin ad fix --------------------------------
+            // IREPORT-2265  Fix for skin ad display side impact
+            // When grey background width is adjusted to 1000px in order to display skin ad tag correctly,
+            // upload overlay is no longer centered
+            
+            //var winVisWidth  = window.innerWidth  || document.documentElement.clientWidth;
+            var winVisWidth  = jQuery(div).parent().width();
+            
+            // depend on upload window's parent width in stead of browser's width.
+            // this way upload window will be centered as per the width of grey background
+            // ----------------------- skin ad fix --------------------------------
+
+            var winVisHeight = window.innerHeight || document.documentElement.clientHeight;
+            var winX = window.pageXOffset || document.documentElement.scrollLeft;
+            var winY = window.pageYOffset || document.documentElement.scrollTop;
+            var divLeft = Math.floor(((winVisWidth  - div.offsetWidth)  / 2) + winX);
+            var divTop  = Math.floor(((winVisHeight - div.offsetHeight) / 2) + winY);
+            divTop = (divTop <= 110) ? 110 : divTop;
+            divLeft = (divLeft <= 9) ?  10 : divLeft;
+            div.style.left = divLeft + 'px';
+            div.style.top  = divTop  + 'px';
+        }
+    </script>
+        <script type="text/javascript" src="/themes/custom/resources/cnn/element-js-2.0-main.js"></script>
+        <script type="text/javascript" src="/themes/custom/resources/cnn/element-js-2.0-connect-connect-queueManager-ssl.js"></script>
+        <script type="text/javascript" src="/themes/custom/resources/cnn/element-js-2.0-connect-connect-queueConfig.js"></script>
+        <script type="text/javascript" src="/themes/custom/resources/cnn/element-js-2.0-connect-connect-user.js?v=2"></script>
+        <script type="text/javascript" src="/themes/custom/resources/cnn/element-js-2.0-connect-connect.js"></script>
+        <script type="text/javascript" src="/themes/custom/resources/username-overlay.js"></script>
+    
+    
+   
+    
+<script type="text/javascript" src="/themes/custom/resources/ui/dateformatter-min.js"></script>
+<script type="text/javascript" src="/themes/custom/resources/overlay.js"></script>
+<script type="text/javascript" src="/themes/custom/resources/alloy/alloy.js?v=B154-12ad847"></script>
+
+        <link rel="stylesheet" type="text/css" href="/themes/custom/resources/iReport.css?v=7"/>
+        <link rel="stylesheet" type="text/css" href="/themes/custom/resources/+global.css"/>
+        <link rel="stylesheet" type="text/css" href="/themes/custom/resources/iReport.refresh.css?v=13"/>
+
+    <!--[if lt IE 8]>
+        <style type="text/css">
+            .ir-username-badge div {display:inline;}
+        </style>
+    <![endif]-->
+	
+    <script type="text/javascript" src="http://z.cdn.turner.com/analytics/cnn/ais.js"></script>
+    <script type="text/javascript" src="http://i.cdn.turner.com/ads/cnn/adfuel.js"></script>
+
+    <script type="text/javascript" src="http://a.postrelease.com/serve/load.js?async=true"></script>
+      
+    
+    <script type="text/javascript">
+        var irptCurrTime = new Date(1442882489147);
+        var irptCurrHour = 20;
+        var irptCurrMin = 41;
+        var irptCurrDay='Mon';
+    </script> 
+    
+</head>
+<body>
+
+    <div id="jive-wrapper" class="clearfix">
+		
+<script type="text/javascript" src="/themes/custom/resources/widget-upload.js"></script>
+
+    <div class="tos-prompt" id="js-tos-prompt" style="display: none">
+        <div class="hdr-wrap">
+            <div class="tos-prompt__close" onclick="collapseTosPrompt()"></div>
+            <div class="tos-prompt__banner">Our Terms of Service and Privacy Policy have changed.</div>
+            <div class="tos-prompt__links"><br>By continuing to use this site, you are agreeing to the new <a href="http://www.cnn.com/privacy.html" target="_blank" onclick="trackTOSBanner('tos_privacy')"><u>Privacy Policy</u></a> and <a href="/terms.jspa" target="_blank" onclick="trackTOSBanner('tos_terms')"><u>Terms of Service</u></a>.</div>
+        </div>
+    </div>
+<!-- begin header -->
+<div id="cnn-hdr" class="ir_hdr-skinny">
+<div class="no-show">
+<div id="cnn_hdr-prompt" style="display: none">
+<div class="hdr-wrap">
+<span id="hdr-prompt-text-span" >
+You've selected the U.S. Edition. Would you like to make this your default edition? <a href="#" title="" onclick="usHeader.switchToAndSetCNNSelectedEdition();return false;">YES</a> | <a href="#" title="" onclick="intlHeader.switchToAndSetCNNSelectedEdition();return false;">NO</a>
+<img src="http://i.cdn.turner.com/ireport/static/themes/custom/resources/irb/hdr/arrow_black.png" border="0" alt="" id="hdr-arrow-us" height="25" width="18" /> </span>
+<!--
+<a href="http://edition.cnn.com/" title="" id="hdr-prompt-text" onclick="return intlHeader.goTo();">
+You've selected the U.S. Edition. Would you like to make this your default edition?
+<img src="http://i.cdn.turner.com/ireport/static/themes/custom/resources/irb/hdr/arrow_black.png" border="0" alt="" id="hdr-arrow-us" height="25" width="18" /> </a>
+-->
+<a href="#" title="" id="hdr-prompt-close" onclick="usHeader.switchToAndSetCNNSelectedEdition();return false;">
+Close&nbsp;<img src="http://i.cdn.turner.com/ireport/static/themes/custom/resources/irb/hdr/hdr-close.jpg" border="0" alt="" height="7" width="7" /></a>
+</div>
+</div>
+<div id="cnn_hdr-main">
+<div class="hdr-wrap">
+<div id="hdr-editions">
+<ul>
+<li class="no-pad-left header-bold">
+<span class="ir-contentlang-en" lang="en" xml:lang="en" >EDITION: U.S.</span> </li>
+<li ><a href="http://edition.cnn.com/" onclick="return intlHeader.goTo();" title="CNN INTERNATIONAL">CNN INTERNATIONAL</a></li>
+<li ><a href="http://www.cnnmexico.com/" title="CNN M&Eacute;XICO">M&Eacute;XICO</a></li>
+<li class="no-border"><a href="http://arabic.cnn.com/" title="CNN ARABIC">CNN ARABIC</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- SKINNY NAV CHANGES -->
+<div id="cnn-hdr-nav">
+<div id="hdr-banner-skinny"><a href="http://www.cnn.com/"><img src="http://i.cdn.turner.com/ireport/static/themes/custom/resources/irb/hdr/logo_cnn_badge.png" border="0" alt="CNN" height="60" width="60" /></a></div>
+<ul id="us-menu" class="nav-menu-skinny">
+<li><a id="nav-news" href="http://www.cnn.com" title="News">News</a></li>
+<li><a id="nav-video" href="http://www.cnn.com/videos/" title="Videos">Video</a></li>
+<li><a id="nav-tv" href="http://www.cnn.com/tv/" title="TV">TV</a></li>
+<li><a id="nav-opinions" href="http://www.cnn.com/opinions/" title="Opinions">Opinions</a></li>
+<li><a id="nav-more" href="http://www.cnn.com/more/" title="More...">More...</a></li>
+</ul>
+</div>
+<!-- SKINNY NAV CHANGES -->
+</div>
+<!-- end header -->
+<!-- Disable all DE(ads by ad files) ads to enable DFP ads -->
+<!-- DFP ad - skin -->
+<div id="ir_body_skin_wrapper">
+<div id="ad_oop_skin_01"></div>
+</div>
+<div id="ir_body_wrapper">
+<div id="cnn-hdr-sub">
+<div id="left_shade_hdr"></div>
+<div id="right_shade_hdr"></div>
+<!-- production :: iReport 5.14.1.B154-12ad847 :: irpt-app-prod1.56m.vgtf.net/10.60.139.99 -->
+<div id="cnnBannerContainer" class="cnn_www_banner util-clear " style="display:none">
+</div>
+<div id="announce-global" class="util-clear " style="display:none">
+</div>
+<div id="subnav" class="clearfix">
+<div class="hdr-wrap">
+<div id="ir_sitelogo">
+<a href="http://ireport.cnn.com/" /><img src="/themes/custom/resources/redesign/cnniReport.jpg"/></a>
+</div>
+<div id="ir_subnav_cont" class="ir_subnav_cont">
+<span class="ir_login_subnav">
+<ul>
+<li>
+<a href="#"
+onclick="showToggleOverlay();return false;"
+title="">SIGN UP</a>
+</li>
+<li>|</li>
+<li class="no-border no-pad-right"> <a
+href="#" onclick="showToggleOverlay();return false;"
+title="">LOG IN</a>
+</li>
+</ul>
+</span>
+<ul>
+<li id="subnav-home" class="no-border"><a
+class="subnav-image-button-selected"
+href="http://ireport.cnn.com/" class="subnav-image-button" style="width:55px !important; height:17px !important; background: url('/themes/custom/resources/subnav/55x17_main.gif')" title=""></a></li>
+<li><a href="/explore.jspa"
+class="subnav-image-button" style="width:74px !important; height:17px !important; background: url('/themes/custom/resources/subnav/74x17_explore.gif')" title=""></a></li>
+<li><a
+href="/community/assignment" class="subnav-image-button" style="width:113px !important; height:17px !important; background: url('/themes/custom/resources/subnav/113x17_assignments.gif')" title=""></a></li>
+<li><div id="nav_confirm"><a href="javascript:ir_loginTo('/ir-myprofile.jspa?view=overview')"
+class="subnav-image-button" style="width:66px !important; height:17px !important; background: url('/themes/custom/resources/subnav/66x17_profile.gif')" title=""></a></div></li>
+<li><a onclick="uploadGenericStory(0); return false;" class="subnav-image-button" style="width:71px !important; height:17px !important; background: url('/themes/custom/resources/subnav/71x17_upload.gif')"
+title=""></a></li>
+</ul>
+</div>
+<div class="clear5"></div>
+</div>
+</div>
+<script type="text/javascript">//<![CDATA[
+var HeaderEdition = Class.create();
+HeaderEdition.prototype = {
+initialize: function(name, hdrPrompt, hdrEditions, hdrNav, omnitureEdition, subNav) {
+this.name = name;
+this.hdrPrompt = (hdrPrompt == '') ? $('cnn_hdr-prompt').innerHTML : hdrPrompt;
+this.hdrEditions = (hdrEditions == '') ? $('hdr-editions').innerHTML : hdrEditions;
+this.hdrNav = (hdrNav == '') ? $('cnn-hdr-nav').innerHTML : hdrNav;
+this.ftrNav = this.ftrBottom = '';
+this.bnBanner = '';
+this.omnitureEdition = omnitureEdition;
+if($('ir_subnav_cont')) {
+this.subNav = (subNav == '') ? $('ir_subnav_cont').innerHTML : subNav;
+}
+},
+setSubNav:function(subNav){
+},
+setFooter: function(ftrNav, ftrBottom, ftrLinkBoxItems) {
+this.ftrNav = (ftrNav == '') ? $('ftr-nav').innerHTML : ftrNav;
+this.ftrBottom = (ftrBottom == '') ? $('ftr-bottom').innerHTML : ftrBottom;
+this.ftrLinkBoxItems = (ftrLinkBoxItems=='')?$('ftr-ir-links').innerHTML:ftrLinkBoxItems;
+},
+setBreakingNews: function(bnBanner) {
+this.bnBanner = bnBanner;
+if (currentHeader == this)
+this.showOrHideBNBanner();
+},
+show: function() {
+if (currentHeader.name == 'cnnMx') return; // locked in: don't switch away
+if (this.name != currentHeader.name) {
+$('cnn_hdr-prompt').innerHTML = this.hdrPrompt;
+$('hdr-editions').innerHTML = this.hdrEditions;
+$('cnn-hdr-nav').innerHTML = this.hdrNav;
+$('ftr-nav').innerHTML = this.ftrNav;
+$('ftr-bottom').innerHTML = this.ftrBottom;
+if($('ir_subnav_cont'))$('ir_subnav_cont').innerHTML = this.subNav;
+$('ftr-ir-links').innerHTML = this.ftrLinkBoxItems;
+this.showOrHideBNBanner();
+currentHeader = this;
+cnnIrptEd = currentHeader.getOmnitureEdition();
+}
+},
+reRender:function(){
+$('cnn_hdr-prompt').innerHTML = this.hdrPrompt;
+$('hdr-editions').innerHTML = this.hdrEditions;
+$('cnn-hdr-nav').innerHTML = this.hdrNav;
+$('ftr-nav').innerHTML = this.ftrNav;
+$('ftr-bottom').innerHTML = this.ftrBottom;
+if($('ir_subnav_cont'))$('ir_subnav_cont').innerHTML = this.subNav;
+$('ftr-ir-links').innerHTML = this.ftrLinkBoxItems;
+this.showOrHideBNBanner();
+},
+showOrHideBNBanner: function() {
+var div = $('cnnBannerContainer');
+if (this.bnBanner == '' || this.bnBanner.substring(0,4) == ("<" + "!--"))
+div.hide();
+else
+div.show();
+div.innerHTML = this.bnBanner;
+},
+cookieName: "SelectedEdition",
+cookieDomain: /cnn\.com/.test(ir_loginToUrlBase) ? 'cnn.com' : null,
+getCookieValue: function() {
+return Cookies.getCookie(this.cookieName);
+},
+setCookieValue: function(newValue) {
+var oldValue = this.getCookieValue();
+if (newValue != oldValue)
+Cookies.setCookie(this.cookieName, newValue, 365*100, '/', this.cookieDomain);
+},
+deleteCookieValue: function() {
+var oldValue = this.getCookieValue();
+if (oldValue != null)
+Cookies.setCookie(this.cookieName, "Deleted", -1, '/', this.cookieDomain);
+},
+switchTo: function() {
+this.setCookieValue(this.name);
+$('cnn_hdr-prompt').hide();
+this.show();
+},
+switchToAndSetCNNSelectedEdition: function() {
+this.switchTo();
+},
+switchToIfCookieSet: function() {
+var cookieValue = this.getCookieValue();
+if (cookieValue == this.name)
+this.switchTo();
+else if (cookieValue == null)
+$('cnn_hdr-prompt').show();
+},
+promptIfNoCookie: function() {
+if (this.getCookieValue() == null)
+$('cnn_hdr-prompt').show();
+else
+$('cnn_hdr-prompt').hide();
+},
+switchToAndClearCookie: function() {
+this.deleteCookieValue();
+$('cnn_hdr-prompt').show();
+this.show();
+},
+syncHeaderToCNNSelectedEdition: function(editionChoice) {
+var cookieValue = this.getCookieValue();
+if (editionChoice == 'www') {
+if (cookieValue != 'www')
+usHeader.switchTo();
+} else if (editionChoice == 'edition') {
+if (cookieValue != 'edition')
+intlHeader.switchTo();
+}
+else if (editionChoice == 'mexico' || editionChoice == 'cnnMx') {
+if (cookieValue != 'mexico' || cookieValue != 'cnnMx')
+cnnMxHeader.switchTo();
+}
+else {
+if (cookieValue != null)
+usHeader.switchToAndClearCookie();
+}
+},
+syncCookieToCNNSelectedEdition: function(editionChoice) {
+var cookieValue = this.getCookieValue();
+if (editionChoice == 'www' || editionChoice == 'edition')
+this.setCookieValue(editionChoice);
+else
+this.deleteCookieValue();
+this.promptIfNoCookie();
+},
+goTo: function() {
+this.setCookieValue(this.name);
+return true;
+},
+getUrlToSetCNNSelectedEdition: function() {
+return 'http://us.cnn.com/ireport/setEdition.html?SelectedEdition=' + encodeURIComponent(this.name);
+},
+getOmnitureEdition: function() {
+return this.omnitureEdition;
+}
+};
+var usHeader = new HeaderEdition('www', '', '', '', 'cnn2global', '');
+var intlHeader = new HeaderEdition('edition', ' \x3Cdiv class=\"hdr-wrap\"\>\n \n \x3Cspan id=\"hdr-prompt-text-span\" \>\n \n You\'ve selected the International Edition. Would you like to make this your default edition? \x3Ca href=\"#\" title=\"\" onclick=\"intlHeader.switchToAndSetCNNSelectedEdition();return false;\"\>YES\x3C/a\> | \x3Ca href=\"#\" title=\"\" onclick=\"usHeader.switchToAndSetCNNSelectedEdition();return false;\"\>NO\x3C/a\>\n \n\x3Cimg src=\"http://i.cdn.turner.com/ireport/static/themes/custom/resources/irb/hdr/arrow_black.png\" border=\"0\" alt=\"\" id=\"hdr-arrow-intl\" height=\"25\" width=\"18\" /\> \x3C/span\>\n \x3C!--\n \x3Ca href=\"http://us.cnn.com/\" title=\"\" id=\"hdr-prompt-text\" onclick=\"return usHeader.goTo();\"\>\n You\'ve selected the International Edition. Would you like to make this your default edition?\n \n\x3Cimg src=\"http://i.cdn.turner.com/ireport/static/themes/custom/resources/irb/hdr/arrow_black.png\" border=\"0\" alt=\"\" id=\"hdr-arrow-intl\" height=\"25\" width=\"18\" /\> \x3C/a\>\n --\>\n \x3Ca href=\"#\" title=\"\" id=\"hdr-prompt-close\" onclick=\"intlHeader.switchToAndSetCNNSelectedEdition();return false;\"\>\n Close&nbsp;\x3Cimg src=\"http://i.cdn.turner.com/ireport/static/themes/custom/resources/irb/hdr/hdr-close.jpg\" border=\"0\" alt=\"\" height=\"7\" width=\"7\" /\>\x3C/a\>\n \x3C/div\>\n', ' \x3Cul\>\n \x3Cli class=\"no-pad-left header-bold\"\>\n\x3Cspan class=\"ir-contentlang-en\" lang=\"en\" xml:lang=\"en\" \>EDITION: INTERNATIONAL\x3C/span\> \x3C/li\>\n \n \x3Cli\>\x3Ca href=\"http://us.cnn.com/\" onclick=\"return usHeader.goTo();\" title=\"CNN U.S.\"\>CNN U.S.\x3C/a\>\x3C/li\>\n \x3Cli \>\x3Ca href=\"http://www.cnnmexico.com/\" title=\"CNN M&Eacute;XICO\"\>M&Eacute;XICO\x3C/a\>\x3C/li\>\n \x3Cli class=\"no-border\"\>\x3Ca href=\"http://arabic.cnn.com/\" title=\"CNN ARABIC\"\>CNN ARABIC\x3C/a\>\x3C/li\>\n\n \x3C/ul\>\n', ' \x3Cdiv id=\"hdr-banner-skinny\"\>\x3Ca href=\"http://www.cnn.com/\"\>\x3Cimg src=\"http://i.cdn.turner.com/ireport/static/themes/custom/resources/irb/hdr/logo_cnn_badge.png\" border=\"0\" alt=\"CNN\" height=\"60\" width=\"60\" /\>\x3C/a\>\x3C/div\>\n \x3Cul id=\"us-menu\" class=\"nav-menu-skinny\"\>\n \x3Cli\>\x3Ca id=\"nav-news\" href=\"http://www.cnn.com\" title=\"News\"\>News\x3C/a\>\x3C/li\>\n \x3Cli\>\x3Ca id=\"nav-video\" href=\"http://www.cnn.com/videos/\" title=\"Videos\"\>Video\x3C/a\>\x3C/li\>\n \x3Cli\>\x3Ca id=\"nav-tv\" href=\"http://www.cnn.com/tv/\" title=\"TV\"\>TV\x3C/a\>\x3C/li\>\n \x3Cli\>\x3Ca id=\"nav-opinions\" href=\"http://www.cnn.com/opinions/\" title=\"Opinions\"\>Opinions\x3C/a\>\x3C/li\>\n \x3Cli\>\x3Ca id=\"nav-more\" href=\"http://www.cnn.com/more/\" title=\"More...\"\>More...\x3C/a\>\x3C/li\>\n \x3C/ul\>\n', 'cnn2intl', ' \x3Cspan class=\"ir_login_subnav\"\>\n \x3Cul\>\n \n \x3Cli\>\n \x3Ca href=\"#\"\n onclick=\"showToggleOverlay();return false;\"\n title=\"\"\>SIGN UP\x3C/a\>\n \n \x3C/li\>\n \x3Cli\>|\x3C/li\>\n \x3Cli class=\"no-border no-pad-right\"\> \x3Ca\n href=\"#\" onclick=\"showToggleOverlay();return false;\"\n title=\"\"\>LOG IN\x3C/a\>\n\x3C/li\>\n \x3C/ul\>\n \x3C/span\>\n \n \x3Cul\>\n \x3Cli id=\"subnav-home\" class=\"no-border\"\>\x3Ca \n \n class=\"subnav-image-button-selected\"\n href=\"http://ireport.cnn.com/\" class=\"subnav-image-button\" style=\"width:55px !important; height:17px !important; background: url(\'/themes/custom/resources/subnav/55x17_main.gif\')\" title=\"\"\>\x3C/a\>\x3C/li\>\n \x3Cli\>\x3Ca href=\"/explore.jspa\" \n \n \n class=\"subnav-image-button\" style=\"width:74px !important; height:17px !important; background: url(\'/themes/custom/resources/subnav/74x17_explore.gif\')\" title=\"\"\>\x3C/a\>\x3C/li\>\n \x3Cli\>\x3Ca \n \n \n href=\"/community/assignment\" class=\"subnav-image-button\" style=\"width:113px !important; height:17px !important; background: url(\'/themes/custom/resources/subnav/113x17_assignments.gif\')\" title=\"\"\>\x3C/a\>\x3C/li\>\n \x3Cli\>\x3Cdiv id=\"nav_confirm\"\>\x3Ca href=\"javascript:ir_loginTo(\'/ir-myprofile.jspa?view=overview\')\" \n \n \n class=\"subnav-image-button\" style=\"width:66px !important; height:17px !important; background: url(\'/themes/custom/resources/subnav/66x17_profile.gif\')\" title=\"\"\>\x3C/a\>\x3C/div\>\x3C/li\>\n \x3Cli\>\x3Ca onclick=\"uploadGenericStory(0); return false;\" class=\"subnav-image-button\" style=\"width:71px !important; height:17px !important; background: url(\'/themes/custom/resources/subnav/71x17_upload.gif\')\" \n \n \n title=\"\"\>\x3C/a\>\x3C/li\>\n \x3C/ul\>\n');
+var cnnMxHeader= new HeaderEdition('cnnMx', ' &nbsp; \n',' \x3Cul\>\n \x3Cli class=\"no-pad-left header-bold\"\>\n\x3Cspan class=\"ir-contentlang-en\" lang=\"en\" xml:lang=\"en\" \>EDITION: M&Eacute;XICO\x3C/span\> \x3C/li\>\n \n \x3Cli\>\x3Ca href=\"http://us.cnn.com/\" title=\"CNN U.S.\"\>CNN U.S.\x3C/a\>\x3C/li\>\n \x3Cli class=\"no-border\"\>\x3Ca href=\"http://edition.cnn.com/\" title=\"CNN INTERNATIONAL\"\>CNN INTERNATIONAL\x3C/a\>\x3C/li\>\n\n \x3C/ul\>\n',' \x3Cdiv id=\"hdr-banner-skinny\"\>\x3Ca href=\"http://www.cnn.com/\"\>\x3Cimg src=\"http://i.cdn.turner.com/ireport/static/themes/custom/resources/irb/hdr/logo_cnn_badge.png\" border=\"0\" alt=\"CNN\" height=\"60\" width=\"60\" /\>\x3C/a\>\x3C/div\>\n \x3Cul id=\"us-menu\" class=\"nav-menu-skinny\"\>\n \x3Cli\>\x3Ca id=\"nav-news\" href=\"http://www.cnn.com\" title=\"News\"\>News\x3C/a\>\x3C/li\>\n \x3Cli\>\x3Ca id=\"nav-video\" href=\"http://www.cnn.com/videos/\" title=\"Videos\"\>Video\x3C/a\>\x3C/li\>\n \x3Cli\>\x3Ca id=\"nav-tv\" href=\"http://www.cnn.com/tv/\" title=\"TV\"\>TV\x3C/a\>\x3C/li\>\n \x3Cli\>\x3Ca id=\"nav-opinions\" href=\"http://www.cnn.com/opinions/\" title=\"Opinions\"\>Opinions\x3C/a\>\x3C/li\>\n \x3Cli\>\x3Ca id=\"nav-more\" href=\"http://www.cnn.com/more/\" title=\"More...\"\>More...\x3C/a\>\x3C/li\>\n \x3C/ul\>\n','cnn2intl', ' \x3Cspan class=\"ir_login_subnav\"\>\n \x3Cul\>\n \n \x3Cli\>\n \x3Ca href=\"#\"\n onclick=\"showToggleOverlay();return false;\"\n title=\"\"\>REGISTRARSE\x3C/a\>\n \n \x3C/li\>\n \x3Cli\>|\x3C/li\>\n \x3Cli class=\"no-border no-pad-right\"\> \x3Ca\n href=\"#\" onclick=\"showToggleOverlay();return false;\"\n title=\"\"\>INGRESAR\x3C/a\>\n\x3C/li\>\n \x3C/ul\>\n \x3C/span\>\n \n \x3Cul\>\n \x3Cli id=\"subnav-home\" class=\"no-border\"\>\x3Ca href=\"http://ireport.cnn.com/\" class=\"subnav-image-button\" style=\"width:60px !important; height:17px !important; background: url(\'/themes/custom/resources/subnav/es/100x17_main.gif\')\" \n \n class=\"subnav-image-button-selected\"\n title=\"\"\>\x3C/a\>\x3C/li\>\n \x3Cli\>\x3Ca href=\"/explore.jspa\" \n \n \n class=\"subnav-image-button\" style=\"width:73px !important; height:17px !important; background: url(\'/themes/custom/resources/subnav/es/100x17_explore.gif\')\" title=\"\"\>\x3C/a\>\x3C/li\>\n \x3Cli\>\x3Ca href=\"/community/assignment\" class=\"subnav-image-button\" style=\"width:116px !important; height:17px !important; background: url(\'/themes/custom/resources/subnav/es/116x17_assignments.gif\')\" \n \n \n title=\"\"\>\x3C/a\>\x3C/li\>\n \x3Cli\>\x3Cdiv id=\"nav_confirm\"\>\x3Ca href=\"javascript:ir_loginTo(\'/ir-myprofile.jspa?view=overview\')\" \n \n \n class=\"subnav-image-button\" style=\"width:56px !important; height:17px !important; background: url(\'/themes/custom/resources/subnav/es/100x17_profile.gif\')\" title=\"\"\>\x3C/a\>\x3C/div\>\x3C/li\>\n \x3Cli\>\x3Ca onclick=\"uploadGenericStory(0); return false;\" class=\"subnav-image-button\" style=\"width:60px !important; height:17px !important; background: url(\'/themes/custom/resources/subnav/es/100x17_upload.gif\')\" \n \n \n title=\"\"\>\x3C/a\>\x3C/li\>\n \n \x3C/ul\>\n');
+var currentHeader = usHeader;
+var cnnIrptEd = currentHeader.getOmnitureEdition();
+//]]></script>
+</div>
+<div id="add-now-box" class="add-now-box">
+<div id="add-now-iframe" class="add-now-iframe"></div>
+</div>
+<div id="add-now-overlay" class="add-now-overlay"></div>
+        
+        <div class="ir_content">
+      
+        <!-- BEGIN body area -->
+        
+
+
+
+
+    
+<div class="announce-vetted-overlay" id="announceVettedOverlayBox" style="display:none; position: absolute; z-index:1000;">
+	<div id="announceVettedContainer"  style="display:block;">
+		<div class="announce-vetted-box">
+			<div class="announce-vetted-box-header"><div></div></div>  	
+			<div class="announce-vetted-box-content">
+				<div class="announce-vetted-overbody">
+                    <div id="announce-vetted">
+                        <a href="#close" class="overlay-close" onclick="announceVettedOverlayHide(); return false;" title="">
+                            <img src="http://i.cdn.turner.com/ireport/static/themes/custom/resources/irb/overlay/overlay-close.png" border="0" alt="" height="16" width="17" class="ie6png" /></a>
+                        <div class="announce-vetted-wrap clearfix">
+                            <h2>Vetting explained</h2>
+                            <div class="hr"></div>
+                            <p class="announce-vetted-copy-1 clearfix">
+                                iReport is a user-generated section of CNN.com. The stories in this section are not edited,
+                                fact-checked or screened before they are posted.
+                            </p>
+                            <p class="clearfix">
+                                <strong>What does the label "not verified by CNN" mean?</strong><br/>
+<img src="http://i.cdn.turner.com/ireport/static/themes/custom/resources/irb/overlay/overlay-not-vetted.jpg" border="0" alt="" height="68" width="120" class="util-left" />                                The label “Not verified by CNN” lets you know that this story hasn’t been both checked and cleared by a CNN editor.
+                            </p>
+                            <p class="clearfix">
+                                <strong>What does "verified" mean?</strong><br/>
+<img src="http://i.cdn.turner.com/ireport/static/themes/custom/resources/irb/overlay/overlay-vetted.jpg" border="0" alt="" height="68" width="120" class="util-left" />                                iReport stories that have a red "CNN iReport" stamp in the corner have been verified and
+                                cleared. That means they've been selected and approved by a CNN producer to use on CNN,
+                                on air, or on any of CNN's platforms.
+                            </p>
+                            <p class="announce-vetted-copy-last">
+                                <strong>How can you get your story on CNN?</strong><br/>
+                                Start with the <a href="/community/assignment">assignment desk</a>,
+                                story ideas from CNN.
+                            </p>
+                        </div>
+                    </div>
+				</div>
+			</div>
+			<div class="announce-vetted-box-footer"><div></div></div>    
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">//<![CDATA[
+    function announceVettedOverlayShow() {
+        irShowOverlay('announceVettedOverlayBox',true);
+    }
+    function announceVettedOverlayHide() {
+        irShowOverlay('announceVettedOverlayBox',false);
+    }
+//]]></script>
+    
+<!--[if IE]><div class="home all-ie"<![endif]-->
+<!--[if !IE]>-->
+<div class="home"><!--<![endif]-->
+<div id="left_shade_mi"></div>
+<div id="right_shade_mi"></div>
+    <div style="display:none;">    <div id="button-tooltip" style="display:none;">
+        <span id="button-tooltip-text"></span>
+        <div id="button-tooltip-arrow"></div>
+    </div>
+    <div id="groupsButton"></div>
+</div>
+
+
+
+<!-- Disable all DE(ads by ad files) ads to enable DFP ads -->
+
+<script type="text/javascript" >
+
+    jQuery(document).ready(function() {
+
+        // check if there is any trafiic to the ad file; otherwise hide the text - advertisement
+        var adDivHeight = jQuery('#ir-homepage-ad').height();
+        // If there is traffic to ads then the height should be 300. Using 100 is safe bet. 
+        if (adDivHeight < 100) {
+            jQuery('.ir-ad-logo').hide();
+        }
+
+    });
+</script>
+
+<div class="col1">
+    
+    <div id="activity-stream"><div id="left_shade_li"></div><div id="right_shade_li"></div>
+    </div>
+</div>
+
+<div class="col2">
+		<div id="ir-login-home">
+			<h3>Be part of iReport & CNN</h3>
+			<p>iReport invites you to share your story with CNN, and quite possibly the world. Log in to get started.</p>
+			<a id="ir-lh-button" href="#" onclick="showToggleOverlay();return false;">Sign up / Sign in</a>
+		</div>
+		
+    <div id="ir-homepage-ad">
+    </div>
+</div>
+
+
+</div><!-- end content -->
+
+<script type="text/javascript">//<![CDATA[
+    jQuery(document).ready(function(){
+        
+        // [IREPORT-2498] Load chartbeat if it is enabled
+            loadChartbeat("ireport", "iReport-editor");
+
+new irpt.ui.ActivityStream("activity-stream",['/static/slates.js?v=1440071573514','/slurp/activities_for_user_ids/s~slates/prod','/themes/custom/resources/slates.js'],5,"feature",undefined);});
+//]]></script>
+
+
+
+        <!-- END body area -->
+    	</div>
+    	
+    
+<!-- start footer -->
+<div id="cnn-ftr" class="clearfix ">
+<div class="cnn-hdr-ftr-shadebox clear clearfix">
+<div class="shadow-clear shadow-top"></div>
+<div id="ftr-ir-links">
+<div class="ftr-list-item-header" >iReport 101
+<ul>
+<li >
+<span class="ftr-link-title">
+<a href="/about.jspa" >
+About
+</a> |
+<a href="/blogs/ireport-blog">
+Blog
+</a>
+</span>
+</li>
+<li>
+<span class="ftr-link-title">
+<a href="http://www.cnn.com/ireport-awards/">Awards</a>
+</span>
+</li>
+<li > <span class="ftr-link-title">
+<a href="/guidelines.jspa" target="_self"> Community Guidelines
+</a></span></li><li > <span class="ftr-link-title">
+<a href="http://ireport.cnn.com/blogs/ireport-blog/2009/11/18/meet-team-ireport" target="_self"> Meet the Team
+</a></span></li><li > <span class="ftr-link-title">
+<a href="/terms.jspa" target="_self"> Terms of Use
+</a></span></li> </ul>
+</div>
+<div class="ftr-list-item-header" >We are Everywhere
+<ul>
+<li > <span class="ftr-link-title">
+<a href="http://www.facebook.com/ireport" target="_blank"> Facebook
+</a></span></li><li > <span class="ftr-link-title">
+<a href="http://twitter.com/cnnireport" target="_blank"> Twitter
+</a></span></li><li > <span class="ftr-link-title">
+<a href="http://ireportcnn.tumblr.com/" target="_blank"> Tumblr
+</a></span></li><li > <span class="ftr-link-title">
+<a href="http://www.flickr.com/groups/ireport/" target="_blank"> Flickr
+</a></span></li> </ul>
+</div>
+<div class="ftr-list-item-header" >Get Help
+<ul>
+<li > <span class="ftr-link-title">
+<a href="/toolkit.jspa" target="_self"> StoryTelling Toolkit
+</a></span></li><li > <span class="ftr-link-title">
+<a href="/faq.jspa" target="_self"> FAQs
+</a></span></li><li > <span class="ftr-link-title">
+<a href="/contactus.jspa" target="_self"> Contact Us
+</a></span></li><li > <span class="ftr-link-title">
+<a href="http://www.cnn.com/services/advertise/specs/specs_ireport.html" target="_self"> Advertising Contacts
+</a></span></li> </ul>
+</div>
+<div class="ftr-list-item-header" >Tools
+<ul>
+<li > <span class="ftr-link-title">
+<a href="http://ireport.cnn.com/blogs/ireport-blog/2011/11/07/how-to-post-ireports" target="_self"> How to post iReports
+</a></span></li><li > <span class="ftr-link-title">
+<a href="http://www.cnn.com/mobile/index.landing.html" target="_self"> CNN Mobile apps
+</a></span></li> </ul>
+</div>
+</div>
+<div class="shadow-clear shadow-bottom"></div>
+</div>
+<!-- SKINNY NAV CHANGES
+<div id="ftr-divide" class="ftr-wrap clearfix">
+<div id="ftr-search">
+<form method="get" action="http://www.cnn.com/search/" onsubmit="return cnnFootSearch(this);">
+<div class="ftr-search-datacntr">
+<div class="ftr-search-tfield">
+<input type="text" name="query" size="12" maxlength="40" value="" id="ftr-search-box"/>
+</div>
+<div class="ftr-search-sicon">
+<input type="image" src="http://i.cdn.turner.com/ireport/static/themes/custom/resources/irb/ftr/search_btn_footer.png" alt=""/>
+</div>
+</div>
+<div class="cnn_ftrggle"><img src="http://i.cdn.turner.com/ireport/static/themes/custom/resources/irb/ftr/footer_google.png" border="0" alt="" height="13" width="88" class="ie6png" /></div>
+</form>
+</div>
+</div>
+<div id="ftr-nav" class="ftr-wrap">
+<ul>
+<li><a href="http://www.cnn.com/">Home</a></li><li><a href="http://www.cnn.com/video/">Video</a></li><li><a href="http://www.cnn.com/US/">U.S.</a></li><li><a href="http://www.cnn.com/WORLD/">World</a></li><li><a href="http://www.cnn.com/POLITICS/">Politics</a></li><li><a href="http://www.cnn.com/JUSTICE/">Justice</a></li><li><a href="http://www.cnn.com/SHOWBIZ/">Entertainment</a></li><li><a href="http://www.cnn.com/TECH/">Tech</a></li><li><a href="http://www.cnn.com/HEALTH/">Health</a></li><li><a href="http://www.cnn.com/LIVING/">Living</a></li><li><a href="http://www.cnn.com/TRAVEL/">Travel</a></li><li><a href="http://www.cnn.com/OPINION/">Opinion</a></li><li><a href="http://ireport.cnn.com/">iReport</a></li><li><a href="http://money.cnn.com/?cnn=yes">Money</a></li><li class="no-border"><a href="http://bleacherreport.com/?utm_source=cnn.com&amp;utm_medium=referral&amp;utm_campaign=cnn-footer" target="_blank">Sports</a></li> </ul>
+<ul>
+<li><a href="http://www.cnn.com/tools/index.html">Tools &amp; widgets</a></li><li><a href="http://www.cnn.com/services/rss/">RSS</a></li>
+<li><a href="http://www.cnn.com/services/podcasting/">Podcasts</a></li><li><a href="http://www.cnn.com/exchange/blogs/index.html">Blogs</a></li><li><a href="http://www.cnn.com/mobile/">CNN mobile</a></li><li><a href="http://www.cnn.com/profile/">My profile</a></li><li><a href="http://www.cnn.com/profile/">E-mail alerts</a></li><li><a href="http://www.turnerstoreonline.com/">CNN shop</a></li><li class="no-border"><a href="http://www.cnn.com/sitemap/">Site map</a></li> </ul>
+</div>
+<div id="ftr-bottom" class="ftr-wrap">
+<div class="util-left">
+<p class="util-left"><img src="http://i.cdn.turner.com/ireport/static/themes/custom/resources/irb/ftr/footer_cnn_logo.png" border="0" alt="CNN" height="11" style="margin-bottom: -2px;" width="23" class="ie6png" />
+&copy; 2013 Cable News Network. <a href="http://www.turner.com/">Turner Broadcasting System, Inc.</a> All Rights Reserved.</p>
+<ul class="util-left" style="clear: left">
+<li class="no-pad-left"><a href="http://www.cnn.com/interactive_legal.html">Terms of service</a></li><li><a href="http://www.cnn.com/privacy.html">Privacy guidelines</a></li><li><a id="cnn_cnsnt_trst"><script type="text/javascript" src="//consent.truste.com/notice?domain=turner.com&c=cnn_cnsnt_trst&text=true&country=us"></script></a><img src="http://i.cdn.turner.com/cnn/.e/img/3.0/global/misc/logo_ad_choices_footer.png" alt="" border="0" class="cnn_ie6png" height="12" style="margin:0pt 0pt 0pt 4px;" width="12"/></li><li><a href="http://www.cnn.com/services/advertise/main.html">Advertise with us</a></li><li><a href="http://www.cnn.com/about/">About us</a></li><li><a href="http://www.cnn.com/feedback/">Contact us</a></li><li><a href="http://www.turner.com/careers/">Work for us</a></li><li class="no-border no-pad-right"><a href="http://www.cnn.com/help/">Help</a></li> </ul>
+</div>
+<div class="util-right">
+<ul class="util-right">
+<li><a href="http://www.cnn.com/espanol/">CNN en ESPA&Ntilde;OL</a></li><li><a href="http://mexico.cnn.com/">CNN M&eacute;xico</a></li><li><a href="http://www.cnnchile.com">CNN Chile</a></li><li class="no-border no-pad-right"><a href="http://www.cnnexpansion.com">CNN Expansi&oacute;n</a></li> </ul>
+<ul class="util-right" style="width: 200px; text-align: right; clear: right">
+<li><a href="http://arabic.cnn.com/" title="Arabic" >&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</a></li><li><a href="http://www.cnn.co.jp/" title="Japanese">&#26085;&#26412;&#35486;</a></li><li class="no-border no-pad-right"><a href="http://www.cnnturk.com/" title="Turkish" >T&uuml;rk&ccedil;e</a></li> </ul>
+<ul class="util-right" style="width: 200px; text-align: right; clear: right">
+<li><a href="http://www.cnn.com/CNN/Programs/">CNN TV</a></li><li><a href="http://www.cnn.com/HLN/">HLN</a></li><li class="no-border no-pad-right"><a href="http://transcripts.cnn.com/TRANSCRIPTS/"><span class="ir-contentlang-en" lang="en" xml:lang="en" >Transcripts</span></a></li> </ul>
+</div>
+</div>
+-->
+<div id="ftr-bottom-pad"></div>
+</div>
+<script>
+var footerRerendered=false;
+var ieVer = getInternetExplorerVersion();
+if(ieVer>-1){// && ieVer<=8) {
+if(typeof $("activity-stream") != 'undefined' && $("activity-stream")!=null && typeof ActivityStreamEvents != "undefined" && typeof ActivityStreamEvents != "null" )
+{
+jQuery(document).bind( ActivityStreamEvents.ACTIVITY_RENDER_COMPLETE, jQuery.proxy( this.onActivityRenderComplete, this) );
+jQuery("#cnn-ftr").hide();
+}
+//Failover, in case ActivityRenderCompleteEvent never fires. This will rerender the footer after 10 seconds if the event never fires
+setTimeout(function(){ onActivityRenderComplete();}, 10000);
+}
+function onActivityRenderComplete(){
+if(footerRerendered)return;
+footerRerendered = true;
+jQuery("#cnn-ftr").show();
+}
+function getInternetExplorerVersion()
+{
+var rv = -1; // Return value assumes failure.
+if (navigator.appName == 'Microsoft Internet Explorer')
+{
+var ua = navigator.userAgent;
+var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+if (re.exec(ua) != null)
+rv = parseFloat( RegExp.$1 );
+}
+return rv;
+}
+</script>
+<script type="text/javascript">//<![CDATA[
+usHeader.setFooter('', '','');
+intlHeader.setFooter(' \x3Cul\>\n\x3Cli\>\x3Ca href=\"http://edition.cnn.com/\"\>Home\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://edition.cnn.com/video/\"\>Video\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://edition.cnn.com/WORLD/\"\>World\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://edition.cnn.com/US/\"\>U.S.\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://edition.cnn.com/AFRICA/\"\>Africa\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://edition.cnn.com/ASIA/\"\>Asia\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://edition.cnn.com/EUROPE/\"\>Europe\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://edition.cnn.com/LATINAMERICA/\"\>Latin America\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://edition.cnn.com/MIDDLEEAST/\"\>Middle East\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://edition.cnn.com/BUSINESS/\"\>Business\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://edition.cnn.com/SPORT/\"\>World Sport\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://edition.cnn.com/SHOWBIZ/\"\>Entertainment\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://edition.cnn.com/TECH/\"\>Tech\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://edition.cnn.com/TRAVEL/\"\>Travel\x3C/a\>\x3C/li\>\x3Cli class=\"no-border\"\>\x3Ca href=\"http://ireport.cnn.com/\"\>iReport\x3C/a\>\x3C/li\> \x3C/ul\>\n \x3Cul\>\n\x3Cli\>\x3Ca href=\"http://edition.cnn.com/tools/index.html\"\>Tools &amp; Widgets\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://edition.cnn.com/services/rss/\"\>RSS\x3C/a\>\x3C/li\> \n\x3Cli\>\x3Ca href=\"http://edition.cnn.com/services/podcasting/\"\>Podcasts\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://edition.cnn.com/exchange/blogs/index.html\"\>Blogs\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://cnnmobile.com/cmte_cnni/services.do\"\>CNN mobile\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://edition.cnn.com/profile/\"\>My profile\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://edition.cnn.com/profile/\"\>E-mail alerts\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://www.turnerstoreonline.com/\"\>CNN shop\x3C/a\>\x3C/li\>\x3Cli \>\x3Ca href=\"http://edition.cnn.com/sitemap/\"\>Site map\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://www.cnnpartners.com/index.html\"\>CNN partner hotels\x3C/a\>\x3C/li\>\x3Cli class=\"no-border\"\>\x3Ca href=\"http://www.cnntraveller.com/\"\>CNN traveller\x3C/a\>\x3C/li\> \x3C/ul\>\n', ' \x3Cdiv class=\"util-left\"\>\n \x3Cp class=\"util-left\"\>\x3Cimg src=\"http://i.cdn.turner.com/ireport/static/themes/custom/resources/irb/ftr/footer_cnn_logo.png\" border=\"0\" alt=\"CNN\" height=\"11\" style=\"margin-bottom: -2px;\" width=\"23\" class=\"ie6png\" /\>\n &copy; 2013 Cable News Network. \x3Ca href=\"http://www.turner.com/\"\>Turner Broadcasting System, Inc.\x3C/a\> All Rights Reserved.\x3C/p\>\n \x3Cul class=\"util-left\" style=\"clear: left\"\>\n\x3Cli class=\"no-pad-left\"\>\x3Ca href=\"http://edition.cnn.com/interactive_legal.html\"\>Terms of service\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://edition.cnn.com/privacy.html\"\>Privacy guidelines\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca id=\"cnn_cnsnt_trst\"\>\x3Cscript type=\"text/javascript\" src=\"//consent.truste.com/notice?domain=turner.com&c=cnn_cnsnt_trst&text=true&country=us\"\>\x3C/script\>\x3C/a\>\x3Cimg src=\"http://i.cdn.turner.com/cnn/.e/img/3.0/global/misc/logo_ad_choices_footer.png\" alt=\"\" border=\"0\" class=\"cnn_ie6png\" height=\"12\" style=\"margin:0pt 0pt 0pt 4px;\" width=\"12\"/\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://edition.cnn.com/services/advertise/main.html\"\>Advertise with us\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://edition.cnn.com/about/\"\>About us\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://edition.cnn.com/feedback/\"\>Contact us\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://www.turner.com/careers/\"\>Work for us\x3C/a\>\x3C/li\>\x3Cli class=\"no-border no-pad-right\"\>\x3Ca href=\"http://edition.cnn.com/help/\"\>Help\x3C/a\>\x3C/li\> \x3C/ul\>\n \x3C/div\>\n \x3Cdiv class=\"util-right\"\>\n \x3Cul class=\"util-right\"\>\n\x3Cli\>\x3Ca href=\"http://edition.cnn.com/espanol/\"\>CNN en ESPA&Ntilde;OL\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://mexico.cnn.com/\"\>CNN M&eacute;xico\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://www.cnnchile.com\"\>CNN Chile\x3C/a\>\x3C/li\>\x3Cli class=\"no-border no-pad-right\"\>\x3Ca href=\"http://www.cnnexpansion.com\"\>CNN Expansi&oacute;n\x3C/a\>\x3C/li\> \x3C/ul\>\n \x3Cul class=\"util-right\" style=\"width: 200px; text-align: right; clear: right\"\>\n\x3Cli\>\x3Ca href=\"http://arabic.cnn.com/\" title=\"Arabic\" \>&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://www.cnn.co.jp/\" title=\"Japanese\"\>&#26085;&#26412;&#35486;\x3C/a\>\x3C/li\>\x3Cli class=\"no-border no-pad-right\"\>\x3Ca href=\"http://www.cnnturk.com/\" title=\"Turkish\" \>T&uuml;rk&ccedil;e\x3C/a\>\x3C/li\> \x3C/ul\>\n \x3Cul class=\"util-right\" style=\"width: 200px; text-align: right; clear: right\"\>\n\x3Cli\>\x3Ca href=\"http://edition.cnn.com/CNN/Programs/\"\>CNN TV\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://edition.cnn.com/HLN/\"\>HLN\x3C/a\>\x3C/li\>\x3Cli class=\"no-border no-pad-right\"\>\x3Ca href=\"http://transcripts.cnn.com/TRANSCRIPTS/\"\>\x3Cspan class=\"ir-contentlang-en\" lang=\"en\" xml:lang=\"en\" \>Transcripts\x3C/span\>\x3C/a\>\x3C/li\> \x3C/ul\>\n \x3C/div\>\n', ' \x3Cdiv class=\"ftr-list-item-header\" \>iReport 101\n \x3Cul\>\n \x3Cli \>\n \x3Cspan class=\"ftr-link-title\"\>\n \x3Ca href=\"/about.jspa\" \>\n About\n \x3C/a\> | \n \x3Ca href=\"/blogs/ireport-blog\"\>\n Blog\n \x3C/a\>\n \x3C/span\> \n \x3C/li\>\n\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"/guidelines.jspa\" target=\"_self\"\> Community Guidelines\n\x3C/a\>\x3C/span\>\x3C/li\>\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"http://ireport.cnn.com/blogs/ireport-blog/2009/11/18/meet-team-ireport\" target=\"_self\"\> Meet the Team\n\x3C/a\>\x3C/span\>\x3C/li\>\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"/terms.jspa\" target=\"_self\"\> Terms of Use\n\x3C/a\>\x3C/span\>\x3C/li\> \x3C/ul\>\n \x3C/div\>\n \x3Cdiv class=\"ftr-list-item-header\" \>We are Everywhere\n \x3Cul\>\n\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"http://www.facebook.com/ireport\" target=\"_blank\"\> Facebook\n\x3C/a\>\x3C/span\>\x3C/li\>\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"http://twitter.com/cnnireport\" target=\"_blank\"\> Twitter\n\x3C/a\>\x3C/span\>\x3C/li\>\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"http://ireportcnn.tumblr.com/\" target=\"_blank\"\> Tumblr\n\x3C/a\>\x3C/span\>\x3C/li\>\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"http://www.flickr.com/groups/ireport/\" target=\"_blank\"\> Flickr\n\x3C/a\>\x3C/span\>\x3C/li\> \x3C/ul\>\n \x3C/div\>\n \x3Cdiv class=\"ftr-list-item-header\" \>Get Help\n \x3Cul\>\n\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"/toolkit.jspa\" target=\"_self\"\> StoryTelling Toolkit\n\x3C/a\>\x3C/span\>\x3C/li\>\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"/faq.jspa\" target=\"_self\"\> FAQs\n\x3C/a\>\x3C/span\>\x3C/li\>\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"/contactus.jspa\" target=\"_self\"\> Contact Us\n\x3C/a\>\x3C/span\>\x3C/li\>\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"http://www.cnn.com/services/advertise/specs/specs_ireport.html\" target=\"_self\"\> Advertising Contacts\n\x3C/a\>\x3C/span\>\x3C/li\> \x3C/ul\>\n \n \x3C/div\>\n \x3Cdiv class=\"ftr-list-item-header\" \>Tools\n \x3Cul\>\n\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"http://ireport.cnn.com/blogs/ireport-blog/2011/11/07/how-to-post-ireports\" target=\"_self\"\> How to post iReports\n\x3C/a\>\x3C/span\>\x3C/li\>\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"http://edition.cnn.com/mobile/index.landing.html\" target=\"_self\"\> CNN Mobile apps\n\x3C/a\>\x3C/span\>\x3C/li\> \x3C/ul\>\n \x3C/div\>\n \n \n\n\n');
+cnnMxHeader.setFooter(' \x3Cul\>\n\x3Cli\>\x3Ca href=\"http://mexico.cnn.com/\"\>Inicio\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://mexico.cnn.com/nacional/\"\>Nacional\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://mexico.cnn.com/mundo/\"\>Mundo\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://mexico.cnn.com/salud/\"\>Vida y salud\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://mexico.cnn.com/entretenimiento/\"\>Entretenimiento\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://mexico.cnn.com/deportes/\"\>Deportes\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://blogs.cnnmexico.com/tecnologia/\" target=\"_blank\"\>Tecnología\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://www.cnnexpansion.com/\" target=\"_blank\"\>Economía\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://ireport.cnn.com/category/cnnmexico\"\>iReport\x3C/a\>\x3C/li\>\x3Cli class=\"no-border\"\>\x3Ca href=\"http://mexico.cnn.com/cmx1_canal_videos.php\"\>Video\x3C/a\>\x3C/li\> \x3C/ul\>\n', ' \x3Cdiv class=\"util-left\"\>\n \x3Cp class=\"util-left\"\>\x3Cimg src=\"http://i.cdn.turner.com/ireport/static/themes/custom/resources/irb/ftr/footer_cnn_logo.png\" border=\"0\" alt=\"CNN\" height=\"11\" style=\"margin-bottom: -2px;\" width=\"23\" class=\"ie6png\" /\>\n &copy; 2013 Cable News Network. \x3Ca href=\"http://www.turner.com/\"\>Turner Broadcasting System, Inc.\x3C/a\> All Rights Reserved.\x3C/p\>\n \x3Cul class=\"util-left\" style=\"clear: left\"\>\n\x3Cli class=\"no-pad-left no-border\"\>CNNM&eacute;xico:\x3C/li\>\x3Cli class=\"no-pad-left\"\>\x3Ca href=\"http://mexico.cnn.com/contact-info\"\>Cont&aacute;ctanos\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://gee.com.mx/fichas.asp?uid=6&amp;inter=2\" target=\"_blank\"\>An&uacute;nciate con nosotros\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://mexico.cnn.com/privacy\"\>T&eacute;rminos&nbsp;y&nbsp;condiciones\x3C/a\>\x3C/li\>\x3Cli class=\"no-border\"\>\x3Ca href=\"http://www.gee.com.mx/empleos.asp\" target=\"_blank\"\>Intégrate&nbsp;a&nbsp;nuestro&nbsp;equipo\x3C/a\>\x3C/li\> \x3C/ul\>\n \x3C/div\>\n \x3Cdiv class=\"util-right\"\>\n \x3Cul class=\"util-right\"\>\n\x3Cli\>\x3Ca href=\"http://edition.cnn.com/espanol/\"\>CNN en ESPA&Ntilde;OL\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://mexico.cnn.com/\"\>CNN M&eacute;xico\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://www.cnnchile.com\"\>CNN Chile\x3C/a\>\x3C/li\>\x3Cli class=\"no-border no-pad-right\"\>\x3Ca href=\"http://www.cnnexpansion.com\"\>CNN Expansi&oacute;n\x3C/a\>\x3C/li\> \x3C/ul\>\n \x3Cul class=\"util-right\" style=\"width: 200px; text-align: right; clear: right\"\>\n\x3Cli\>\x3Ca href=\"http://arabic.cnn.com/\" title=\"Arabic\" \>&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://www.cnn.co.jp/\" title=\"Japanese\"\>&#26085;&#26412;&#35486;\x3C/a\>\x3C/li\>\x3Cli class=\"no-border no-pad-right\"\>\x3Ca href=\"http://www.cnnturk.com/\" title=\"Turkish\" \>T&uuml;rk&ccedil;e\x3C/a\>\x3C/li\> \x3C/ul\>\n \x3Cul class=\"util-right\" style=\"width: 200px; text-align: right; clear: right\"\>\n\x3Cli\>\x3Ca href=\"http://edition.cnn.com/CNN/Programs/\"\>CNN TV\x3C/a\>\x3C/li\>\x3Cli\>\x3Ca href=\"http://edition.cnn.com/HLN/\"\>HLN\x3C/a\>\x3C/li\>\x3Cli class=\"no-border no-pad-right\"\>\x3Ca href=\"http://transcripts.cnn.com/TRANSCRIPTS/\"\>\x3Cspan class=\"ir-contentlang-en\" lang=\"en\" xml:lang=\"en\" \>Transcripts\x3C/span\>\x3C/a\>\x3C/li\> \x3C/ul\>\n \x3C/div\>\n' , ' \x3Cdiv class=\"ftr-list-item-header\" \>iReport 101\n \x3Cul\>\n \x3Cli \>\n \x3Cspan class=\"ftr-link-title\"\>\n \x3Ca href=\"/about.jspa\" \>\n Sobre iReport\n \x3C/a\> | \n \x3Ca href=\"/blogs/ireport-blog\"\>\n Blog\n \x3C/a\>\n \x3C/span\> \n \x3C/li\>\n\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"/guidelines.jspa\" target=\"_self\"\> Reglas de comunidad\n\x3C/a\>\x3C/span\>\x3C/li\>\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"http://ireport.cnn.com/blogs/ireport-blog/2009/11/18/meet-team-ireport\" target=\"_self\"\> Conoce al equipo \n\x3C/a\>\x3C/span\>\x3C/li\>\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"/terms.jspa\" target=\"_self\"\> T&#233;rminos de uso\n\x3C/a\>\x3C/span\>\x3C/li\> \x3C/ul\>\n \x3C/div\>\n \x3Cdiv class=\"ftr-list-item-header\" \>En las redes\n \x3Cul\>\n\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"http://www.facebook.com/ireport\" target=\"_blank\"\> Facebook\n\x3C/a\>\x3C/span\>\x3C/li\>\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"http://twitter.com/cnnireport\" target=\"_blank\"\> Twitter\n\x3C/a\>\x3C/span\>\x3C/li\>\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"http://ireportcnn.tumblr.com/\" target=\"_blank\"\> Tumblr\n\x3C/a\>\x3C/span\>\x3C/li\>\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"http://www.flickr.com/groups/ireport/\" target=\"_blank\"\> Flickr\n\x3C/a\>\x3C/span\>\x3C/li\> \x3C/ul\>\n \x3C/div\>\n \x3Cdiv class=\"ftr-list-item-header\" \>Ayuda\n \x3Cul\>\n\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"/toolkit.jspa\" target=\"_self\"\> Herramientas\n\x3C/a\>\x3C/span\>\x3C/li\>\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"/faq.jspa\" target=\"_self\"\> Preguntas frecuentes\n\x3C/a\>\x3C/span\>\x3C/li\>\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"/contactus.jspa\" target=\"_self\"\> Cont&#225;ctanos\n\x3C/a\>\x3C/span\>\x3C/li\>\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"/advertise.jspa\" target=\"_self\"\> Contactos para publicidad\n\x3C/a\>\x3C/span\>\x3C/li\> \x3C/ul\>\n \n \x3C/div\>\n \x3Cdiv class=\"ftr-list-item-header\" \>Tools\n \x3Cul\>\n\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"http://ireport.cnn.com/blogs/ireport-blog/2011/11/07/how-to-post-ireports\" target=\"_self\"\> C&#243;mo publicar iReports\n\x3C/a\>\x3C/span\>\x3C/li\>\x3Cli \> \x3Cspan class=\"ftr-link-title\"\>\n\x3Ca href=\"http://www.cnn.com/mobile/index.landing.html\" target=\"_self\"\> Aplicaciones m&#243;viles de CNN\n\x3C/a\>\x3C/span\>\x3C/li\> \x3C/ul\>\n \x3C/div\>\n\n\n' );
+(function() {
+var referrer = document.referrer.toLowerCase();
+var followingReferrer = true;
+if (referrer.substr(0,19) == 'http://www.cnn.com/' ||
+referrer.substr(0,18) == 'http://us.cnn.com/')
+usHeader.show();
+else if (referrer.substr(0,23) == 'http://edition.cnn.com/')
+intlHeader.show();
+else {
+followingReferrer = false;
+intlHeader.switchToIfCookieSet();
+}
+currentHeader.promptIfNoCookie();
+window.syncToCNNSelectedEdition = function(editionChoice) {
+};
+})();
+//]]></script>
+<!-- end footer -->
+<div class="ir-login-overlays">
+<link rel="stylesheet" type="text/css" href="/themes/custom/resources/cnn/element-css-2.0-connect_overlay.css?v=3" />
+<!--[if lte IE 6]><style type="text/css">
+div.cnnConnBox .cnnBoxHeaderConn { background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=http://i.cdn.turner.com/cnn/.element/img/2.0/global/dropdowns/shdw_TL.png, sizingMethod='scale'); }
+div.cnnConnBox .cnnBoxHeaderConn div{ background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=http://i.cdn.turner.com/cnn/.element/img/2.0/global/dropdowns/shdw_TR.png, sizingMethod='scale'); }
+div.cnnConnBox .cnnBoxContentConn{ background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=http://i.cdn.turner.com/cnn/.element/img/2.0/global/dropdowns/shdw_center2.png, sizingMethod='scale'); }
+div.cnnConnBox .cnnBoxFooterConn { background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=http://i.cdn.turner.com/cnn/.element/img/2.0/global/dropdowns/shdw_BL.png, sizingMethod='scale'); }
+div.cnnConnBox .cnnBoxFooterConn div { background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=http://i.cdn.turner.com/cnn/.element/img/2.0/global/dropdowns/shdw_BR.png, sizingMethod='scale'); }
+</style><![endif]-->
+<div class="cnnConnectOverlay" id="cnnConnectOverlayBox" style="display:none; position: absolute; z-index:1000;">
+<div id="cnnConnectLoginRegistrationContainer" style="display:block;">
+<div class="cnnConnBox">
+<div class="cnnBoxHeaderConn">
+<div>
+</div>
+</div>
+<div class="cnnBoxContentConn">
+<div class="cnnConnectOverbodyHeading"><div class="cnnConnectOverHeader"><div class="cnnConnRSclose"><a href="javascript:void(0);" onclick="cnnConnectOverlayHideOverlay(); return false;"><img src="http://i.cdn.turner.com/ireport/static/themes/custom/resources/irb/close_bt.gif" border="0" alt="Close Window" height="15" width="15" /></a></div><a href="http://ireport.cnn.com/"><img src="http://i.cdn.turner.com/ireport/static/themes/custom/resources/irb/cnn_ireport_logo.gif" border="0" alt="CNN iReport" height="25" width="125" /></a><span class="ir-contentlang-en" lang="en" xml:lang="en" >Welcome! Let's get started.</span></div></div>
+<div class="cnnConnectOverbody">
+<!-- begin: content -->
+<div class="cnnConnectOvc1">
+<div class="cnnWireBox">
+<div class="cnnBoxHeader">
+<div>
+</div>
+</div>
+<div class="cnnBoxContent pad12">
+<!-- begin: login -->
+<div id="cnnConnectLoginContainer">
+<div id="cnnConnectLoginText1" style="display:block;">
+<h3><span class="ir-contentlang-en" lang="en" xml:lang="en" >Member Log In</span></h3>
+</div>
+<div id="cnnConnectLoginText2" style="display:none;">
+<h3><span class="ir-contentlang-en" lang="en" xml:lang="en" >Reset Successful</span></h3>
+<p><span class="ir-contentlang-en" lang="en" xml:lang="en" >Log in now.</span></p>
+</div>
+<div class="cnnConnectOvinput">
+<form id="cnnConnectFormLogin" onsubmit="return false;">
+<input type="text" id="cnnOverlayEmail1" class="cnnConnectFormbg5 cnn_connectoverlay_email" name="email" onfocus="if(this.value == 'E-mail'){this.value='';}this.className = 'cnnConnectFormbgnone cnn_connectoverlay_email'" onblur="if(this.value==''){ this.className = 'cnnConnectFormbg5 cnn_connectoverlay_email'};" onchange="if(this.value != ''){this.className='cnnConnectFormbgnone cnn_connectoverlay_email'};" onKeyPress="return submitenter(this,event)" />
+<input type="password" id="cnnOverlayPwd" class="cnnConnectFormbg6 cnn_connectoverlay_password" name="password" onfocus="if(this.type == 'text') {this.value = ''; this.type='password'; } this.className = 'cnnConnectFormbgnone cnn_connectoverlay_password'" onblur="if(this.value=='') this.className = 'cnnConnectFormbg6 cnn_connectoverlay_password'" onKeyPress="return submitenter(this,event)" /><br />
+<a class="cnnConnectFGPW" href="javascript:void(0);" onclick="cnnConnectOverlayUpdate('login2forgot');cnnConnectOverlayClearForgot();">
+<span class="ir-contentlang-en" lang="en" xml:lang="en" >Forgot password?</span> </a>
+<div class="clear">
+</div>
+<div id="cnnConnectLoginErrors" class="cnnredtxt connectptxt1" style="display:none;">
+</div>
+<div class="cnnConnectRememberMe">
+<label id="cnnRememberMeLabel" for="cnnRememberMe" class="clearfix">
+<input id="cnnRememberMe" name="rememberme" type="checkbox" checked="checked"/>
+<span><span class="ir-contentlang-en" lang="en" xml:lang="en" >Remember me for two weeks</span></span>
+</label>
+</div>
+<div class="cnnConnectLogin"><input type="image" src="http://i.cdn.turner.com/ireport/static/themes/custom/resources/cnn/log_in.gif" id="cnn_connectoverlay_login" onclick="$('cnnConnectFormLogin').email.value = stringTrim($('cnnConnectFormLogin').email.value);cnn_formConnectLogin('cnnConnectFormLogin');" onKeyPress="return submitenter(this,event)" />
+</div>
+<script type="text/javascript">
+function submitenter(myfield,e){
+var keycode;
+if (window.event) keycode = window.event.keyCode;
+else if (e) keycode = e.which;
+else return true;
+if (keycode == 13)
+{
+$('cnnConnectFormLogin').email.value = stringTrim($('cnnConnectFormLogin').email.value);
+cnn_formConnectLogin('cnnConnectFormLogin');
+return false;
+}
+else
+return true;
+}
+</script>
+</form>
+</div>
+</div><!--/cnnConnectLoginContainer-->
+<!-- end: login -->
+<!-- begin: forgot password -->
+<div id="cnnConnectForgotContainer" style="display:none;">
+<h3><span class="ir-contentlang-en" lang="en" xml:lang="en" >Forgot Password</span></h3>
+<p><span class="ir-contentlang-en" lang="en" xml:lang="en" >Enter your e-mail address below and we will send you an e-mail with a link and reset code to reset your password.</span></p>
+<div class="cnnConnectOvinput">
+<form id="cnnConnectFormForgot" onsubmit="return false;">
+<input type="text" id="cnnOverlayEmail2" class="cnnConnectFormbg5 cnn_connectoverlay_email" name="email" onclick="this.className = 'cnnConnectFormbgnone cnn_connectoverlay_email'" onblur="if(this.value=='') this.className = 'cnnConnectFormbg5 cnn_connectoverlay_email'" />
+<div id="cnnConnectForgotErrors" class="cnnredtxt connectptxt1" style="display:none;">
+</div>
+<div class="cnnConnectLogin"><input onclick="ms_formResetUserPassword('cnnConnectFormForgot');" type="image" src="http://i.cdn.turner.com/ireport/static/themes/custom/resources/cnn/btn.submit.gif" id="cnn_connectoverlay_submit" />
+</div>
+</form>
+<a href="javascript:void(0);" onclick="cnnConnectOverlayUpdate('forgot2resetWithoutCode');cnnConnectOverlayClearReset();" class="cnnConnectContinue">
+<span class="ir-contentlang-en" lang="en" xml:lang="en" >Continue if you already have the reset code</span> </a>
+</div>
+</div><!--/cnnConnectForgotContainer-->
+<!-- end: forgot password -->
+<!-- begin: reset password -->
+<div id="cnnConnectResetContainer" style="display:none;">
+<h3><span class="ir-contentlang-en" lang="en" xml:lang="en" >Password Selection</span></h3>
+<div id="cnnConnectResetText1" style="display:none;">
+<p><span class="ir-contentlang-en" lang="en" xml:lang="en" >Grab the reset code we e-mailed to you.<br/>Type it in, and create your new password.</span></p>
+</div>
+<div id="cnnConnectResetText2" style="display:none;">
+<p><span class="ir-contentlang-en" lang="en" xml:lang="en" >Create your new password</span></p>
+</div>
+<div class="cnnConnectOvinput">
+<form id="cnnConnectFormReset" onsubmit="return false;">
+<input type="text" id="cnn_connectoverlay_email3" class="cnnConnectFormbg5 cnnblacktxt" name="email" onfocus="this.className = 'cnnblacktxt cnnConnectFormbgnone'" onblur="if(this.value==''){ this.className = 'cnnblacktxt cnnConnectFormbg5'};" />
+<input type="text" id="cnn_connectoverlay_password3" class="cnnConnectFormbg7 cnnblacktxt" name="resetCode" onfocus="this.className = 'cnnblacktxt cnnConnectFormbgnone'" onblur="if(this.value==''){ this.className = 'cnnblacktxt cnnConnectFormbg7'};" />
+<input type="password" id="cnn_connectoverlay_password4" class="cnnConnectFormbg8 cnnblacktxt" name="newPassword" onfocus="this.className = 'cnnblacktxt cnnConnectFormbgnone'" onblur="if(this.value==''){ this.className = 'cnnblacktxt cnnConnectFormbg8'};" />
+<input type="password" id="cnn_connectoverlay_password5" class="cnnConnectFormbg9 cnnblacktxt" name="confirmNewPassword" onfocus="this.className = 'cnnblacktxt cnnConnectFormbgnone'" onblur="if(this.value==''){ this.className = 'cnnConnectFormbg9 cnnblacktxt'};" />
+<div id="cnnConnectResetErrors" class="cnnredtxt connectptxt1" style="display:none;">
+</div>
+<div class="cnnConnectLogin2"><input type="image" onclick="ms_formSetUserPassword('cnnConnectFormReset');" src="http://i.cdn.turner.com/ireport/static/themes/custom/resources/cnn/btn.submit.gif" id="cnn_connectoverlay_submit" />
+</div>
+</form>
+</div>
+</div><!--/cnnConnectResetContainer-->
+<!-- end: reset password -->
+</div>
+<div class="cnnBoxFooter">
+<div>
+</div>
+</div>
+</div>
+</div>
+<div class="cnnConnectOvc2">
+<div class="cnnWireBox">
+<div class="cnnBoxHeader">
+<div>
+</div>
+</div>
+<div class="cnnBoxContent pad12">
+<h3><span class="ir-contentlang-en" lang="en" xml:lang="en" >Sign Up</span>
+<span class="ir-login-requiredNote">&nbsp;<span class="ir-contentlang-en" lang="en" xml:lang="en" >Be sure to fill in everything with an *</span></span>
+</h3>
+<form id="cnnConnectFormRegister" onsubmit="return false;">
+<input type="text" class="cnnConnectFormbg3 cnn_connectoverlay_screenname" name="screenName" onfocus="this.className = 'cnnConnectFormbgnone cnn_connectoverlay_screenname';if(this.value=='* Screen Name (Select one with 3-12 characters; number and letters only)'){this.value='';this.className='cnnConnectFormnone cnn_connectoverlay_screenname cnnblacktxt'}" onblur="if(this.value=='') { this.className='cnnConnectFormbg3 cnn_connectoverlay_screenname' };" />
+<input type="text" id="cnnOverlayEmail3" class="cnnConnectFormbg1 cnn_connectoverlay_email2" name="email" onfocus="this.className = 'cnnConnectFormbgnone cnn_connectoverlay_email2';if(this.value=='* E-mail'){this.value='';this.className='cnnConnectFormnone cnn_connectoverlay_email2 cnnblacktxt'}" onblur="if(this.value=='') { this.className='cnnConnectFormbg1 cnn_connectoverlay_email2' };" />
+<input type="password" id="cnnOverlayPwd2" class="cnnConnectFormbg2 cnn_connectoverlay_password2" name="password" onfocus="this.className = 'cnnConnectFormbgnone cnn_connectoverlay_password2';if(this.value=='* Password (Make it 6-10 characters, and don\'t use spaces)'){this.value='';this.className='cnnConnectFormnone cnn_connectoverlay_password2 cnnblacktxt';this.type='password'}" onblur="if(this.value=='') { this.className='cnnConnectFormbg2 cnn_connectoverlay_password2' };" />
+<div class="cnnConnectOvc2Div"><div></div></div>
+<input type="text" id="cnnOverlayFirstName" class="cnnConnectFormbgFirstName cnn_connectoverlay_firstName" name="firstName" onfocus="this.className = 'cnnConnectFormbgnone cnn_connectoverlay_firstName';if(this.value=='First Name (optional)'){this.value='';this.className='cnnConnectFormnone cnn_connectoverlay_firstName cnnblacktxt'}" onblur="if(this.value=='') { this.className='cnnConnectFormbgFirstName cnn_connectoverlay_firstName' };" />
+<input type="text" id="cnnOverlayLastName" class="cnnConnectFormbgLastName cnn_connectoverlay_lastName" name="lastName" onfocus="this.className = 'cnnConnectFormbgnone cnn_connectoverlay_lastName';if(this.value=='Last Name (optional)'){this.value='';this.className='cnnConnectFormnone cnn_connectoverlay_lastName cnnblacktxt'}" onblur="if(this.value=='') { this.className='cnnConnectFormbgLastName cnn_connectoverlay_lastName' };" />
+<input type="text" id="cnnOverlayPhone" class="cnnConnectFormbgPhone cnn_connectoverlay_phone" name="phone" onfocus="this.className = 'cnnConnectFormbgnone cnn_connectoverlay_phone';if(this.value=='Phone (optional)'){this.value='';this.className='cnnConnectFormnone cnn_connectoverlay_phone cnnblacktxt'}" onblur="if(this.value=='') { this.className='cnnConnectFormbgPhone cnn_connectoverlay_phone' };" />
+<p><span class="ir-contentlang-en" lang="en" xml:lang="en" >Providing your contact information helps us verify your stories to include in CNN coverage.</span></p>
+<ul>
+<li><img id="cnnConnectCaptchaImage" src="/themes/custom/resources/irb/1x1pixel.gif" height="50" width="200" alt="" align="left" /></li>
+<li><input type="text" class="cnnConnectFormbg4 cnn_connectoverlay_enterit" name="captcha" onfocus="this.className = 'cnnConnectFormbgnone cnn_connectoverlay_enterit';if(this.value=='* Type what you see in the grey box'){this.value='';this.className='cnnConnectFormnone cnn_connectoverlay_enterit cnnblacktxt'}" onblur="if(this.value =='') { this.className='cnnConnectFormbg4 cnn_connectoverlay_enterit'; }" />
+<br />
+<div class="cnnConnectCantRead">
+<a href="#" onclick="generateCaptchaImage();return false;"><span class="ir-contentlang-en" lang="en" xml:lang="en" >Can't read this?</span></a>
+</div>
+</li>
+</ul>
+<div class="clear cnnConnectOvc2Div"><div></div></div>
+<p id="cnnConnectTerms">
+<span class="ir-contentlang-en" lang="en" xml:lang="en" >By clicking on "sign up" you agree with <a href="http://www.cnn.com/interactive_legal.html" target="_blank">CNN's Terms of Service</a>, CNN iReport's <a href="http://ireport.cnn.com/terms.jspa" target="_blank">Terms of Service</a>, and CNN's <a href="http://www.cnn.com/privacy.html" target="_blank">Privacy Policy</a> and consent to the collection, storage and use of this information in the U.S. subject to U.S. laws and regulations.</span> <a href="#" onclick="$('signuplearnmore').toggle(); return false;">
+<span class="ir-contentlang-en" lang="en" xml:lang="en" >(learn more)</span> </a>
+</p>
+<p id="signuplearnmore" style="display: none;">
+<span class="ir-contentlang-en" lang="en" xml:lang="en" >For our international users, please be aware that the information you submit when registering for our services is collected in the United States of America. In addition to being subject to our Privacy Policy, the collection, storage, and use of your data will be subject to U.S. laws and regulations, which may be different from the laws and regulations of your home country. By registering for this service, you are consenting to this collection, storage, and use.</span> </p>
+<input type="hidden" name="privacyPolicy" value="1"/>
+<div id="cnnConnectRegisterErrors" class="cnnredtxt connectptxt1" style="display:none;"></div>
+<div class="cnnConnectLogin"><input onclick="ms_formRegister('cnnConnectFormRegister')" type="image" src="http://i.cdn.turner.com/ireport/static/themes/custom/resources/cnn/signup.gif" id="cnn_connectoverlay_signup" />
+</div>
+</form>
+</div>
+<div class="cnnBoxFooter">
+<div>
+</div>
+</div>
+</div>
+</div>
+<div class="clear">
+</div>
+</div>
+</div>
+<div class="cnnBoxFooterConn">
+<div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="cnnConnectMessageContainer" style="position:absolute; top:0px; left: 0px; display:none;">
+<div class="cnnConnBox">
+<div class="cnnBoxHeaderConn"><div></div></div>
+<div class="cnnBoxContentConn">
+<div class="cnnConnectOverbodyHeading"><div class="cnnConnectOverHeader"><div class="cnnConnRSclose"><a href="javascript:void(0);" onclick="closeOverlayMessage(); return false;"><img src="http://i.cdn.turner.com/ireport/static/themes/custom/resources/irb/close_bt.gif" border="0" alt="Close Window" height="15" width="15" /></a></div><a href="http://ireport.cnn.com/"><img src="http://i.cdn.turner.com/ireport/static/themes/custom/resources/irb/cnn_ireport_logo.gif" border="0" alt="CNN iReport" height="25" width="125" /></a></div></div>
+<div class="cnnConnectOverbody cnnConnectOverbodyheight3">
+<div id="cnnConnectMessageContent"></div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="cnnBoxFooterConn"><div></div></div>
+</div>
+</div>
+<script type="text/javascript">
+msQueueManager.init('requestFrame', ms_blankURL);
+</script>
+</div>
+<div class="ir-login-overlays">
+<div class="cnnConnectOverlay" id="irCreateUsernameOverlayBox" style="display: none; position: absolute; z-index:1000;">
+<div id="irCreateUsernameContainer" style="display:block;">
+<div class="cnnConnBox">
+<div class="cnnBoxHeaderConn">
+<div>
+</div>
+</div>
+<div class="cnnBoxContentConn">
+<div class="cnnConnectOverbody">
+<div class="cnnConnRSclose"><a href="javascript:void(0);" onclick="irCreateUsernameOverlay_hideOverlay(); return false;"><img src="http://i.cdn.turner.com/cnn/.element/img/2.0/sect/connect/btn_close.gif" width="12" height="12" alt="Close Window" /></a></div>
+<div class="cnnConnectOvc2">
+<div class="cnnWireBox">
+<div class="cnnBoxHeader">
+<div>
+</div>
+</div>
+<div class="cnnBoxContent pad12">
+<div id="cnnConnectLoginText1" style="display:block;">
+<h3>Create your screen name</h3>
+<p>Please create a screen name. This screen name will be associated with your
+iReport stories and comments on this site.
+It cannot be changed once you make a selection.</p>
+</div>
+<div>
+<form onsubmit="return false;" id="irCreateUsername-form">
+<input type="text" id="screennameinput" name="screenName" /><input id="savescreenname" type="image" onclick="createScreenname('save')" id="cnn_connectoverlay_save" src="http://i.cdn.turner.com/ireport/static/themes/custom/resources/cnn/save.gif"/>
+</form>
+<p id="irCreateUsername-screennameinstr" class="cnngraytxt">Select one with 3-12 characters, numbers and letters only</p>
+<p id="irCreateUsername-error" class="cnnredtxt" style="display: none;"></p>
+</div>
+</div>
+<div class="cnnBoxFooter">
+<div>
+</div>
+</div>
+</div>
+</div>
+<div class="clear">
+</div>
+</div>
+</div>
+<div class="cnnBoxFooterConn">
+<div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="irRegisterShowThanks" style="position:absolute; top:0px; left: 0px; display:none; z-index:999"></div>
+<script type="text/javascript">
+function irRegisterShowThanks() {
+jQuery("#irRegisterShowThanks").load("/services/register-thanks.jspa",
+function(){
+irShowOverlay("irRegisterShowThanks",true);
+});
+}
+if (Cookies.getCookie("irRegisterShowThanks") != null) {
+Cookies.setCookie("irRegisterShowThanks","",-1,"/");
+irRegisterShowThanks();
+}
+</script>
+<script type="text/javascript">//<![CDATA[
+var irGetBanners_Called = false;
+function irGetBanners(event) {
+if (irGetBanners_Called) return;
+irGetBanners_Called = true;
+var url = "/services/banner-list.jspa";
+new Ajax.Request(url, { method: 'get' });
+}
+Event.observe(document, "dom:loaded", irGetBanners);
+Event.observe(window, "load", irGetBanners); // for IE6
+function ir_clsbnbnnr(bannerTimestamp)
+{
+currentHeader.setBreakingNews("<!--Breaking news closed-->");
+// Insert session cookie with timestamp to ensure that Banner isn't shown again until next updated
+var cookieDomain = /cnn\.com/.test(ir_loginToUrlBase) ? 'cnn.com' : 'ireport.com';
+Cookies.setCookie("bannerLastClosed", bannerTimestamp, null, '/', cookieDomain);
+}
+//]]></script>
+<script type="text/javascript" src="http://js.revsci.net/gateway/gw.js?csid=A09801"></script>
+<script type="text/javascript">
+//ADM
+if (typeof cnnad_setADMSizes == "function") {
+cnnad_setADMSizes(["728x90","300x250","336x280","160x600","336x850","300x600","300x850"]);
+}
+if (typeof cnnad_sendADMData == "function")
+cnnad_sendADMData();
+//UGD
+if (typeof cnnad_ugsync == "function")
+cnnad_ugsync();
+</script>
+    </div>
+    </div>
+
+
+<div id="jiveTT-note-user" class="jive-tooltip2 notedefault snp-mouseoffset"  >
+	<div class="jive-tooltip2-top"></div>
+	<div class="jive-tooltip2-mid">
+		<div class="jive-tooltip2-mid-padding" id="jive-note-user-body"></div>
+	</div>
+	<div class="jive-tooltip2-btm"></div>
+</div>
+    
+
+
+    
+<div class="tracking">
+    <script type="text/javascript" src="http://z.cdn.turner.com/analytics/cnnexpan/jsmd.min.js"></script>
+
+
+
+<script type="text/javascript">//<![CDATA[
+    if (typeof irptPageName == "undefined")
+        irptPageName = ""; //TODO see if we can do better
+    if (typeof irptTemplateType == "undefined")
+        irptTemplateType = "ireport";
+    if (typeof irptTemplateTypeContent == "undefined")
+        irptTemplateTypeContent = "";
+    if (typeof irptSubsectionType == "undefined")
+        irptSubsectionType = "irp : misc";
+    var cnn_metadata = {
+        section: [ "iReport", irptSubsectionType ],
+        friendly_name: irptPageName,
+        template_type: irptTemplateType,
+        template_type_content: irptTemplateTypeContent, 
+        business: { cnn: { page: { photo: {} }, video: {} } }
+    };
+    if (typeof irptSectionName != "undefined" && irptSectionName != "iReport Home Page")
+        cnn_metadata.section[0] = irptSectionName;
+    if (typeof irptVideoCount != "undefined")
+        cnn_metadata.business.cnn.page.video_embed_count = irptVideoCount;
+    if (typeof irptPublishDate != "undefined")
+        cnn_metadata.business.cnn.page.publish_date = irptPublishDate;
+    if (typeof irptTopicId != "undefined")
+        cnn_metadata.business.cnn.page.topic = irptTopicId;
+    if (typeof irptOpenStoryID != "undefined")
+        cnn_metadata.business.cnn.page.photo.gallery = irptOpenStoryID;
+    
+    // do not send page-view beacons for iReport widgets that are on CNN story or blog pages.
+    var noWidget = true;
+    if (typeof widgetPage != "undefined") noWidget = false;  
+    
+    // Call jsmd after the page fully initializes and provide a placeholder in case of any calls to trackMetrics before then. 
+    var jsmd = {
+        trackMetrics: function(action,data) {  }
+    };
+    Event.observe(window, "load", function() {
+        if ( typeof(_jsmd) != "undefined" && noWidget) { //protect against JS load failure
+            jsmd = _jsmd.init();
+            jsmd.send();
+        }
+    });
+    var s = {};
+    s.tl = function() {};
+//]]></script>
+
+</div>
+
+<script type='text/javascript'>
+
+    function initializeChartbeat(site, section, author) {
+        'use strict';
+        window._sf_startpt=(new Date()).getTime();
+        window._sf_async_config={};
+    
+        /** CONFIGURATION START **/
+        window._sf_async_config.uid = 37612;
+        window._sf_async_config.useCanonical = true; 
+        window._sf_async_config.domain = site;
+        window._sf_async_config.sections = section;
+        window._sf_async_config.authors = author;
+        /** CONFIGURATION END **/
+    }
+    
+    function loadChartbeat(section, author) {
+        'use strict';
+        var site = location.host;
+        if (site.indexOf("localhost") >= 0 || site.indexOf("ireportqa") >= 0 || site.indexOf("ireportstage") >= 0 )  {
+            site = "ref.cnn.com";
+        } else {
+            site = "cnn.com";
+        }
+        initializeChartbeat(site, section, author);
+        window._sf_endpt=(new Date()).getTime();
+        var e = document.createElement('script');
+        e.setAttribute('src', (('https:' === document.location.protocol) ?
+            'https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/' : 'http://static.chartbeat.com/') + 'js/chartbeat.js');
+        document.body.appendChild(e);
+    }
+    
+</script> 
+
+
+    
+<script type="text/javascript" src="/themes/custom/resources/px.js"></script>
+<script type="text/javascript" src="/themes/custom/resources/ui/ui.js?v=B154-12ad847"></script>
+
+</body>
+</html>
+

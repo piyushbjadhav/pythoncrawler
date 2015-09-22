@@ -1,0 +1,3856 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type='text/javascript'>var _sf_startpt=(new Date()).getTime()</script>
+<meta name="google-site-verification" content="4_qSmiePwMZeSyNswhhNiGD6LiJ5Tr98wgD77PXAaMU"/>
+        <script type="text/javascript">
+            function mobileDetectRed() {
+                var detectGameId;
+                var redirectToUrl;
+                try {
+                    var pageurl = window.location.href;
+                    var isGamecast = pageurl.indexOf('gamecast.html') > -1 ? true : false;
+                    var isStatistics = pageurl.indexOf('statistics.html') > -1 ? true : false;
+                    var urlpart;
+                    if (isGamecast === true) {
+                        urlpart = pageurl.split('/gamecast/');
+                    }
+                    if(isStatistics === true) {
+                        urlpart = pageurl.split('/gamecast/statistics/id/');
+                    }
+
+                    if (urlpart.length > 0) {
+                        detectGameId = urlpart[1].split('/')[0];
+                        if (isGamecast === true) {
+                            redirectToUrl = 'http://m.espn.go.com/soccer/gamecast?gameId=' + detectGameId;
+                        }
+
+                        if (isStatistics === true) {
+                            redirectToUrl = 'http://m.espn.go.com/soccer/gamecast?gameId=' + detectGameId + '&action=summary';
+                        }
+                    }
+
+                }
+                catch(e){
+                    //console.log('exception occured', e);
+                    detectGameId = 0;
+                    redirectToUrl = '';
+                }
+                return redirectToUrl;
+            }
+
+            (function () {
+                var redirectTo = mobileDetectRed();
+                // If mobileDetectRed returned empty string, do not run the redirection part
+                if (redirectTo === '') {
+                    //console.log('returning from anonymous function');
+                    return;
+                }
+                function e(e) {
+                    e = e.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                    var t = new RegExp("[\\?&]" + e + "=([^&#]*)"),
+                        n = t.exec(location.search);
+                    return n == null ? "" : decodeURIComponent(n[1].replace(/\+/g, " "))
+                }
+                var t = navigator.userAgent,
+                    n = window.location,
+                    r = document.cookie,
+                    i = document.referrer,
+                    //s = i === "" || i.indexOf(".go.com") !== -1,
+                    //o = s ? "http://m.espn.go.com/soccer/gamecast?gameId=&action=summary" : "http://m.espn.go.com/soccer/gamecast?gameId=&action=summary&rand=ref~%7B%22ref%22%3A%22" + encodeURIComponent(i) + "%22%7D",
+                    o = redirectTo,
+                    u = t.match(/iPad/i) || t.match(/Android/i) && !t.match(/Mobile/i) || t.match(/RIM Tablet/i) || t.match(/Silk/i) || t.match(/windows phone/i),
+                    a = t.match(/Mobile/i) || t.match(/Mini/i),
+                    f = n.href.match(/src=mobile/i),
+                    l = r.indexOf("iphone_redirect=false") > -1,
+                    c = r.indexOf("iphone_redirect=true") > -1,
+                    h = e("addata"),
+                    p = e("ex_cid");
+                if (h != "") {
+                    o += "&addata=" + h
+                }
+                if (p != "") {
+                    o += "&ex_cid=" + p
+                }
+                //console.log('anonymous function running');
+                if (u) {
+                    document.documentElement.className += " tablet ";
+                    if ((!t.match(/iPad/i) || c) && !l) {
+                        n.href = o
+                    }
+                } else if (a && !l && !f) {
+                    n.href = o
+                }
+            })()
+        </script>
+
+		<title>Chelsea v Barcelona live football scores | Soccer scores and live video | ESPNFC.com</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		
+		<meta name="ROBOTS" content="NOINDEX, NOFOLLOW"/>
+		
+		
+		
+			
+		
+		<meta name="keywords" content="live football, espnfc, International Champions Cup"/>
+		<meta name="description" content="Follow minute-by-minute live commentary of Chelsea v Barcelona"/>
+		<meta property="fb:app_id" content="116656161708917"/>
+		<meta property="og:site_name" content="ESPNFC.com"/>
+		<meta property="og:title" content="Chelsea v Barcelona"/>
+		<meta property="og:description" content="Follow minute-by-minute live commentary of Chelsea v Barcelona"/>
+		<link rel="canonical" href="http://www.espnfc.us/gamecast/419985/gamecast.html" />
+		<meta property="og:url" content="http://www.espnfc.us/gamecast/419985/gamecast.html"/>
+		<meta property="og:type" content="article"/>
+		
+		    <meta property="og:image" content="http://i.espncdn.com/i/img/Euro 2012 logo_200_112.jpg"/>
+        
+		
+        <script src="http://a.espncdn.com/prod/scripts/espnfc/eurofc/libs/jquery-1.6.4.min.js"></script>
+        
+
+
+
+<script language="javascript"  type="text/javascript">
+    ord=Math.random()*10000000000000000;
+    var ad_counter = 1;
+    /* SITE_EDITION constant is used to get edition.*/
+    var SITE_EDITION = "null/null";
+</script>
+
+<script type="text/javascript" src="http://a.espncdn.com/prod/scripts/espnfc/eurofc/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://a.espncdn.com/prod/scripts/espnfc/eurofc/helper.r4.js"></script>
+
+<script type="text/javascript">
+    var CURRENT_EDITION = espn.getEdition(); 
+    if(CURRENT_EDITION){
+        var COUNTRY_NAME = espn.lookupName[CURRENT_EDITION];
+    }
+    else{
+    	var COUNTRY_NAME = 
+    	    "";
+    }
+</script>
+
+		<link rel="shortcut icon" href="http://i.espncdn.com/i/assets/img/logos/espn/favicon.ico" type="image/ico" />
+
+		<link rel="stylesheet" charset="utf-8" media="screen" href="http://a.espncdn.com/combiner/c?css=espnfc/eurofc/reset.css,espnfc/eurofc/base.r10.css,espnfc/eurofc/grid/970.css,espnfc/eurofc/site-structure/header.r5.css,espnfc/eurofc/site-structure/sub-header.r1.css,espnfc/eurofc/site-structure/navigation.r2.css,espnfc/eurofc/site-structure/footer.css,espnfc/eurofc/modules/editions.r2.css,espnfc/eurofc/ui/ui.r8.css,espnfc/eurofc/ui/forms.css,espnfc/eurofc/ui/lists.r3.css,espnfc/eurofc/ui/tabs.r4.css,espnfc/eurofc/ui/table.css,espnfc/eurofc/ui/flags.css,espnfc/eurofc/modules/modules.r11.css,espnfc/eurofc/ui/social.css,espnfc/eurofc/page-type/media.r7.css,espnfc/eurofc/modules/pillar.css,espnfc/eurofc/modules/mem.r5.css,espnfc/eurofc/modules/matches.css,espnfc/eurofc/modules/editions.css,espnfc/eurofc/modules/countdown.css" />
+
+        <link rel="stylesheet" type="text/css" href="http://a.espncdn.com/combiner/c?css=espnfc/eurofc/ui/advertising.r4.css">
+        <link rel="stylesheet" type="text/css" href="http://a.espncdn.com/combiner/c?css=espnfc/eurofc/espnfc.ads.matchhq.r3.css">
+
+		
+		<script src="http://a.espncdn.com/combiner/c?js=espnfc/eurofc/libs/jquery-1.6.4.min.js,espnfc/eurofc/libs/jquery.stickyPanel.min.js,espnfc/eurofc/default.r20.js,espnfc/eurofc/social.r4.js,espnfc/eurofc/social_module.r2.js,espnfc/eurofc/photos.r9.js,espnfc/eurofc/gallery.r12.js,espnfc/eurofc/hacks.r1.js"></script>
+		
+		<!--[if lte IE 8]><link rel="stylesheet" href="http://a.espncdn.com/prod/styles/espnfc/eurofc/ie.r9.css" /><![endif]-->
+    	<!--[if lte IE 9]>
+    	<script type="text/javascript" language="javascript" src="http://a.espncdn.com/prod/scripts/espnfc/eurofc/html5.js"></script>
+    	<![endif]-->
+        <script language="javascript" src="http://tredir.go.com/capmon/GetDE?set=j&param=country"></script>
+
+		
+		<meta name="layout" content="singleColumn"/>
+
+        
+        
+        
+        
+        
+
+		<link type="text/css" rel="stylesheet" href="http://a.espncdn.com/combiner/c?css=espnfc/eurofc/calendar.r11.css,espnfc/eurofc/matches.r2.css,espnfc/eurofc/flags.r1.css,espnfc/eurofc/page-type/match-hq.r11.css,espnfc/eurofc/gamecast/gamecast.r1.3.css"/>
+
+		
+
+<link type="text/css" rel="stylesheet" href="http://a.espncdn.com/prod/styles/espnfc/eurofc/modules/oot.css" />  
+<!--[if IE 7]>
+    <link rel="stylesheet" href="http://a.espncdn.com/prod/styles/espnfc/eurofc/modules/ie7-oot.css" />
+<![endif]-->    
+
+
+
+
+		
+		
+		
+		
+		
+		
+
+
+		<script type="text/javascript">
+			var activeGameId = "419985";
+		</script>
+		<script type="text/javascript" src="http://a.espncdn.com/combiner/c?js=espnfc/eurofc/gamecast/gamecast.modules.caster.js"></script>
+
+		<style type="text/css">
+			#tt {position:absolute; display:block;border:1px solid #000000; background:#FFF8DC;}
+			#tttop {display:block; background:#FFF8DC top right no-repeat; overflow:hidden;}
+			#ttcont {display:block; padding:2px 12px 3px 7px; margin-left:5px; background:#FFF8DC; color:#000000}
+			#ttbot {display:block;  overflow:hidden}
+
+			span.gameCastNote{
+				font-size:11px;
+				color: #8d8d8d;
+				font-style: italic;
+			}
+
+		</style>
+	
+
+		
+		<!--BEGIN QUALTRICS SITE INTERCEPT-->
+		<script type='text/javascript'>
+			var SI_9BN247aV81cIBvu_ed='';
+			var SI_9BN247aV81cIBvu_url='http://siteintercept.qualtrics.com/WRSiteIntercept Engine/?Q_SIID=SI_9BN247aV81cIBvu' + SI_9BN247aV81cIBvu_ed;
+			var SI_9BN247aV81cIBvu_sampleRate=6; var q_si_f = function(){
+			if(Math.random() >= SI_9BN247aV81cIBvu_sampleRate/100)
+				return;
+			var	s=document.createElement('script');
+			s.type='text/javascript';s.src=SI_9BN247aV81cIBvu_url+'&Q_LOC='+encodeURIComponent(window.location.href);
+			if(document.body)
+				document.body.appendChild(s);
+			};
+			try{
+				if(window.addEventListener){window.addEventListener('load',q_si_f,false);
+				}else if(window.attachEvent){r=window.attachEvent('onload',q_si_f);}
+				else{}
+			} catch(e){}
+		    </script>
+		    <div id='SI_9BN247aV81cIBvu'><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>
+		 <noscript><a target="_blank" href="http://www.qualtrics.com/survey-software">Survey Software</a><br/>
+		 <a target="_blank" href="http://www.qualtrics.com/crm-integration">CRM Integration</a><br/></noscript>
+		<!--END SITE INTERCEPT-->
+		
+		<script src="http://a.espncdn.com/combiner/c?v1&js=jquery-1.7.1.js,plugins/json2.r3.js,plugins/teacrypt.js,plugins/jquery.metadata.js,plugins/jquery.bgiframe.js,plugins/jquery.easing.1.3.js,plugins/jquery.hoverIntent.js,plugins/jquery.jcarousel.js,plugins/jquery.tinysort.r4.js,plugins/jquery.pubsub.r5.js,ui/1.8.16/jquery.ui.core.js,ui/1.8.16/jquery.ui.widget.js,ui/1.8.16/jquery.ui.tabs.js,plugins/ba-debug-0.4.js,espn.l10n.r12.js,swfobject/2.2/swfobject.js,flashObjWrapper.r7.js,espn.core.duo.r54.js,stub.search.r8.js,espn.nav.mega.r33.js,espn.storage.r6.js,espn.p13n.r15.js,espn.espn360.stub.r10.js,registration/espn.overlay.stub.r3-19.js,registration/staticLoginIntl.r1-5.js&development=true"></script>
+		
+		<style>[data-geotarget-exclude]{ display: none; }</style>
+		<script type="text/javascript" src="http://a.espncdn.com/combiner/c?js=espnfc/asteroids/espnfc.geo-targeting.js"></script>
+        
+        <!-- For new GPT Ad code / added before world cup 2014 -->
+        <!-- Declare Ads config -->
+        <script type="text/javascript">
+          	window.espnfc = window.espnfc || {ads: {}};
+          	espnfc.ads = {
+                league: 'fifafriendly',
+                lang: 'us',
+                pgn: 'gamecast'
+          	};
+        </script>
+        <!-- Reference new Ads js -->
+        <script type="text/javascript" src="http://a.espncdn.com/combiner/c?js=espnfc/asteroids/espnfc.ads.matchhq.r4.js"></script>
+        <!-- ##END For new GPT Ad code / added before world cup 2014 -->
+	</head>
+
+
+	<body id="bd-gamecast" role="document" class="forSoccernet">
+	<!--[if IE 6]><div class="ie ie6"><![endif]-->
+	<!--[if IE 7]><div class="ie ie7"><![endif]-->
+	<!--[if IE 8]><div class="ie ie8"><![endif]-->
+
+	<script type="text/javascript">
+      	if(espnfc.geo) {
+			espnfc.geo.init();
+      	}
+    </script>
+
+    
+
+
+	
+    	
+        <header id="site-header">
+            <div class="container header">
+                <!-- Placeholder for logos -->
+                <div class="logo-bar" style="overflow: hidden;">
+                   <h1><a href="/"  class="logo" title="ESPNFC" target="_blank">ESPNFC</a></h1>
+                   
+                </div>
+                <div class="mod-ad ad-lb" role="banner">
+                    <!-- Pencil Ad -->
+<div data-ad-type="ad-pencil"></div>
+                </div>
+            </div>
+        </header>
+    	
+	
+
+
+		<section>
+			<div id="content-wrap" class="container clearfix">
+				
+
+
+
+
+	<div id="main-content" class="span-18 column" role="main">
+		<section class="mod-container">
+			
+			
+			
+
+
+
+
+
+    
+    
+    
+
+        <div class="oot" data-lt="global.champs_cup" data-ootqs="?">
+        <div class="nav prev">
+            <a href="#"></a>
+        </div>        
+
+        <div class="wrapper">
+            <ul>
+                
+                    
+                    <li id="gid-419985" class="postgame">
+                        <div class="teams">
+                            <div class="state">
+                                
+                                    FT
+                                
+                            </div>
+
+                            <div class="home ">
+                                <p class="name">Chelsea</p>
+                                <p class="score">
+                                    2
+                                    
+                                </p>
+                            </div>
+                            <div class="away ">
+                                <p class="name">Barcelona</p>
+                                <p class="score">
+                                    2
+                                    
+                                </p>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <a href="http://www.espnfc.us/gamecast/419985/gamecast.html">Gamecast</a>
+                        </div>
+                    </li>
+                
+                    
+                    <li id="gid-419984" class="postgame">
+                        <div class="teams">
+                            <div class="state">
+                                
+                                    FT
+                                
+                            </div>
+
+                            <div class="home ">
+                                <p class="name">America</p>
+                                <p class="score">
+                                    0
+                                    
+                                </p>
+                            </div>
+                            <div class="away ">
+                                <p class="name">Benfica</p>
+                                <p class="score">
+                                    0
+                                    
+                                </p>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <a href="http://www.espnfc.us/gamecast/419984/gamecast.html">Gamecast</a>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+
+        <div class="nav next">
+            <a href="#"></a>
+        </div>
+    </div>
+
+
+			<link rel="stylesheet" href="http://a.espncdn.com/combiner/c?css=espnfc/eurofc/matchcenter/matches.css,espnfc/eurofc/matchcenter/match-hq.css" />
+
+<!-- STYLES TO ADD TO MATCH CENTER CSS -->
+<style type="text/css">
+	.mod-match-bar span.score, .match p.score {
+		position:relative;
+	}
+
+	.mod-match-bar span.time {
+	    margin: 5px 10px;
+	    padding:0;
+	}
+</style>
+
+
+	
+
+	
+		
+			<section class="match final gamecast-match" id="matchcenter-419985">
+		
+
+			<div class="match-details">
+				<p class="floatleft">
+					
+
+					
+						INTERNATIONAL CHAMPIONS CUP
+						
+							<span>
+								<script type="text/javascript">
+									(function(){
+										var d = new Date(1438128000000);
+
+										var year = d.getFullYear();
+										var month = d.getMonth() + 1;
+										var day = d.getDate();
+										var minutes = d.getMinutes();
+										var hours = d.getHours();
+
+										if (minutes < 10) { minutes = '0' + minutes; }
+										var dmy = [day, month, year];
+										var hm = [hours, minutes];
+			                            if (SITE_EDITION == 'us/en') {
+			                            	var dmy = [month, day, year];
+	                                    }
+                                   	    var matches_local = dmy.join('/') + " " + hm.join(':');
+                                   	    matches_local += "<span class='live-red'>*</span>";
+
+										document.write(matches_local);
+									})();
+								</script>
+							</span>
+						
+					
+				</p>
+				
+					<p class="floatright upperCase">
+					
+					FedExField
+					</p>
+				
+				
+			</div>
+			<div class="progress-bar">
+				
+					<div style="width:0" class="progress-indicator"></div>
+				
+			</div>
+			<div class="matchup">
+				<p class="floatleft size-6 normal light">
+					
+					<span>
+						
+					</span>
+				</p>
+				<p class="floatright size-6 normal light">
+					<span class="live-red">* </span><em>Local time based on your geographic location.</em>
+				</p>
+				<div style="clear:both"></div>
+
+				<div id="teamId-363" class="team away">					
+					
+						
+							<a href="/club/chelsea/363/index" target="_blank">
+							    <img class="floatright newFlagImg" src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/363.png&h=55">
+							</a>
+						
+					
+					<p class="team-name floatright" style="text-align: right;">
+						
+							<a href="/club/chelsea/363/index" target="_blank">Chelsea</a>
+						
+					</p>
+					<ul class="goal-scorers">
+
+						
+
+						
+							
+								<li>
+									
+									 	
+											Eden Hazard
+										
+									
+									<strong>
+										10'
+										
+										
+									</strong>
+									<span>&bull;</span>
+								</li>
+							
+						
+							
+						
+							
+						
+							
+								<li>
+									
+									 	
+											Gary Cahill
+										
+									
+									<strong>
+										85'
+										
+										
+									</strong>
+									<span>&bull;</span>
+								</li>
+							
+						
+					</ul>
+				</div>
+				<div class="score-time">
+					<div style="overflow:hidden;">
+						
+							<p class="score">
+
+								
+
+								2 - 2
+
+								
+							</p>
+
+							
+								
+									<p class="time">FT</p>
+								
+							
+
+							
+
+						
+					</div>
+				</div>
+
+				<div id="teamId-83" class="team home">
+					
+						
+						<a href="/club/barcelona/83/index" target="_blank">
+							<img class="floatleft newFlagImg" src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/83.png&h=55">
+						</a>
+						
+					
+					<p class="team-name floatleft">
+						
+							<a href="/club/barcelona/83/index" target="_blank">Barcelona</a>
+						
+					</p>
+
+					<ul class="goal-scorers">
+
+						
+
+						
+							
+						
+							
+								<li>
+									<span>&bull;</span>
+									
+									 	
+											Luis Suárez
+										
+									
+									<strong>
+										52'
+										
+										
+									</strong>
+								</li>
+							
+						
+							
+								<li>
+									<span>&bull;</span>
+									
+									 	
+											Sandro Ramírez
+										
+									
+									<strong>
+										66'
+										
+										
+									</strong>
+								</li>
+							
+						
+							
+						
+					</ul>
+				</div>
+				<script>
+					$("body.forSoccernet div.matchup .newFlagImg").error(function () {
+ 						$(this).unbind("error").attr("src", "http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/default-team-logo-500.png&h=55");
+					});
+				</script>
+			</div>
+
+			
+		</section>
+	
+	
+
+
+			
+
+			
+			
+
+
+
+<div id="liveTabs" class="span-18">
+			<ul class="tabs">
+					
+						
+							
+								
+
+								
+
+								
+
+								
+
+								
+
+								
+
+								
+
+								
+
+								
+
+								
+
+								
+
+								
+
+										<li class="active">
+									       <a href="/gamecast/419985/gamecast.html">
+									           Live
+									       </a>
+									    </li>
+									
+								
+
+										<li class="">
+											<a href="/commentary/419985/commentary.html">
+												Commentary
+											</a>
+										</li>
+									
+								
+
+										<li class="">
+                                           <a href="/gamecast/statistics/id/419985/statistics.html">
+                                               Stats
+                                           </a>
+										</li>
+									
+								
+
+								
+
+								
+
+								
+
+								
+
+								
+
+								
+							
+						
+							
+						
+					
+					
+						<li data-geotarget-exclude="us,pk,in,eg,ir,sa,sy,ae,il,jo,ps,lb,om,kw,qa,bh,ye,lk,fr,fx">
+							<a target="_blank" href="http://www.bet365.com/home/FlashGen4/WebConsoleApp.asp?affiliate=365_307577&rn=7545462869&stf=1">betting <span class="external">&nbsp;</span></a>
+						</li>
+					
+					</ul>
+					
+					 <div class="matchHqSocial">
+					    <ul class="list piped social">
+					        <li class="no-pipe fb" style="width: 75px">
+					        <div id="fb-root"></div>
+					        <script>(function(d, s, id) {
+					          var js, fjs = d.getElementsByTagName(s)[0];
+					          if (d.getElementById(id)) return;
+					          js = d.createElement(s); js.id = id;
+					          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+					          fjs.parentNode.insertBefore(js, fjs);
+					        }(document, 'script', 'facebook-jssdk'));</script>
+					        <div class="fb-like"  data-href="http://www.espnfc.com/gamecast/419985/gamecast.html" data-send="false" data-layout="button_count" style="height: 20px; width: 90px;" data-show-faces="false"></div>
+					        </li>
+					        <li class="no-pipe twitter">
+								<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.espnfc.com/gamecast/419985/gamecast.html" data-via="ESPNFC.com" data-related="espnfc" data-count="horizontal">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+					        </li>
+					        <li class="no-pipe last">
+					            <div data-href="http://www.espnfc.com/gamecast/419985/gamecast.html" class="g-plusone" data-size="medium"  ></div>
+					                <script type="text/javascript">
+					                  (function() {
+					                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+					                    po.src = 'https://apis.google.com/js/plusone.js';
+					                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+					                  })();
+					                </script>
+					        </li>
+					    </ul>
+					    </div>
+					
+                        <div style="clear:both"></div>
+
+</div>
+			
+		</section>
+
+
+		<!--  video/gamecast -->
+		<section class="mod-container mod-tabs">
+		
+			<div class="clearfix"></div>
+
+			
+
+						<ul class="tabs rounded">
+							
+								<li class="active"><a href="javascript:void(0);">GameCast</a></li>
+							
+						</ul>
+		
+
+
+			
+            
+
+			
+			<div id="player" class="videoplayer videoplayer-show videoplayer-videoHub09" style="overflow:hidden; width:585px; height:0px; margin-top: 0px !important; float:none !important; background:#000;position: absolute;">
+				<div id="videoPlayer"></div>
+			</div>
+
+			<div id="gamecast" class="tab-cont gamecast">
+				<div id="watchespn-player" style="width:614px;height:345px;position:absolute;display:none;"></div>
+				<div id="soccerGameCast" class="soccerGameCast">
+					<div class="goalAnimation" style="position:absolute; background: #000; top:25px;">
+						<div class="fieldClone">
+						</div>
+						<div class="anim-1">
+							<span></span>
+							<img class="ball_front" src="http://i.espncdn.com/i/assets/img/gamecast/ball_miss.png"/>
+						</div>
+						<div class="anim-2">
+							<span></span>
+						</div>
+					</div>
+					<canvas id="gcField" width="585" height="374" class="left clearBoth"></canvas>
+
+						
+						
+		
+			<div class="span-7 column" style="margin-left:6px; margin-right:10px; float:right;">
+				<section class="mod-container">
+					<div id="cil-modal" class="cil-modal">
+						<div class="cil-modal-long sct-commentary" id="convo-window" style="height: 425px;">
+							
+								
+									<ul id="convo-list">
+										
+											<li id="419985-comment-8554258">
+												
+													<div class="timestamp"><p>99'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Penalty Shootout ends, Chelsea 2(4), Barcelona 2(2).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554234">
+												
+													<div class="timestamp"><p>98'</p></div>
+												
+												<div class="comment" style="width: 290px; background-color:#E3EFFF"><p><img width="18" height="18" src="http://soccernet-akamai.espn.go.com/i/gamecast/alert_icon2.gif" alt="">Goal!  Chelsea 2(4), Barcelona 2(2). Loïc Remy (Chelsea) converts the penalty with a right footed shot to the top left corner.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554233">
+												
+													<div class="timestamp"><p>97'</p></div>
+												
+												<div class="comment" style="width: 290px; background-color:#E3EFFF"><p><img width="18" height="18" src="http://soccernet-akamai.espn.go.com/i/gamecast/alert_icon2.gif" alt="">Goal!  Chelsea 2(3), Barcelona 2(2). Sandro Ramírez (Barcelona) converts the penalty with a right footed shot to the top left corner.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554226">
+												
+													<div class="timestamp"><p>96'</p></div>
+												
+												<div class="comment" style="width: 290px; background-color:#E3EFFF"><p><img width="18" height="18" src="http://soccernet-akamai.espn.go.com/i/gamecast/alert_icon2.gif" alt="">Goal!  Chelsea 2(3), Barcelona 2(1). Ramires (Chelsea) converts the penalty with a right footed shot to the bottom right corner.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554225">
+												
+													<div class="timestamp"><p>95'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Penalty saved! Gerard Piqué (Barcelona) fails to capitalise on this great opportunity,  right footed shot saved  in the bottom left corner.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554221">
+												
+													<div class="timestamp"><p>94'</p></div>
+												
+												<div class="comment" style="width: 290px; background-color:#E3EFFF"><p><img width="18" height="18" src="http://soccernet-akamai.espn.go.com/i/gamecast/alert_icon2.gif" alt="">Goal!  Chelsea 2(2), Barcelona 2(1). Victor Moses (Chelsea) converts the penalty with a right footed shot to the bottom right corner.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554220">
+												
+													<div class="timestamp"><p>93'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Penalty missed! Still  Chelsea 2(1), Barcelona 2(1). Alen Halilovic (Barcelona) hits the bar with a left footed shot.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554219">
+												
+													<div class="timestamp"><p>92'</p></div>
+												
+												<div class="comment" style="width: 290px; background-color:#E3EFFF"><p><img width="18" height="18" src="http://soccernet-akamai.espn.go.com/i/gamecast/alert_icon2.gif" alt="">Goal!  Chelsea 2(1), Barcelona 2(1). Falcao (Chelsea) converts the penalty with a right footed shot to the top right corner.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554218">
+												
+													<div class="timestamp"><p>91'</p></div>
+												
+												<div class="comment" style="width: 290px; background-color:#E3EFFF"><p><img width="18" height="18" src="http://soccernet-akamai.espn.go.com/i/gamecast/alert_icon2.gif" alt="">Goal!  Chelsea 2, Barcelona 2(1). Andrés Iniesta (Barcelona) converts the penalty with a right footed shot to the bottom right corner.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554215">
+												
+													<div class="timestamp"><p>90'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Penalty Shootout begins Chelsea 2, Barcelona 2.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554214">
+												
+													<div class="timestamp"><p>&nbsp;</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Match ends, Chelsea 2(4), Barcelona 2(2).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554211">
+												
+													<div class="timestamp"><p>90'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Second Half ends, Chelsea 2, Barcelona 2.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554210">
+												
+													<div class="timestamp"><p>90'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Ramires (Chelsea) wins a free kick in the defensive half.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554209">
+												
+													<div class="timestamp"><p>90'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Rafinha (Barcelona).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554204">
+												
+													<div class="timestamp"><p>90'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Nathaniel Chalobah (Chelsea).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554203">
+												
+													<div class="timestamp"><p>90'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Alen Halilovic (Barcelona) wins a free kick in the attacking half.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554200">
+												
+													<div class="timestamp"><p>90'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Corner,  Barcelona. Conceded by Branislav Ivanovic.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554199">
+												
+													<div class="timestamp"><p>89'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Thomas Vermaelen (Barcelona) wins a free kick in the defensive half.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554198">
+												
+													<div class="timestamp"><p>89'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Victor Moses (Chelsea).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554195">
+												
+													<div class="timestamp"><p>87'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Substitution, Chelsea. Nathaniel Chalobah replaces Gary Cahill because of an injury.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554194">
+												
+													<div class="timestamp"><p>85'</p></div>
+												
+												<div class="comment" style="width: 290px; background-color:#E3EFFF"><p><img width="18" height="18" src="http://soccernet-akamai.espn.go.com/i/gamecast/alert_icon2.gif" alt="">Goal!  Chelsea 2, Barcelona 2. Gary Cahill (Chelsea) header from the centre of the box to the high centre of the goal following a set piece situation.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554193">
+												
+													<div class="timestamp"><p>85'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Ramires (Chelsea) wins a free kick on the right wing.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554192">
+												
+													<div class="timestamp"><p>85'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Rafinha (Barcelona).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554191">
+												
+													<div class="timestamp"><p>84'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Attempt missed. Pedro (Barcelona) right footed shot from the left side of the box is close, but misses to the left. Assisted by Jordi Alba.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554186">
+												
+													<div class="timestamp"><p>83'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Victor Moses (Chelsea).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554185">
+												
+													<div class="timestamp"><p>83'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Andrés Iniesta (Barcelona) wins a free kick in the attacking half.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554184">
+												
+													<div class="timestamp"><p>83'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Corner,  Barcelona. Conceded by Gary Cahill.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554183">
+												
+													<div class="timestamp"><p>82'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Attempt blocked. Sandro Ramírez (Barcelona) left footed shot from the left side of the box is blocked. Assisted by Jordi Alba.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554182">
+												
+													<div class="timestamp"><p>82'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Pedro (Barcelona) wins a free kick on the left wing.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554175">
+												
+													<div class="timestamp"><p>82'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Branislav Ivanovic (Chelsea).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554171">
+												
+													<div class="timestamp"><p>79'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Attempt missed. Ramires (Chelsea) right footed shot from the centre of the box misses to the right. Assisted by Victor Moses.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554170">
+												
+													<div class="timestamp"><p>77'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Attempt missed. Falcao (Chelsea) right footed shot from the centre of the box is high and wide to the left. Assisted by Loïc Remy with a cross.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554168">
+												
+													<div class="timestamp"><p>75'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Jordi Alba (Barcelona) is shown the yellow card for a bad foul.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554167">
+												
+													<div class="timestamp"><p>74'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Victor Moses (Chelsea) wins a free kick on the right wing.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554166">
+												
+													<div class="timestamp"><p>74'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Jordi Alba (Barcelona).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554165">
+												
+													<div class="timestamp"><p>73'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Substitution, Barcelona. Alen Halilovic replaces Munir El Haddadi.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554156">
+												
+													<div class="timestamp"><p>72'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Willian (Chelsea) wins a free kick in the attacking half.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554155">
+												
+													<div class="timestamp"><p>72'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Sergi Samper (Barcelona).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554154">
+												
+													<div class="timestamp"><p>71'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Loïc Remy (Chelsea) wins a free kick on the left wing.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554153">
+												
+													<div class="timestamp"><p>71'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Rafinha (Barcelona).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554147">
+												
+													<div class="timestamp"><p>69'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Munir El Haddadi (Barcelona) wins a free kick on the right wing.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554146">
+												
+													<div class="timestamp"><p>69'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Kurt Zouma (Chelsea).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554145">
+												
+													<div class="timestamp"><p>68'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Substitution, Chelsea. Falcao replaces Eden Hazard.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554144">
+												
+													<div class="timestamp"><p>68'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Willian (Chelsea) wins a free kick in the attacking half.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554143">
+												
+													<div class="timestamp"><p>68'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Sandro Ramírez (Barcelona).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554142">
+												
+													<div class="timestamp"><p>66'</p></div>
+												
+												<div class="comment" style="width: 290px; background-color:#E3EFFF"><p><img width="18" height="18" src="http://soccernet-akamai.espn.go.com/i/gamecast/alert_icon2.gif" alt="">Goal!  Chelsea 1, Barcelona 2. Sandro Ramírez (Barcelona) right footed shot from the left side of the box to the bottom right corner. Assisted by Rafinha.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554141">
+												
+													<div class="timestamp"><p>64'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Corner,  Barcelona. Conceded by Victor Moses.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554140">
+												
+													<div class="timestamp"><p>64'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Attempt blocked. Munir El Haddadi (Barcelona) left footed shot from outside the box is blocked. Assisted by Sergi Samper.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554132">
+												
+													<div class="timestamp"><p>64'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Substitution, Chelsea. Victor Moses replaces Cesc Fàbregas.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554131">
+												
+													<div class="timestamp"><p>62'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Substitution, Chelsea. John Terry replaces César Azpilicueta.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554130">
+												
+													<div class="timestamp"><p>62'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Substitution, Barcelona. Pedro replaces Luis Suárez.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554129">
+												
+													<div class="timestamp"><p>62'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Thomas Vermaelen (Barcelona).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554125">
+												
+													<div class="timestamp"><p>62'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Branislav Ivanovic (Chelsea) wins a free kick in the defensive half.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554124">
+												
+													<div class="timestamp"><p>61'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Substitution, Barcelona. Sergi Samper replaces Sergio Busquets.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554123">
+												
+													<div class="timestamp"><p>61'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Substitution, Barcelona. Rafinha replaces Gerard Gumbau.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554116">
+												
+													<div class="timestamp"><p>61'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Substitution, Chelsea. John Obi Mikel replaces Nemanja Matic.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554115">
+												
+													<div class="timestamp"><p>60'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Substitution, Chelsea. Loïc Remy replaces Diego Costa.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554114">
+												
+													<div class="timestamp"><p>60'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Substitution, Barcelona. Jordi Masip replaces Marc-André ter Stegen.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554113">
+												
+													<div class="timestamp"><p>60'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Substitution, Barcelona. Andrés Iniesta replaces Ivan Rakitic.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554112">
+												
+													<div class="timestamp"><p>60'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Substitution, Barcelona. Jordi Alba replaces Adriano.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554111">
+												
+													<div class="timestamp"><p>59'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Substitution, Barcelona. Thomas Vermaelen replaces Jeremy Mathieu.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554108">
+												
+													<div class="timestamp"><p>59'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Substitution, Barcelona. Gerard Piqué replaces Marc Bartra.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554107">
+												
+													<div class="timestamp"><p>54'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Attempt missed. Ivan Rakitic (Barcelona) right footed shot from outside the box is too high.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554104">
+												
+													<div class="timestamp"><p>53'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Attempt blocked. Adriano (Barcelona) right footed shot from outside the box is blocked. Assisted by Sandro Ramírez.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554103">
+												
+													<div class="timestamp"><p>53'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Attempt blocked. Gerard Gumbau (Barcelona) left footed shot from outside the box is blocked. Assisted by Munir El Haddadi.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554102">
+												
+													<div class="timestamp"><p>53'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Munir El Haddadi (Barcelona) wins a free kick on the right wing.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554101">
+												
+													<div class="timestamp"><p>53'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Cesc Fàbregas (Chelsea).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554097">
+												
+													<div class="timestamp"><p>52'</p></div>
+												
+												<div class="comment" style="width: 290px; background-color:#E3EFFF"><p><img width="18" height="18" src="http://soccernet-akamai.espn.go.com/i/gamecast/alert_icon2.gif" alt="">Goal!  Chelsea 1, Barcelona 1. Luis Suárez (Barcelona) right footed shot from the centre of the box to the centre of the goal following a corner.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554096">
+												
+													<div class="timestamp"><p>51'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Corner,  Barcelona. Conceded by Eden Hazard.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554094">
+												
+													<div class="timestamp"><p>49'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Munir El Haddadi (Barcelona).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554093">
+												
+													<div class="timestamp"><p>49'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>César Azpilicueta (Chelsea) wins a free kick in the defensive half.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554092">
+												
+													<div class="timestamp"><p>48'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Attempt missed. Diego Costa (Chelsea) right footed shot from the centre of the box is high and wide to the right. Assisted by Cesc Fàbregas.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554087">
+												
+													<div class="timestamp"><p>47'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Attempt missed. Luis Suárez (Barcelona) right footed shot from outside the box is close, but misses the top right corner. Assisted by Sergi Roberto.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554086">
+												
+													<div class="timestamp"><p>45'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Substitution, Chelsea. Willian replaces Kenedy.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554085">
+												
+													<div class="timestamp"><p>45'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Substitution, Chelsea. Ramires replaces Oscar.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554084">
+												
+													<div class="timestamp"><p>45'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Second Half begins Chelsea 1, Barcelona 0.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554079">
+												
+													<div class="timestamp"><p>45'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>First Half ends, Chelsea 1, Barcelona 0.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554075">
+												
+													<div class="timestamp"><p>42'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Jeremy Mathieu (Barcelona) is shown the yellow card for a bad foul.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554074">
+												
+													<div class="timestamp"><p>42'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Jeremy Mathieu (Barcelona).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554073">
+												
+													<div class="timestamp"><p>42'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Eden Hazard (Chelsea) wins a free kick in the attacking half.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554072">
+												
+													<div class="timestamp"><p>41'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Ivan Rakitic (Barcelona) wins a free kick in the defensive half.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554071">
+												
+													<div class="timestamp"><p>41'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Eden Hazard (Chelsea).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554068">
+												
+													<div class="timestamp"><p>39'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Attempt missed. Ivan Rakitic (Barcelona) right footed shot from the centre of the box is high and wide to the right.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554067">
+												
+													<div class="timestamp"><p>39'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Attempt blocked. Sandro Ramírez (Barcelona) left footed shot from very close range is blocked. Assisted by Luis Suárez.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554064">
+												
+													<div class="timestamp"><p>39'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Sergio Busquets (Barcelona) wins a free kick in the attacking half.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554063">
+												
+													<div class="timestamp"><p>39'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Eden Hazard (Chelsea).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554057">
+												
+													<div class="timestamp"><p>37'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Offside, Chelsea. Diego Costa tries a through ball, but Eden Hazard is caught offside.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554056">
+												
+													<div class="timestamp"><p>37'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Attempt missed. Munir El Haddadi (Barcelona) left footed shot from outside the box is close, but misses to the left. Assisted by Sergi Roberto.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554055">
+												
+													<div class="timestamp"><p>36'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Attempt saved. Luis Suárez (Barcelona) right footed shot from the right side of the box is saved in the bottom left corner. Assisted by Sergi Roberto with a headed pass.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554053">
+												
+													<div class="timestamp"><p>33'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Attempt missed. Diego Costa (Chelsea) right footed shot from the left side of the box is close, but misses to the right. Assisted by Cesc Fàbregas.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554052">
+												
+													<div class="timestamp"><p>32'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Attempt saved. Sandro Ramírez (Barcelona) right footed shot from outside the box is saved in the bottom right corner. Assisted by Sergio Busquets.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554049">
+												
+													<div class="timestamp"><p>31'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Attempt saved. Luis Suárez (Barcelona) right footed shot from the centre of the box is saved in the bottom right corner. Assisted by Munir El Haddadi.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554048">
+												
+													<div class="timestamp"><p>29'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Munir El Haddadi (Barcelona).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554047">
+												
+													<div class="timestamp"><p>29'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Eden Hazard (Chelsea) wins a free kick in the defensive half.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554044">
+												
+													<div class="timestamp"><p>27'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Sandro Ramírez (Barcelona) wins a free kick on the left wing.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554043">
+												
+													<div class="timestamp"><p>27'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Kenedy (Chelsea).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554042">
+												
+													<div class="timestamp"><p>26'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Corner,  Chelsea. Conceded by Gerard Gumbau.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554037">
+												
+													<div class="timestamp"><p>26'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Cesc Fàbregas (Chelsea) hits the left post with a right footed shot from outside the box from a direct free kick.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554034">
+												
+													<div class="timestamp"><p>25'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Jeremy Mathieu (Barcelona).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554033">
+												
+													<div class="timestamp"><p>25'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Diego Costa (Chelsea) wins a free kick in the attacking half.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554032">
+												
+													<div class="timestamp"><p>22'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Sergi Roberto (Barcelona) wins a free kick on the right wing.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554031">
+												
+													<div class="timestamp"><p>22'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Eden Hazard (Chelsea).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554030">
+												
+													<div class="timestamp"><p>22'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Attempt blocked. Ivan Rakitic (Barcelona) right footed shot from outside the box is blocked. Assisted by Sandro Ramírez.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554023">
+												
+													<div class="timestamp"><p>17'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Sergio Busquets (Barcelona) wins a free kick in the defensive half.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554022">
+												
+													<div class="timestamp"><p>17'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Cesc Fàbregas (Chelsea).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554021">
+												
+													<div class="timestamp"><p>17'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Substitution, Barcelona. Sergi Roberto replaces Douglas.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554015">
+												
+													<div class="timestamp"><p>16'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Corner,  Barcelona. Conceded by César Azpilicueta.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554014">
+												
+													<div class="timestamp"><p>16'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Attempt blocked. Marc Bartra (Barcelona) header from the centre of the box is blocked. Assisted by Ivan Rakitic with a cross.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554013">
+												
+													<div class="timestamp"><p>15'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Corner,  Barcelona. Conceded by Kurt Zouma.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554012">
+												
+													<div class="timestamp"><p>15'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Corner,  Barcelona. Conceded by Thibaut Courtois.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554011">
+												
+													<div class="timestamp"><p>15'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Attempt saved. Ivan Rakitic (Barcelona) right footed shot from the right side of the box is saved in the top right corner. Assisted by Luis Suárez.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554008">
+												
+													<div class="timestamp"><p>11'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Kurt Zouma (Chelsea) wins a free kick in the defensive half.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554007">
+												
+													<div class="timestamp"><p>11'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Luis Suárez (Barcelona).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554006">
+												
+													<div class="timestamp"><p>10'</p></div>
+												
+												<div class="comment" style="width: 290px; background-color:#E3EFFF"><p><img width="18" height="18" src="http://soccernet-akamai.espn.go.com/i/gamecast/alert_icon2.gif" alt="">Goal!  Chelsea 1, Barcelona 0. Eden Hazard (Chelsea) right footed shot from the centre of the box to the bottom left corner. Assisted by Kurt Zouma.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554003">
+												
+													<div class="timestamp"><p>9'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Attempt saved. Oscar (Chelsea) right footed shot from the right side of the box is saved in the centre of the goal. Assisted by Diego Costa.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8554000">
+												
+													<div class="timestamp"><p>7'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Munir El Haddadi (Barcelona) wins a free kick on the right wing.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8553999">
+												
+													<div class="timestamp"><p>7'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by César Azpilicueta (Chelsea).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8553993">
+												
+													<div class="timestamp"><p>6'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Offside, Chelsea. Cesc Fàbregas tries a through ball, but Nemanja Matic is caught offside.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8553992">
+												
+													<div class="timestamp"><p>5'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Marc Bartra (Barcelona).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8553991">
+												
+													<div class="timestamp"><p>5'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Eden Hazard (Chelsea) wins a free kick on the left wing.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8553990">
+												
+													<div class="timestamp"><p>4'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Gerard Gumbau (Barcelona) wins a free kick in the defensive half.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8553989">
+												
+													<div class="timestamp"><p>4'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Oscar (Chelsea).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8553984">
+												
+													<div class="timestamp"><p>3'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Corner,  Chelsea. Conceded by Marc-André ter Stegen.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8553983">
+												
+													<div class="timestamp"><p>3'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Attempt saved. Kurt Zouma (Chelsea) header from the left side of the six yard box is saved in the centre of the goal. Assisted by Cesc Fàbregas with a cross.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8553982">
+												
+													<div class="timestamp"><p>3'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Kenedy (Chelsea) wins a free kick in the attacking half.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8553981">
+												
+													<div class="timestamp"><p>3'</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Foul by Gerard Gumbau (Barcelona).</p></div>
+											</li>											
+										
+											<li id="419985-comment-8553980">
+												
+													<div class="timestamp"><p>&nbsp;</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>Lineups are announced and players are warming up.</p></div>
+											</li>											
+										
+											<li id="419985-comment-8553978">
+												
+													<div class="timestamp"><p>&nbsp;</p></div>
+												
+												<div class="comment" style="width: 290px; "><p>First Half begins.</p></div>
+											</li>											
+										
+									</ul>
+																
+							
+						</div>
+					</div>
+				</section>
+			</div>
+		
+						
+
+					<div class="gamecastFilters left activeGame">
+						<span class="selectedPlayerMap">COMPLETE TEAM</span>
+						<span class="closeWatch">CLOSE X</span>
+						<ul class="filterTabs">
+							<li data-div="filterShots" class="selected"></li>
+							<li data-div="filterGoals"></li>
+							<li data-div="showTacticalInformation"></li>
+							<li data-div="showHeatMaps"></li>
+						</ul>
+						<div class="arrow-up"></div>
+						<div class="tabWrap">
+							<div class="filterShots active">
+								<ul>
+									<li class="reset"></li>
+									<li class="firstHalf"></li>
+									<li class="secondHalf"></li>
+									<li class="extraShots"></li>
+									<li class="showPenalties"></li>
+									<!-- Below span will have text note  note for gamecast where gamsourceid are
+									2(PA) and 32(PA-MATCHPLUS) and Script is at bottom of the page -->
+									<span class="gameCastNote"></span>
+								</ul>
+							</div>
+							<div class="filterGoals">
+								<ul>
+									<li class="resetGoals"></li>
+									<li class="firstHalfGoals"></li>
+									<li class="secondHalfGoals"></li>
+									<li class="extraGoals"></li>
+									<li class="showPenalties"></li>
+									<!-- Below span will have text note  note for gamecast where gamsourceid are
+									2(PA) and 32(PA-MATCHPLUS) and Script is at bottom of the page -->
+									<span class="gameCastNote"></span>
+								</ul>
+							</div>
+							<div class="showTacticalInformation">
+							</div>
+							<div class="showHeatMaps">
+							</div>
+						</div>
+						<div class="gamecastKey">
+							<img src="http://i.espncdn.com/i/assets/img/gamecast/goal-scored.png"/> Goal
+							<img src="http://i.espncdn.com/i/assets/img/gamecast/shot.png"/> Shot
+							<img src="http://i.espncdn.com/i/assets/img/gamecast/video.png" class="videoIcon"/><span class="videoIcon"> Video</span>
+						</div>
+					</div>
+					<canvas id="gcTimelineCanvas" width="970" height="100" class="left clearBoth"></canvas>
+					<div class="timelinePopup"></div>
+					<div class="viewportPopup"></div>
+				</div>
+				<div id="casterListener"></div>
+
+			</div>
+			
+
+		</section>
+
+		
+		
+
+			
+				
+
+				<section class="mod-container gc-stat-list">
+					<ul class="gc-stat-row labels clearfix">
+						<li class="country">&nbsp;</li>
+						<li><h2 style="text-transform: uppercase;">Shots (on goal)</h2></li>
+						<li><h2 style="text-transform: uppercase;">tackles</h2></li>
+						<li><h2 style="text-transform: uppercase;">Fouls</h2></li>
+						<li class="last possession"><h2 style="text-transform: uppercase;">possession</h2></li>
+					</ul>
+
+					
+					
+						
+						<ul class="gc-stat-row clearfix">
+							
+								<li class="country"><h2 title="Chelsea" style="border-left: 10px solid #034694;">Chelsea</h2></li>
+							
+							
+								<li><div class="bar-graph-container"><div id="home-shots-bar" class="fill" style="width:40%; background-color:#034694;"></div><p>9(4)</p></div></li>
+							
+
+							
+								<li><div class="bar-graph-container"><div id="home-tackles-bar" class="fill" style="width:47%; background-color:#034694;"></div><p>18</p></div></li>
+							
+
+							
+								<li><div class="bar-graph-container"><div id="home-fouls-bar" class="fill" style="width:48%; background-color:#034694;"></div><p>13</p></div></li>
+							
+
+							
+								
+									
+										<li class="last possession">
+											<div class="bar-graph-container" style="background-color:#951D27;">
+												<div id="home-possession-bar" class="fill" style="width:31%; background-color:#034694;"></div>
+											</div>
+											<p style="left:0;">31%</p><p style="right:0;" class="floatright">69%</p>
+										</li>
+									
+								
+							
+						</ul>
+					
+						
+						<ul class="gc-stat-row clearfix">
+							
+								<li class="country"><h2 title="Barcelona" style="border-left: 10px solid #951D27;">Barcelona</h2></li>
+							
+							
+								<li><div class="bar-graph-container"><div id="away-shots-bar" class="fill" style="width:60%; background-color:#951D27;"></div><p>18(6)</p></div></li>
+							
+
+							
+								<li><div class="bar-graph-container"><div id="away-tackles-bar" class="fill" style="width:53%; background-color:#951D27;"></div><p>20</p></div></li>
+							
+
+							
+								<li><div class="bar-graph-container"><div id="away-fouls-bar" class="fill" style="width:52%; background-color:#951D27;"></div><p>14</p></div></li>
+							
+
+							
+								
+									
+										<li class="last possession"></li>
+									
+								
+							
+						</ul>
+					
+				</section>
+			
+
+			
+				
+					
+						
+							<div class="span-6 column">
+								<section class="mod-container">
+									<h1 class="heading alt" style="border-bottom-color:#034694;">Chelsea</h1>
+										
+											<table class="stat-table">
+												<thead>
+													<tr class="subheader team-color">
+													<th colspan="3" style="text-transform: uppercase;">Line-up</th>
+													</tr>
+													<tr>
+                   										<th class="first" style="width:50px">POS</th>
+                    									<th>No</th>
+                    									<th class="last">Name</th>
+                     								</tr>
+												</thead>
+												<tbody>
+													
+														<tr id="playerStarter-134283" class="odd">
+															
+																<td class="first"><p>G</p></td>
+															
+															
+																<td>13</td>
+															
+															
+																<td class="last">
+																	
+																	<a href="/player/134283/thibaut-courtois" target="_blank" title="Thibaut Courtois" alt="Thibaut Courtois">Thibaut Courtois</a>
+																	
+																
+																
+																</td>
+															
+														</tr>
+														
+													
+														<tr id="playerStarter-83519" class="">
+															
+																<td class="first"><p>D</p></td>
+															
+															
+																<td>2</td>
+															
+															
+																<td class="last">
+																	
+																	<a href="/player/83519/branislav-ivanovic" target="_blank" title="Branislav Ivanovic" alt="Branislav Ivanovic">Branislav Ivanovic</a>
+																	
+																
+																
+																</td>
+															
+														</tr>
+														
+													
+														<tr id="playerStarter-159319" class="odd">
+															
+																<td class="first"><p>D</p></td>
+															
+															
+																<td>5</td>
+															
+															
+																<td class="last">
+																	
+																	<a href="/player/159319/kurt-zouma" target="_blank" title="Kurt Zouma" alt="Kurt Zouma">Kurt Zouma</a>
+																	
+																
+																
+																</td>
+															
+														</tr>
+														
+													
+														<tr id="playerStarter-40509" class="">
+															
+																<td class="first"><p>D</p></td>
+															
+															
+																<td>24</td>
+															
+															
+																<td class="last">
+																	
+																	<a href="/player/40509/gary-cahill" target="_blank" title="Gary Cahill" alt="Gary Cahill">Gary Cahill</a>
+																	
+																
+																	
+																		
+																			
+																				<div class="soccer-icons soccer-icons-goal" onmouseover="tooltip.show('<strong>Goal - Header</strong> - 85\'');" onmouseout="tooltip.hide();"></div>
+																			
+																		
+																	
+																
+																
+																	<div class="soccer-icons soccer-icons-subout" onmouseover="tooltip.show('<strong>Substitution</strong> - 87\'<br />On: Nathaniel Chalobah');" onmouseout="tooltip.hide();"></div>
+																
+																</td>
+															
+														</tr>
+														
+															
+																<tr id="playerStarter-149755">
+																	
+																		<td class="first"><div class="soccer-icons soccer-icons-subarrow"></div>D</td>
+																	
+																	
+																		<td style="text-indent:10px;">29</td>
+																	
+																	
+																		<td class="last" style="text-indent:10px;">
+																		
+																		<a href="/player/149755/nathaniel-chalobah" target="_blank" title="Nathaniel Chalobah" alt="Nathaniel Chalobah">Nathaniel Chalobah</a>
+																		
+																			
+																				<div class="soccer-icons soccer-icons-subin" onmouseover="tooltip.show('<strong>Substitution</strong> - 87\'<br />Off: Gary Cahill');" onmouseout="tooltip.hide();"></div>
+																			
+																			
+																				
+																					
+																						
+																					
+																				
+																			
+																			
+																		</td>
+																	
+																</tr>
+															
+														
+													
+														<tr id="playerStarter-97770" class="odd">
+															
+																<td class="first"><p>D</p></td>
+															
+															
+																<td>28</td>
+															
+															
+																<td class="last">
+																	
+																	<a href="/player/97770/césar-azpilicueta" target="_blank" title="César Azpilicueta" alt="César Azpilicueta">César Azpilicueta</a>
+																	
+																
+																
+																	<div class="soccer-icons soccer-icons-subout" onmouseover="tooltip.show('<strong>Substitution</strong> - 62\'<br />On: John Terry');" onmouseout="tooltip.hide();"></div>
+																
+																</td>
+															
+														</tr>
+														
+															
+																<tr id="playerStarter-8931">
+																	
+																		<td class="first"><div class="soccer-icons soccer-icons-subarrow"></div>D</td>
+																	
+																	
+																		<td style="text-indent:10px;">26</td>
+																	
+																	
+																		<td class="last" style="text-indent:10px;">
+																		
+																		<a href="/player/8931/john-terry" target="_blank" title="John Terry" alt="John Terry">John Terry</a>
+																		
+																			
+																				<div class="soccer-icons soccer-icons-subin" onmouseover="tooltip.show('<strong>Substitution</strong> - 62\'<br />Off: César Azpilicueta');" onmouseout="tooltip.hide();"></div>
+																			
+																			
+																				
+																					
+																						
+																					
+																				
+																			
+																			
+																		</td>
+																	
+																</tr>
+															
+														
+													
+														<tr id="playerStarter-38886" class="">
+															
+																<td class="first"><p>M</p></td>
+															
+															
+																<td>4</td>
+															
+															
+																<td class="last">
+																	
+																	<a href="/player/38886/cesc-fàbregas" target="_blank" title="Cesc Fàbregas" alt="Cesc Fàbregas">Cesc Fàbregas</a>
+																	
+																
+																
+																	<div class="soccer-icons soccer-icons-subout" onmouseover="tooltip.show('<strong>Substitution</strong> - 64\'<br />On: Victor Moses');" onmouseout="tooltip.hide();"></div>
+																
+																</td>
+															
+														</tr>
+														
+															
+																<tr id="playerStarter-112547">
+																	
+																		<td class="first"><div class="soccer-icons soccer-icons-subarrow"></div>M</td>
+																	
+																	
+																		<td style="text-indent:10px;">20</td>
+																	
+																	
+																		<td class="last" style="text-indent:10px;">
+																		
+																		<a href="/player/112547/victor-moses" target="_blank" title="Victor Moses" alt="Victor Moses">Victor Moses</a>
+																		
+																			
+																				<div class="soccer-icons soccer-icons-subin" onmouseover="tooltip.show('<strong>Substitution</strong> - 64\'<br />Off: Cesc Fàbregas');" onmouseout="tooltip.hide();"></div>
+																			
+																			
+																				
+																					
+																						
+																					
+																				
+																			
+																			
+																		</td>
+																	
+																</tr>
+															
+														
+													
+														<tr id="playerStarter-173667" class="odd">
+															
+																<td class="first"><p>M</p></td>
+															
+															
+																<td>8</td>
+															
+															
+																<td class="last">
+																	
+																	<a href="/player/173667/oscar" target="_blank" title="Oscar" alt="Oscar">Oscar</a>
+																	
+																
+																
+																	<div class="soccer-icons soccer-icons-subout" onmouseover="tooltip.show('<strong>Substitution</strong> - 45\'<br />On: Willian');" onmouseout="tooltip.hide();"></div>
+																
+																</td>
+															
+														</tr>
+														
+															
+																<tr id="playerStarter-178487">
+																	
+																		<td class="first"><div class="soccer-icons soccer-icons-subarrow"></div>M</td>
+																	
+																	
+																		<td style="text-indent:10px;">22</td>
+																	
+																	
+																		<td class="last" style="text-indent:10px;">
+																		
+																		<a href="/player/178487/willian" target="_blank" title="Willian" alt="Willian">Willian</a>
+																		
+																			
+																				<div class="soccer-icons soccer-icons-subin" onmouseover="tooltip.show('<strong>Substitution</strong> - 45\'<br />Off: Oscar');" onmouseout="tooltip.hide();"></div>
+																			
+																			
+																				
+																					
+																						
+																					
+																				
+																			
+																			
+																		</td>
+																	
+																</tr>
+															
+														
+													
+														<tr id="playerStarter-101390" class="">
+															
+																<td class="first"><p>M</p></td>
+															
+															
+																<td>10</td>
+															
+															
+																<td class="last">
+																	
+																	<a href="/player/101390/eden-hazard" target="_blank" title="Eden Hazard" alt="Eden Hazard">Eden Hazard</a>
+																	
+																
+																	
+																		
+																			
+																				<div class="soccer-icons soccer-icons-goal" onmouseover="tooltip.show('<strong>Goal</strong> - 10\'');" onmouseout="tooltip.hide();"></div>
+																			
+																		
+																	
+																
+																
+																	<div class="soccer-icons soccer-icons-subout" onmouseover="tooltip.show('<strong>Substitution</strong> - 68\'<br />On: Radamel Falcao');" onmouseout="tooltip.hide();"></div>
+																
+																</td>
+															
+														</tr>
+														
+															
+																<tr id="playerStarter-87706">
+																	
+																		<td class="first"><div class="soccer-icons soccer-icons-subarrow"></div>F</td>
+																	
+																	
+																		<td style="text-indent:10px;">9</td>
+																	
+																	
+																		<td class="last" style="text-indent:10px;">
+																		
+																		<a href="/player/87706/radamel-falcao" target="_blank" title="Radamel Falcao" alt="Radamel Falcao">Radamel Falcao</a>
+																		
+																			
+																				<div class="soccer-icons soccer-icons-subin" onmouseover="tooltip.show('<strong>Substitution</strong> - 68\'<br />Off: Eden Hazard');" onmouseout="tooltip.hide();"></div>
+																			
+																			
+																				
+																					
+																						
+																					
+																				
+																			
+																			
+																		</td>
+																	
+																</tr>
+															
+														
+													
+														<tr id="playerStarter-135743" class="odd">
+															
+																<td class="first"><p>M</p></td>
+															
+															
+																<td>21</td>
+															
+															
+																<td class="last">
+																	
+																	<a href="/player/135743/nemanja-matic" target="_blank" title="Nemanja Matic" alt="Nemanja Matic">Nemanja Matic</a>
+																	
+																
+																
+																	<div class="soccer-icons soccer-icons-subout" onmouseover="tooltip.show('<strong>Substitution</strong> - 61\'<br />On: John Obi Mikel');" onmouseout="tooltip.hide();"></div>
+																
+																</td>
+															
+														</tr>
+														
+															
+																<tr id="playerStarter-60503">
+																	
+																		<td class="first"><div class="soccer-icons soccer-icons-subarrow"></div>M</td>
+																	
+																	
+																		<td style="text-indent:10px;">12</td>
+																	
+																	
+																		<td class="last" style="text-indent:10px;">
+																		
+																		<a href="/player/60503/john-obi-mikel" target="_blank" title="John Obi Mikel" alt="John Obi Mikel">John Obi Mikel</a>
+																		
+																			
+																				<div class="soccer-icons soccer-icons-subin" onmouseover="tooltip.show('<strong>Substitution</strong> - 61\'<br />Off: Nemanja Matic');" onmouseout="tooltip.hide();"></div>
+																			
+																			
+																				
+																					
+																						
+																					
+																				
+																			
+																			
+																		</td>
+																	
+																</tr>
+															
+														
+													
+														<tr id="playerStarter-195349" class="">
+															
+																<td class="first"><p>M</p></td>
+															
+															
+																<td>33</td>
+															
+															
+																<td class="last">
+																	
+																	<a href="/player/195349/kenedy" target="_blank" title="Kenedy" alt="Kenedy">Kenedy</a>
+																	
+																
+																
+																	<div class="soccer-icons soccer-icons-subout" onmouseover="tooltip.show('<strong>Substitution</strong> - 45\'<br />On: Ramires');" onmouseout="tooltip.hide();"></div>
+																
+																</td>
+															
+														</tr>
+														
+															
+																<tr id="playerStarter-99025">
+																	
+																		<td class="first"><div class="soccer-icons soccer-icons-subarrow"></div>M</td>
+																	
+																	
+																		<td style="text-indent:10px;">7</td>
+																	
+																	
+																		<td class="last" style="text-indent:10px;">
+																		
+																		<a href="/player/99025/ramires" target="_blank" title="Ramires" alt="Ramires">Ramires</a>
+																		
+																			
+																				<div class="soccer-icons soccer-icons-subin" onmouseover="tooltip.show('<strong>Substitution</strong> - 45\'<br />Off: Kenedy');" onmouseout="tooltip.hide();"></div>
+																			
+																			
+																				
+																					
+																						
+																					
+																				
+																			
+																			
+																		</td>
+																	
+																</tr>
+															
+														
+													
+														<tr id="playerStarter-95410" class="odd">
+															
+																<td class="first"><p>F</p></td>
+															
+															
+																<td>19</td>
+															
+															
+																<td class="last">
+																	
+																	<a href="/player/95410/diego-costa" target="_blank" title="Diego Costa" alt="Diego Costa">Diego Costa</a>
+																	
+																
+																
+																	<div class="soccer-icons soccer-icons-subout" onmouseover="tooltip.show('<strong>Substitution</strong> - 60\'<br />On: Loïc Rémy');" onmouseout="tooltip.hide();"></div>
+																
+																</td>
+															
+														</tr>
+														
+															
+																<tr id="playerStarter-84886">
+																	
+																		<td class="first"><div class="soccer-icons soccer-icons-subarrow"></div>F</td>
+																	
+																	
+																		<td style="text-indent:10px;">18</td>
+																	
+																	
+																		<td class="last" style="text-indent:10px;">
+																		
+																		<a href="/player/84886/loïc-rémy" target="_blank" title="Loïc Rémy" alt="Loïc Rémy">Loïc Rémy</a>
+																		
+																			
+																				<div class="soccer-icons soccer-icons-subin" onmouseover="tooltip.show('<strong>Substitution</strong> - 60\'<br />Off: Diego Costa');" onmouseout="tooltip.hide();"></div>
+																			
+																			
+																				
+																					
+																						
+																					
+																				
+																			
+																			
+																		</td>
+																	
+																</tr>
+															
+														
+													
+
+													
+													 	<tr><td colspan="3">&nbsp;</td></tr>
+                										<tr class="subheader team-color">
+                    										<th colspan="3" style="border-top-color:#034694; border-top-width:3px; text-transform: uppercase;">Substitutes</th>
+                										</tr>
+                										<tr>
+                   											<th class="first" style="width:50px">POS</th>
+                    										<th>No</th>
+                    										<th class="last">Name</th>
+                    									 </tr>
+														
+															<tr id="playerSub-168303" class="odd">
+																
+																	<td class="first">G</td>
+																
+																
+																	<td>27</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/168303/jamal-blackman" target="_blank" title="Jamal Blackman" alt="Jamal Blackman">Jamal Blackman</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-92885" class="">
+																
+																	<td class="first">G</td>
+																
+																
+																	<td>1</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/92885/asmir-begovic" target="_blank" title="Asmir Begovic" alt="Asmir Begovic">Asmir Begovic</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-8931" class="odd">
+																
+																	<td class="first">D</td>
+																
+																
+																	<td>26</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/8931/john-terry" target="_blank" title="John Terry" alt="John Terry">John Terry</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-149755" class="">
+																
+																	<td class="first">D</td>
+																
+																
+																	<td>29</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/149755/nathaniel-chalobah" target="_blank" title="Nathaniel Chalobah" alt="Nathaniel Chalobah">Nathaniel Chalobah</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-206227" class="odd">
+																
+																	<td class="first">D</td>
+																
+																
+																	<td>34</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/206227/ola-aina" target="_blank" title="Ola Aina" alt="Ola Aina">Ola Aina</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-219781" class="">
+																
+																	<td class="first">D</td>
+																
+																
+																	<td>37</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/219781/jake-clark-salter" target="_blank" title="Jake Clark-Salter" alt="Jake Clark-Salter">Jake Clark-Salter</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-99025" class="odd">
+																
+																	<td class="first">M</td>
+																
+																
+																	<td>7</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/99025/ramires" target="_blank" title="Ramires" alt="Ramires">Ramires</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-118986" class="">
+																
+																	<td class="first">M</td>
+																
+																
+																	<td>11</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/118986/juan-cuadrado" target="_blank" title="Juan Cuadrado" alt="Juan Cuadrado">Juan Cuadrado</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-60503" class="odd">
+																
+																	<td class="first">M</td>
+																
+																
+																	<td>12</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/60503/john-obi-mikel" target="_blank" title="John Obi Mikel" alt="John Obi Mikel">John Obi Mikel</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-169661" class="">
+																
+																	<td class="first">M</td>
+																
+																
+																	<td>14</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/169661/bertrand-traore" target="_blank" title="Bertrand Traore" alt="Bertrand Traore">Bertrand Traore</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-112547" class="odd">
+																
+																	<td class="first">M</td>
+																
+																
+																	<td>20</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/112547/victor-moses" target="_blank" title="Victor Moses" alt="Victor Moses">Victor Moses</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-178487" class="">
+																
+																	<td class="first">M</td>
+																
+																
+																	<td>22</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/178487/willian" target="_blank" title="Willian" alt="Willian">Willian</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-194115" class="odd">
+																
+																	<td class="first">M</td>
+																
+																
+																	<td>35</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/194115/dominic-solanke" target="_blank" title="Dominic Solanke" alt="Dominic Solanke">Dominic Solanke</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-186505" class="">
+																
+																	<td class="first">M</td>
+																
+																
+																	<td>36</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/186505/ruben-loftus-cheek" target="_blank" title="Ruben Loftus-Cheek" alt="Ruben Loftus-Cheek">Ruben Loftus-Cheek</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-87706" class="odd">
+																
+																	<td class="first">F</td>
+																
+																
+																	<td>9</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/87706/radamel-falcao" target="_blank" title="Radamel Falcao" alt="Radamel Falcao">Radamel Falcao</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-84886" class="">
+																
+																	<td class="first">F</td>
+																
+																
+																	<td>18</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/84886/loïc-rémy" target="_blank" title="Loïc Rémy" alt="Loïc Rémy">Loïc Rémy</a>
+																	
+																	</td>
+																
+															</tr>
+														
+													
+												</tbody>
+											</table>
+										
+								</section>
+							</div>
+					
+				
+			
+
+			
+				
+					
+						
+							<div class="span-6 column">
+								<section class="mod-container">
+									<h1 class="heading alt" style="border-bottom-color:#951D27;">Barcelona</h1>
+										
+											<table class="stat-table">
+												<thead>
+													<tr class="subheader team-color">
+													<th colspan="3" style="text-transform: uppercase;">Line-up</th>
+													</tr>
+													<tr>
+                   										<th class="first" style="width:50px">POS</th>
+                    									<th>No</th>
+                    									<th class="last">Name</th>
+                     								</tr>
+												</thead>
+												<tbody>
+													
+														<tr id="playerStarter-140740" class="odd">
+															
+																<td class="first"><p>G</p></td>
+															
+															
+																<td>1</td>
+															
+															
+																<td class="last">
+																	
+																	<a href="/player/140740/marc-andré-ter-stegen" target="_blank" title="Marc-André ter Stegen" alt="Marc-André ter Stegen">Marc-André ter Stegen</a>
+																	
+																
+																
+																	<div class="soccer-icons soccer-icons-subout" onmouseover="tooltip.show('<strong>Substitution</strong> - 60\'<br />On: Jordi Masip');" onmouseout="tooltip.hide();"></div>
+																
+																</td>
+															
+														</tr>
+														
+															
+																<tr id="playerStarter-150792">
+																	
+																		<td class="first"><div class="soccer-icons soccer-icons-subarrow"></div>G</td>
+																	
+																	
+																		<td style="text-indent:10px;">25</td>
+																	
+																	
+																		<td class="last" style="text-indent:10px;">
+																		
+																		<a href="/player/150792/jordi-masip" target="_blank" title="Jordi Masip" alt="Jordi Masip">Jordi Masip</a>
+																		
+																			
+																				<div class="soccer-icons soccer-icons-subin" onmouseover="tooltip.show('<strong>Substitution</strong> - 60\'<br />Off: Marc-André ter Stegen');" onmouseout="tooltip.hide();"></div>
+																			
+																			
+																				
+																					
+																						
+																					
+																				
+																			
+																			
+																		</td>
+																	
+																</tr>
+															
+														
+													
+														<tr id="playerStarter-145078" class="">
+															
+																<td class="first"><p>D</p></td>
+															
+															
+																<td>15</td>
+															
+															
+																<td class="last">
+																	
+																	<a href="/player/145078/marc-bartra" target="_blank" title="Marc Bartra" alt="Marc Bartra">Marc Bartra</a>
+																	
+																
+																
+																	<div class="soccer-icons soccer-icons-subout" onmouseover="tooltip.show('<strong>Substitution</strong> - 59\'<br />On: Gerard Piqué');" onmouseout="tooltip.hide();"></div>
+																
+																</td>
+															
+														</tr>
+														
+															
+																<tr id="playerStarter-45931">
+																	
+																		<td class="first"><div class="soccer-icons soccer-icons-subarrow"></div>D</td>
+																	
+																	
+																		<td style="text-indent:10px;">3</td>
+																	
+																	
+																		<td class="last" style="text-indent:10px;">
+																		
+																		<a href="/player/45931/gerard-piqué" target="_blank" title="Gerard Piqué" alt="Gerard Piqué">Gerard Piqué</a>
+																		
+																			
+																				<div class="soccer-icons soccer-icons-subin" onmouseover="tooltip.show('<strong>Substitution</strong> - 59\'<br />Off: Marc Bartra');" onmouseout="tooltip.hide();"></div>
+																			
+																			
+																				
+																					
+																						
+																					
+																				
+																			
+																			
+																		</td>
+																	
+																</tr>
+															
+														
+													
+														<tr id="playerStarter-130673" class="odd">
+															
+																<td class="first"><p>D</p></td>
+															
+															
+																<td>16</td>
+															
+															
+																<td class="last">
+																	
+																	<a href="/player/130673/douglas-" target="_blank" title="Douglas " alt="Douglas ">Douglas </a>
+																	
+																
+																
+																	<div class="soccer-icons soccer-icons-subout" onmouseover="tooltip.show('<strong>Substitution</strong> - 17\'<br />On: Sergi Roberto');" onmouseout="tooltip.hide();"></div>
+																
+																</td>
+															
+														</tr>
+														
+															
+																<tr id="playerStarter-150225">
+																	
+																		<td class="first"><div class="soccer-icons soccer-icons-subarrow"></div>M</td>
+																	
+																	
+																		<td style="text-indent:10px;">20</td>
+																	
+																	
+																		<td class="last" style="text-indent:10px;">
+																		
+																		<a href="/player/150225/sergi-roberto" target="_blank" title="Sergi Roberto" alt="Sergi Roberto">Sergi Roberto</a>
+																		
+																			
+																				<div class="soccer-icons soccer-icons-subin" onmouseover="tooltip.show('<strong>Substitution</strong> - 17\'<br />Off: Douglas ');" onmouseout="tooltip.hide();"></div>
+																			
+																			
+																				
+																					
+																						
+																					
+																				
+																			
+																			
+																		</td>
+																	
+																</tr>
+															
+														
+													
+														<tr id="playerStarter-47006" class="">
+															
+																<td class="first"><p>D</p></td>
+															
+															
+																<td>21</td>
+															
+															
+																<td class="last">
+																	
+																	<a href="/player/47006/adriano" target="_blank" title="Adriano" alt="Adriano">Adriano</a>
+																	
+																
+																
+																	<div class="soccer-icons soccer-icons-subout" onmouseover="tooltip.show('<strong>Substitution</strong> - 60\'<br />On: Jordi Alba');" onmouseout="tooltip.hide();"></div>
+																
+																</td>
+															
+														</tr>
+														
+															
+																<tr id="playerStarter-121021">
+																	
+																		<td class="first"><div class="soccer-icons soccer-icons-subarrow"></div>D</td>
+																	
+																	
+																		<td style="text-indent:10px;">18</td>
+																	
+																	
+																		<td class="last" style="text-indent:10px;">
+																		
+																		<a href="/player/121021/jordi-alba" target="_blank" title="Jordi Alba" alt="Jordi Alba">Jordi Alba</a>
+																		
+																			
+																				<div class="soccer-icons soccer-icons-subin" onmouseover="tooltip.show('<strong>Substitution</strong> - 60\'<br />Off: Adriano');" onmouseout="tooltip.hide();"></div>
+																			
+																			
+																				
+																					
+																						
+																					
+																				
+																					
+																						
+																							<div class="soccer-icons soccer-icons-yellowcard" onmouseover="tooltip.show('<strong>Yellow Card</strong> - 75\'');" onmouseout="tooltip.hide();"></div>
+																						
+																					
+																				
+																			
+																			
+																		</td>
+																	
+																</tr>
+															
+														
+													
+														<tr id="playerStarter-84617" class="odd">
+															
+																<td class="first"><p>D</p></td>
+															
+															
+																<td>24</td>
+															
+															
+																<td class="last">
+																	
+																	<a href="/player/84617/jérémy-mathieu" target="_blank" title="Jérémy Mathieu" alt="Jérémy Mathieu">Jérémy Mathieu</a>
+																	
+																
+																	
+																		
+																			
+																				<div class="soccer-icons soccer-icons-yellowcard" onmouseover="tooltip.show('<strong>Yellow Card</strong> - 42\'');" onmouseout="tooltip.hide();"></div>
+																			
+																		
+																	
+																
+																
+																	<div class="soccer-icons soccer-icons-subout" onmouseover="tooltip.show('<strong>Substitution</strong> - 59\'<br />On: Thomas Vermaelen');" onmouseout="tooltip.hide();"></div>
+																
+																</td>
+															
+														</tr>
+														
+															
+																<tr id="playerStarter-40543">
+																	
+																		<td class="first"><div class="soccer-icons soccer-icons-subarrow"></div>D</td>
+																	
+																	
+																		<td style="text-indent:10px;">23</td>
+																	
+																	
+																		<td class="last" style="text-indent:10px;">
+																		
+																		<a href="/player/40543/thomas-vermaelen" target="_blank" title="Thomas Vermaelen" alt="Thomas Vermaelen">Thomas Vermaelen</a>
+																		
+																			
+																				<div class="soccer-icons soccer-icons-subin" onmouseover="tooltip.show('<strong>Substitution</strong> - 59\'<br />Off: Jérémy Mathieu');" onmouseout="tooltip.hide();"></div>
+																			
+																			
+																				
+																					
+																						
+																					
+																				
+																			
+																			
+																		</td>
+																	
+																</tr>
+															
+														
+													
+														<tr id="playerStarter-102251" class="">
+															
+																<td class="first"><p>M</p></td>
+															
+															
+																<td>4</td>
+															
+															
+																<td class="last">
+																	
+																	<a href="/player/102251/ivan-rakitic" target="_blank" title="Ivan Rakitic" alt="Ivan Rakitic">Ivan Rakitic</a>
+																	
+																
+																
+																	<div class="soccer-icons soccer-icons-subout" onmouseover="tooltip.show('<strong>Substitution</strong> - 60\'<br />On: Andrés Iniesta');" onmouseout="tooltip.hide();"></div>
+																
+																</td>
+															
+														</tr>
+														
+															
+																<tr id="playerStarter-17566">
+																	
+																		<td class="first"><div class="soccer-icons soccer-icons-subarrow"></div>M</td>
+																	
+																	
+																		<td style="text-indent:10px;">8</td>
+																	
+																	
+																		<td class="last" style="text-indent:10px;">
+																		
+																		<a href="/player/17566/andrés-iniesta" target="_blank" title="Andrés Iniesta" alt="Andrés Iniesta">Andrés Iniesta</a>
+																		
+																			
+																				<div class="soccer-icons soccer-icons-subin" onmouseover="tooltip.show('<strong>Substitution</strong> - 60\'<br />Off: Ivan Rakitic');" onmouseout="tooltip.hide();"></div>
+																			
+																			
+																				
+																					
+																						
+																					
+																				
+																			
+																			
+																		</td>
+																	
+																</tr>
+															
+														
+													
+														<tr id="playerStarter-121893" class="odd">
+															
+																<td class="first"><p>M</p></td>
+															
+															
+																<td>5</td>
+															
+															
+																<td class="last">
+																	
+																	<a href="/player/121893/sergio-busquets" target="_blank" title="Sergio Busquets" alt="Sergio Busquets">Sergio Busquets</a>
+																	
+																
+																
+																	<div class="soccer-icons soccer-icons-subout" onmouseover="tooltip.show('<strong>Substitution</strong> - 61\'<br />On: Sergi Samper');" onmouseout="tooltip.hide();"></div>
+																
+																</td>
+															
+														</tr>
+														
+															
+																<tr id="playerStarter-185223">
+																	
+																		<td class="first"><div class="soccer-icons soccer-icons-subarrow"></div>M</td>
+																	
+																	
+																		<td style="text-indent:10px;">26</td>
+																	
+																	
+																		<td class="last" style="text-indent:10px;">
+																		
+																		<a href="/player/185223/sergi-samper" target="_blank" title="Sergi Samper" alt="Sergi Samper">Sergi Samper</a>
+																		
+																			
+																				<div class="soccer-icons soccer-icons-subin" onmouseover="tooltip.show('<strong>Substitution</strong> - 61\'<br />Off: Sergio Busquets');" onmouseout="tooltip.hide();"></div>
+																			
+																			
+																				
+																					
+																						
+																					
+																				
+																			
+																			
+																		</td>
+																	
+																</tr>
+															
+														
+													
+														<tr id="playerStarter-186181" class="">
+															
+																<td class="first"><p>M</p></td>
+															
+															
+																<td>28</td>
+															
+															
+																<td class="last">
+																	
+																	<a href="/player/186181/gerard" target="_blank" title="Gerard" alt="Gerard">Gerard</a>
+																	
+																
+																
+																	<div class="soccer-icons soccer-icons-subout" onmouseover="tooltip.show('<strong>Substitution</strong> - 61\'<br />On: Rafinha');" onmouseout="tooltip.hide();"></div>
+																
+																</td>
+															
+														</tr>
+														
+															
+																<tr id="playerStarter-154814">
+																	
+																		<td class="first"><div class="soccer-icons soccer-icons-subarrow"></div>M</td>
+																	
+																	
+																		<td style="text-indent:10px;">12</td>
+																	
+																	
+																		<td class="last" style="text-indent:10px;">
+																		
+																		<a href="/player/154814/rafinha" target="_blank" title="Rafinha" alt="Rafinha">Rafinha</a>
+																		
+																			
+																				<div class="soccer-icons soccer-icons-subin" onmouseover="tooltip.show('<strong>Substitution</strong> - 61\'<br />Off: Gerard');" onmouseout="tooltip.hide();"></div>
+																			
+																			
+																				
+																					
+																						
+																					
+																				
+																			
+																			
+																		</td>
+																	
+																</tr>
+															
+														
+													
+														<tr id="playerStarter-125088" class="odd">
+															
+																<td class="first"><p>F</p></td>
+															
+															
+																<td>9</td>
+															
+															
+																<td class="last">
+																	
+																	<a href="/player/125088/luis-suárez" target="_blank" title="Luis Suárez" alt="Luis Suárez">Luis Suárez</a>
+																	
+																
+																	
+																		
+																			
+																				<div class="soccer-icons soccer-icons-goal" onmouseover="tooltip.show('<strong>Goal</strong> - 52\'');" onmouseout="tooltip.hide();"></div>
+																			
+																		
+																	
+																
+																
+																	<div class="soccer-icons soccer-icons-subout" onmouseover="tooltip.show('<strong>Substitution</strong> - 62\'<br />On: Pedro');" onmouseout="tooltip.hide();"></div>
+																
+																</td>
+															
+														</tr>
+														
+															
+																<tr id="playerStarter-114032">
+																	
+																		<td class="first"><div class="soccer-icons soccer-icons-subarrow"></div>F</td>
+																	
+																	
+																		<td style="text-indent:10px;">7</td>
+																	
+																	
+																		<td class="last" style="text-indent:10px;">
+																		
+																		<a href="/player/114032/pedro" target="_blank" title="Pedro" alt="Pedro">Pedro</a>
+																		
+																			
+																				<div class="soccer-icons soccer-icons-subin" onmouseover="tooltip.show('<strong>Substitution</strong> - 62\'<br />Off: Luis Suárez');" onmouseout="tooltip.hide();"></div>
+																			
+																			
+																				
+																					
+																						
+																					
+																				
+																			
+																			
+																		</td>
+																	
+																</tr>
+															
+														
+													
+														<tr id="playerStarter-193782" class="">
+															
+																<td class="first"><p>F</p></td>
+															
+															
+																<td>17</td>
+															
+															
+																<td class="last">
+																	
+																	<a href="/player/193782/munir-el-haddadi" target="_blank" title="Munir El Haddadi" alt="Munir El Haddadi">Munir El Haddadi</a>
+																	
+																
+																
+																	<div class="soccer-icons soccer-icons-subout" onmouseover="tooltip.show('<strong>Substitution</strong> - 73\'<br />On: Alen Halilovic');" onmouseout="tooltip.hide();"></div>
+																
+																</td>
+															
+														</tr>
+														
+															
+																<tr id="playerStarter-179195">
+																	
+																		<td class="first"><div class="soccer-icons soccer-icons-subarrow"></div>M</td>
+																	
+																	
+																		<td style="text-indent:10px;">30</td>
+																	
+																	
+																		<td class="last" style="text-indent:10px;">
+																		
+																		<a href="/player/179195/alen-halilovic" target="_blank" title="Alen Halilovic" alt="Alen Halilovic">Alen Halilovic</a>
+																		
+																			
+																				<div class="soccer-icons soccer-icons-subin" onmouseover="tooltip.show('<strong>Substitution</strong> - 73\'<br />Off: Munir El Haddadi');" onmouseout="tooltip.hide();"></div>
+																			
+																			
+																				
+																					
+																						
+																					
+																				
+																			
+																			
+																		</td>
+																	
+																</tr>
+															
+														
+													
+														<tr id="playerStarter-188165" class="odd">
+															
+																<td class="first"><p>F</p></td>
+															
+															
+																<td>29</td>
+															
+															
+																<td class="last">
+																	
+																	<a href="/player/188165/sandro-ramírez" target="_blank" title="Sandro Ramírez" alt="Sandro Ramírez">Sandro Ramírez</a>
+																	
+																
+																	
+																		
+																			
+																				<div class="soccer-icons soccer-icons-goal" onmouseover="tooltip.show('<strong>Goal</strong> - 66\'');" onmouseout="tooltip.hide();"></div>
+																			
+																		
+																	
+																
+																
+																</td>
+															
+														</tr>
+														
+													
+													
+													 	<tr><td colspan="3">&nbsp;</td></tr>
+                										<tr class="subheader team-color">
+                    										<th colspan="3" style="border-top-color:#951D27;border-top-width:3px; text-transform: uppercase;">Substitutes</th>
+                										</tr>
+                										<tr>
+                   											<th class="first" style="width:50px">POS</th>
+                    										<th>No</th>
+                    										<th class="last">Name</th>
+                    									 </tr>
+														
+															<tr id="playerSub-205768" class="odd">
+																
+																	<td class="first">G</td>
+																
+																
+																	<td>13</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/205768/josé-suarez" target="_blank" title="José Suarez" alt="José Suarez">José Suarez</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-150792" class="">
+																
+																	<td class="first">G</td>
+																
+																
+																	<td>25</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/150792/jordi-masip" target="_blank" title="Jordi Masip" alt="Jordi Masip">Jordi Masip</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-45931" class="odd">
+																
+																	<td class="first">D</td>
+																
+																
+																	<td>3</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/45931/gerard-piqué" target="_blank" title="Gerard Piqué" alt="Gerard Piqué">Gerard Piqué</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-121021" class="">
+																
+																	<td class="first">D</td>
+																
+																
+																	<td>18</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/121021/jordi-alba" target="_blank" title="Jordi Alba" alt="Jordi Alba">Jordi Alba</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-40543" class="odd">
+																
+																	<td class="first">D</td>
+																
+																
+																	<td>23</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/40543/thomas-vermaelen" target="_blank" title="Thomas Vermaelen" alt="Thomas Vermaelen">Thomas Vermaelen</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-17566" class="">
+																
+																	<td class="first">M</td>
+																
+																
+																	<td>8</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/17566/andrés-iniesta" target="_blank" title="Andrés Iniesta" alt="Andrés Iniesta">Andrés Iniesta</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-154814" class="odd">
+																
+																	<td class="first">M</td>
+																
+																
+																	<td>12</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/154814/rafinha" target="_blank" title="Rafinha" alt="Rafinha">Rafinha</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-150225" class="">
+																
+																	<td class="first">M</td>
+																
+																
+																	<td>20</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/150225/sergi-roberto" target="_blank" title="Sergi Roberto" alt="Sergi Roberto">Sergi Roberto</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-185223" class="odd">
+																
+																	<td class="first">M</td>
+																
+																
+																	<td>26</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/185223/sergi-samper" target="_blank" title="Sergi Samper" alt="Sergi Samper">Sergi Samper</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-179195" class="">
+																
+																	<td class="first">M</td>
+																
+																
+																	<td>30</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/179195/alen-halilovic" target="_blank" title="Alen Halilovic" alt="Alen Halilovic">Alen Halilovic</a>
+																	
+																	</td>
+																
+															</tr>
+														
+															<tr id="playerSub-114032" class="odd">
+																
+																	<td class="first">F</td>
+																
+																
+																	<td>7</td>
+																
+																
+																	<td class="last">
+																	
+																		<a href="/player/114032/pedro" target="_blank" title="Pedro" alt="Pedro">Pedro</a>
+																	
+																	</td>
+																
+															</tr>
+														
+													
+												</tbody>
+											</table>
+										
+								</section>
+							</div>
+					
+				
+			
+
+
+			<div class="span-6 column last">
+				
+					
+						
+							
+
+ 
+	
+	
+
+
+
+
+
+
+							<section class="mod-container">
+								<h1 class="heading standard">Match Stats</h1>
+								<ul class="heading h2h">
+									<li style="border-color:#034694;" class="home">Chelsea</li>
+									<li style="border-color:#951D27;" class="away">Barcelona</li>
+								</ul>
+									<table class="no-borders">
+										<tbody>
+										
+											<tr>
+												
+													
+													
+														
+															
+																<td id="home-shots" class="first">9(4)</td>
+															
+														
+															
+														
+																<td class="center">Shots (on goal)</td>
+														
+															
+														
+															
+																<td id="away-shots" class="right last">18(6)</td>
+															
+														
+													
+												
+												
+												
+												
+												
+												
+												
+												
+											</tr>			
+										
+											<tr>
+												
+												
+													
+													
+														
+															
+																<td id="home-fouls" class="first">13</td>
+															
+														
+															
+														
+																<td class="center">Fouls</td>
+														
+															
+														
+															
+																<td id="away-fouls" class="right last">14</td>
+															
+														
+													
+												
+												
+												
+												
+												
+												
+												
+											</tr>			
+										
+											<tr>
+												
+												
+												
+													
+													
+														
+															
+																<td id="home-corner-kicks" class="first">2</td>
+															
+														
+															
+														
+																<td class="center">Corner kicks</td>
+														
+															
+														
+															
+																<td id="away-corner-kicks" class="right last">7</td>
+															
+														
+													
+												
+												
+												
+												
+												
+												
+											</tr>			
+										
+											<tr>
+												
+												
+												
+												
+													
+													
+														
+															
+																<td id="home-offsides" class="first">2</td>
+															
+														
+															
+														
+																<td class="center">Offsides</td>
+														
+															
+														
+															
+																<td id="away-offsides" class="right last">0</td>
+															
+														
+													
+												
+												
+												
+												
+												
+											</tr>			
+										
+											<tr>
+												
+												
+												
+												
+												
+													
+													
+														
+															
+																<td id="home-possession" class="first">31%</td>
+															
+														
+															
+														
+																<td class="center">Time of Possession</td>
+														
+															
+														
+															
+																<td id="away-possession" class="right last">69%</td>
+															
+														
+													
+												
+												
+												
+												
+											</tr>			
+										
+											<tr>
+												
+												
+												
+												
+												
+												
+													
+													
+														
+															
+																<td id="home-yellow-cards" class="first">0</td>
+															
+														
+															
+														
+																<td class="center">Yellow Cards</td>
+														
+															
+														
+															
+																<td id="away-yellow-cards" class="right last">2</td>
+															
+														
+													
+												
+												
+												
+											</tr>			
+										
+											<tr>
+												
+												
+												
+												
+												
+												
+												
+													
+													
+														
+															
+																<td id="home-red-cards" class="first">0</td>
+															
+														
+															
+														
+																<td class="center">Red Cards</td>
+														
+															
+														
+															
+																<td id="away-red-cards" class="right last">0</td>
+															
+														
+													
+												
+												
+											</tr>			
+										
+											<tr>
+												
+												
+												
+												
+												
+												
+												
+												
+													
+													
+														
+															
+																<td id="home-saves" class="first">4</td>
+															
+														
+															
+														
+																<td class="center">Saves</td>
+														
+															
+														
+															
+																<td id="away-saves" class="right last">2</td>
+															
+														
+													
+												
+											</tr>			
+										
+										</tbody>
+									</table>
+							</section>
+						
+				
+
+				
+
+		
+			<div class="mod-container mod-ad ad-300x250">
+				<!-- Incontent Ad (300x250) -->
+<div data-ad-type="ad-in-content"></div>
+			</div>
+		
+
+			</div>
+		
+
+			<div class="clearfix"></div>
+
+			<div style="width: 640px">
+	<h5>Comments</h5>
+	<p style="margin: 10px 0 0; font-size: 10px; color: #777;">Use a <a href="https://www.facebook.com/r.php" rel="nofollow">Facebook account</a> to add a comment, subject to Facebook's <a href="https://www.facebook.com/policies/" rel="nofollow">Terms of Service</a> and <a href="https://www.facebook.com/about/privacy/" rel="nofollow">Privacy Policy</a>. Your Facebook name, photo & other personal information you make public on Facebook will appear with your comment, and may be used on ESPN's media platforms. <a href="http://espn.go.com/community/story/_/id/8756098/espn-facebook-comments-faq">Learn more</a>.
+	</p>
+	<div class="fb-comments" data-href="http://espnfc.com/gamecast/419985/gamecast.html" data-num-posts="5" data-colorscheme="light" data-width="640"></div>
+</div>
+	</div>
+
+
+		<!--[if lte IE 8]>
+		<script src="http://a.espncdn.com/combiner/c?js=jquery-1.7.1.js,espnfc/eurofc/tooltip2.js,plugins/ba-debug-0.4.js,swfobject/2.2/swfobject.js,flashObjWrapper.r7.js,espn.video.barebones.r21.js,espnfc/eurofc/gamecast/lib/raphael-min.js,espnfc/eurofc/gamecast/caster-gc-oot.r1.js,espnfc/eurofc/gamecast/Gamecast-0.2-svg.r3.js,espnfc/eurofc/gamecast/gamecast-controller.r1.3.1.js"></script>
+		<![endif]-->
+
+		<!--[if (gt IE 8)|!(IE)]><!-->
+		<script src="http://a.espncdn.com/combiner/c?js=jquery-1.7.1.js,espnfc/eurofc/tooltip2.js,plugins/ba-debug-0.4.js,swfobject/2.2/swfobject.js,flashObjWrapper.r7.js,espn.video.barebones.r21.js,espnfc/eurofc/gamecast/lib/easeljs-0.4.2.min.js,espnfc/eurofc/gamecast/lib/tweenjs-0.2.0.min.js,espnfc/eurofc/gamecast/caster-gc-oot.r1.js,espnfc/eurofc/gamecast/Gamecast-0.2.r3.js,espnfc/eurofc/gamecast/gamecast-controller.r1.3.1.js"></script>
+		<!--<![endif]-->
+
+
+		
+
+
+
+
+    <script type="text/javascript" src="http://a.espncdn.com/combiner/c?js=espnfc/eurofc/scrolle.1.0.0.js,espnfc/eurofc/oot.3.0.0.js"></script>
+
+
+
+
+
+
+
+		<script type="text/javascript">
+			//Pick these from the template
+			Gamecast.matchId = '419985' || null;
+			Gamecast.langId = '' || null;
+			Gamecast.sessionId = 'global.champs_cup-gp10' || null;
+			Gamecast.season = '2015' || null;
+			Gamecast.edition = 'US English edition' || null;
+			Gamecast.snapshotId = '0' || null;
+			Gamecast.homeColor = '034694' || null;
+			Gamecast.awayColor = '951D27' || null;
+			Gamecast.gameCastNote = 'Please note that not all shots are being shown for this game.' || null;
+			Gamecast.gameSourceId = '38' || null;
+
+			//Script to display note for gamecast where gamsourceid are 2(PA) and 32(PA-MATCHPLUS)
+			if((Gamecast.gameSourceId == 2) || (Gamecast.gameSourceId == 32)){
+				$('span.gameCastNote').text(Gamecast.gameCastNote);
+			}
+
+		</script>
+
+
+
+		
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+
+
+<!-- START - New omniture code added during FC Redesign -->
+
+
+
+<script type="text/javascript">
+var anScripts = "http://a.espncdn.com/combiner/c/28?js=analytics/unified/VisitorAPI.js,analytics/unified/sOmni.2.combined.beta.1.js,analytics/unified/analytics.2.beta.1.js,analytics/externalnielsen.js",
+    s_account = "wdgespsoccernet", // wdgespsoccernet or wdgespespnw
+    omniPageName = "soccernet:international+champions+cup:gamecast:game:gameid=419985-game+desc+-+chelsea+vs+barcelona", /* pagename value for video (freewheel) */
+    cB = { /* chartbeat settings */
+        'domain' : 'espnfc.com',
+        'sections' : 'espnfc', /* site */
+        'authors' : 'game',
+        'path' : '/gamecast/419985/gamecast.html',
+        'title' : 'Chelsea v Barcelona live football scores | Soccer scores and live video | ESPNFC.com',
+        'loadPubJS' : false,
+        'loadVidJS' : true
+    },
+    initTracking = function () {
+        var ems = espn.memberservices || {},
+            insider = ems.insider || "anonymous",
+            loginStatus = ems.loginStatus || "anonymous",
+            year = ems.bYear || "unknown",
+            gender = ems.gender || "unknown",
+            age = ems.bDate || "unknown",
+            key = [year, gender, loginStatus, insider, "premium-no"].join(':');
+        espn.track.trackPage({ // init and track
+            pageName: "soccernet:international+champions+cup:gamecast:game:gameid=419985-game+desc+-+chelsea+vs+barcelona",
+            site: "espnfc", // espnfc or espnw
+            section: "gamecast",
+            sections: "international+champions+cup:gamecast:game ",
+            contentType: "game",
+            gameInfo: "gameid=419985-game+desc+-+chelsea+vs+barcelona",
+            lang: "en_us", // en_us | en_uk | en_www
+            countryRegion: "en-us", // en-us | en-uk | en-www
+            sport: "soccer",
+            league: "international+champions+cup",
+            convrSport: "soccer",
+            insiderStatus: insider + ":premium-no",
+            birthAge: age,
+            gender: gender,
+            loginStatus: loginStatus,
+            userKey: key
+            /*  chartbeat client-side calls setup
+                - i ncase you start doing AJAX calls on this page
+                    and want to trigger a chartbeat pageload call
+
+            // chartbeat settings
+            cbSettings = {
+                site : cB.sections,
+                section : cB.path,
+                pagename : cB.title
+            },
+            disableCB : false
+            */
+        });
+        /*  set ad_site globally
+        */
+        window.ad_site = 'espnfc.us.gamecast';
+        /** // All Editions
+            - espnfc.com > espnfc.global.<section>
+            - espnfc.us >espnfc.us.<section>
+            - espnfc.co.uk >espnfc.uk.<section>
+        **/
+    };
+// Delayed request
+if (typeof s_omni === "undefined") {
+    jQuery(function ($) {
+        $.ajaxSetup({ cache: true });
+        /* we want to load the analytics files from the cache if possible - so, let's use full $.ajax() calls */
+        $.getScript(anScripts, function () {
+             /* Init Chartbeat */
+            espn.track.initCB(cB);
+            /* Init Tracking */
+            initTracking();
+        });
+    });
+}
+
+</script>
+<!-- END - New omniture code added during FC Redesign-->
+
+
+		<script>
+			var gamebox = jQuery("#matchcenter-" + activeGameId);
+		</script>
+
+		<!-- Begin comScore Tag -->
+		<script>
+		var _comscore = _comscore || [];
+		_comscore.push({ c1: "2", c2: "3000005" });
+		(function() {
+		var s = document.createElement("script"), el =
+		document.getElementsByTagName("script")[0]; s.async = true;
+		s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+		el.parentNode.insertBefore(s, el);
+		})();
+		</script>
+		<!-- End comScore Tag -->
+
+
+	
+
+			</div>
+		</section>
+
+
+		
+		<!-- Google Plus One code -->
+		<script type="text/javascript">
+		  (function() {
+		    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		    po.src = 'https://apis.google.com/js/plusone.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  })();
+		</script>
+
+		<!-- Facebook code -->
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) {return;}
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId="+espn.social.gSettings.facebook_app_id;
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
+
+		<!-- Below JS reference is added on Aug 12, 2014 to fascilitate analytics team to run surveys -->
+		<script type="text/javascript" src="http://content.dl-rms.com/rms/mother/53849/nodetag.js"></script>
+
+		<!-- Twitter code -->
+		<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+		
+
+		
+	</body>
+	</html>

@@ -1,0 +1,274 @@
+<HTML>
+<HEAD>
+   <TITLE> Efficient Query Processing in Large Search Engines </TITLE>
+</HEAD> 
+<body BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="000099"
+      leftmargin="100%" rightmargin="100%" topmargin="100%" bottommargin="100%"
+      marginwidth="10%" marginheight="10%">
+
+
+<H2>
+NSF III-1117829: Efficient Query Processing in Large Search Engines
+</H2>
+
+<p>
+
+This page describes research conducted at the NYU Polytechnic School of 
+Engineering by Prof. <a href="http://cse.poly.edu/suel">Torsten Suel</a> and his 
+research group, funded by the National Science Foundation under grant 
+<a href="http://www.nsf.gov/awardsearch/showAward?AWD_ID=1117829">III-1117829, 
+"Efficient Query Processing in Large Search Engines"</a>, and by grants from 
+Google. In the following, we first give a high-level desxription of the problems 
+addressed and the proposed solutions, written for the non-expert. Then we 
+provide some information on status, current activities, project participants, 
+and research publications and manuscripts.
+
+<p>
+
+<H3>
+1 Introduction and Motivation
+</H3>
+
+As the title suggests, this project focuses on new techniques that allow large
+web search engines, such as those run by Google, Bing, and others, to more
+efficiently execute queries posted by users. These engines now receive
+several billion queries per day that have to be processed over databases
+of hundreds of billions of web pages and other types of documents. To do so,
+companies are building many large data centers involving tens of thousands of
+machines each, with large hardware, maintenance, and energy costs. Reducing
+these costs by even a moderate amount would have great benefits for the
+economy and environment.
+
+<p>
+
+Reducing the cost of query processing in large search engines is of course a
+very active research area, with many projects underway at various companies
+and universities. Our work studies new algorithmic techniques (i.e., smart
+algorithms and data structures) for this problem, and focuses on the following
+two aspects of state-of-the-art search engines:
+<ul>
+<li>
+<b>Complex Ranking Functions:</b>
+Query results are determined and ordered (ranked) based on highly complex
+ranking functions involving hundreds of features. These functions increase
+the cost of query processing, but they are necessary for returning relevant
+results to the user. More and more, ranking functions also include social (e.g.,
+social network links) and geographic (user location, place names in documents)
+features and constraints.
+<li>
+<b>Early Termination:</b>
+Because of the costs involved, engines utilize various techniques that avoid
+an exhaustive traversal of the data structures for the query terms. These
+techniques are usually called Early Termination, Query Pruning, or Index Pruning, 
+and they include many different ways to decrease the size of the index structures 
+or to limit access at query time to the most promising parts of the index. Thus,
+the methods basically try to cut corners without significantly decreasing
+result quality.
+</ul>
+Our main goal is to develop early termination techniques that work for complex
+ranking functions and provide significant savings in processing costs at
+little reduction in quality. Many previous techniques are heuristic in nature
+and may work only for certain classes of ranking functions; others are
+unpublished and closely guarded by the search engine companies. A larger and
+more ambitious goal is to develop a general framework for optimizing query
+processing in Information Retrieval systems with complex and often changing
+ranking functions, partly inspired by the highly successful body of work on
+query optimization in the world of relational databases.
+
+<h3>
+2 Our Work and Approach:
+</h3>
+
+Our research group is attacking the above challenges from several directions.
+We are starting from the multi-phase (or cascading) model of ranking that is 
+widely used in today's search engines: first, a simple ranking function is run 
+on a large part of the index, resulting in a set of, say, a few hundred or 
+thousand candidate results that are then filtered in subsequent phases (cascades) 
+using increasingly more complex (i.e., precise but computationally expensive) 
+ranking functions (see, e.g., <a href="http://dl.acm.org/citation.cfm?id=2009934">
+[Wang/Lin/Metzler, SIGIR 2011]</a>).
+
+<p>
+<b>2.1 Faster Early Termination for Simple Ranking Functions:</b><br>
+One set of activities focuses on better early termination techniques for
+simple ranking functions, i.e., the first phase of the model. Here, we are
+building on the recently proposed Block-Max Wand (BMW) approach 
+<a href="http://dl.acm.org/citation.cfm?id=2010048">[Ding/Suel, SIGIR 2011]</a>. 
+Our recent results in [1] and [2] describes new techniques for this approach 
+that result in significant additional speed-ups by exploiting the SIMD features of
+current CPUs. We observe speed-ups by a factor of 2-3 over state-of-the-art 
+approaches, at the expense of some extra main memory required to store additional 
+auxiliary index structures. Other work currently underway tries to apply this 
+approach to query processing on Graphical Processing Units (GPUs).
+
+<p>
+<b>2.2 Positional Indexing and the Role of Positions in Ranking:</b><br>
+State-of-the-art ranking functions make heavy use of information about the locations
+(positions) of the query terms in the documents. Thus, documents where some of the
+query terms occur close to, or directly next to, each other, are often ranked
+higher than documents where the terms are far apart. Thus, positions allow search
+engines to return better results, and efficient index structures for proximity
+can help quickly narrow the search to the most promising results. Unfortunately,
+index structures for positions and phrases are large and expensive to access, and 
+search engine efficiency heavily depends on how and when to utilize position 
+information during query processing.  
+<p>
+In an initial piece of work, undertaken with colleagues in
+Chile, we looked at how to best store and access positions. Our work in [3] showed 
+that a standard inverted index does often not provide the best trade-off between 
+time and space, and that in fact simply storing the parsed documents in highly 
+compressed form is often better. The right approach depends on when and how often
+positions are accessed -- if positions are heavily accessed during the first phase
+of ranking, then a standard positional index is best, but if accesses are delayed
+to the second phase (with the potential exception of accesses to more efficient
+phrase index structures in the first phase), then storing the parsed documents
+may perform better. In fact, 
+<a href="http://research.microsoft.com/en-us/um/people/trishulc/papers/Maguro.pdf">
+recent work by researchers at Bing</a> confirms that positional indexes may in
+fact not be the best choice for fast query processing.
+<p>
+For the next phase, were working on how to use and optimize phrase indexes and 
+pairwise indexes for efficient early termination of complex ranking functions. Here
+the idea, building on <a href="http://lintool.github.io/IIS-0916043/publications/Asadi_Lin_SIGIR2013.pdf">
+recent work by Asadi and Lin</a>, is to build good index structures and access 
+strategies that identify promising candidates for subsequent evaluation by the 
+complex ranker, rather than to focus on optimizing the simple first-stage ranker,
+thus using an end-to-end approach.
+
+<p>
+<b>2.3 Approximating Complex Ranking Functions:</b><br>
+In work currently underway, we are investigating how to learn, given a complex ranking
+function, an optimal simple ranking function for the first phase of query processing. 
+Or, in other words, what is the best set of term-wise impact scores such that the
+top-k results under this set of impact scores lead to better top-m results, m << k?
+That is, if we apply the complex ranking function to the top-k, do we get good top-m
+results?
+<p>
+Some related work on this problem was recently done by
+<a href="http://hunch.net/~jl/projects/predictive_indexing/predictive_indexing.pdf">
+Goel, Langford, and Strehl</a>, <a href="https://sites.google.com/site/maxim432/publications/ilearn.wsdm2012.pdf">Agarwal and Gurevich</a>, 
+and <a href="http://ciir.cs.umass.edu/~bemike/pubs/2013-1">Dang, Bendersky, and 
+Croft</a>. This problem also leads to the interesting general question of how to do 
+automatic and end-to-end query optimization for complex ranking functions.
+
+<p>
+<b>2.4 Static Index Pruning and Index Tiering:</b><br>
+Static index pruning is the idea of pruning an inverted index structure by removing 
+some of the less useful index entries (postings saying which term exists in which
+document) from the index. The goal is to get
+a smaller index that allows queries to be processed more quickly without significant
+losses in result quality. There has been some amount of work on this approach, mostly
+based on simple heuristics that remove postings with low rank or impact score. We
+are working on a new approach that tries to estimate the usefulness of a posting using
+language modeling and machine learning techniques. Our current results [4] show that
+by performing language modeling of the query stream, and estimating the likelihood
+a posting will make it into the top results if the term is part of a query, we can
+prune 90% or more of the inverted index for the GOV2 and ClueWeb09 data sets while 
+still obtaining result quality close to that of the complete index (and much better 
+than with previous methods).
+<p>
+Related to static index pruning the the problem of index tiering, where the most 
+valuable documents or index postings are stored in the first tier, while others are
+relegated to the second or further tiers. Incoming queries are then first processed
+by the first tier, and only forwarded to the other tiers if the result from the
+first tier is considered insufficient. Tiering is a technique that appears to be
+used by all current major search engines, but it has only been partially explored in
+the academic literature. Our current work tries to apply some of our lessons from
+static index pruning to tiering. One interesting question is if index tiering is
+best done in a document-oriented way, as current engines appear to do, with whole 
+documents assigned to one tier, or if ragged tiers that allow different parts of 
+documents (posting) to be assigned to different tiers are preferable.
+
+<p>
+<b>2.5 High-Performance Index Updates:</b><br>
+This work looks at the problem of how to best update inverted indexes under document
+insertions, deletions, and modification, in cases where only part of the index
+fits in main memory. The basic challenge for index updates is that documents usually
+contain hundreds of different terms, which for disk-based indexes would result in
+changes in hundreds of different locations on disk. Thus, inverted index updates, if
+not properly managed, can result in large numbers of random disk accesses.
+<p>
+There has been a lot of previous work on index updates, but there are some questions
+that are still unexplored. One is the interaction between queries and updates --
+basically, the choice of best update mechanism should depend on the query load, and
+thus it is not a good idea to study updates in isolation. Also, both updates and
+queries utilize caching and buffering mechanisms that interact. Finally, different
+terms in the same document should be handled differently for best performance. We
+are working at an adaptive mechsnism that allows updates to be handled efficiently
+based on characteristics of the current workload.
+
+<p>
+<b>2.6 Distance Estimation and Query Processing in Text Graphs:</b><br>
+One of the main online trends of the last decade has been the creation of large 
+social networks and other social structures on the web. This creates an opportunity
+for search engines to improve the relevance of their results by taking this, and 
+in particular the social structure around the user and the candidate results or 
+searched-for entities, into account. However, this also creates a challenge in query 
+processing: while we know a lot about how to search in text data, and about how to 
+process graph data, much less is known about how to deal with the combination of
+these basic data types, in particular ``text graphs'' where nodes or edges may contain 
+some textual information. For example, a search engine may want to return results
+that are both relevant in terms of textual similarity and close to the user in
+terms of social structure.
+<p>
+We are interested in new approaches that extend the highly efficient inverted index
+approaches for text to text graphs. One important ingredient in this problem is a fast
+distance oracles, that is, a method that given two nodes returns an estimate, and maybe
+upper and lower bounds, for the distance between the nodes. We have looked at
+several new approaches for this problem that achieve a better trade-off between
+the size and speed of the lookup structure and the accuracy of the estimate. One
+approach that is particularly promising for the types of graphs encountered in
+social networks uses machine learning in order to basically learn to estimate the
+distance. If there is only very limited space available, then our experiments
+show that this approach achieves much better accuracy than a standard landmark-based
+approach [5]. 
+
+
+<h3>
+Project Participants
+</h3>
+
+Participants include the PI, Torsten Suel, and several PhD students at NYU supported
+by this and other grants, in particular, 
+<a href="http://cis.poly.edu/~christom/">Maria Christoforaki</a>,
+<a href="http://cis.poly.edu/~constantinos/">Costas Dimopoulos</a>,
+Sergey Nepomnyachiy, Wei Jiang, Jose Rodriguez, and Qi Wang. 
+Our collaborators at other institutions include 
+<a href="http://www.inf.utfsm.cl/component/contact/68-profesores/46-darroyuelo">Diego Arroyuelo</a>, 
+<a href="http://dcc.uchile.cl/~mmarin/">Mauricio Marin</a>, and their team in Santiago 
+de Chile, and <a href="http://www.iai.uni-bonn.de/~alex/">Alex Markowetz</a> and 
+Pascal Welke at the University of Bonn.
+<h3>
+Project Publications
+</h3>
+
+[1]  <em><b>A Candidate Filtering Mechanism for Fast Top-K Query Processing
+     on Modern CPUs.</b></em>
+     C. Dimopoulos, S. Nepomnyachiy, and T. Suel.
+     36th Annual ACM SIGIR Conference, July 2013.
+     <a href="http://cis.poly.edu/suel/papers/filter.pdf">PDF</a>
+<p>
+[2]  <em><b>Optimizing Top-k Document Retrieval Strategies for Block-Max
+     Indexes.</b></em>
+     C. Dimopoulos, S. Nepomnyachiy, and T. Suel.
+     6th ACM Conference on Web Search and Data Mining, February 2013.
+     36th Annual ACM SIGIR Conference, July 2013.
+     <a href="http://cis.poly.edu/suel/papers/bmm.pdf">PDF</a>
+<p>
+[3]  <em><b>To Index or not to Index: Time-Space Trade-Offs in Search Engines
+     with Positional Ranking Functions.</b></em>
+     D. Arroyuelo, S. Gonzalez, M. Marin, M. Oyarzun, and T. Suel.
+     35th Annual ACM SIGIR Conference, July 2012.
+     <a href="http://cis.poly.edu/suel/papers/wavelet.pdf">PDF</a>
+<p>
+[4]  <em><b>Improved Methods for Static Index Pruning.</b></em>
+     Wei Jiang, Juan Rodriguez, and Torsten Suel.
+     Submitted for publication, July 2014.
+<p>
+[5]  <em><b>Estimating Pairwise Distances in Large Graphs.</b></em>
+     Maria Christoforaki and Torsten Suel.
+     Submitted for publication, June 2014.
+
+</BODY> 
+</HTML>
+

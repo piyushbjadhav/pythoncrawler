@@ -1,0 +1,7074 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type='text/javascript'>var _sf_startpt=(new Date()).getTime()</script>
+<meta name="google-site-verification" content="4_qSmiePwMZeSyNswhhNiGD6LiJ5Tr98wgD77PXAaMU"/>
+        <script type="text/javascript">
+            function mobileDetectRed() {
+                var detectGameId;
+                var redirectToUrl;
+                try {
+                    var pageurl = window.location.href;
+                    var isGamecast = pageurl.indexOf('gamecast.html') > -1 ? true : false;
+                    var isStatistics = pageurl.indexOf('statistics.html') > -1 ? true : false;
+                    var urlpart;
+                    if (isGamecast === true) {
+                        urlpart = pageurl.split('/gamecast/');
+                    }
+                    if(isStatistics === true) {
+                        urlpart = pageurl.split('/gamecast/statistics/id/');
+                    }
+
+                    if (urlpart.length > 0) {
+                        detectGameId = urlpart[1].split('/')[0];
+                        if (isGamecast === true) {
+                            redirectToUrl = 'http://m.espn.go.com/soccer/gamecast?gameId=' + detectGameId;
+                        }
+
+                        if (isStatistics === true) {
+                            redirectToUrl = 'http://m.espn.go.com/soccer/gamecast?gameId=' + detectGameId + '&action=summary';
+                        }
+                    }
+
+                }
+                catch(e){
+                    //console.log('exception occured', e);
+                    detectGameId = 0;
+                    redirectToUrl = '';
+                }
+                return redirectToUrl;
+            }
+
+            (function () {
+                var redirectTo = mobileDetectRed();
+                // If mobileDetectRed returned empty string, do not run the redirection part
+                if (redirectTo === '') {
+                    //console.log('returning from anonymous function');
+                    return;
+                }
+                function e(e) {
+                    e = e.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                    var t = new RegExp("[\\?&]" + e + "=([^&#]*)"),
+                        n = t.exec(location.search);
+                    return n == null ? "" : decodeURIComponent(n[1].replace(/\+/g, " "))
+                }
+                var t = navigator.userAgent,
+                    n = window.location,
+                    r = document.cookie,
+                    i = document.referrer,
+                    //s = i === "" || i.indexOf(".go.com") !== -1,
+                    //o = s ? "http://m.espn.go.com/soccer/gamecast?gameId=&action=summary" : "http://m.espn.go.com/soccer/gamecast?gameId=&action=summary&rand=ref~%7B%22ref%22%3A%22" + encodeURIComponent(i) + "%22%7D",
+                    o = redirectTo,
+                    u = t.match(/iPad/i) || t.match(/Android/i) && !t.match(/Mobile/i) || t.match(/RIM Tablet/i) || t.match(/Silk/i) || t.match(/windows phone/i),
+                    a = t.match(/Mobile/i) || t.match(/Mini/i),
+                    f = n.href.match(/src=mobile/i),
+                    l = r.indexOf("iphone_redirect=false") > -1,
+                    c = r.indexOf("iphone_redirect=true") > -1,
+                    h = e("addata"),
+                    p = e("ex_cid");
+                if (h != "") {
+                    o += "&addata=" + h
+                }
+                if (p != "") {
+                    o += "&ex_cid=" + p
+                }
+                //console.log('anonymous function running');
+                if (u) {
+                    document.documentElement.className += " tablet ";
+                    if ((!t.match(/iPad/i) || c) && !l) {
+                        n.href = o
+                    }
+                } else if (a && !l && !f) {
+                    n.href = o
+                }
+            })()
+        </script>
+
+		<title>Chelsea v Barcelona live football scores | Soccer scores and live video | ESPNFC.com</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		
+		<meta name="ROBOTS" content="NOINDEX, NOFOLLOW"/>
+		
+		
+		
+			
+		
+		<meta name="keywords" content="live football, espnfc, International Champions Cup"/>
+		<meta name="description" content="Follow minute-by-minute live commentary of Chelsea v Barcelona"/>
+		<meta property="fb:app_id" content="116656161708917"/>
+		<meta property="og:site_name" content="ESPNFC.com"/>
+		<meta property="og:title" content="Chelsea v Barcelona"/>
+		<meta property="og:description" content="Follow minute-by-minute live commentary of Chelsea v Barcelona"/>
+		<link rel="canonical" href="http://www.espnfc.us/gamecast/statistics/id/419985/statistics.html" />
+		<meta property="og:url" content="http://www.espnfc.us/gamecast/statistics/id/419985/statistics.html"/>
+		<meta property="og:type" content="article"/>
+		
+		    <meta property="og:image" content="http://i.espncdn.com/i/img/Euro 2012 logo_200_112.jpg"/>
+        
+		
+        <script src="http://a.espncdn.com/prod/scripts/espnfc/eurofc/libs/jquery-1.6.4.min.js"></script>
+        
+
+
+
+<script language="javascript"  type="text/javascript">
+    ord=Math.random()*10000000000000000;
+    var ad_counter = 1;
+    /* SITE_EDITION constant is used to get edition.*/
+    var SITE_EDITION = "null/null";
+</script>
+
+<script type="text/javascript" src="http://a.espncdn.com/prod/scripts/espnfc/eurofc/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://a.espncdn.com/prod/scripts/espnfc/eurofc/helper.r4.js"></script>
+
+<script type="text/javascript">
+    var CURRENT_EDITION = espn.getEdition(); 
+    if(CURRENT_EDITION){
+        var COUNTRY_NAME = espn.lookupName[CURRENT_EDITION];
+    }
+    else{
+    	var COUNTRY_NAME = 
+    	    "";
+    }
+</script>
+
+		<link rel="shortcut icon" href="http://i.espncdn.com/i/assets/img/logos/espn/favicon.ico" type="image/ico" />
+
+		<link rel="stylesheet" charset="utf-8" media="screen" href="http://a.espncdn.com/combiner/c?css=espnfc/eurofc/reset.css,espnfc/eurofc/base.r10.css,espnfc/eurofc/grid/970.css,espnfc/eurofc/site-structure/header.r5.css,espnfc/eurofc/site-structure/sub-header.r1.css,espnfc/eurofc/site-structure/navigation.r2.css,espnfc/eurofc/site-structure/footer.css,espnfc/eurofc/modules/editions.r2.css,espnfc/eurofc/ui/ui.r8.css,espnfc/eurofc/ui/forms.css,espnfc/eurofc/ui/lists.r3.css,espnfc/eurofc/ui/tabs.r4.css,espnfc/eurofc/ui/table.css,espnfc/eurofc/ui/flags.css,espnfc/eurofc/modules/modules.r11.css,espnfc/eurofc/ui/social.css,espnfc/eurofc/page-type/media.r7.css,espnfc/eurofc/modules/pillar.css,espnfc/eurofc/modules/mem.r5.css,espnfc/eurofc/modules/matches.css,espnfc/eurofc/modules/editions.css,espnfc/eurofc/modules/countdown.css" />
+
+        <link rel="stylesheet" type="text/css" href="http://a.espncdn.com/combiner/c?css=espnfc/eurofc/ui/advertising.r4.css">
+        <link rel="stylesheet" type="text/css" href="http://a.espncdn.com/combiner/c?css=espnfc/eurofc/espnfc.ads.matchhq.r3.css">
+
+		
+		<script src="http://a.espncdn.com/combiner/c?js=espnfc/eurofc/libs/jquery-1.6.4.min.js,espnfc/eurofc/libs/jquery.stickyPanel.min.js,espnfc/eurofc/default.r20.js,espnfc/eurofc/social.r4.js,espnfc/eurofc/social_module.r2.js,espnfc/eurofc/photos.r9.js,espnfc/eurofc/gallery.r12.js,espnfc/eurofc/hacks.r1.js"></script>
+		
+		<!--[if lte IE 8]><link rel="stylesheet" href="http://a.espncdn.com/prod/styles/espnfc/eurofc/ie.r9.css" /><![endif]-->
+    	<!--[if lte IE 9]>
+    	<script type="text/javascript" language="javascript" src="http://a.espncdn.com/prod/scripts/espnfc/eurofc/html5.js"></script>
+    	<![endif]-->
+        <script language="javascript" src="http://tredir.go.com/capmon/GetDE?set=j&param=country"></script>
+
+		
+		<meta name="layout" content="singleColumn"/>
+        
+        
+        
+        
+        
+
+		<link type="text/css" rel="stylesheet" href="http://a.espncdn.com/combiner/c?css=espnfc/eurofc/calendar.r11.css,espnfc/eurofc/matches.r2.css,espnfc/eurofc/flags.r1.css,espnfc/eurofc/page-type/match-hq.r11.css"/>
+
+        
+
+<link type="text/css" rel="stylesheet" href="http://a.espncdn.com/prod/styles/espnfc/eurofc/modules/oot.css" />  
+<!--[if IE 7]>
+    <link rel="stylesheet" href="http://a.espncdn.com/prod/styles/espnfc/eurofc/modules/ie7-oot.css" />
+<![endif]-->    
+
+
+
+        
+
+
+
+
+    <script type="text/javascript" src="http://a.espncdn.com/combiner/c?js=espnfc/eurofc/scrolle.1.0.0.js,espnfc/eurofc/oot.3.0.0.js,espnfc/eurofc/gamecast/caster-nongc-oot.r1.js"></script>
+
+
+
+		
+		
+		
+		
+		
+		
+
+		<script type="text/javascript" language="javascript" src="http://a.espncdn.com/prod/scripts/espnfc/eurofc/tooltip2.js"></script>
+
+		<style type="text/css">
+			#tt {position:absolute; display:block;border:1px solid #000000; background:#FFF8DC;}
+			#tttop {display:block; background:#FFF8DC top right no-repeat; overflow:hidden;}
+			#ttcont {display:block; padding:2px 12px 3px 7px; margin-left:5px; background:#FFF8DC; color:#000000}
+			#ttbot {display:block;  overflow:hidden}
+		</style>
+
+		<style type="text/css">
+			th.tb-substitutes.home-team{
+			    border-top-color:#034694;
+			}
+			th.tb-substitutes.away-team{
+			    border-top-color:#951D27;
+			}
+			h1#home-team.heading.alt{
+				border-bottom-color:#034694;
+			}
+			h1#away-team.heading.alt{
+				border-bottom-color: #951D27;
+			}
+		</style>
+
+    
+
+		
+		<!--BEGIN QUALTRICS SITE INTERCEPT-->
+		<script type='text/javascript'>
+			var SI_9BN247aV81cIBvu_ed='';
+			var SI_9BN247aV81cIBvu_url='http://siteintercept.qualtrics.com/WRSiteIntercept Engine/?Q_SIID=SI_9BN247aV81cIBvu' + SI_9BN247aV81cIBvu_ed;
+			var SI_9BN247aV81cIBvu_sampleRate=6; var q_si_f = function(){
+			if(Math.random() >= SI_9BN247aV81cIBvu_sampleRate/100)
+				return;
+			var	s=document.createElement('script');
+			s.type='text/javascript';s.src=SI_9BN247aV81cIBvu_url+'&Q_LOC='+encodeURIComponent(window.location.href);
+			if(document.body)
+				document.body.appendChild(s);
+			};
+			try{
+				if(window.addEventListener){window.addEventListener('load',q_si_f,false);
+				}else if(window.attachEvent){r=window.attachEvent('onload',q_si_f);}
+				else{}
+			} catch(e){}
+		    </script>
+		    <div id='SI_9BN247aV81cIBvu'><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>
+		 <noscript><a target="_blank" href="http://www.qualtrics.com/survey-software">Survey Software</a><br/>
+		 <a target="_blank" href="http://www.qualtrics.com/crm-integration">CRM Integration</a><br/></noscript>
+		<!--END SITE INTERCEPT-->
+		
+		<script src="http://a.espncdn.com/combiner/c?v1&js=jquery-1.7.1.js,plugins/json2.r3.js,plugins/teacrypt.js,plugins/jquery.metadata.js,plugins/jquery.bgiframe.js,plugins/jquery.easing.1.3.js,plugins/jquery.hoverIntent.js,plugins/jquery.jcarousel.js,plugins/jquery.tinysort.r4.js,plugins/jquery.pubsub.r5.js,ui/1.8.16/jquery.ui.core.js,ui/1.8.16/jquery.ui.widget.js,ui/1.8.16/jquery.ui.tabs.js,plugins/ba-debug-0.4.js,espn.l10n.r12.js,swfobject/2.2/swfobject.js,flashObjWrapper.r7.js,espn.core.duo.r54.js,stub.search.r8.js,espn.nav.mega.r33.js,espn.storage.r6.js,espn.p13n.r15.js,espn.espn360.stub.r10.js,registration/espn.overlay.stub.r3-19.js,registration/staticLoginIntl.r1-5.js&development=true"></script>
+		
+		<style>[data-geotarget-exclude]{ display: none; }</style>
+		<script type="text/javascript" src="http://a.espncdn.com/combiner/c?js=espnfc/asteroids/espnfc.geo-targeting.js"></script>
+        
+        <!-- For new GPT Ad code / added before world cup 2014 -->
+        <!-- Declare Ads config -->
+        <script type="text/javascript">
+          	window.espnfc = window.espnfc || {ads: {}};
+          	espnfc.ads = {
+                league: 'fifafriendly',
+                lang: 'us',
+                pgn: 'gamecast'
+          	};
+        </script>
+        <!-- Reference new Ads js -->
+        <script type="text/javascript" src="http://a.espncdn.com/combiner/c?js=espnfc/asteroids/espnfc.ads.matchhq.r4.js"></script>
+        <!-- ##END For new GPT Ad code / added before world cup 2014 -->
+	</head>
+
+
+	<body id="bd-gamecast" role="document" class="forSoccernet">
+	<!--[if IE 6]><div class="ie ie6"><![endif]-->
+	<!--[if IE 7]><div class="ie ie7"><![endif]-->
+	<!--[if IE 8]><div class="ie ie8"><![endif]-->
+
+	<script type="text/javascript">
+      	if(espnfc.geo) {
+			espnfc.geo.init();
+      	}
+    </script>
+
+    
+
+
+	
+    	
+        <header id="site-header">
+            <div class="container header">
+                <!-- Placeholder for logos -->
+                <div class="logo-bar" style="overflow: hidden;">
+                   <h1><a href="/"  class="logo" title="ESPNFC" target="_blank">ESPNFC</a></h1>
+                   
+                </div>
+                <div class="mod-ad ad-lb" role="banner">
+                    <!-- Pencil Ad -->
+<div data-ad-type="ad-pencil"></div>
+                </div>
+            </div>
+        </header>
+    	
+	
+
+
+		<section>
+			<div id="content-wrap" class="container clearfix">
+				
+	<div id="main-content" class="span-18 column" role="main">
+		<section class="mod-container">
+
+				
+				
+
+
+
+
+
+    
+    
+    
+
+        <div class="oot" data-lt="global.champs_cup" data-ootqs="?">
+        <div class="nav prev">
+            <a href="#"></a>
+        </div>        
+
+        <div class="wrapper">
+            <ul>
+                
+                    
+                    <li id="gid-419985" class="postgame">
+                        <div class="teams">
+                            <div class="state">
+                                
+                                    FT
+                                
+                            </div>
+
+                            <div class="home ">
+                                <p class="name">Chelsea</p>
+                                <p class="score">
+                                    2
+                                    
+                                </p>
+                            </div>
+                            <div class="away ">
+                                <p class="name">Barcelona</p>
+                                <p class="score">
+                                    2
+                                    
+                                </p>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <a href="http://www.espnfc.us/gamecast/419985/gamecast.html">Gamecast</a>
+                        </div>
+                    </li>
+                
+                    
+                    <li id="gid-419984" class="postgame">
+                        <div class="teams">
+                            <div class="state">
+                                
+                                    FT
+                                
+                            </div>
+
+                            <div class="home ">
+                                <p class="name">America</p>
+                                <p class="score">
+                                    0
+                                    
+                                </p>
+                            </div>
+                            <div class="away ">
+                                <p class="name">Benfica</p>
+                                <p class="score">
+                                    0
+                                    
+                                </p>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <a href="http://www.espnfc.us/gamecast/419984/gamecast.html">Gamecast</a>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+
+        <div class="nav next">
+            <a href="#"></a>
+        </div>
+    </div>
+
+
+				<link rel="stylesheet" href="http://a.espncdn.com/combiner/c?css=espnfc/eurofc/matchcenter/matches.css,espnfc/eurofc/matchcenter/match-hq.css" />
+
+<!-- STYLES TO ADD TO MATCH CENTER CSS -->
+<style type="text/css">
+	.mod-match-bar span.score, .match p.score {
+		position:relative;
+	}
+
+	.mod-match-bar span.time {
+	    margin: 5px 10px;
+	    padding:0;
+	}
+</style>
+
+
+	
+
+	
+		
+			<section class="match final gamecast-match" id="matchcenter-419985">
+		
+
+			<div class="match-details">
+				<p class="floatleft">
+					
+
+					
+						INTERNATIONAL CHAMPIONS CUP
+						
+							<span>
+								<script type="text/javascript">
+									(function(){
+										var d = new Date(1438128000000);
+
+										var year = d.getFullYear();
+										var month = d.getMonth() + 1;
+										var day = d.getDate();
+										var minutes = d.getMinutes();
+										var hours = d.getHours();
+
+										if (minutes < 10) { minutes = '0' + minutes; }
+										var dmy = [day, month, year];
+										var hm = [hours, minutes];
+			                            if (SITE_EDITION == 'us/en') {
+			                            	var dmy = [month, day, year];
+	                                    }
+                                   	    var matches_local = dmy.join('/') + " " + hm.join(':');
+                                   	    matches_local += "<span class='live-red'>*</span>";
+
+										document.write(matches_local);
+									})();
+								</script>
+							</span>
+						
+					
+				</p>
+				
+					<p class="floatright upperCase">
+					
+					FedExField
+					</p>
+				
+				
+			</div>
+			<div class="progress-bar">
+				
+					<div style="width:0" class="progress-indicator"></div>
+				
+			</div>
+			<div class="matchup">
+				<p class="floatleft size-6 normal light">
+					
+					<span>
+						
+					</span>
+				</p>
+				<p class="floatright size-6 normal light">
+					<span class="live-red">* </span><em>Local time based on your geographic location.</em>
+				</p>
+				<div style="clear:both"></div>
+
+				<div id="teamId-363" class="team away">					
+					
+						
+							<a href="/club/chelsea/363/index" target="_blank">
+							    <img class="floatright newFlagImg" src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/363.png&h=55">
+							</a>
+						
+					
+					<p class="team-name floatright" style="text-align: right;">
+						
+							<a href="/club/chelsea/363/index" target="_blank">Chelsea</a>
+						
+					</p>
+					<ul class="goal-scorers">
+
+						
+
+						
+							
+								<li>
+									
+									 	
+											Eden Hazard
+										
+									
+									<strong>
+										10'
+										
+										
+									</strong>
+									<span>&bull;</span>
+								</li>
+							
+						
+							
+						
+							
+						
+							
+								<li>
+									
+									 	
+											Gary Cahill
+										
+									
+									<strong>
+										85'
+										
+										
+									</strong>
+									<span>&bull;</span>
+								</li>
+							
+						
+					</ul>
+				</div>
+				<div class="score-time">
+					<div style="overflow:hidden;">
+						
+							<p class="score">
+
+								
+
+								2 - 2
+
+								
+							</p>
+
+							
+								
+									<p class="time">FT</p>
+								
+							
+
+							
+
+						
+					</div>
+				</div>
+
+				<div id="teamId-83" class="team home">
+					
+						
+						<a href="/club/barcelona/83/index" target="_blank">
+							<img class="floatleft newFlagImg" src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/83.png&h=55">
+						</a>
+						
+					
+					<p class="team-name floatleft">
+						
+							<a href="/club/barcelona/83/index" target="_blank">Barcelona</a>
+						
+					</p>
+
+					<ul class="goal-scorers">
+
+						
+
+						
+							
+						
+							
+								<li>
+									<span>&bull;</span>
+									
+									 	
+											Luis Suárez
+										
+									
+									<strong>
+										52'
+										
+										
+									</strong>
+								</li>
+							
+						
+							
+								<li>
+									<span>&bull;</span>
+									
+									 	
+											Sandro Ramírez
+										
+									
+									<strong>
+										66'
+										
+										
+									</strong>
+								</li>
+							
+						
+							
+						
+					</ul>
+				</div>
+				<script>
+					$("body.forSoccernet div.matchup .newFlagImg").error(function () {
+ 						$(this).unbind("error").attr("src", "http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/default-team-logo-500.png&h=55");
+					});
+				</script>
+			</div>
+
+			
+		</section>
+	
+	
+
+
+				
+
+				
+				
+
+
+
+<div id="liveTabs" class="span-18">
+			<ul class="tabs">
+					
+						
+							
+								
+
+								
+
+								
+
+								
+
+								
+
+								
+
+								
+
+								
+
+								
+
+								
+
+								
+
+								
+
+										<li class="">
+									       <a href="/gamecast/419985/gamecast.html">
+									           Live
+									       </a>
+									    </li>
+									
+								
+
+										<li class="">
+											<a href="/commentary/419985/commentary.html">
+												Commentary
+											</a>
+										</li>
+									
+								
+
+										<li class="active">
+                                           <a href="/gamecast/statistics/id/419985/statistics.html">
+                                               Stats
+                                           </a>
+										</li>
+									
+								
+
+								
+
+								
+
+								
+
+								
+
+								
+
+								
+							
+						
+							
+						
+					
+					
+						<li data-geotarget-exclude="us,pk,in,eg,ir,sa,sy,ae,il,jo,ps,lb,om,kw,qa,bh,ye,lk,fr,fx">
+							<a target="_blank" href="http://www.bet365.com/home/FlashGen4/WebConsoleApp.asp?affiliate=365_307577&rn=7545462869&stf=1">betting <span class="external">&nbsp;</span></a>
+						</li>
+					
+					</ul>
+					
+					 <div class="matchHqSocial">
+					    <ul class="list piped social">
+					        <li class="no-pipe fb" style="width: 75px">
+					        <div id="fb-root"></div>
+					        <script>(function(d, s, id) {
+					          var js, fjs = d.getElementsByTagName(s)[0];
+					          if (d.getElementById(id)) return;
+					          js = d.createElement(s); js.id = id;
+					          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+					          fjs.parentNode.insertBefore(js, fjs);
+					        }(document, 'script', 'facebook-jssdk'));</script>
+					        <div class="fb-like"  data-href="http://www.espnfc.com/gamecast/419985/gamecast.html" data-send="false" data-layout="button_count" style="height: 20px; width: 90px;" data-show-faces="false"></div>
+					        </li>
+					        <li class="no-pipe twitter">
+								<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.espnfc.com/gamecast/419985/gamecast.html" data-via="ESPNFC.com" data-related="espnfc" data-count="horizontal">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+					        </li>
+					        <li class="no-pipe last">
+					            <div data-href="http://www.espnfc.com/gamecast/419985/gamecast.html" class="g-plusone" data-size="medium"  ></div>
+					                <script type="text/javascript">
+					                  (function() {
+					                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+					                    po.src = 'https://apis.google.com/js/plusone.js';
+					                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+					                  })();
+					                </script>
+					        </li>
+					    </ul>
+					    </div>
+					
+                        <div style="clear:both"></div>
+
+</div>
+				
+		</section>
+
+		
+		<section class="mod-container" style="margin-bottom: 0px;">
+			
+
+	
+		</section>
+		
+
+		
+
+	
+		
+			
+				
+				
+					
+						<section class="mod-container gc-stat-list">
+							<ul class="gc-stat-row labels clearfix">
+								<li class="country">&nbsp;</li>
+								<li><h2 style="text-transform: uppercase;">Shots (on goal)</h2></li>
+								<li><h2 style="text-transform: uppercase;">tackles</h2></li>
+								<li><h2 style="text-transform: uppercase;">Fouls</h2></li>
+								<li class="last possession"><h2 style="text-transform: uppercase;">possession</h2></li>
+							</ul>
+						
+							<ul class="gc-stat-row clearfix">
+								
+									<li class="country"><h2 title="Chelsea" style="border-left: 10px solid #034694;">Chelsea</h2></li>
+								
+								
+									<li><div class="bar-graph-container"><div class="fill" style="width:40%; background-color:#034694;"></div><p>9(4)</p></div></li>
+								
+								
+									<li><div class="bar-graph-container"><div class="fill" style="width:47%; background-color:#034694;"></div><p>18</p></div></li>
+								
+								
+									<li><div class="bar-graph-container"><div class="fill" style="width:48%; background-color:#034694;"></div><p>13</p></div></li>
+								
+								
+								
+									
+										
+										<li class="last possession">
+											<div class="bar-graph-container" style="background-color:#951D27;">
+												<div class="fill" style="width:31%; background-color:#034694;"></div>
+											</div>
+											<p style="left:0;">31%</p><p style="right:0;" class="floatright">69%</p>
+										</li>
+										
+									
+									
+							</ul>
+						
+							<ul class="gc-stat-row clearfix">
+								
+									<li class="country"><h2 title="Barcelona" style="border-left: 10px solid #951D27;">Barcelona</h2></li>
+								
+								
+									<li><div class="bar-graph-container"><div class="fill" style="width:60%; background-color:#951D27;"></div><p>18(6)</p></div></li>
+								
+								
+									<li><div class="bar-graph-container"><div class="fill" style="width:53%; background-color:#951D27;"></div><p>20</p></div></li>
+								
+								
+									<li><div class="bar-graph-container"><div class="fill" style="width:52%; background-color:#951D27;"></div><p>14</p></div></li>
+								
+								
+								
+									
+										
+											<li class="last possession"></li>
+										
+									
+									
+							</ul>
+												
+						</section>
+					
+			
+		
+
+<div class="span-12 column">
+				
+						
+						
+
+					<section class="mod-container">
+						
+							
+								
+								<h1 id="home-team" class="heading alt">Chelsea</h1>
+									
+										<table class="stat-table">
+            								<thead>
+                     							
+
+<tr class="subheader team-color">
+    
+            <th colspan="13" class="tb-lineup">
+                Line-up
+            </th>
+    
+</tr>
+
+<tr>
+    
+        <th class="pstat-pos">
+            POS
+        </th>
+    
+        <th class="pstat-no">
+            No
+        </th>
+    
+        <th class="pstat-name">
+            Name
+        </th>
+    
+    
+        <th 
+            class="pstat-SH" 
+            title="Shots">
+            SH
+        </th>
+    
+        <th 
+            class="pstat-SG" 
+            title="Shots on Goal">
+            SG
+        </th>
+    
+        <th 
+            class="pstat-G" 
+            title="Goals">
+            G
+        </th>
+    
+        <th 
+            class="pstat-A" 
+            title="Assists">
+            A
+        </th>
+    
+        <th 
+            class="pstat-OF" 
+            title="Offsides">
+            OF
+        </th>
+    
+        <th 
+            class="pstat-FD" 
+            title="Fouls Drawn">
+            FD
+        </th>
+    
+        <th 
+            class="pstat-FC" 
+            title="Fouls Committed">
+            FC
+        </th>
+    
+        <th 
+            class="pstat-SV" 
+            title="Saves">
+            SV
+        </th>
+    
+        <th 
+            class="pstat-YC" 
+            title="Yellow Cards">
+            YC
+        </th>
+    
+        <th 
+            class="pstat-RC" 
+            title="Red Cards">
+            RC
+        </th>
+    
+</tr>
+
+
+            								</thead>
+	            							<tbody>
+	            								
+													<tr class="odd">
+														
+															<td class="first"><p>G</p></td>
+														
+														
+															<td>13</td>
+														
+														
+															<td>
+															
+															<a href="/player/134283/thibaut-courtois" target="_blank"  title="Thibaut Courtois" alt="Thibaut Courtois">Thibaut Courtois</a>
+															
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    4
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	            								
+													<tr class="">
+														
+															<td class="first"><p>D</p></td>
+														
+														
+															<td>2</td>
+														
+														
+															<td>
+															
+															<a href="/player/83519/branislav-ivanovic" target="_blank"  title="Branislav Ivanovic" alt="Branislav Ivanovic">Branislav Ivanovic</a>
+															
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	            								
+													<tr class="odd">
+														
+															<td class="first"><p>D</p></td>
+														
+														
+															<td>5</td>
+														
+														
+															<td>
+															
+															<a href="/player/159319/kurt-zouma" target="_blank"  title="Kurt Zouma" alt="Kurt Zouma">Kurt Zouma</a>
+															
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	            								
+													<tr class="">
+														
+															<td class="first"><p>D</p></td>
+														
+														
+															<td>24</td>
+														
+														
+															<td>
+															
+															<a href="/player/40509/gary-cahill" target="_blank"  title="Gary Cahill" alt="Gary Cahill">Gary Cahill</a>
+															
+																
+																	
+																		
+																			
+																				<div class="soccer-icons soccer-icons-goal" onmouseover="tooltip.show('<strong>Goal - Header</strong> - 85\'');" onmouseout="tooltip.hide();"></div>
+																			
+																		
+																	
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	            								
+													<tr class="odd">
+														
+															<td class="first"><p>D</p></td>
+														
+														
+															<td>28</td>
+														
+														
+															<td>
+															
+															<a href="/player/97770/césar-azpilicueta" target="_blank"  title="César Azpilicueta" alt="César Azpilicueta">César Azpilicueta</a>
+															
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	            								
+													<tr class="">
+														
+															<td class="first"><p>M</p></td>
+														
+														
+															<td>4</td>
+														
+														
+															<td>
+															
+															<a href="/player/38886/cesc-fàbregas" target="_blank"  title="Cesc Fàbregas" alt="Cesc Fàbregas">Cesc Fàbregas</a>
+															
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    2
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	            								
+													<tr class="odd">
+														
+															<td class="first"><p>M</p></td>
+														
+														
+															<td>8</td>
+														
+														
+															<td>
+															
+															<a href="/player/173667/oscar" target="_blank"  title="Oscar" alt="Oscar">Oscar</a>
+															
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	            								
+													<tr class="">
+														
+															<td class="first"><p>M</p></td>
+														
+														
+															<td>10</td>
+														
+														
+															<td>
+															
+															<a href="/player/101390/eden-hazard" target="_blank"  title="Eden Hazard" alt="Eden Hazard">Eden Hazard</a>
+															
+																
+																	
+																		
+																			
+																				<div class="soccer-icons soccer-icons-goal" onmouseover="tooltip.show('<strong>Goal</strong> - 10\'');" onmouseout="tooltip.hide();"></div>
+																			
+																		
+																	
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    3
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    3
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	            								
+													<tr class="odd">
+														
+															<td class="first"><p>M</p></td>
+														
+														
+															<td>21</td>
+														
+														
+															<td>
+															
+															<a href="/player/135743/nemanja-matic" target="_blank"  title="Nemanja Matic" alt="Nemanja Matic">Nemanja Matic</a>
+															
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	            								
+													<tr class="">
+														
+															<td class="first"><p>M</p></td>
+														
+														
+															<td>33</td>
+														
+														
+															<td>
+															
+															<a href="/player/195349/kenedy" target="_blank"  title="Kenedy" alt="Kenedy">Kenedy</a>
+															
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	            								
+													<tr class="odd">
+														
+															<td class="first"><p>F</p></td>
+														
+														
+															<td>19</td>
+														
+														
+															<td>
+															
+															<a href="/player/95410/diego-costa" target="_blank"  title="Diego Costa" alt="Diego Costa">Diego Costa</a>
+															
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    2
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	            								
+
+	            								
+													<tr><td colspan="13">&nbsp;</td></tr>
+	                     							
+
+<tr class="subheader team-color">
+        
+            <th colspan="13" class="tb-substitutes home-team">
+                Substitutes
+            </th>
+    
+</tr>
+
+<tr>
+    
+        <th class="pstat-pos">
+            POS
+        </th>
+    
+        <th class="pstat-no">
+            No
+        </th>
+    
+        <th class="pstat-name">
+            Name
+        </th>
+    
+    
+        <th 
+            class="pstat-SH" 
+            title="Shots">
+            SH
+        </th>
+    
+        <th 
+            class="pstat-SG" 
+            title="Shots on Goal">
+            SG
+        </th>
+    
+        <th 
+            class="pstat-G" 
+            title="Goals">
+            G
+        </th>
+    
+        <th 
+            class="pstat-A" 
+            title="Assists">
+            A
+        </th>
+    
+        <th 
+            class="pstat-OF" 
+            title="Offsides">
+            OF
+        </th>
+    
+        <th 
+            class="pstat-FD" 
+            title="Fouls Drawn">
+            FD
+        </th>
+    
+        <th 
+            class="pstat-FC" 
+            title="Fouls Committed">
+            FC
+        </th>
+    
+        <th 
+            class="pstat-SV" 
+            title="Saves">
+            SV
+        </th>
+    
+        <th 
+            class="pstat-YC" 
+            title="Yellow Cards">
+            YC
+        </th>
+    
+        <th 
+            class="pstat-RC" 
+            title="Red Cards">
+            RC
+        </th>
+    
+</tr>
+
+
+	                     							
+													<tr class="odd">
+														
+															<td class="first"><p>G</p></td>
+														
+														
+															<td>27</td>
+														
+														
+															<td>
+															
+															<a href="/player/168303/jamal-blackman" target="_blank" title="Jamal Blackman" alt="Jamal Blackman">Jamal Blackman</a>
+															
+																
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="">
+														
+															<td class="first"><p>G</p></td>
+														
+														
+															<td>1</td>
+														
+														
+															<td>
+															
+															<a href="/player/92885/asmir-begovic" target="_blank" title="Asmir Begovic" alt="Asmir Begovic">Asmir Begovic</a>
+															
+																
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="odd">
+														
+															<td class="first"><p>D</p></td>
+														
+														
+															<td>26</td>
+														
+														
+															<td>
+															
+															<a href="/player/8931/john-terry" target="_blank" title="John Terry" alt="John Terry">John Terry</a>
+															
+																
+																	<div class="soccer-icons soccer-icons-subinout" onmouseover="tooltip.show('<strong>Substitution</strong> - 62\'<br />Off: César Azpilicueta');" onmouseout="tooltip.hide();"></div>
+																
+																
+																	
+																		
+																			
+																		
+																	
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="">
+														
+															<td class="first"><p>D</p></td>
+														
+														
+															<td>29</td>
+														
+														
+															<td>
+															
+															<a href="/player/149755/nathaniel-chalobah" target="_blank" title="Nathaniel Chalobah" alt="Nathaniel Chalobah">Nathaniel Chalobah</a>
+															
+																
+																	<div class="soccer-icons soccer-icons-subinout" onmouseover="tooltip.show('<strong>Substitution</strong> - 87\'<br />Off: Gary Cahill');" onmouseout="tooltip.hide();"></div>
+																
+																
+																	
+																		
+																			
+																		
+																	
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="odd">
+														
+															<td class="first"><p>D</p></td>
+														
+														
+															<td>34</td>
+														
+														
+															<td>
+															
+															<a href="/player/206227/ola-aina" target="_blank" title="Ola Aina" alt="Ola Aina">Ola Aina</a>
+															
+																
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="">
+														
+															<td class="first"><p>D</p></td>
+														
+														
+															<td>37</td>
+														
+														
+															<td>
+															
+															<a href="/player/219781/jake-clark-salter" target="_blank" title="Jake Clark-Salter" alt="Jake Clark-Salter">Jake Clark-Salter</a>
+															
+																
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="odd">
+														
+															<td class="first"><p>M</p></td>
+														
+														
+															<td>7</td>
+														
+														
+															<td>
+															
+															<a href="/player/99025/ramires" target="_blank" title="Ramires" alt="Ramires">Ramires</a>
+															
+																
+																	<div class="soccer-icons soccer-icons-subinout" onmouseover="tooltip.show('<strong>Substitution</strong> - 45\'<br />Off: Kenedy');" onmouseout="tooltip.hide();"></div>
+																
+																
+																	
+																		
+																			
+																		
+																	
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    2
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="">
+														
+															<td class="first"><p>M</p></td>
+														
+														
+															<td>11</td>
+														
+														
+															<td>
+															
+															<a href="/player/118986/juan-cuadrado" target="_blank" title="Juan Cuadrado" alt="Juan Cuadrado">Juan Cuadrado</a>
+															
+																
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="odd">
+														
+															<td class="first"><p>M</p></td>
+														
+														
+															<td>12</td>
+														
+														
+															<td>
+															
+															<a href="/player/60503/john-obi-mikel" target="_blank" title="John Obi Mikel" alt="John Obi Mikel">John Obi Mikel</a>
+															
+																
+																	<div class="soccer-icons soccer-icons-subinout" onmouseover="tooltip.show('<strong>Substitution</strong> - 61\'<br />Off: Nemanja Matic');" onmouseout="tooltip.hide();"></div>
+																
+																
+																	
+																		
+																			
+																		
+																	
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="">
+														
+															<td class="first"><p>M</p></td>
+														
+														
+															<td>14</td>
+														
+														
+															<td>
+															
+															<a href="/player/169661/bertrand-traore" target="_blank" title="Bertrand Traore" alt="Bertrand Traore">Bertrand Traore</a>
+															
+																
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="odd">
+														
+															<td class="first"><p>M</p></td>
+														
+														
+															<td>20</td>
+														
+														
+															<td>
+															
+															<a href="/player/112547/victor-moses" target="_blank" title="Victor Moses" alt="Victor Moses">Victor Moses</a>
+															
+																
+																	<div class="soccer-icons soccer-icons-subinout" onmouseover="tooltip.show('<strong>Substitution</strong> - 64\'<br />Off: Cesc Fàbregas');" onmouseout="tooltip.hide();"></div>
+																
+																
+																	
+																		
+																			
+																		
+																	
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    2
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="">
+														
+															<td class="first"><p>M</p></td>
+														
+														
+															<td>22</td>
+														
+														
+															<td>
+															
+															<a href="/player/178487/willian" target="_blank" title="Willian" alt="Willian">Willian</a>
+															
+																
+																	<div class="soccer-icons soccer-icons-subinout" onmouseover="tooltip.show('<strong>Substitution</strong> - 45\'<br />Off: Oscar');" onmouseout="tooltip.hide();"></div>
+																
+																
+																	
+																		
+																			
+																		
+																	
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    2
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="odd">
+														
+															<td class="first"><p>M</p></td>
+														
+														
+															<td>35</td>
+														
+														
+															<td>
+															
+															<a href="/player/194115/dominic-solanke" target="_blank" title="Dominic Solanke" alt="Dominic Solanke">Dominic Solanke</a>
+															
+																
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="">
+														
+															<td class="first"><p>M</p></td>
+														
+														
+															<td>36</td>
+														
+														
+															<td>
+															
+															<a href="/player/186505/ruben-loftus-cheek" target="_blank" title="Ruben Loftus-Cheek" alt="Ruben Loftus-Cheek">Ruben Loftus-Cheek</a>
+															
+																
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="odd">
+														
+															<td class="first"><p>F</p></td>
+														
+														
+															<td>9</td>
+														
+														
+															<td>
+															
+															<a href="/player/87706/radamel-falcao" target="_blank" title="Radamel Falcao" alt="Radamel Falcao">Radamel Falcao</a>
+															
+																
+																	<div class="soccer-icons soccer-icons-subinout" onmouseover="tooltip.show('<strong>Substitution</strong> - 68\'<br />Off: Eden Hazard');" onmouseout="tooltip.hide();"></div>
+																
+																
+																	
+																		
+																			
+																		
+																	
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="">
+														
+															<td class="first"><p>F</p></td>
+														
+														
+															<td>18</td>
+														
+														
+															<td>
+															
+															<a href="/player/84886/loïc-rémy" target="_blank" title="Loïc Rémy" alt="Loïc Rémy">Loïc Rémy</a>
+															
+																
+																	<div class="soccer-icons soccer-icons-subinout" onmouseover="tooltip.show('<strong>Substitution</strong> - 60\'<br />Off: Diego Costa');" onmouseout="tooltip.hide();"></div>
+																
+																
+																	
+																		
+																			
+																		
+																	
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+	            								
+	            							</tbody>
+	            						</table>
+									
+							
+						
+					</section>
+				
+
+				
+						
+						
+					<section class="mod-container">
+						
+							
+								
+								<h1 id="away-team" class="heading alt">Barcelona</h1>
+									
+										<table class="stat-table">
+            								<thead>
+                     							
+
+<tr class="subheader team-color">
+    
+            <th colspan="13" class="tb-lineup">
+                Line-up
+            </th>
+    
+</tr>
+
+<tr>
+    
+        <th class="pstat-pos">
+            POS
+        </th>
+    
+        <th class="pstat-no">
+            No
+        </th>
+    
+        <th class="pstat-name">
+            Name
+        </th>
+    
+    
+        <th 
+            class="pstat-SH" 
+            title="Shots">
+            SH
+        </th>
+    
+        <th 
+            class="pstat-SG" 
+            title="Shots on Goal">
+            SG
+        </th>
+    
+        <th 
+            class="pstat-G" 
+            title="Goals">
+            G
+        </th>
+    
+        <th 
+            class="pstat-A" 
+            title="Assists">
+            A
+        </th>
+    
+        <th 
+            class="pstat-OF" 
+            title="Offsides">
+            OF
+        </th>
+    
+        <th 
+            class="pstat-FD" 
+            title="Fouls Drawn">
+            FD
+        </th>
+    
+        <th 
+            class="pstat-FC" 
+            title="Fouls Committed">
+            FC
+        </th>
+    
+        <th 
+            class="pstat-SV" 
+            title="Saves">
+            SV
+        </th>
+    
+        <th 
+            class="pstat-YC" 
+            title="Yellow Cards">
+            YC
+        </th>
+    
+        <th 
+            class="pstat-RC" 
+            title="Red Cards">
+            RC
+        </th>
+    
+</tr>
+
+
+            								</thead>
+	            							<tbody>
+	            								
+													<tr class="odd">
+														
+															<td class="first"><p>G</p></td>
+														
+														
+															<td>1</td>
+														
+														
+															<td>
+															
+															<a href="/player/140740/marc-andré-ter-stegen" target="_blank" title="Marc-André ter Stegen" alt="Marc-André ter Stegen">Marc-André ter Stegen</a>
+															
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    2
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	            								
+													<tr class="">
+														
+															<td class="first"><p>D</p></td>
+														
+														
+															<td>15</td>
+														
+														
+															<td>
+															
+															<a href="/player/145078/marc-bartra" target="_blank" title="Marc Bartra" alt="Marc Bartra">Marc Bartra</a>
+															
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	            								
+													<tr class="odd">
+														
+															<td class="first"><p>D</p></td>
+														
+														
+															<td>16</td>
+														
+														
+															<td>
+															
+															<a href="/player/130673/douglas-" target="_blank" title="Douglas " alt="Douglas ">Douglas </a>
+															
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	            								
+													<tr class="">
+														
+															<td class="first"><p>D</p></td>
+														
+														
+															<td>21</td>
+														
+														
+															<td>
+															
+															<a href="/player/47006/adriano" target="_blank" title="Adriano" alt="Adriano">Adriano</a>
+															
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	            								
+													<tr class="odd">
+														
+															<td class="first"><p>D</p></td>
+														
+														
+															<td>24</td>
+														
+														
+															<td>
+															
+															<a href="/player/84617/jérémy-mathieu" target="_blank" title="Jérémy Mathieu" alt="Jérémy Mathieu">Jérémy Mathieu</a>
+															
+																
+																	
+																		
+																			
+																				<div class="soccer-icons soccer-icons-yellowcard" onmouseover="tooltip.show('<strong>Yellow Card</strong> - 42\'');" onmouseout="tooltip.hide();"></div>
+																			
+																		
+																	
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    2
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	            								
+													<tr class="">
+														
+															<td class="first"><p>M</p></td>
+														
+														
+															<td>4</td>
+														
+														
+															<td>
+															
+															<a href="/player/102251/ivan-rakitic" target="_blank" title="Ivan Rakitic" alt="Ivan Rakitic">Ivan Rakitic</a>
+															
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    4
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	            								
+													<tr class="odd">
+														
+															<td class="first"><p>M</p></td>
+														
+														
+															<td>5</td>
+														
+														
+															<td>
+															
+															<a href="/player/121893/sergio-busquets" target="_blank" title="Sergio Busquets" alt="Sergio Busquets">Sergio Busquets</a>
+															
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    2
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	            								
+													<tr class="">
+														
+															<td class="first"><p>M</p></td>
+														
+														
+															<td>28</td>
+														
+														
+															<td>
+															
+															<a href="/player/186181/gerard" target="_blank" title="Gerard" alt="Gerard">Gerard</a>
+															
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	            								
+													<tr class="odd">
+														
+															<td class="first"><p>F</p></td>
+														
+														
+															<td>9</td>
+														
+														
+															<td>
+															
+															<a href="/player/125088/luis-suárez" target="_blank" title="Luis Suárez" alt="Luis Suárez">Luis Suárez</a>
+															
+																
+																	
+																		
+																			
+																				<div class="soccer-icons soccer-icons-goal" onmouseover="tooltip.show('<strong>Goal</strong> - 52\'');" onmouseout="tooltip.hide();"></div>
+																			
+																		
+																	
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    4
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    3
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	            								
+													<tr class="">
+														
+															<td class="first"><p>F</p></td>
+														
+														
+															<td>17</td>
+														
+														
+															<td>
+															
+															<a href="/player/193782/munir-el-haddadi" target="_blank" title="Munir El Haddadi" alt="Munir El Haddadi">Munir El Haddadi</a>
+															
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    2
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    3
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    2
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	            								
+													<tr class="odd">
+														
+															<td class="first"><p>F</p></td>
+														
+														
+															<td>29</td>
+														
+														
+															<td>
+															
+															<a href="/player/188165/sandro-ramírez" target="_blank" title="Sandro Ramírez" alt="Sandro Ramírez">Sandro Ramírez</a>
+															
+																
+																	
+																		
+																			
+																				<div class="soccer-icons soccer-icons-goal" onmouseover="tooltip.show('<strong>Goal</strong> - 66\'');" onmouseout="tooltip.hide();"></div>
+																			
+																		
+																	
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    4
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    2
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	            								
+
+	            								
+													<tr><td colspan="13">&nbsp;</td></tr>
+	                     							
+
+<tr class="subheader team-color">
+        
+            <th colspan="13" class="tb-substitutes away-team">
+                Substitutes
+            </th>
+    
+</tr>
+
+<tr>
+    
+        <th class="pstat-pos">
+            POS
+        </th>
+    
+        <th class="pstat-no">
+            No
+        </th>
+    
+        <th class="pstat-name">
+            Name
+        </th>
+    
+    
+        <th 
+            class="pstat-SH" 
+            title="Shots">
+            SH
+        </th>
+    
+        <th 
+            class="pstat-SG" 
+            title="Shots on Goal">
+            SG
+        </th>
+    
+        <th 
+            class="pstat-G" 
+            title="Goals">
+            G
+        </th>
+    
+        <th 
+            class="pstat-A" 
+            title="Assists">
+            A
+        </th>
+    
+        <th 
+            class="pstat-OF" 
+            title="Offsides">
+            OF
+        </th>
+    
+        <th 
+            class="pstat-FD" 
+            title="Fouls Drawn">
+            FD
+        </th>
+    
+        <th 
+            class="pstat-FC" 
+            title="Fouls Committed">
+            FC
+        </th>
+    
+        <th 
+            class="pstat-SV" 
+            title="Saves">
+            SV
+        </th>
+    
+        <th 
+            class="pstat-YC" 
+            title="Yellow Cards">
+            YC
+        </th>
+    
+        <th 
+            class="pstat-RC" 
+            title="Red Cards">
+            RC
+        </th>
+    
+</tr>
+
+
+	                     							
+													<tr class="odd">
+														
+															<td class="first"><p>G</p></td>
+														
+														
+															<td>13</td>
+														
+														
+															<td>
+															
+															<a href="/player/205768/josé-suarez" target="_blank" title="José Suarez" alt="José Suarez">José Suarez</a>
+															
+																
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="">
+														
+															<td class="first"><p>G</p></td>
+														
+														
+															<td>25</td>
+														
+														
+															<td>
+															
+															<a href="/player/150792/jordi-masip" target="_blank" title="Jordi Masip" alt="Jordi Masip">Jordi Masip</a>
+															
+																
+																	<div class="soccer-icons soccer-icons-subinout" onmouseover="tooltip.show('<strong>Substitution</strong> - 60\'<br />Off: Marc-André ter Stegen');" onmouseout="tooltip.hide();"></div>
+																
+																
+																	
+																		
+																			
+																		
+																	
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="odd">
+														
+															<td class="first"><p>D</p></td>
+														
+														
+															<td>3</td>
+														
+														
+															<td>
+															
+															<a href="/player/45931/gerard-piqué" target="_blank" title="Gerard Piqué" alt="Gerard Piqué">Gerard Piqué</a>
+															
+																
+																	<div class="soccer-icons soccer-icons-subinout" onmouseover="tooltip.show('<strong>Substitution</strong> - 59\'<br />Off: Marc Bartra');" onmouseout="tooltip.hide();"></div>
+																
+																
+																	
+																		
+																			
+																		
+																	
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="">
+														
+															<td class="first"><p>D</p></td>
+														
+														
+															<td>18</td>
+														
+														
+															<td>
+															
+															<a href="/player/121021/jordi-alba" target="_blank" title="Jordi Alba" alt="Jordi Alba">Jordi Alba</a>
+															
+																
+																	<div class="soccer-icons soccer-icons-subinout" onmouseover="tooltip.show('<strong>Substitution</strong> - 60\'<br />Off: Adriano');" onmouseout="tooltip.hide();"></div>
+																
+																
+																	
+																		
+																			
+																		
+																	
+																		
+																			
+																				<div class="soccer-icons soccer-icons-yellowcard" onmouseover="tooltip.show('<strong>Yellow Card</strong> - 75\'');" onmouseout="tooltip.hide();"></div>
+																			
+																		
+																	
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="odd">
+														
+															<td class="first"><p>D</p></td>
+														
+														
+															<td>23</td>
+														
+														
+															<td>
+															
+															<a href="/player/40543/thomas-vermaelen" target="_blank" title="Thomas Vermaelen" alt="Thomas Vermaelen">Thomas Vermaelen</a>
+															
+																
+																	<div class="soccer-icons soccer-icons-subinout" onmouseover="tooltip.show('<strong>Substitution</strong> - 59\'<br />Off: Jérémy Mathieu');" onmouseout="tooltip.hide();"></div>
+																
+																
+																	
+																		
+																			
+																		
+																	
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="">
+														
+															<td class="first"><p>M</p></td>
+														
+														
+															<td>8</td>
+														
+														
+															<td>
+															
+															<a href="/player/17566/andrés-iniesta" target="_blank" title="Andrés Iniesta" alt="Andrés Iniesta">Andrés Iniesta</a>
+															
+																
+																	<div class="soccer-icons soccer-icons-subinout" onmouseover="tooltip.show('<strong>Substitution</strong> - 60\'<br />Off: Ivan Rakitic');" onmouseout="tooltip.hide();"></div>
+																
+																
+																	
+																		
+																			
+																		
+																	
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="odd">
+														
+															<td class="first"><p>M</p></td>
+														
+														
+															<td>12</td>
+														
+														
+															<td>
+															
+															<a href="/player/154814/rafinha" target="_blank" title="Rafinha" alt="Rafinha">Rafinha</a>
+															
+																
+																	<div class="soccer-icons soccer-icons-subinout" onmouseover="tooltip.show('<strong>Substitution</strong> - 61\'<br />Off: Gerard');" onmouseout="tooltip.hide();"></div>
+																
+																
+																	
+																		
+																			
+																		
+																	
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    3
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="">
+														
+															<td class="first"><p>M</p></td>
+														
+														
+															<td>20</td>
+														
+														
+															<td>
+															
+															<a href="/player/150225/sergi-roberto" target="_blank" title="Sergi Roberto" alt="Sergi Roberto">Sergi Roberto</a>
+															
+																
+																	<div class="soccer-icons soccer-icons-subinout" onmouseover="tooltip.show('<strong>Substitution</strong> - 17\'<br />Off: Douglas ');" onmouseout="tooltip.hide();"></div>
+																
+																
+																	
+																		
+																			
+																		
+																	
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="odd">
+														
+															<td class="first"><p>M</p></td>
+														
+														
+															<td>26</td>
+														
+														
+															<td>
+															
+															<a href="/player/185223/sergi-samper" target="_blank" title="Sergi Samper" alt="Sergi Samper">Sergi Samper</a>
+															
+																
+																	<div class="soccer-icons soccer-icons-subinout" onmouseover="tooltip.show('<strong>Substitution</strong> - 61\'<br />Off: Sergio Busquets');" onmouseout="tooltip.hide();"></div>
+																
+																
+																	
+																		
+																			
+																		
+																	
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="">
+														
+															<td class="first"><p>M</p></td>
+														
+														
+															<td>30</td>
+														
+														
+															<td>
+															
+															<a href="/player/179195/alen-halilovic" target="_blank" title="Alen Halilovic" alt="Alen Halilovic">Alen Halilovic</a>
+															
+																
+																	<div class="soccer-icons soccer-icons-subinout" onmouseover="tooltip.show('<strong>Substitution</strong> - 73\'<br />Off: Munir El Haddadi');" onmouseout="tooltip.hide();"></div>
+																
+																
+																	
+																		
+																			
+																		
+																	
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+													<tr class="odd">
+														
+															<td class="first"><p>F</p></td>
+														
+														
+															<td>7</td>
+														
+														
+															<td>
+															
+															<a href="/player/114032/pedro" target="_blank" title="Pedro" alt="Pedro">Pedro</a>
+															
+																
+																	<div class="soccer-icons soccer-icons-subinout" onmouseover="tooltip.show('<strong>Substitution</strong> - 62\'<br />Off: Luis Suárez');" onmouseout="tooltip.hide();"></div>
+																
+																
+																	
+																		
+																			
+																		
+																	
+																
+															</td>
+														
+														
+
+
+    
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    1
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+        
+            <td>
+                
+                    -
+                
+            </td>   
+        
+    
+
+
+													</tr>
+	                     							
+	            								
+	            							</tbody>
+	            						</table>
+									
+							
+						
+					</section>
+				
+			</div>
+
+ 			<div class="span-6 column last">
+ 				<div id="bet365-stats" class="mod-container"></div>
+
+				
+					
+					
+
+
+
+
+
+
+
+
+
+
+
+					<section class="mod-container">
+						<h1 class="heading standard">Scoring Summary</h1>
+							<ul class="heading h2h">
+ 								<li class="home" style="border-color:#034694;">Chelsea</li>
+								<li class="away" style="border-color:#951D27;">Barcelona</li>
+							</ul>
+							
+								
+									<div class="span-3 column" style="margin-right:10px;">
+										<table class="no-borders">
+											<tbody>
+											
+												
+												<tr>
+													<td class="first">
+														
+															
+															<a href="/player/101390/eden-hazard" target="_blank" title="Eden Hazard" alt="Eden Hazard">Eden Hazard</a>
+															
+														 (10')</td>
+												</tr>
+												
+												<tr>
+													<td class="first">
+														
+															
+															<a href="/player/40509/gary-cahill" target="_blank" title="Gary Cahill" alt="Gary Cahill">Gary Cahill</a>
+															
+														 (85')</td>
+												</tr>
+												
+											
+											</tbody>
+										</table>
+									</div>
+								
+							
+								
+									<div class="span-3 column" style="margin:0px;">
+										<table class="no-borders">
+											<tbody>
+											
+												
+												<tr>
+													<td class="right last">(52')
+													
+														
+														<a href="/player/125088/luis-suárez" target="_blank" title="Luis Suárez" alt="Luis Suárez">Luis Suárez</a>
+														
+													
+													</td>
+												</tr>
+												
+												<tr>
+													<td class="right last">(66')
+													
+														
+														<a href="/player/188165/sandro-ramírez" target="_blank" title="Sandro Ramírez" alt="Sandro Ramírez">Sandro Ramírez</a>
+														
+													
+													</td>
+												</tr>
+												
+											
+											</tbody>
+										</table>
+									</div>
+								
+							
+					</section>
+				
+
+			
+			<div class="mod-container mod-ad ad-300x250">
+				<!-- Incontent Ad (300x250) -->
+<div data-ad-type="ad-in-content"></div>
+			</div>
+			
+
+			
+				
+					
+						
+								 
+	
+	
+
+
+
+
+
+
+
+
+							<section class="mod-container">
+								<h1 class="heading standard">Match Stats</h1>
+								<ul class="heading h2h">
+									<li style="border-color:#034694;" class="home">Chelsea</li>
+									<li style="border-color:#951D27;" class="away">Barcelona</li>
+								</ul>
+									<table class="no-borders">
+										<tbody>
+										
+											<tr>
+												
+													
+													
+														
+															
+																<td id="home-shots" class="first">9(4)</td>
+															
+														
+															
+														
+																<td class="center">Shots (on goal)</td>
+														
+															
+														
+															
+																<td id="away-shots" class="right last">18(6)</td>
+															
+														
+													
+												
+												
+												
+												
+												
+												
+												
+												
+											</tr>			
+										
+											<tr>
+												
+												
+													
+													
+														
+															
+																<td id="home-fouls" class="first">13</td>
+															
+														
+															
+														
+																<td class="center">Fouls</td>
+														
+															
+														
+															
+																<td id="away-fouls" class="right last">14</td>
+															
+														
+													
+												
+												
+												
+												
+												
+												
+												
+											</tr>			
+										
+											<tr>
+												
+												
+												
+													
+													
+														
+															
+																<td id="home-corner-kicks" class="first">2</td>
+															
+														
+															
+														
+																<td class="center">Corner kicks</td>
+														
+															
+														
+															
+																<td id="away-corner-kicks" class="right last">7</td>
+															
+														
+													
+												
+												
+												
+												
+												
+												
+											</tr>			
+										
+											<tr>
+												
+												
+												
+												
+													
+													
+														
+															
+																<td id="home-offsides" class="first">2</td>
+															
+														
+															
+														
+																<td class="center">Offsides</td>
+														
+															
+														
+															
+																<td id="away-offsides" class="right last">0</td>
+															
+														
+													
+												
+												
+												
+												
+												
+											</tr>			
+										
+											<tr>
+												
+												
+												
+												
+												
+													
+													
+														
+															
+																<td id="home-possession" class="first">31%</td>
+															
+														
+															
+														
+																<td class="center">Time of Possession</td>
+														
+															
+														
+															
+																<td id="away-possession" class="right last">69%</td>
+															
+														
+													
+												
+												
+												
+												
+											</tr>			
+										
+											<tr>
+												
+												
+												
+												
+												
+												
+													
+													
+														
+															
+																<td id="home-yellow-cards" class="first">0</td>
+															
+														
+															
+														
+																<td class="center">Yellow Cards</td>
+														
+															
+														
+															
+																<td id="away-yellow-cards" class="right last">2</td>
+															
+														
+													
+												
+												
+												
+											</tr>			
+										
+											<tr>
+												
+												
+												
+												
+												
+												
+												
+													
+													
+														
+															
+																<td id="home-red-cards" class="first">0</td>
+															
+														
+															
+														
+																<td class="center">Red Cards</td>
+														
+															
+														
+															
+																<td id="away-red-cards" class="right last">0</td>
+															
+														
+													
+												
+												
+											</tr>			
+										
+											<tr>
+												
+												
+												
+												
+												
+												
+												
+												
+													
+													
+														
+															
+																<td id="home-saves" class="first">4</td>
+															
+														
+															
+														
+																<td class="center">Saves</td>
+														
+															
+														
+															
+																<td id="away-saves" class="right last">2</td>
+															
+														
+													
+												
+											</tr>			
+										
+										</tbody>
+									</table>
+							</section>
+						
+				
+			
+			</div>
+
+	
+
+	<div style="width: 640px">
+	<h5>Comments</h5>
+	<p style="margin: 10px 0 0; font-size: 10px; color: #777;">Use a <a href="https://www.facebook.com/r.php" rel="nofollow">Facebook account</a> to add a comment, subject to Facebook's <a href="https://www.facebook.com/policies/" rel="nofollow">Terms of Service</a> and <a href="https://www.facebook.com/about/privacy/" rel="nofollow">Privacy Policy</a>. Your Facebook name, photo & other personal information you make public on Facebook will appear with your comment, and may be used on ESPN's media platforms. <a href="http://espn.go.com/community/story/_/id/8756098/espn-facebook-comments-faq">Learn more</a>.
+	</p>
+	<div class="fb-comments" data-href="http://espnfc.com/gamecast/419985/gamecast.html" data-num-posts="5" data-colorscheme="light" data-width="640"></div>
+</div>
+
+	</div>
+<div id="casterListener"></div>
+
+		
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+
+
+<!-- START - New omniture code added during FC Redesign -->
+
+
+
+<script type="text/javascript">
+var anScripts = "http://a.espncdn.com/combiner/c/28?js=analytics/unified/VisitorAPI.js,analytics/unified/sOmni.2.combined.beta.1.js,analytics/unified/analytics.2.beta.1.js,analytics/externalnielsen.js",
+    s_account = "wdgespsoccernet", // wdgespsoccernet or wdgespespnw
+    omniPageName = "soccernet:international+champions+cup:statistics:game:gameid=419985-game+desc+-+chelsea+vs+barcelona", /* pagename value for video (freewheel) */
+    cB = { /* chartbeat settings */
+        'domain' : 'espnfc.com',
+        'sections' : 'espnfc', /* site */
+        'authors' : 'game',
+        'path' : '/gamecast/statistics/id/419985/statistics.html',
+        'title' : 'Chelsea v Barcelona live football scores | Soccer scores and live video | ESPNFC.com',
+        'loadPubJS' : false,
+        'loadVidJS' : true
+    },
+    initTracking = function () {
+        var ems = espn.memberservices || {},
+            insider = ems.insider || "anonymous",
+            loginStatus = ems.loginStatus || "anonymous",
+            year = ems.bYear || "unknown",
+            gender = ems.gender || "unknown",
+            age = ems.bDate || "unknown",
+            key = [year, gender, loginStatus, insider, "premium-no"].join(':');
+        espn.track.trackPage({ // init and track
+            pageName: "soccernet:international+champions+cup:statistics:game:gameid=419985-game+desc+-+chelsea+vs+barcelona",
+            site: "espnfc", // espnfc or espnw
+            section: "statistics",
+            sections: "international+champions+cup:statistics:game ",
+            contentType: "game",
+            gameInfo: "gameid=419985-game+desc+-+chelsea+vs+barcelona",
+            lang: "en_us", // en_us | en_uk | en_www
+            countryRegion: "en-us", // en-us | en-uk | en-www
+            sport: "soccer",
+            league: "international+champions+cup",
+            convrSport: "soccer",
+            insiderStatus: insider + ":premium-no",
+            birthAge: age,
+            gender: gender,
+            loginStatus: loginStatus,
+            userKey: key
+            /*  chartbeat client-side calls setup
+                - i ncase you start doing AJAX calls on this page
+                    and want to trigger a chartbeat pageload call
+
+            // chartbeat settings
+            cbSettings = {
+                site : cB.sections,
+                section : cB.path,
+                pagename : cB.title
+            },
+            disableCB : false
+            */
+        });
+        /*  set ad_site globally
+        */
+        window.ad_site = 'espnfc.us.statistics';
+        /** // All Editions
+            - espnfc.com > espnfc.global.<section>
+            - espnfc.us >espnfc.us.<section>
+            - espnfc.co.uk >espnfc.uk.<section>
+        **/
+    };
+// Delayed request
+if (typeof s_omni === "undefined") {
+    jQuery(function ($) {
+        $.ajaxSetup({ cache: true });
+        /* we want to load the analytics files from the cache if possible - so, let's use full $.ajax() calls */
+        $.getScript(anScripts, function () {
+             /* Init Chartbeat */
+            espn.track.initCB(cB);
+            /* Init Tracking */
+            initTracking();
+        });
+    });
+}
+
+</script>
+<!-- END - New omniture code added during FC Redesign-->
+
+
+		<!-- Begin comScore Tag -->
+		<script>
+		var _comscore = _comscore || [];
+		_comscore.push({ c1: "2", c2: "3000005" });
+		(function() {
+		var s = document.createElement("script"), el =
+		document.getElementsByTagName("script")[0]; s.async = true;
+		s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+		el.parentNode.insertBefore(s, el);
+		})();
+		</script>
+		<!-- End comScore Tag -->
+
+	
+
+			</div>
+		</section>
+
+
+		
+		<!-- Google Plus One code -->
+		<script type="text/javascript">
+		  (function() {
+		    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		    po.src = 'https://apis.google.com/js/plusone.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  })();
+		</script>
+
+		<!-- Facebook code -->
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) {return;}
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId="+espn.social.gSettings.facebook_app_id;
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
+
+		<!-- Below JS reference is added on Aug 12, 2014 to fascilitate analytics team to run surveys -->
+		<script type="text/javascript" src="http://content.dl-rms.com/rms/mother/53849/nodetag.js"></script>
+
+		<!-- Twitter code -->
+		<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+		
+
+		
+	</body>
+	</html>

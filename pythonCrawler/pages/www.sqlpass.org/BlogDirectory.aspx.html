@@ -1,0 +1,1577 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  xml:lang="en-US" lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head"><title>
+	Blog Directory | Community | SQL Server | PASS - the Professional Association for SQL Server
+</title><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><meta content="text/javascript" http-equiv="Content-Script-Type" /><meta content="text/css" http-equiv="Content-Style-Type" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta id="MetaCopyright" name="COPYRIGHT" content="Copyright 2015 by PASS" /><meta id="MetaAuthor" name="AUTHOR" content="PASS" /><meta name="RESOURCE-TYPE" content="DOCUMENT" /><meta name="DISTRIBUTION" content="GLOBAL" /><meta id="MetaRobots" name="ROBOTS" content="INDEX, FOLLOW" /><meta name="REVISIT-AFTER" content="1 DAYS" /><meta name="RATING" content="GENERAL" /><meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" /><style id="StylePlaceholder" type="text/css"></style><link href="/Portals/_default/default.css?cdv=96" type="text/css" rel="stylesheet"/><link href="/DesktopModules/Admin/Banners/module.css?cdv=96" type="text/css" rel="stylesheet"/><link href="/Portals/_default/Skins/pass_skin_2012/skin.css?cdv=96" type="text/css" rel="stylesheet"/><link href="/Portals/0/portal.css?cdv=96" type="text/css" rel="stylesheet"/><script src="/Resources/Shared/Scripts/jquery/jquery.min.js?cdv=96" type="text/javascript"></script><link id="PASSStyles" rel="stylesheet" type="text/css" href="/Resources/shared/stylesheets/pass/pass.css" /><link id="CustomStyles" rel="stylesheet" type="text/css" href="/Portals/_default/Skins/pass_skin_2012/custom.css" />
+    <script type="text/javascript">
+        function NavMouseover(li) {
+            var agent  = navigator.userAgent.toLowerCase();
+            var regex = /msie/i;
+   	        if (regex.test(agent))
+               li.className+=' hover ';
+            if (li.id.match('^navParent')) {
+                var navChild=document.getElementById('navChild');
+                if (navChild) {
+                    var childContainers = navChild.getElementsByTagName('ul');
+                    if (childContainers) {
+                        for (var i = 0; i < childContainers.length; i++)
+                        {  
+                            if (childContainers[i].id.match('^navChild')) {
+                                if (childContainers[i].id.match('^navChild-'+li.id.substring(li.id.indexOf('-')+1))) {
+                                    childContainers[i].style.display='inline';
+                                } else {
+                                    childContainers[i].style.display='none';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        function NavMouseout(li) { 
+            var agent  = navigator.userAgent.toLowerCase();
+            var regex = /msie/i;
+    	    if (regex.test(agent))
+                li.className=li.className.replace(' hover ', '');
+         }
+    </script>
+<link rel='SHORTCUT ICON' href='/Portals/0/favicon.ico' type='image/x-icon' />     
+        
+			    <script type="text/javascript">
+			      var _gaq = _gaq || [];
+			      _gaq.push(['_setAccount', 'UA-3210692-4']);
+			      _gaq.push(['_trackPageview']);
+			 
+			      (function() {
+				    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			      })();
+			    </script>
+        
+		  </head>
+<body id="Body">
+    
+    <form method="post" action="/Community/BlogDirectory.aspx" id="Form" enctype="multipart/form-data">
+<div class="aspNetHidden">
+<input type="hidden" name="StylesheetManager_TSSM" id="StylesheetManager_TSSM" value="" />
+<input type="hidden" name="ScriptManager_TSM" id="ScriptManager_TSM" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNzQ3NTU0MDE2D2QWCGYPFgIeBFRleHQFeTwhRE9DVFlQRSBodG1sIFBVQkxJQyAiLS8vVzNDLy9EVEQgWEhUTUwgMS4wIFRyYW5zaXRpb25hbC8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9UUi94aHRtbDEvRFREL3hodG1sMS10cmFuc2l0aW9uYWwuZHRkIj5kAgIPFgIfAAVDIHhtbDpsYW5nPSJlbi1VUyIgbGFuZz0iZW4tVVMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sImQCBA9kFg4CBg8WAh4HVmlzaWJsZWhkAgcPFgQeB2NvbnRlbnRkHwFoZAIIDxYEHwJkHwFoZAIJDxYCHwIFFkNvcHlyaWdodCAyMDE1IGJ5IFBBU1NkAgoPFgQfAmQfAWhkAgsPFgIfAgUEUEFTU2QCDg8WAh8CBQ1JTkRFWCwgRk9MTE9XZAIGD2QWAgIBD2QWAgIHD2QWAmYPZBYMAgMPZBYEZg8PFgoeCENzc0NsYXNzBQpMb2dpblN0eWxlHwAFBUxvZ2luHgdUb29sVGlwBQVMb2dpbh4LTmF2aWdhdGVVcmwFY2h0dHA6Ly93d3cuc3FscGFzcy5vcmcvVXNlckxvZ2luL3RhYmlkLzM3NC9EZWZhdWx0LmFzcHg/cmV0dXJudXJsPSUyZkNvbW11bml0eSUyZkJsb2dEaXJlY3RvcnkuYXNweB4EXyFTQgICZGQCAg8WAh8BaBYCAgEPDxYKHwMFCkxvZ2luU3R5bGUfAAUFTG9naW4fBAUFTG9naW4fBQVjaHR0cDovL3d3dy5zcWxwYXNzLm9yZy9Vc2VyTG9naW4vdGFiaWQvMzc0L0RlZmF1bHQuYXNweD9yZXR1cm51cmw9JTJmQ29tbXVuaXR5JTJmQmxvZ0RpcmVjdG9yeS5hc3B4HwYCAmRkAgQPZBYEZg8PFgQfAwUKTG9naW5TdHlsZR8GAgJkZAICDw8WCh8DBQpMb2dpblN0eWxlHwAFCFJlZ2lzdGVyHwUFbGh0dHA6Ly93d3cuc3FscGFzcy5vcmcvUmVnaXN0ZXJmb3JTUUxQQVNTLmFzcHg/cmV0dXJudXJsPWh0dHA6Ly93d3cuc3FscGFzcy5vcmcvQ29tbXVuaXR5L0Jsb2dEaXJlY3RvcnkuYXNweB8GAgIfAWdkZAIHD2QWAmYPFgIeBWNsYXNzBSxEbm5Nb2R1bGUgRG5uTW9kdWxlLUROTl9IVE1MIERubk1vZHVsZS0xMjU5ORYCAgEPZBYCZg9kFgICAQ8PZBYCHwcFHEROTk1vZHVsZUNvbnRlbnQgTW9kRE5OSFRNTEMWAgIBD2QWAgICDxYCHwFoZAIID2QWAmYPFgIfBwUqRG5uTW9kdWxlIERubk1vZHVsZS1ETk5fSFRNTCBEbm5Nb2R1bGUtNDA5FgICAQ9kFgJmD2QWAgIBDw9kFgIfBwUcRE5OTW9kdWxlQ29udGVudCBNb2RETk5IVE1MQxYCAgEPZBYCAgIPFgIfAWhkAgkPFgIfBwUcYm90dG9tcGFuZSBwYW5lIEROTkVtcHR5UGFuZWQCCg9kFgRmDxYCHwcFK0Rubk1vZHVsZSBEbm5Nb2R1bGUtQmFubmVycyBEbm5Nb2R1bGUtMTMyMTcWAgIBD2QWAmYPZBYCAgEPD2QWAh8HBRxETk5Nb2R1bGVDb250ZW50IE1vZEJhbm5lcnNDFgICAQ9kFgJmDzwrAAkCAA8WBh4IRGF0YUtleXMWAB4LXyFJdGVtQ291bnRmHwFoZAgWBB4LQ2VsbFBhZGRpbmdmHwYCgIAIZAIBDxYCHwcFK0Rubk1vZHVsZSBEbm5Nb2R1bGUtQmFubmVycyBEbm5Nb2R1bGUtMjQwMDcWAgIBD2QWAmYPZBYCAgEPD2QWAh8HBRxETk5Nb2R1bGVDb250ZW50IE1vZEJhbm5lcnNDFgICAQ9kFgJmDxQrAAkPFggfCBYAHwkCAR4MUmVwZWF0TGF5b3V0CyomU3lzdGVtLldlYi5VSS5XZWJDb250cm9scy5SZXBlYXRMYXlvdXQAHg9SZXBlYXREaXJlY3Rpb24LKilTeXN0ZW0uV2ViLlVJLldlYkNvbnRyb2xzLlJlcGVhdERpcmVjdGlvbgFkFgQeC0JvcmRlcldpZHRoGwAAAAAAAAAAAQAAAB8GAiBkZGRkZGQWBB8KAgQfBgKAgAgWAmYPZBYCZg8PFgIfAAWXBjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij52YXIgcD0iaHR0cCIsZD0ic3RhdGljIjtpZihkb2N1bWVudC5sb2NhdGlvbi5wcm90b2NvbD09Imh0dHBzOiIpe3ArPSJzIjtkPSJlbmdpbmUiO312YXIgej1kb2N1bWVudC5jcmVhdGVFbGVtZW50KCJzY3JpcHQiKTt6LnR5cGU9InRleHQvamF2YXNjcmlwdCI7ei5hc3luYz10cnVlO3ouc3JjPXArIjovLyIrZCsiLm11bHRpdmlldy5jb20vYWRvcy5qcyI7dmFyIHM9ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoInNjcmlwdCIpWzBdO3MucGFyZW50Tm9kZS5pbnNlcnRCZWZvcmUoeixzKTs8L3NjcmlwdD4KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPgp2YXIgYWRvcyA9IGFkb3MgfHwge307CmFkb3MucnVuID0gYWRvcy5ydW4gfHwgW107CmFkb3MucnVuLnB1c2goZnVuY3Rpb24oKSB7Ci8qIGxvYWQgcGxhY2VtZW50IGZvciBhY2NvdW50OiBNdWx0aXZpZXcsIHNpdGU6IFBBU1N3ZWIgLSBQcm9mZXNzaW9uYWwgQXNzb2NpYXRpb24gZm9yIFNRTCBTZXJ2ZXIgLSBNdWx0aVdlYiwgc2l6ZTogOTUweDk1IC0gOTUwIHggOTUsIHpvbmU6IFBBU1N3ZWIgLSBMZWFkZXJib2FyZCAtIDk1MHg5NSovCmFkb3NfYWRkX3BsYWNlbWVudCg0NDY2LCA2ODEwMywgIm12QmFubmVyIiwgMjQ4Mykuc2V0Wm9uZSgxMjMzOTIpOwphZG9zX3NldERvbWFpbignZW5naW5lLm11bHRpdmlldy5jb20nKTsKYWRvc19sb2FkKCk7Cn0pOzwvc2NyaXB0Pgo8ZGl2IGlkPSJtdkJhbm5lciIgc3R5bGU9InRleHQtYWxpZ246Y2VudGVyOyI+PC9kaXY+ZGRk8Pk2NLVhDGoLMb0OE2KxRyS2CHM=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form'];
+if (!theForm) {
+    theForm = document.Form;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=nN31kf057Bc-tuaMqOWpssY3RYAEWZ9B3m59e3Ijf4Qt9bgWek7kDjhajUSumPOqpUTLRaoWfkBrY8200&amp;t=635763807152737963" type="text/javascript"></script>
+
+
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ScriptManager_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3a47de63c8-89d4-489c-bfde-4185a11627a3%3aea597d4b%3ab25378d2" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAPmpK0ulFL7UilMg5Iywqf6V8nzZwti40eBrdWaPdC9rCCVhOCbIPrX4LkK0Gy5W0AMGMfQUEeV7R0V++heFTwErHvlRQ==" />
+</div><script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager', 'Form', [], [], [], 90, '');
+//]]>
+</script>
+
+        <script src="/js/dnncore.js?cdv=96" type="text/javascript"></script><script src="//assets.adobedtm.com/c876840ac68fc41c08a580a3fb1869c51ca83380/satelliteLib-9f3f936770d3dfb2574288a87de1ff730ac06258.js?cdv=96" type="text/javascript"></script>
+        
+        
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+
+
+
+
+
+
+
+<div id="ContentWrapper">
+<div id="ContentContainer">
+    <div id="header">
+        <div class="banner" onclick="javascript:window.location='http://www.sqlpass.org/';" style="cursor:pointer;"></div>
+
+        <ul id="login">
+            <li><a id="dnn_dnnLOGIN_loginLink" title="Login" class="LoginStyle" href="http://www.sqlpass.org/UserLogin/tabid/374/Default.aspx?returnurl=%2fCommunity%2fBlogDirectory.aspx">Login</a>
+<!--close loginGroup--></li>
+            <li>|</li>
+            <li>
+<a id="dnn_dnnUSER_registerLink" class="LoginStyle" href="http://www.sqlpass.org/RegisterforSQLPASS.aspx?returnurl=http://www.sqlpass.org/Community/BlogDirectory.aspx">Register</a>
+<!--close registerGroup--></li>
+        </ul>
+
+        <ul class="social">
+            <li><a target="_blank" href="//www.youtube.com/SQLPASSTV"><img src="/Portals/_default/Skins/pass_skin_2012/social_youtube.png" alt="" /></a></li>
+            <li><a target="_blank" href="//twitter.com/sqlpass"><img src="/Portals/_default/Skins/pass_skin_2012/social_twitter.png" width="22px" height="22px" alt="" /></a></li>
+            <li><a target="_blank" href="//www.facebook.com/pages/The-Professional-Association-for-SQL-Server/37651511063"><img src="/Portals/_default/Skins/pass_skin_2012/social_facebook.png" alt="" /></a></li>
+            <li><a target="_blank" href="//www.linkedin.com/groups?home=&gid=61756&trk=anet_ug_hm"><img src="/Portals/_default/Skins/pass_skin_2012/social_linkedin.png" alt="" /></a></li>
+            <!-- <li><a href="http://www.sqlpass.org/Home/RSS.aspx"><img src="/Portals/_default/Skins/pass_skin_2012/social_rss.png" alt="" /></a></li> -->
+        </ul>
+    </div><!-- END HEADER -->
+
+    <div id="navMenuWrapper">
+        <div id="navMenu">
+            <table cellSpacing="0" cellPadding="0" width="100%" border="0">
+                <tr>
+                    <td width="100%" valign="middle" nowrap="nowrap" class="parent">
+                        
+
+ <div id="navParent" class="TabList"> <ul class="dnn-nav Level1"> <li id="navParent-1465"  onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/Home.aspx">Home</a> </li> <li id="navParent-54"  onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/LearningCenter.aspx">Learning Center</a> <li id="navParent-55"  onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/Events.aspx">Events</a> <li id="navParent-56"  onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/Careers.aspx">Careers</a> <li id="navParent-57"  class="SelectedItem" onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/Community.aspx">Community</a> <li id="navParent-191"  onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/PASSChapters.aspx">PASS Chapters</a> <li id="navParent-6743"  onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/Elections.aspx">Elections</a> <li id="navParent-59"  onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/AboutPASS.aspx">About PASS</a>
+ </ul></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100%" valign="middle" class="child">
+                        
+ <div id="navChildContainer"><div id="navChild" class="TabList"> <ul id="navChild-54-62" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/LearningCenter/SessionRecordings.aspx" title="Session Recordings | SQL Server | Learning | PASS" >Session Recordings</a> </li>
+ </ul> <ul id="navChild-54-64" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/LearningCenter/PASSPublications.aspx" title="PASS Publications | Newsletter | Connector | PASS" >PASS Publications</a>
+ </ul> <ul id="navChild-54-13893" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/LearningCenter/WhitePapers.aspx" title="" >White Papers</a>
+ </ul> <ul id="navChild-55-175" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/Events/PASSSummit.aspx" title="PASS Summit | Conference | SQL Server | BI | PASS" >PASS Summit</a>
+ </ul> <ul id="navChild-55-282" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/Events/24HoursofPASS.aspx" title="24 Hours of PASS | Virtual Event | SQL Server | Learning" >24 Hours of PASS</a>
+ </ul> <ul id="navChild-55-4892" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/Events/PASSSQLRally.aspx" title="PASS SQLRally | Conference | Regional | SQL Server | PASS" >PASS SQLRally</a>
+ </ul> <ul id="navChild-55-10515" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://passbaconference.com/" title="" >PASS BA Conference</a>
+ </ul> <ul id="navChild-55-2031" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/Events/PASSSQLSaturday.aspx" title="PASS SQLSaturday | SQL Server | Training | PASS" >PASS SQLSaturday</a>
+ </ul> <ul id="navChild-57-15340" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/Community/ConnectorNews.aspx" title="" >Connector News</a>
+ </ul> <ul id="navChild-57-66" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/Community/BlogDirectory.aspx" title="Blog Directory | Community | SQL Server | PASS - the Professional Association for SQL Server" class="SelectedItem">Blog Directory</a>
+ </ul> <ul id="navChild-57-1476" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/Community/PASSBlog.aspx" title="PASS Blog | Community | PASS - the Professional Association for SQL Server" >PASS Blog</a>
+ </ul> <ul id="navChild-57-8515" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/Community/GlobalGrowth.aspx" title="Global Growth | SQL Server | International |PASS" >Global Growth</a>
+ </ul> <ul id="navChild-57-73" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/Community/Volunteers.aspx" title="Volunteers | PASS - the Professional Association for SQL Server" >Volunteers</a>
+ </ul> <ul id="navChild-57-189" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/Community/SpeakerResource.aspx" title="Speaker Resources | Events | Summit | PASS" >Speaker Resource</a>
+ </ul> <ul id="navChild-191-7010" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/PASSChapters/LocalChapters.aspx" title="Local Chapters | Region | PASS - the Professional Association for SQL Server" >Local Chapters</a>
+ </ul> <ul id="navChild-191-67" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/PASSChapters/VirtualChapters.aspx" title="" >Virtual Chapters</a>
+ </ul> <ul id="navChild-191-4210" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/PASSChapters/StartingAChapter.aspx" title="" >Starting A Chapter</a>
+ </ul> <ul id="navChild-6743-6745" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/Elections/Candidates.aspx" title="Candidates | Board of Directors | PASS | Elections" >Candidates</a>
+ </ul> <ul id="navChild-6743-14173" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/Elections/Discussion.aspx" title="" >Discussion</a>
+ </ul> <ul id="navChild-6743-8565" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/Elections/NominationCommittee.aspx" title="" >Nomination Committee</a>
+ </ul> <ul id="navChild-6743-6744" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/Elections/Timeline.aspx" title="Timeline | Elections | Board of Directors | PASS" >Timeline</a>
+ </ul> <ul id="navChild-6743-11054" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/Elections/WhyRun.aspx" title="" >Why Run</a>
+ </ul> <ul id="navChild-59-69" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/AboutPASS/BecomeaMember.aspx" title="Become a Member | SQL Server | PASS - the Professional Association for SQL Server" >Become a Member</a>
+ </ul> <ul id="navChild-59-71" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/AboutPASS/BoardofDirectors.aspx" title="Board of Directors | Executive | PASS - the Professional Association for SQL Server" >Board of Directors</a>
+ </ul> <ul id="navChild-59-118" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/AboutPASS/Governance.aspx" title="Governance | Finance | Minutes |PASS - the Professional Association for SQL Server" >Governance</a>
+ </ul> <ul id="navChild-59-70" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/AboutPASS/News.aspx" title="News | Press Releases | PASS - the Professional Association for SQL Server" >News</a>
+ </ul> <ul id="navChild-59-72" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/AboutPASS/Advertising.aspx" title="Advertising | Sponsor | Exhibitor | PASS" >Advertising</a>
+ </ul> <ul id="navChild-59-14159" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/AboutPASS/Partners.aspx" title="" >Partners</a>
+ </ul> <ul id="navChild-59-283" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/AboutPASS/ContactUs.aspx" title="Contact Us | Headquarters | Staff | PASS" >Contact Us</a>
+ </ul> <ul id="navChild-8514-13099" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/Staging/RegistrationTest.aspx" title="" >RegistrationTest</a>
+ </ul> <ul id="navChild-8514-14337" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/Staging/Listing.aspx" title="" >Listing</a>
+ </ul> <ul id="navChild-374-4203" class="dnn-nav">
+         <li onmouseover="NavMouseover(this);" onmouseout="NavMouseout(this);">
+             <a href="http://www.sqlpass.org/UserLogin/LostMyLogin.aspx" title="" >Lost My Login</a>
+ </ul> </div></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+    <div id="mainColumn">
+        <div id="contentColumns">
+            <table class="contentcolumns one_column narrow" cellspacing="0" border="0" width="950" style="width:950px;">
+                <tr>
+                    <td valign="top" class="left main" style="width:950px;">
+                        <div id="content">
+                            <div id="dnn_BannerPane" class="banner pane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-12599"><a name="12599"></a><div id="dnn_ctr12599_ContentPane"><!-- Start_Module_12599 --><div id="dnn_ctr12599_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr12599_HtmlModule_lblContent" class="Normal">
+	<p><img width="950" height="80" border="0" src="/portals/0/PASSSkinImages/PASS_Banner_Blog_950x80.png" alt="" /></p>
+</div>
+
+</div><!-- End_Module_12599 --></div>
+</div></div>
+                            <div id="dnn_ContentPane" class="content pane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-409"><a name="409"></a><div id="dnn_ctr409_ContentPane"><!-- Start_Module_409 --><div id="dnn_ctr409_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr409_HtmlModule_lblContent" class="Normal">
+	<p>The blogs below are SQL focused, but may still feature topics that venture into areas and interests besides SQL Server. Browse the list, or just grab the <a href="/Portals/0/_Community/passopml.zip">OPML file</a> that has the entire list and add to your feed reader - it&rsquo;s up to you! If you&rsquo;re a SQL blogger, please <a class="ApplyClass" href="mailto:ce@sqlpass.org?subject=Blog for the PASS Blog Directory">email us</a> and we&rsquo;ll be glad to add you to the list.</p>
+<table width="100%">
+    <tbody>
+        <tr>
+            <td valign="top">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Aaron Bertrand (<a href="https://twitter.com/#!/AaronBertrand">Twitter </a>| <a href="http://sqlblog.com/blogs/aaron_bertrand/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Aaron Jackson (<a href="http://twitter.com/AaronJ85AU ">Twitter</a> | <a href="http://www.barkingcat.com.au">Blog</a>)&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Aaron Lowe (Twitter | <a href="http://www.aaronlowe.net/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Aaron Nelson (<a href="http://twitter.com/#!/SQLvariant">Twitter</a> | <a href="http://sqlvariant.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Adam Machanic (<a href="https://twitter.com/#!/AdamMachanic">Twitter</a> | <a href="http://sqlblog.com/blogs/adam_machanic/default.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Adrian Hills (Twitter | <a href="http://www.adathedev.co.uk">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Alberto Ferrari (<a href="https://twitter.com/#!/FerrariAlberto">Twitter</a> | <a href="http://sqlblog.com/blogs/alberto_ferrari/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Alberto Lopez Grande (Twitter | <a href="http://qwalgrande.blogspot.es/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Alessandro Alpi (<a href="https://twitter.com/suxstellino">Twitter</a> | <a href="http://suxstellino.wordpress.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Alexander Kuznetsov (Twitter | <a href="http://sqlblog.com/blogs/alexander_kuznetsov/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Allan Hirt (<a href="https://twitter.com/#!/SQLHA">Twitter</a> | <a href="http://www.sqlha.com/blog/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Allen White (<a href="https://twitter.com/#!/SQLRunr">Twitter</a> | <a href="http://sqlblog.com/blogs/allen_white/default.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Andrea Allred (<a href="http://twitter.com/RoyalSQL" target="_blank">Twitter</a> | <a href="http://www.royalsql.com/ " target="_blank">Blog</a>)&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Andreas Wolter (<a href="https://twitter.com/AndreasWolter">Twitter</a> | <a href="http://www.insidesql.org/blogs/andreaswolter/ ">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Andrew Brust (<a href="http://www.twitter.com/andrewbrust">Twitter</a> | <a href="http://bit.ly/bigondata">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Andrew J. Kelly (<a href="https://twitter.com/#!/GunneyK">Twitter</a> | <a href="http://sqlblog.com/blogs/andrew_kelly/default.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Andrew Pruski (<a href="http://www.twitter.com/DBAFromTheCold">Twitter</a> | <a href="http://www.dbafromthecold.wordpress.com/">Blog</a>)&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Andy Leonard (<a href="https://twitter.com/#!/AndyLeonard">Twitter</a> | <a href="http://sqlblog.com/blogs/andy_leonard/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Andy Lohn (<a href="https://twitter.com/SQLQuill">Twitter</a> | <a href="http://www.sqlfeatherandquill.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Andy Warren (<a href="https://twitter.com/#!/sqlandy">Twitter</a> | <a href="http://www.sqlandy.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Angela Henry (<a href="https://twitter.com/SQLSwimmer">Twitter </a>| <a href="http://sqlswimmer.wordpress.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Anthony DiFranco (<a href="/LinkClick.aspx?link=https%3a%2f%2ftwitter.com%2fsharepntbeeeye&amp;tabid=66&amp;portalid=0&amp;mid=409">Twitter</a> | <a href="/LinkClick.aspx?link=http%3a%2f%2fsharepointbeeeye.com%2f&amp;tabid=66&amp;portalid=0&amp;mid=409">Blog</a>)&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Aravind Gurumoorthy (<a href="https://twitter.com/@aravindbharathi">Twitter</a> | <a href=" http://letsthinksql.blogspot.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Arie Jones (<a href="https://twitter.com/#!/programmersedge">Twitter</a> | <a href="http://www.programmersedge.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Arnie Rowland (<a href="https://twitter.com/ArnieRowland">Twitter</a> | <a href="http://sqlblog.com/blogs/arnie_rowland/default.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Artemakis Artemiou (<a href="https://twitter.com/#!/artemakis">Twitter</a> | <a href="http://aartemiou.blogspot.com/feeds/posts/default">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Bart Duncan (Twitter | <a href="http://blogs.msdn.com/bartd/rss.xml">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Ben Miller (<a href="https://twitter.com/#!/DBAduck">Twitter</a> | <a href="http://dbaduck.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Benjamin Nevarez (<a href="https://twitter.com/#!/BenjaminNevarez">Twitter</a> | <a href="http://www.benjaminnevarez.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Bill Barnes (<a href="http://www.dbaonthego.com/" target="_blank">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Bill Graziano (<a href="https://twitter.com/#!/billgraziano">Twitter</a> | <a href="http://weblogs.sqlteam.com/billg/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Bob Beauchemin (<a href="https://twitter.com/#!/bobbeauch">Twitter</a> | <a href="http://www.sqlskills.com/BLOGS/BOBB/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Bob Myers (Twitter | <a href="http://blogs.msdn.com/bobmeyers/rss.xml">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Bob Pusateri (<a href="https://twitter.com/sqlbob ">Twitter</a> | <a href="http://www.bobpusateri.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Boris Hristov (<a href="https://twitter.com/borishristov">Twitter</a> | <a href="http://borishristov.com/blog">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Brad M McGehee (<a href="https://twitter.com/#!/bradmcgehee">Twitter</a> | <a href="http://www.bradmcgehee.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Bradley Ball (<a href="https://twitter.com/#!/SQLBalls">Twitter</a> | <a href="http://www.sqlballs.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Brandon Williams (<a href="https://twitter.com/is_brandon">Twitter</a> | <a href="http://www.sqlrepl.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Brent Ozar (<a href="https://twitter.com/#!/BrentO">Twitter</a> | <a href="http://www.brentozar.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Brian Kelley (<a href="https://twitter.com/#!/kbriankelley">Twitter</a> | <a href="http://www.sqlservercentral.com/blogs/brian_kelley/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Bru Medishetty (Twitter | <a href="http://www.learnsqlwithbru.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Buck Woody (<a href="https://twitter.com/#!/buckwoody">Twitter</a> | <a href="http://blogs.msdn.com/buckwoody/rss.xml">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Cathrine Wilhelmsen (<a target="_blank" href="http://twitter.com/cathrinew">Twitter</a> | <a target="_blank" href="http://www.cathrinewilhelmsen.net">Blog</a>) <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Chad Miller (<a href="https://twitter.com/#!/cmille19">Twitter</a> | <a href="http://feeds.feedburner.com/sev17">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Chris Bell (<a href="https://twitter.com/CBellDBA">Twitter</a> | <a href="http://www.wateroxconsulting.com/blog">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Chris Shaw (<a href="https://twitter.com/#!/SQLShaw">Twitter</a> | <a href="http://chrisshaw.wordpress.com/feed/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Chris Webb (<a href="https://twitter.com/#!/Technitrain">Twitter</a> | <a href="http://cwebbbi.spaces.live.com/feed.rss">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Chris Yates (<a href="https://twitter.com/ChrisYa80235671">Twitter</a> | <a href="http://chrisyatessql.wordpress.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Christian Bolton (<a href="https://twitter.com/#!/christianbolton">Twitter</a> | <a href="http://sqlblogcasts.com/blogs/christian/default.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Christian Robert (<a href="https://twitter.com/#!/chrisql">Twitter</a> | <a href="http://blogs.codes-sources.com/christian/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Christopher Schmidt (<a href="https://twitter.com/sqlbischmidt">Twitter</a> | <a href="http://intelligentsql.wordpress.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Chuck Lathrope (<a href="https://twitter.com/#!/SQLGuyChuck">Twitter</a> | <a href="http://www.sqlwebpedia.com " target="_blank">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Cindy Gross (<a href="https://twitter.com/#!/SQLCindy">Twitter</a> | <a href="http://blogs.msdn.com/cindygross/" target="_blank">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Colin Stasiuk (<a href="https://twitter.com/#!/ColinStasiuk">Twitter</a> | <a href="http://benchmarkitconsulting.com/feed/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Colleen Morrow (<a href="https://twitter.com/#!/ClevelandDBA">Twitter</a> | <a href="http://colleenmorrow.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Craig Freedman (Twitter | <a href="http://blogs.msdn.com/craigfr/rss.xml">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Craig Purnell (<a href="http://twitter.com/craigpurnell">Twitter</a> | <a href="http://www.craigpurnell.com ">Blog</a>) <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cristian Lefter (<a href="https://twitter.com/#!/xmldeveloper">Twitter</a> | <a href="http://sqlserver.ro/blogs/cristians_blog/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>CSS SQL Server Engineers (Twitter | <a href="http://blogs.msdn.com/psssql/rss.xml">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Dan English (<a href="https://twitter.com/#!/denglishbi">Twitter</a> | <a href="http://denglishbi.spaces.live.com/feed.rss">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Dan Holmes (Twitter | <a href="http://dnhlmssql.blogspot.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Daniel Hutmacher (Twitter| <a href="http://www.sqlsunday.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Dave Green (<a href="http://twitter.com/d_a_green">Twitter</a> | <a href="http://d-a-green.blogspot.com">Blog</a>)&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>David Klee (<a href="http://www.twitter.com/@kleegeek">Twitter</a> | <a href="http://www.davidklee.net/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Danilo Dominici (<a href="https://twitter.com/#!/danilo_dominici">Twitter</a> | <a href="http://www.sqlserverinfo.it/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Dejan Sarka (<a href="https://twitter.com/#!/DejanSarka">Twitter</a> | <a href="http://blogs.solidq.com/en/dsarka/_layouts/listfeed.aspx?list={871e778d-7617-45b7-a6ce-7b8215ed5aea}">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Derek Colley (<a href="https://twitter.com/dcolleySQL">Twitter</a> | <a href="http://uksqldba.blogspot.com ">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Derek Wilson (<a target="_blank" href="http://twitter.com/derekewilson">Twitter</a> | <a target="_blank" href="http://derekewilson.com">Blog</a>) <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Denise McInerney (<a href="https://twitter.com/#!/denisemc06">Twitter</a> | <a href="http://weblogs.sqlteam.com/denisem/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Denny Cherry (<a href="https://twitter.com/#!/mrdenny">Twitter</a> | <a href="http://itknowledgeexchange.techtarget.com/sql-server/feed/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Devin Knight (<a href="https://twitter.com/#!/knight_devin">Twitter</a> | <a href="http://www.sqlservercentral.com/blogs/dknight/default.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Dinesh Priyankara (Twitter | <a href="http://dinesql.blogspot.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Dmitri Korotkevitch (Twitter | <a href="http://aboutsqlserver.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Don Kiely (Twitter | <a href="http://sqljunkies.com/weblog/donkiely/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Donabel Santos (<a href="https://twitter.com/#!/sqlbelle">Twitter</a> | <a href="http://www.sqlmusings.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Doug Lane(<a href="https://twitter.com/#!/thedouglane">Twitter</a> | <a href="http://www.douglane.net">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Duane Douglas (Twitter | <a href="http://www.ssisbi.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Dukagjin Maloku (<a href="https://twitter.com/#!/DugiDBA">Twitter </a>| <a href="http://www.sqlservercentral.com/blogs/dugi/default.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Ed Leighton-Dick (Twitter | <a href="http://edleightondick.com" target="_blank">Blog</a>) <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ed Watson (<a href="http://twitter.com/@SQLGator">Twitter </a>| <a href="http://sqlgator.wordpress.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Ellen Russell (Twitter | <a href="http://blogs.perkinsconsulting.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Enrico van de Laar (<a href="http://twitter.com/evdlaar" target="_blank">Twitter</a> | <a href="http://www.dotnine.nl" target="_blank">Blog</a>) <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Erin Stellato (<a href="https://twitter.com/erinstellato">Twitter</a> | <a href="http://www.sqlskills.com/blogs/erin">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Erik Ejlskov Jensen (<a href="http://www.twitter.com/ErikEJ">Twitter</a> | <a href="http://erikej.blogspot.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Fernando Guerrero (Twitter | <a href="http://blogs.solidq.com/en/fguerrero/_layouts/listfeed.aspx?list=8d57431a-4024-43ec-b39a-88ca6fee9987">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>GK Ranjan (<a href="http://twitter.com/ergkranjan">Twitter</a> | <a href="http://www.sqlrelease.com">Blog</a>) <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Gail Shaw (Twitter | <a href="http://feeds2.feedburner.com/sqlinthewild">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td><span>Gavin Campbell (</span><a style="background-color: #ffffff;" href="https://twitter.com/SQLSophist">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://www.sqlsophistry.com ">Blog</a><span>)</span>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Gavin Payne (<a href="https://twitter.com/GavinPayneUK">Twitter </a>| <a href="http://blog.gavinpayneuk.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Geoff Hiten (Twitter | <a href="http://weblogs.sqlteam.com/geoffh/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>George Woods (<a href="https://twitter.com/gvwoods">Twitter</a> | <a href="http://gvwoods.blogspot.com/">Blog</a>) <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Glenn Berry (<a href="https://twitter.com/#!/GlennAlanBerry">Twitter</a> | <a href="http://glennberrysqlperformance.spaces.live.com/feed.rss">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Govoni Sergio (Twitter | <a href="http://community.ugiss.org/blogs/sgovoni/" target="_blank">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Grant Fritchey (<a href="https://twitter.com/#!/GFritchey">Twitter</a> | <a href="http://scarydba.wordpress.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Greg Larsen (<a href="https://twitter.com/#!/GregoryLarsen">Twitter</a> | <a href="http://www.sqlserverexamples.com/v2/blogs/tabid/205/default.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Greg Low (<a href="https://twitter.com/#!/greglow">Twitter</a> | <a href="http://sqlblog.com/blogs/greg_low/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Grumpy Old DBA (Twitter | <a href="http://sqlblogcasts.com/blogs/grumpyolddba/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Guillermo Taylor (<a href="http://www.twitter.com/guillermotaylor">Twitter</a> | <a href="http://masterGT68.wordpress.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Haidong Ji (Twitter | <a href="http://www.haidongji.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Hakan Winther (<a href="https://twitter.com/h_winther">Twitter</a> | <a href="http://www.sqlservice.se/blogg/hakan_winther.aspx ">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>HarshDeep Singh (<a href="https://twitter.com/harshdeepsingh">Twitter </a>| <a href="http://blogs.msdn.com/b/sqljourney/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Hemantgiri S. Goswami (Twitter | <a href="http://www.sql-server-citation.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Hennie de Nooijer (<a href="https://twitter.com/hennie7863">Twitter</a> | <a href="http://bifuture.blogspot.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Hernan Martin Demczuk (<a href="http://twitter.com/HMartin91">Twitter</a> | <a href="http://hernanmartin.me" target="_blank">Blog</a>) <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hugo Kornelis (<a href="http://www.twitter.com/Hugo_Kornelis ">Twitter</a> | <a href="http://sqlblog.com/blogs/hugo_kornelis/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Jack Corbett (<a href="https://twitter.com/#!/unclebiguns">Twitter</a> | <a href="http://wiseman-wiseguy.blogspot.com/feeds/posts/default">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Jack Vamvas (<a href="http://www.twitter.com/jackvamvas">Twitter</a> | <a href="http://www.sqlserver-dba.com ">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Jahanzaib Hassan (Twitter | <a href="http://aureus-salah.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>James Hippolite (Twitter | <a href="http://feeds.geekzone.co.nz/gzjameship">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Jamie Thomson (<a href="http://twitter.com/jamiet">Twitter</a> | <a href="http://sqlblog.com/blogs/jamie_thomson/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>James M. Dorame (Twitter | <a href="http://www.jamesdorame.com/" target="_blank">Blog</a>) <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Janos Berke (<a href="https://twitter.com/JanosBerke">Twitter</a> | <a href="http://iamberke.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Jason Brimhall (<a href="https://twitter.com/#!/sqlrnnr">Twitter</a> | <a href="http://jasonbrimhall.info/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Jason Carter (<a href="http://www.twitter.com/TampaDBA" target="_blank">Twitter </a>| <a href="http://jason-carter.net" target="_blank">Blog</a>)&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Jason Clements (<a href="http://twitter.com/dbahiker">Twitter</a> | <a href="http://www.sqlhiker.com">Blog</a>) <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jason Follas (Twitter | <a href="http://feeds2.feedburner.com/aviewinsidemyhead">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Jason Horner (<a href="https://twitter.com/jasonhorner">Twitter</a> | <a href="http://blog.jasonhorner.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Jason Massie (Twitter | <a href="http://feeds.feedburner.com/statisticsio">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Jason Strate (<a href="https://twitter.com/#!/StrateSQL">Twitter</a> | <a href="http://www.jasonstrate.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Jason Thomas (<a href="https://twitter.com/SQLJason">Twitter</a> | <a href="http://www.sqljason.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Jason Yosuef (<a href="https://twitter.com/Huslayer">Twitter</a> | <a href="http://www.jasonyousef.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Jasper Smith (Twitter | <a href="http://sqlblogcasts.com/blogs/sqldbatips/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Javier Guillen (<a href="https://twitter.com/javiguillen">Twitter</a> | <a href="http://javierguillen.wordpress.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Jaya Munnangi (<a href="http://sqlserverlabs.wordpress.com " target="_blank">Blog</a>)&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Jeff Garbus (Twitter | <a href="http://mssqlperformance.blogspot.com/feeds/posts/default">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Jeff Schroeder (Twitter | <a href="http://jeffsc.blogspot.com/" target="_blank">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Jeff Smith (Twitter | <a href="http://feeds.feedburner.com/jeffssqlserverweblog">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Jeffrey Verheul (<a href="http://twitter.com/DevJef">Twitter</a> | <a href="http://devjef.wordpress.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Jen Stirrup (<a href="https://twitter.com/#!/jenstirrup">Twitter</a> | <a href="http://www.jenstirrup.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Jens Vestergaard (<a href="http://twitter.com/vestergaardj">Twitter</a> | <a target="_blank" href="http://www.t-sql.dk ">Blog</a>) <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jeremiah Peschka (<a href="https://twitter.com/#!/peschkaj">Twitter</a> | <a href="http://facility9.com/feed/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Jeremy Huppatz (Twitter | <a href="http://ozziemedessql.blogspot.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Jes Borland (<a href="https://twitter.com/#!/grrl_geek">Twitter</a> | <a href="http://jesborland.wordpress.com">Blog</a>)</td>
+                    </tr>
+                </tbody>
+            </table>
+            </td>
+            <td valign="top">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><span>Jessica Moss (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/jessicammoss">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://feeds2.feedburner.com/jessicamoss">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Jesus Gil (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/jesus_gilv">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.solidq.com/JGil/Home.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td>Jim Arko (<a href="http://www.twitter.com/jim_arko">Twitter</a> | <a href="http://www.jimarko.com">Blog</a>)&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><span>Joe Chang (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://sqlblog.com/blogs/joe_chang/rss.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Joe Sack (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://feeds.feedburner.com/joesackssqlserverweblog">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Joe Webb (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/joewebb">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://www.webbtechsolutions.com/blog" target="_blank">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Johan Ahlen (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/johanahlen">Twitter&nbsp;</a><span>|&nbsp;</span><a style="background-color: #ffffff;" href="http://joinsights.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td>John Bulla (<a href="http://www.twitter.com/johnbulla">Twitter</a> | <a href="http://geeks.ms/blogs/johnbulla">Blog</a>)&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><span>John Sterrett (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/johnsterrett">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://johnsterrett.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>John Gallardo (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.msdn.com/jgalla/rss.xml">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>John Magnabosco (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://www.simple-talk.com/community/blogs/johnm/rss.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>John Paul Cook (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://sqlblog.com/blogs/john_paul_cook/rss.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>John Racer (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://www.speeddba.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td>John O'Shea (Twitter | <a href="http://sqlpowershell.blogspot.com/" target="_blank">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>John Sansom (<a href="https://twitter.com/#!/sqlbrit">Twitter</a> | <a href="http://www.johnsansom.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>John Welch (<a href="https://twitter.com/#!/john_welch">Twitter</a> | <a href="http://agilebi.com/cs/blogs/jwelch/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td><span>Jon Seigel (</span><a style="background-color: #ffffff;" href="http://twitter.com/voluntarydba">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://voluntarydba.com/">Blog</a><span>)&nbsp;</span></td>
+                    </tr>
+                    <tr>
+                        <td>Jonathan Allen (<a href="https://twitter.com/#!/fatherjack">Twitter</a> | <a href="http://www.simple-talk.com/community/blogs/jonathanallen/" target="_blank">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Jonathan Bloom (<a href="https://twitter.com/sqljon" target="_blank">Twitter</a> | <a href="http://www.bloomconsultingbi.com/" target="_blank">Blog</a>)&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Jonathan Kehayias (<a href="https://twitter.com/#!/SQLPoolBoy">Twitter</a> | <a href="http://sqlblog.com/blogs/jonathan_kehayias/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Jorg Klein (Twitter | <a href="http://sqlblog.com/blogs/jorg_klein/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Jorge Segarra (<a href="https://twitter.com/#!/SQLChicken">Twitter</a> | <a href="http://feeds.feedburner.com/sqlchicken">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Josef Richberg (<a style="background-color: #ffffff;" href="https://twitter.com/#!/sqlrunner">Twitter</a>&nbsp;|&nbsp;<a style="background-color: #ffffff;" href="http://josef-richberg.squarespace.com/" target="_blank">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Joshua Lynn (Twitter | <a href="http://www.pocketjoshua.com/sql">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Kalen Delaney (<a href="https://twitter.com/#!/sqlqueen">Twitter</a> | <a href="http://sqlblog.com/blogs/kalen_delaney/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Karen Lopez (<a href="http://www.twitter.com/datachick">Twitter </a>| <a href="http://blog.infoadvisors.com">Blog</a>)&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Kathi Kellenberger (Twitter | <a href="http://auntkathisql.com">Blog</a>) <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kelly Martinez (Twitter | <a href="http://zero1design.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Ken Johnson (Twitter | <a href="http://kenj.blogspot.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Ken Simmons (<a href="https://twitter.com/#!/KenSimmons">Twitter</a> | <a href="http://cybersql.blogspot.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Kendal Van Dyke (<a href="https://twitter.com/#!/SQLDBA">Twitter</a> | <a href="http://feeds.feedburner.com/kendalvandyke">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Kendra Little (<a href="https://twitter.com/#!/Kendra_Little">Twitter</a> | <a href="http://littlekendra.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Kenneth Fisher (Twitter | <a href="http://www.sqlstudies.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Kent Tegels (Twitter | <a href="http://sqlblog.com/blogs/kent_tegels/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Kevin Kline (<a href="https://twitter.com/#!/kekline">Twitter</a> | <a href="http://sqlblog.com/blogs/kevin_kline/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Key DBA (Twitter | <a href="http://keydba.wordpress.com/feed/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Kim Tessereau (Twitter | <a href="http://blogs.lessthandot.com/index.php/All/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Kimberly L Tripp (<a href="https://twitter.com/#!/KimberlyLTripp">Twitter</a> | <a href="http://www.sqlskills.com/blogs/kimberly/syndication.axd">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Kirk Haselden (Twitter | <a href="http://sqlblog.com/blogs/knightreign/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Koen Verbeeck (<a href="http://twitter.com/Ko_Ver">Twitter</a> | <a href="http://sqlkover.com/">Blog</a>)&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Kris Wenzel (<a href="http://twitter.com/sqlkris" target="_blank">Twitter </a>| <a href="http://www.essentialsql.com" target="_blank">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Kurt Survance (Twitter | <a href="http://sqlserverconsulting.blogspot.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Kyle Masters (<a href="https://twitter.com/woodybade">Twitter</a> | <a href="http://thesqlschool.wordpress.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Laerte Junior (<a href="https://twitter.com/LaerteSQLDBA">Twitter</a> | <a href="http://shellyourexperience.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Lara Rubbelke (<a href="https://twitter.com/#!/SQLGal">Twitter</a> | <a href="http://sqlblog.com/blogs/lara_rubbelke/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Lars Rasmussen (Twitter | <a href="http://larsrasmussen.blogspot.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Lawrence Overbey (Twitter | <a href="http://dbatipster.blogspot.com/" target="_blank">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Lee Everest (Twitter | <a href="http://www.texastoo.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Leigh Freijo (Twitter | <a href="http://www.leighfreijo.com" target="_blank">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Linchi Shea (Twitter | <a href="http://sqlblog.com/blogs/linchi_shea/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Lori &amp; Tim Edwards (<a href="https://twitter.com/#!/loriedwards">Twitter</a> | <a href="http://www.sqlservertimes2.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Louis Davidson (<a href="https://twitter.com/#!/drsql">Twitter</a> | <a href="http://sqlblog.com/blogs/louis_davidson/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Luca Bianchi (Twitter | <a href="http://blogs.aspitalia.com/lucabianchi/rss_extra.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Luis Maldonado (Twitter | <a href="http://blogs.msdn.com/b/newtech/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Lukasz Pawlowski (Twitter | <a href="http://blogs.msdn.com/lukaszp/rss.xml">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Lynn Langit (<a href="http://twitter.com/lynnlangit">Twitter</a> | <a href="http://lynnlangit.com">Blog</a>)&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Lynn Pettis (<a href="https://twitter.com/#!/LynnPettis">Twitter</a> | <a href="http://www.sqlservercentral.com/blogs/lynnpettis/default.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Marco Russo (<a href="https://twitter.com/#!/marcorus">Twitter </a>| <a href="http://sqlblog.com/blogs/marco_russo/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Marco Schreuder (<a href="https://twitter.com/in2bi">Twitter</a> | <a href="http://blog.in2bi.com ">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Maria Zakourdaev (<a href="https://twitter.com/MariaZakourdaev">Twitter</a> | <a href="http://sqlblog.com/blogs/maria_zakourdaev/default.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Mark Broadbent (<a href="https://twitter.com/retracement " target="_blank">Twitter</a> | <a href="http://tenbulls.co.uk/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Mark Caldwell (Twitter | <a href="http://weblogs.sqlteam.com/markc/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Mark Ginnebaugh (<a href="https://twitter.com/#!/markginnebaugh">Twitter</a> | <a href="http://markginnebaugh.com/blog/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Mark S. Rasmussen (<a href="https://twitter.com/#!/improvedk">Twitter</a> | <a href="http://improve.dk">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Mark Tabladillo (<a href="http://twitter.com/MarkTabNet">Twitter</a> | <a href="http://marktab.net/datamining/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Mark Vaillancourt (<a href="http://twitter.com/markvsql">Twitter</a> | <a href="http://www.markvsql.com">Blog</a>)&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Marlon Ribunal (<a href="https://twitter.com/#!/MarlonRibunal">Twitter </a>| <a href="http://marlonribunal.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Martin Catherall (<a href="https://twitter.com/martinznz">Twitter</a> | <a href="http://martincatherall.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Matan Yungman (<a href="https://twitter.com/MatanYungman">Twitter</a> | <a href="http://www.dbnewsfeed.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Matija Lah (Twitter | <a href="http://feeds.feedburner.com/snapssnippets">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Matt Lavery (Twitter | <a target="_blank" href="http://blog.matticus.net/">Blog</a>) <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Matt Silva (Twitter | <a href="http://blog.3234.net/" target="_blank">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Matthew Campbell (Twitter | <a href="http://www.nanaroo.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Matthew Velic (<a href="https://twitter.com/#!/mvelic">Twitter </a>| <a href="http://mattvelic.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Matthew Roche (Twitter | <a href="http://bi-polar23.blogspot.com/feeds/posts/default">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Maximiliano Damian Accotto (<a target="_blank" href="https://twitter.com/maxiaccotto">Twitter</a> | <a target="_blank" href="http://blog.maxiaccotto.com">Blog</a>) <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Meagan Longoria (<a href="http://twitter.com/mmarie">Twitter</a> | <a href="http://datasavvy.wordpress.com/ ">Blog</a>)&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Melissa Coates (Twitter | <a href="http://www.sqlchick.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Merrill Aldrich (Twitter | <a href="http://sqlblog.com/blogs/merrill_aldrich/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Michael Albert (Twitter | <a href="http://yassb.blogspot.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Michael Campbell (Twitter | <a href="http://updates.sqlservervideos.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Michael Coles (Twitter | <a href="http://sqlblog.com/blogs/michael_coles/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Michael DeFehr (Twitter | <a href="http://mikedefehr.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Michael Rys (Twitter | <a href="http://sqlblog.com/blogs/michael_rys/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Michael Swart (Twitter | <a href="http://dbwhisperer.blogspot.com/" target="_blank">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Michael Zilberstein (Twitter | <a href="http://sqlblog.com/blogs/michael_zilberstein/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Michel Caradec (Twitter | <a href="http://bimatters.spaces.live.com/feed.rss">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Michelle Ufford (<a href="https://twitter.com/#!/sqlfool">Twitter</a> | <a href="http://feeds2.feedburner.com/sqlfool">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Mickey Stuewe (<a href="https://twitter.com/SQLMickey">Twitter</a> | <a href="http://mickeystuewe.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Mike Ormond (Twitter | <a href="http://feeds.feedburner.com/mikeormond">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Mike Walsh (<a href="https://twitter.com/#!/mike_walsh">Twitter</a> | <a href="http://www.straightpathsql.com/blog/rss.xml">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Mitsugi Ogawa (Twitter | <a href="http://blogs.sqlpassj.org/mitsugi/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Mohammed Hafeezuddin (Twitter | <a href="http://mohammedu.spaces.live.com/feed.rss">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Mohit Gupta (Twitter | <a href="http://sqllearnings.blogspot.com/feeds/posts/default">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Mosha Pasumansky (Twitter | <a href="http://sqlblog.com/blogs/mosha/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Mpumelelo Msimanga (<a href="http://twitter.com/sql4bi">Twitter </a>| <a href="http://msiman.ga/blog">Blog</a>) <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nancy Hidy Wilson (<a href="http://www.twitter.com/NancyHidyWilson ">Twitter</a> | <a href="http://NancyHidyWilson.wordpress.com ">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Neil Hambly (<a href="https://twitter.com/neil_hambly ">Twitter</a> | <a href="http://sqlblogcasts.com/blogs/neilHambly/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Nick Barclay (Twitter | <a href="http://feeds2.feedburner.com/nickbarclay">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Niels Berglund (Twitter | <a href="http://sqlblogcasts.com/blogs/nielsb/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Nigel Sammy (Twitter | <a href="http://www.nigelpsammy.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Niko Neugebauer (<a href="http://www.twitter.com/NikoNeugebauer">Twitter</a> | <a href="http://www.nikoport.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Noel McKinney (Twitter | <a href="http://noelmckinney.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Oliver Asmus (<a href="https://twitter.com/OliverAsmus">Twitter</a> | <a href="http://www.oliverasmus.com">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Olivier Meyer (Twitter | <a href="http://blogs.msdn.com/oliviermeyer/rss.xml">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Orhan Akdogan (Twitter | <a href="http://orhan.ws">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>PASS Blog (Twitter | <a href="/Community/BlogDirectory.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Patrick Keisler (<a href="https://twitter.com/PatrickKeisler">Twitter</a> | <a href="http://www.patrickkeisler.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Patrick LeBlanc (<a href="https://twitter.com/#!/patrickdba">Twitter</a> | <a href="http://sqldownsouth.blogspot.com/" target="_blank">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Pat Wright (<a href="http://twitter.com/sqlasylum">Twitter</a> | <a href="http://www.sqlasylum.com ">Blog</a>) <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Paul Nielsen (Twitter | <a href="http://sqlblog.com/blogs/paul_nielsen/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Paul Paiva (Twitter | <a href="http://paulpaivasql.blogspot.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Paul Randal (<a href="https://twitter.com/#!/search/PaulRandal">Twitter</a> | <a href="http://www.sqlskills.com/blogs/paul/syndication.axd">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Paul te Braak (<a href="https://twitter.com/paultebraak">Twitter</a> | <a href="http://www.paultebraak.wordpress.com ">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Paul Turley (Twitter | <a href="http://sqlserverbiblog.com/" target="_blank">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Paul White (<a href="http://twitter.com/SQL_kiwi">Twitter</a> | <a href="http://sqlblog.com/blogs/paul_white" target="_blank">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Peter DeBetta (Twitter | <a href="http://sqlblog.com/blogs/peter_debetta/rss.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Phil Factor (<a href="https://twitter.com/#!/Phil_Factor">Twitter</a> | <a href="http://www.sqlservercentral.com/blogs/philfactor/default.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Pieter Vanhove (<a href="http://twitter.com/Pieter_Vanhove">Twitter</a> | <a href="http://pietervanhove.azurewebsites.net/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Pinalkumar Dave (<a href="https://twitter.com/#!/pinaldave">Twitter</a> | <a href="http://blog.sqlauthority.com/feed/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Plamen Ratchev (<a href="https://twitter.com/#!/PlamenRatchev">Twitter</a> | <a href="http://pratchev.blogspot.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Preethiviraj Kulasingham (Twitter | <a href="http://preethiviraj.blogspot.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Prince Rastogi (Twitter | <a href="http://www.sqlservergeeks.com/author/princerastogi/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>R Barry Young (Twitter | <a href="http://movingsql.com/dnn/home/tabid/125/rssid/2/default.aspx">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Rafael Salas (<a href="https://twitter.com/#!/RafSalas">Twitter</a> | <a href="http://rafael-salas.blogspot.com/feeds/posts/default">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Rafik Robeal (Twitter | <a href="http://blogs.msdn.com/synchronizer/rss.xml">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Ronen Ariely (Twitter| <a href="http://ariely.info/Blog/tabid/83/language/en-US/Default.aspx">Blog</a>)</td>
+                    </tr>
+                </tbody>
+            </table>
+            </td>
+            <td valign="top">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><span>Ramkumar Gopal (</span><a style="background-color: #ffffff;" href="https://twitter.com/geramkumar">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://www.sqlservercentral.com/blogs/livingforsqlserver/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td>Randy Knight (<a style="background-color: #ffffff;" href="https://twitter.com/#!/randy_knight">Twitter</a>&nbsp;|&nbsp;<a style="background-color: #ffffff;" href="http://www.sqlsolutionsgroup.com/blog/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>RDX (Twitter | <a href="http://www.rdx.com/Blog/category/sqlserver/">Blog</a>)&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>R&eacute;gis Baccaro (<a href="http://twitter.com/regbac" target="_blank">Twitter</a> | <a href="http://theblobfarm.wordpress.com" target="_blank">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td>Remus Rusanu (Twitter |&nbsp;<a style="background-color: #ffffff;" href="http://rusanu.com/feed/">Blog</a>)&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><span>Reza Rad (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://www.rad.pasfu.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Rhys Campbell (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://www.youdidwhatwithtsql.com/" target="_blank">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Richard Douglas (</span><a style="background-color: #ffffff;" href="http://twitter.com/#!/SQLRich">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://sql.richarddouglas.co.uk/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Richard Fryer (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://www.sql-server-pro.com/" target="_blank">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Richard Hundhausen (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://sqlblog.com/blogs/rhundhausen/rss.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td>Richard Weiss (<a href="http://twitter.com/richardaweiss" target="_blank">Twitter</a> | <a href="http://www.RichWeiss.com" target="_blank">Blog</a>) <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>Rick Heiges (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/heigesr2">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://sqlblog.com/blogs/rick_heiges/rss.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Rick Lowe (</span><a style="background-color: #ffffff;" href="https://twitter.com/DataFLowe">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://dataflowe.wordpress.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Rob Carrol (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.technet.com/rob/rss.xml">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Rob Farley (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/rob_farley">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://msmvps.com/epprecht/rss.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Rob Garrison (Twitter |&nbsp;<a style="background-color: #ffffff;" href="http://persistencevision.blogspot.com/">Blog</a>)</span></td>
+                    </tr>
+                    <tr>
+                        <td>Rob Kerr (<a style="background-color: #ffffff;" href="https://twitter.com/#!/robkerrbi">Twitter</a>&nbsp;|&nbsp;<a style="background-color: #ffffff;" href="http://msbiacademy.com/">Blog</a>)&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Rob Reid (<a href="http://www.twitter.com/robreid15" target="_blank">Twitter</a> | <a href="http://robertbreid.com/" target="_blank">Blog</a>)&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Rob Sewell (<a href="http://twitter.com/fade2blackuk">Twitter</a>&nbsp;| <a href="http:\\sqldbawithabeard.com">Blog</a>)&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><span>Robert Cain (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/arcanecode">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://arcanecode.wordpress.com/feed/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Robert Matthew Cook (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://www.sqlmashup.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Robert L Davis (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/SQLSoldier">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://www.sqlservercentral.com/blogs/robert_davis/default.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Robert Pearl (</span><a style="background-color: #ffffff;" href="http://twitter.com/Pearlknows">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://www.sqlservercentral.com/blogs/pearlknows/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Roberto Pozo (</span><a style="background-color: #ffffff;" href="http://twitter.com/angaroasoft">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://angaroasoft.wordpress.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Rodney Landrum (</span><a style="background-color: #ffffff;" href="https://twitter.com/SQLBeat">Twitter</a><span>&nbsp;|</span><a style="background-color: #ffffff;" href="http://www.simple-talk.com/blogs/author/2133-rodney-landrum/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Roger Doherty (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.msdn.com/rdoherty/rss.xml">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Roger Wolter (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.msdn.com/rogerwolterblog/rss.xml">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td>Roman Horolskiy (<a href="https://twitter.com/Forrards">Twitter</a> | <a href="http://forrards.com/WhitePappers.aspx">Blog</a>) <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>Roman Rehak (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://sqlblog.com/blogs/roman_rehak/rss.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Roy Ernest (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/RumblingDBA">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://www.sqlservercentral.com/blogs/dba_rumblings/default.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Rushabh Mehta (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/rushabhmehta">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://sqlblog.com/blogs/rushabh_mehta/rss.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td>Russ Thomas (<a href="http://twitter.com/sqljudo">Twitter</a> | <a href="http://sqljudo.wordpress.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td><span>Ryan Adams (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/search/ryanjadams">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://www.ryanjadams.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Samson Loo (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://justsamson.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Samuel Vanga (</span><a style="background-color: #ffffff;" href="http://twitter.com/SamuelVanga">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://feeds.feedburner.com/SamVangasBlog">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Sarabpreet Singh (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://solutions-guru.com/articles/sql-server.html">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Sankar Reddy (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://sankarreddy.com/" target="_blank">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Sarah Henwood (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://sqlblog.com/blogs/sarah_henwood/rss.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Satya Shyam K Jayanty (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://sqlserver-qa.net/blogs/mainfeed.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Scott Klein (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://geekswithblogs.net/ScottKlein/Default.aspx" target="_blank">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Scott Stauffer (</span><a style="background-color: #ffffff;" href="https://twitter.com/SQLSocialite">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://scottstauffer.ca/blog">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Sedat Salman (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://www.sdtslmn.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Sethu Srinivasan (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.msdn.com/sethus">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Shahfaisal Muhammed (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://shahfaisalmuhammed.wordpress.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Shaun Stuart (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://shaunjstuart.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td>Sherbaz Mohamed (Twitter | <a href="http://www.sherbaz.com " target="_blank">Blog</a>)<br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>Shyam Viking (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://msrviking.wordpress.com/feed/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Sid Atkinson Jr (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://www.sidatkinson.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Siddharth Mehta (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://siddhumehta.blogspot.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Simon Abbott (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://sqlsimon.com/blog" target="_blank">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Simon Doubt (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://olapsprint.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Simon Sabin (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/simon_sabin">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://feeds.feedburner.com/simonssqlserverstuff">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>SQLSaturday (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blog.sqlsaturday.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>SQL CAT (</span><a style="background-color: #ffffff;" href="http://twitter.com/#!/sqlcat">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.msdn.com/b/sqlcat/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>SQL CLR Integration Team (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.msdn.com/sqlclr/rss.xml">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>SQL Programmability &amp; API Development Team Blog (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.msdn.com/sqlprogrammability/rss.xml">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>SQL Server Compact Team Blog (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.msdn.com/sqlservercompact/rss.xml">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>SQL Server Documentation Team (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.msdn.com/sqlserverue/rss.xml">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>SQL Server Engine Tips (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.msdn.com/sqltips/rss.xml">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>SQL Server Express Web Log (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.msdn.com/sqlexpress/rss.xml">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>SQL Server Manageability Team Blog (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.msdn.com/sqlrem/rss.xml">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>SQL Server News (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.technet.com/dataplatforminsider/rss.xml">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>SQL Server Premier Field Engineering Blog (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.msdn.com/sql_pfe_blog/archive/2009/05/27/introducing-the-sql-server-premier-field-engineer-blog.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>SQL Server Protocol Team (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.msdn.com/sql_protocols/rss.xml">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>SQL Server Service Broker Team Blog (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.msdn.com/sql_service_broker/rss.xml">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>SSIS Team Blog (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.msdn.com/mattm/rss.xml">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Stacia Misner (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/StaciaMisner">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://blog.datainspirations.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Staffan Olofsson (</span><a style="background-color: #ffffff;" href="https://twitter.com/SQLSoS">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://b3itonms.wordpress.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Stefan Bauer (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/stefbauer">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://stef-bauer.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Steiner Anderson (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://www.sqlservice.se/blogg/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>St&eacute;phane Fr&eacute;chette (<a href="http://twitter.com/sfrechette">Twitter </a>| <a href="http://stephanefrechette.com">Blog</a>)</span><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>Stephen Arbour (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://zyggyslounge.com/feed/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Steve Hood (</span><a style="background-color: #ffffff;" href="https://twitter.com/SimpleSQLServer">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://simplesqlserver.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Steve Jones (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/way0utwest">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://feeds.feedburner.com/sqlmusings">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Steve Kass (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://sqlblog.com/blogs/steve_kass/rss.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Steve Lasker (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.msdn.com/stevelasker/rss.xml">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Steve Simon (</span><a style="background-color: #ffffff;" href="https://twitter.com/SQLServerBoffin">Twitter&nbsp;</a><span>|&nbsp;</span><a style="background-color: #ffffff;" href="http://www.sqlservercentral.com/blogs/simon_says/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Steve Wake (</span><a style="background-color: #ffffff;" href="https://twitter.com/stevewake">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://blog.wakebi.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Steven Ormrod (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://stevenormrod.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Steven White (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://sqlblogcasts.com/blogs/stevenwhite/" target="_blank">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Stuart Ainsworth (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/search/codegumbo">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://www.codegumbo.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Suprotim Agarwal (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/SuprotimAgarwal">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://feeds2.feedburner.com/sqlservercurry/blog">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>S.V. Nagaraj (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://strictlysql.blogspot.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Szymon W&oacute;jcik (</span><a style="background-color: #ffffff;" href="https://twitter.com/phobosq">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://sqlphobosq.wordpress.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Takahiro Matsumoto (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.sqlpassj.org/matu_tak/rss.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Tara Kizer (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://weblogs.sqlteam.com/tarad/rss.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Ted Krueger (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/onpnt">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.lessthandot.com/index.php/All/?disp=authdir&amp;author=68" target="_blank">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Teo Lachev (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://prologika.com/cs/blogs/blog/rss.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Tharindu Dhaneenja (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://dhaneenja.blogspot.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Thomas LaRock (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/SQLRockstar">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://www.thomaslarock.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Thomas Rushton (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/ThomasRushton">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://thelonedba.wordpress.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Tibor Karaszi (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://sqlblog.com/blogs/tibor_karaszi/rss.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Tillmann Eitelberg (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://www.ssis-components.net/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Tim Mitchell (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/Tim_Mitchell">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://www.timmitchell.net/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Timothy Benninghoff (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://timbenninghoff.com/" target="_blank">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Timothy Ford (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/sqlagentman">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://thesqlagentman.com">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Tjay Belt (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/tjaybelt">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://tjaybelt.blogspot.com/feeds/posts/default">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Tobiasz Koprowski (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/KoprowskiT">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://koprowskit.eu/geek">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Todd McDermid (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://toddmcdermid.blogspot.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Tom Mills (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.msdn.com/tommills/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Tom Norman (</span><a style="background-color: #ffffff;" href="https://twitter.com/ArmorDba">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://armordba.wordpress.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Tomislav Piasevoli (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://tomislavpiasevoli.spaces.live.com/default.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Tony O'Grady (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://togrady.wordpress.com/" target="_blank">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Tony Rogerson (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://sqlblogcasts.com/blogs/tonyrogerson/rss.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Torsten Schuessler (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://www.insidesql.org/blogs/tosc/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="color: #1c1c1c;">Tracy McKibben (<a href="http://twitter.com/realSQLguy">Twitter</a> | <a href="http://realsqlguy.com/">Blog</a>)</span>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Troy Blake (<a href="http://twitter.com/seniorDBA" target="_blank">Twitter</a> | <a href="http://seniordba.wordpress.com" target="_blank">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td><span>Turgay Sahtiyan (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://www.turgaysahtiyan.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td>Tushar Ghodake (Twitter | <a target="_blank" href="http://techdiary.in">Blog</a>) <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>Valentino Vranken (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blog.hoegaerden.be/" target="_blank">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td>Varinder Sandhu (<a href="http://twitter.com/varinder_sandhu" target="_blank">Twitter </a>| <a href="http://www.varindersandhu.in" target="_blank">Blog</a>)&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><span>Venkatesan (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://venkattechnicalblog.blogspot.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Vidas Matelis (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://www.ssas-info.com/VidasMatelisBlog/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Vidhya Sagar (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://www.sql-articles.com/blogs/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Visakh Murukesan (</span><a style="background-color: #ffffff;" href="http://www.twitter.com/visakh16">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://visakhm.blogspot.in/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Vishal Pawar (</span><a style="background-color: #ffffff;" href="https://twitter.com/Vishal_BI">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://sqlmentalist.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>VS Data Team (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.msdn.com/vsdata/rss.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Ward Pond (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.technet.com/wardpond/rss.xml">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Wayne Snyder (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/sqlwayne">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://www.msbicentral.com/blogs/waynesnyder.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Wayne Sheffield (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/DBAWayne">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://blog.waynesheffield.com/wayne">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Wes Brown (</span><a style="background-color: #ffffff;" href="https://twitter.com/#!/WesBrownSQL">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://www.sqlservercentral.com/blogs/sqlmanofmystery/default.aspx">Blog</a><span>)</span>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><span>Wes Dumey (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://thedamndata.blogspot.com/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td>Wes Springob (<a href="http://twitter.com/SQLWes">Twitter</a> | <a href="http://SQLWes.com">Blog</a>) <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>Whitney Weaver (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blog.magenic.com/blogs/whitneyw/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td>William Assaf (<a href="https://twitter.com/william_a_dba">Twitter</a> | <a href="http://www.sqltact.com/">Blog</a>)</td>
+                    </tr>
+                    <tr>
+                        <td><span>Yoshishiro Kawabata (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://blogs.sqlpassj.org/yoshihirokawabata/rss.aspx">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Zach Owens (Twitter |&nbsp;</span><a style="background-color: #ffffff;" href="http://www.zachskylesowens.net/">Blog</a><span>)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Zoltan Horvath (</span><a style="background-color: #ffffff;" href="https://twitter.com/zoltanhorvath">Twitter</a><span>&nbsp;|&nbsp;</span><a style="background-color: #ffffff;" href="http://addictivemeasures.blogspot.hu/">Blog</a><span>)</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+</div>
+
+</div><!-- End_Module_409 --></div>
+</div></div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div id="dnn_BottomPane" class="bottompane pane DNNEmptyPane"></div>
+        </div>
+    </div>
+
+</div><!-- END Content Container -->
+</div><!-- END Content Wrapper -->
+
+<div id="footerWrap">
+<div id="footer">
+    <div id="dnn_FooterPane" class="banner pane"><div class="DnnModule DnnModule-Banners DnnModule-13217"><a name="13217"></a><div id="dnn_ctr13217_ContentPane"><!-- Start_Module_13217 --><div id="dnn_ctr13217_ModuleContent" class="DNNModuleContent ModBannersC">
+	
+
+</div><!-- End_Module_13217 --></div>
+</div><div class="DnnModule DnnModule-Banners DnnModule-24007"><a name="24007"></a><div id="dnn_ctr24007_ContentPane"><!-- Start_Module_24007 --><div id="dnn_ctr24007_ModuleContent" class="DNNModuleContent ModBannersC">
+	<table id="dnn_ctr24007_DisplayBanners_lstBanners" cellspacing="0" cellpadding="4" summary="Banner Design Table" style="border-collapse:collapse;">
+		<tr>
+			<td style="border-width:0px;"><span id="dnn_ctr24007_DisplayBanners_lstBanners_lblItem_0"><script type="text/javascript">var p="http",d="static";if(document.location.protocol=="https:"){p+="s";d="engine";}var z=document.createElement("script");z.type="text/javascript";z.async=true;z.src=p+"://"+d+".multiview.com/ados.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(z,s);</script>
+<script type="text/javascript">
+var ados = ados || {};
+ados.run = ados.run || [];
+ados.run.push(function() {
+/* load placement for account: Multiview, site: PASSweb - Professional Association for SQL Server - MultiWeb, size: 950x95 - 950 x 95, zone: PASSweb - Leaderboard - 950x95*/
+ados_add_placement(4466, 68103, "mvBanner", 2483).setZone(123392);
+ados_setDomain('engine.multiview.com');
+ados_load();
+});</script>
+<div id="mvBanner" style="text-align:center;"></div></span></td>
+		</tr>
+	</table>
+
+</div><!-- End_Module_24007 --></div>
+</div></div>
+
+    <div class="footertext">
+        <ul class="nav clearfix">
+            <li><a href="http://www.sqlpass.org/">PASS Home</a></li>
+            <li>|</li>
+            <li><a href="http://www.sqlpass.org/LearningCenter.aspx">Learning Center</a></li>
+            <li>|</li>
+            <li><a href="http://www.sqlpass.org/Events.aspx">Events</a></li>
+            <li>|</li>
+            <li><a href="http://www.sqlpass.org/Careers.aspx">Careers</a></li>
+            <li>|</li>
+            <li><a href="http://www.sqlpass.org/Community.aspx">Community</a></li>
+            <li>|</li>
+            <li><a href="http://www.sqlpass.org/PASSChapters.aspx">Chapters</a></li>
+            <li>|</li>
+            <li><a href="http://www.sqlpass.org/AboutPASS.aspx">About PASS</a></li>
+        </ul>
+
+        <ul class="info">
+            <li><span id="dnn_COPYRIGHT1_lblCopyright" class="Small">Copyright 2015 by PASS</span>
+</li>
+            <li><a href="http://www.sqlpass.org/PrivacyPolicy.aspx">Privacy Policy</a></li>
+            <li><a href="http://www.sqlpass.org/TermsofUse.aspx">Terms of Use</a></li>
+        </ul>
+
+        <div class="social" onclick="location.href='http://www.sqlpass.org/twitter';" style="cursor:pointer;"></div>
+    </div>               
+</div><!-- END FOOTER -->
+</div><!-- END FOOTER WRAPPER -->
+
+<script type="text/javascript">_satellite.pageBottom();</script>
+        <input name="ScrollTop" type="hidden" id="ScrollTop" />
+        <input name="__dnnVariable" type="hidden" id="__dnnVariable" autocomplete="off" />
+        
+    
+<script type="text/javascript" src="/Resources/Shared/scripts/initWidgets.js" ></script></form>
+    
+    
+    
+        <!-- Google Tag Manager -->
+            <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TVJKB9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            <script>(function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-TVJKB9');</script>
+        <!-- End Google Tag Manager -->
+    
+</body>
+</html>

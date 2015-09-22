@@ -1,0 +1,1232 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head><link href="http://i1.blogs.technet.com/rrcontent/6983b188969ac3cb4cce6085fc941d88-f0889a62ce3c34d8ff65e32ae372de85-RequestReducedStyle.css" rel="Stylesheet" type="text/css" /><script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.7.1.min.js" type="text/javascript" language="javascript"></script><link rel="shortcut icon" type="image/ico" href="/Themes/favicon.ico"><meta name="robots" content="index,follow"><meta name="description" content="Insider news about SQL Server and Microsoft's Information Platform"><meta name="keywords" content="SQL Server, Information Platform, Data Platform, ADO.NET, Sync, Entity Data Model, Entity Framework, SQL Server Data Services, SSDS, LINQ"><meta name="GENERATOR" content="7.x Production"><link rel="pingback" href="http://blogs.technet.com/b/dataplatforminsider/pingback.aspx">
+<link rel="alternate" type="application/rss+xml" title="Site Home (RSS 2.0)" href="http://blogs.technet.com/rss.aspx">
+<link rel="alternate" type="application/rss+xml" title="SQL Server Team Blog (RSS 2.0)" href="http://blogs.technet.com/b/dataplatforminsider/rss.aspx">
+<link rel="alternate" type="application/atom+xml" title="SQL Server Team Blog (Atom 1.0)" href="http://blogs.technet.com/b/dataplatforminsider/atom.aspx">
+<link rel="alternate" type="application/rss+xml" title="SQL Server Team Blog - All Comments (RSS 2.0)" href="http://blogs.technet.com/b/dataplatforminsider/rsscomments.aspx">
+
+                    <script src="http://i1.blogs.technet.com/rrcontent/882c15308b94067e780847bea99822ca-9ebbacc21adc19297214b71092198a40-RequestReducedScript.js" type="text/javascript" ></script><script type="text/javascript">
+// <![CDATA[
+try { jQuery.extend(jQuery.validator.messages,{required:'This field is required.',remote:'Please fix this field.',date:'Please enter a valid date.',dateISO:'Please enter a valid date (ISO).',number:'Please enter a valid number.',digits:'Please enter only digits.',creditcard:'Please enter a valid credit card number.',equalTo:'Please enter the same value again.',accept:'Please enter a value with a valid extension.',maxlength:jQuery.validator.format('Please enter no more than {0} characters.'),minlength:jQuery.validator.format('Please enter at least {0} characters.'),rangelength:jQuery.validator.format('Please enter a value between {0} and {1} characters long.'),range:jQuery.validator.format('Please enter a value between {0} and {1}.'),max:jQuery.validator.format('Please enter a value less than or equal to {0}.'),min:jQuery.validator.format('Please enter a value greater than or equal to {0}.')}); } catch(e) { };
+// ]]>
+</script><script src="http://i1.blogs.technet.com/rrcontent/3b989b6ff1c8202c8c7938900f73b19e-ff97bb072929eadc81395306c676d0a8-RequestReducedScript.js" type="text/javascript" ></script><script type="text/javascript">
+// <![CDATA[
+try { jQuery.telligent.evolution.site.configure({baseUrl:'\/',monthNames:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],dayNames:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],authorizationCookieName:'AuthorizationCookie',defaultErrorMessage:'An error occurred.  Please try again or contact your administrator.',defaultMultiErrorMessagePrefix:'The following errors occurred:  ',silverlightFileUploadEnabled:true});
+jQuery.extend($.fn.evolutionUserFileTextBox.defaults,{removeText:'Remove',selectText:'Select\/Upload...',noFileText:'No File Selected'});
+jQuery.telligent.evolution.navigationConfirmation.configure({message:'==============================\r\nUnless you save before leaving this page, you will lose any changes you have made.\r\n=============================='});
+jQuery.telligent.evolution.validation.registerExtensions({passwordInvalidMessage:'Password contains invalid chars ...',passwordRegex:'^.*$',emailInvalidMessage:'Your email address is invalid.',emailRegex:'^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$',usernameInvalidMessage:'Your sign in name does not meet the requirements for this site.',usernameRegex:'^[a-zA-Z0-9_\\- @\\.]+$',emailsInvalidMessage:'One or more emails is invalid',urlInvalidMessage:'URL not in correct format',urlRegex:'^((http|https|mailto|mms):|\/|#|~\/)'});
+jQuery.extend(jQuery.fn.evolutionLike.defaults,{likeText:'Like',unlikeText:'Unlike',modalTitleText:'People who like this',modalShowMoreText:'Show More',whoLikesOtherText:'<a href=\"{user_profile_url}\" class=\"internal-link view-user-profile\">{user_display_name}<\/a> likes this',whoLikesOtherTwoText:'<a href=\"{user_profile_url}\" class=\"internal-link view-user-profile\">{user_display_name}<\/a> and <span class=\"who-likes\">1 other<\/span> like this',whoLikesOtherMultipleText:'<a href=\"{user_profile_url}\" class=\"internal-link view-user-profile\">{user_display_name}<\/a> and <span class=\"who-likes\">{count} others<\/span> like this',whoLikesAccessingText:'You like this',whoLikesAccessingTwoText:'You and <span class=\"who-likes\">1 other<\/span> like this',whoLikesAccessingMultipleText:'You and <span class=\"who-likes\">{count} others<\/span> like this'});
+jQuery.extend(jQuery.fn.evolutionInlineTagEditor.defaults,{editButtonText:'Edit tags',selectTagsText:'Select tags',saveTagsText:'Save',cancelText:'Cancel'});
+jQuery.extend(jQuery.fn.evolutionStarRating.defaults,{titles:['Terrible','Poor','Fair','Average','Good','Excellent'],ratingMessageFormat:'Average rating: {rating} out of {count} ratings.'});
+jQuery.extend(jQuery.fn.evolutionModerate.defaults,{moderateLinkText:'moderate',reportLinkText:'Flag as spam\/abuse',reportedLinkText:'Flagged as spam\/abuse',reportedNotificationMessageText:'{NAME}\'s post has been flagged. <strong>Thank you for your feedback.<\/strong>'});
+} catch(e) { };
+// ]]>
+</script> <script src='http://widgets.membership.s-msft.com/v1/loader.js?brand=TechNet&lang=en-US' type='text/javascript' language='javascript'></script>
+<script type="text/javascript">
+(function($){
+$.telligent.evolution.ui.components['wikipagestory-revisions']  = {
+	add: function(elm, options) {
+        var elm = $(elm), revisions;
+		elm.bind('click', function(e){
+			revisions = revisions || $('#' + elm.data('revisions'));
+            e.preventDefault();
+            if(revisions.is(':visible')) {
+                revisions.stop().slideUp(150);
+                elm.html('Show revision history');
+            } else {
+                revisions.stop().slideDown(150);
+                elm.html('Hide revision history');
+            }
+		});
+	}
+};
+}(jQuery));
+</script><script type="text/javascript">(function($){ $.telligent.evolution.media.defaults.endpoint = 'http://blogs.technet.com/callback.ashx?__type=Telligent.Evolution.Api.Plugins.Endpoints.FileViewerEndpoint%2C%20Telligent.Evolution.Api%2C%20Version%3D7.1.12.36162%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull'; }(jQuery));</script><script type="text/javascript">(function($){ $.telligent.evolution.preview.defaults.endpoint = 'http://blogs.technet.com/callback.ashx?__type=Telligent.Evolution.Api.Plugins.Endpoints.WebPreviewEndpoint%2C%20Telligent.Evolution.Api%2C%20Version%3D7.1.12.36162%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull'; }(jQuery));</script><script type="text/javascript">(function($){ $.telligent.evolution.language.defaults.dateEndpoint = 'http://blogs.technet.com/callback.ashx?__type=Telligent.Evolution.Api.Plugins.Endpoints.DateFormattingEndpoint%2C%20Telligent.Evolution.Api%2C%20Version%3D7.1.12.36162%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull'; }(jQuery));</script>
+                  
+          <link type="text/css" rel="stylesheet" href="/themes/blogs/generic/css/dynamic-style.aspx?AppType=Weblog&WeblogID=6054&PreviewKey=0&Theme=bcea08641f214e839c2b31db680d7bfe" media="screen,print">
+        <meta name="msvalidate.01" content="B717AD6FC29D3A844832AF011B5F9E4C">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blogs.technet.com/b/dataplatforminsider/rsd.ashx">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" title="WLWManifest" href="http://blogs.technet.com/b/dataplatforminsider/wlwmanifest.ashx">
+<title>
+	Top 3 Features I’m Excited About in SQL Server 2014 - SQL Server Team Blog - Site Home - TechNet Blogs
+</title><!--[if lt IE 9]><script>document.createElement('header');document.createElement('nav');document.createElement('section');document.createElement('article');document.createElement('aside');document.createElement('footer');document.createElement('hgroup');</script><![endif]--><script type="text/javascript" src="//nexus.ensighten.com/technet/Bootstrap.js"></script></head>
+	<body spellcheck="true">
+		<form name="aspnetForm" method="post" action="/b/dataplatforminsider/archive/2014/03/05/top-3-features-i-m-excited-about-in-sql-server-2014.aspx/" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTM1MjQyMzYwMmRkZBUiXSFIVaD+v7Bq1RNhtW0mUJs=">
+</div>
+
+
+<script src="http://i1.blogs.technet.com/rrcontent/a5f868d003b28e18a18057fb232a282f-ddb73fb73149e701ac7db4222df3e8b7-RequestReducedScript.js" type="text/javascript" ></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="84C00179">
+</div>
+			
+                
+            
+            
+                <div class="header-fragments-header"></div>
+<div class="header-fragments minimal ">   <div class="header-fragment-outer top-bar wireframe-header-fragment-outer wireframe-top-bar">       <div class="header-fragment-inner top-bar wireframe-header-fragment-inner wireframe-top-bar">           <div class="header-fragment welcome-message">               <!-- always render -->           </div>           <div class="header-fragment login-logout">               <div class="navigation-list-header"></div>               <ul class="navigation-list">                   <li class="navigation-item">                       <span class="internal-link live-id-button">                           <a class="scarabLink" href="https://login.live.com/login.srf?wa=wsignin1.0&amp;wtrealm=blogs.technet.com&amp;wreply=https%3a%2f%2fblogs.technet.com%2fb%2fdataplatforminsider%2farchive%2f2014%2f03%2f05%2ftop-3-features-i-m-excited-about-in-sql-server-2014.aspx%2f%3fstoAI%3d10&amp;wp=MBI_FED_SSL&amp;wlcxt=microsoft%24microsoft%24microsoft" title="Sign in">Sign in</a>                       </span>                   </li>               </ul>               <div class="navigation-list-footer"></div>           </div>           <div class="header-fragment user-welcome-without-login">               &nbsp;<!-- always render -->               <span class="user-name">                   <a class="internal-link view-user-profile" href="">                       <span></span>                   </a>               </span>                          </div>       </div>   </div><div class="header-fragment-outer wireframe-header-fragment-outer site-banner">    <div class="header-fragment-inner wireframe-header-fragment-inner site-banner">        <div class="header-fragment site-banner">            <div class="site-banner-header"></div>            <div class="site-banner"></div>            <div class="site-banner-footer"></div>        </div>    </div></div></div><div class="header-fragments-footer"></div>
+            
+			
+    <div class="content-fragment-page post" id="ctl00_content_ctl00_page"><div class="layout">
+<div class="layout-header"></div>
+<div class="layout-content header-top-content-left-sidebar-right" id="ctl00_content_ctl00_layout">
+<div class="layout-region header" id="ctl00_content_ctl00_header">
+<div class="layout-region-inner header"><div class="content-fragment blog-bread-crumbs no-wrapper-with-spacing" id="fragment-173139">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-content">
+
+
+
+<div class="breadcrumb-list-header"></div>
+<div class="breadcrumb-list">
+	<span class="breadcrumb-item"><a href="/" class="internal-link view-home"><span></span>TechNet Blogs</a></span>
+
+	
+			<span class="separator"> &raquo; </span>
+		<span class="breadcrumb-item"><a href="/b/dataplatforminsider/default.aspx"><span></span>SQL Server Team Blog</a></span>
+	
+			<span class="separator"> &raquo; </span>
+		<span class="breadcrumb-item"><a href="/b/dataplatforminsider/archive/2014/03/05/top-3-features-i-m-excited-about-in-sql-server-2014.aspx"><span></span>Top 3 Features I’m Excited About in SQL Server 2014</a></span>
+	
+	</div>
+<div class="breadcrumb-list-footer"></div>
+			</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment raw-html no-wrapper" id="fragment-173140">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-content">
+<div class="user-defined-markup"><div id="stb-breadcrumbs">
+  <div class="breadcrumb-list">
+    <span class="breadcrumb-item"><a href="http://blogs.technet.com/b/serverandtools/">Server &amp; Tools Blogs</a></span>
+    <span class="separator"> &gt; </span>
+    <span class="breadcrumb-item"><a href="http://blogs.msdn.com/b/data-platform">Data Platform Blogs</a></span>
+    <span class="separator"> &gt; </span>
+    <span class="breadcrumb-item2">SQL Server Blog</span>
+  </div>
+</div>
+<div id="stb-header">
+            <ul class="stb-nav"> 
+    <li>
+      <a href="#" class="menu-title">Data Development<b><!--style element: drop-down arrow--></b></a>
+      <ul class="stb-nav-drop">
+        <b><!--style element: partial white border atop the drop-down menu--></b>					
+        <li><a href="http://blogs.msdn.com/b/adonet/">ADO.NET (Managed Providers, DataSet &amp; EF)</a></li>
+        <li><a href="http://blogs.msdn.com/b/astoriateam/">WCF Data Services</a></li>
+        <li><a href="http://blogs.msdn.com/b/sqlcat/">SQL Server Customer Advisory Team</a></li>
+        <li><a href="http://blogs.msdn.com/b/ssdt/">SQL Server Data Tools</a></li>
+        <li><a href="http://blogs.msdn.com/b/streaminsight/">StreamInsight</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" class="menu-title">Data Quality Services<b><!--style element: drop-down arrow--></b></a>
+      <ul class="stb-nav-drop">
+        <b><!--style element: partial white border atop the drop-down menu--></b>					
+        <li><a href="http://blogs.msdn.com/b/sqlcat/">SQL Server Customer Advisory Team</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" class="menu-title">OLTP<b><!--style element: drop-down arrow--></b></a>
+      <ul class="stb-nav-drop">
+        <b><!--style element: partial white border atop the drop-down menu--></b>					
+        <li><a href="http://blogs.technet.com/b/dataplatforminsider/">SQL Server Team</a></li>
+        <li><a href="http://blogs.msdn.com/b/adonet/">ADO.NET (Managed Providers, DataSet &amp; EF)</a></li>
+        <li><a href="http://blogs.msdn.com/b/sqlcat/">SQL Server Customer Advisory Team</a></li>
+        <li><a href="http://blogs.msdn.com/b/sqlreleaseservices/">SQL Release Services</a></li>
+        <li><a href="http://blogs.msdn.com/b/saponsqlserver/">Running SAP on SQL Server</a></li>
+        <li><a href="http://blogs.msdn.com/b/conor_cunningham_msft/">Conor vs. SQL</a></li>
+        <li><a href="http://blogs.msdn.com/b/sqlalwayson/">SQL AlwaysOn Team</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" class="menu-title">Integration Services<b><!--style element: drop-down arrow--></b></a>
+      <ul class="stb-nav-drop">
+        <b><!--style element: partial white border atop the drop-down menu--></b>					
+        <li><a href="http://blogs.msdn.com/b/sqlcat/">SQL Server Customer Advisory Team</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" class="menu-title">Data Security &amp; Storage<b><!--style element: drop-down arrow--></b></a>
+      <ul class="stb-nav-drop">
+        <b><!--style element: partial white border atop the drop-down menu--></b>					
+        <li><a href="http://blogs.msdn.com/b/sqlsecurity/">SQL Server Security</a></li>
+        <li><a href="http://blogs.msdn.com/b/sqlserverstorageengine/">SQL Server Database Engine</a></li>
+        <li><a href="http://blogs.msdn.com/b/sqlcat/">SQL Server Customer Advisory Team</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" class="menu-title">Data in the Cloud<b><!--style element: drop-down arrow--></b></a>
+      <ul class="stb-nav-drop">
+        <b><!--style element: partial white border atop the drop-down menu--></b>					
+        <li><a href="http://blogs.msdn.com/b/windowsazure" target="_blank">Microsoft Azure</a></li>
+        <li><a href="http://blogs.technet.com/b/dataplatforminsider/">SQL Server Team</a></li>
+        <li><a href="http://blogs.msdn.com/b/silverlining/">Silver Lining</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" class="menu-title">Machine Learning<b><!--style element: drop-down arrow--></b></a>
+      <ul class="stb-nav-drop">
+        <b><!--style element: partial white border atop the drop-down menu--></b>					
+        <li><a href="http://blogs.technet.com/b/machinelearning">Machine Learning Blog</a></li>
+      </ul>
+    </li>
+  </ul><div class="description-container">
+    <div class="description">
+      <a href="http://blogs.technet.com/b/dataplatforminsider/"><h2>SQL Server Blog</h2></a>
+      <p class="tagline">Official News from Microsoft&rsquo;s Information Platform</p>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+<!-- Begin drop-down menu -->
+  $("#stb-header > .stb-nav")
+    .mouseleave(function () {
+      $(this)
+        .find("a.menu-title")
+          .removeClass("expanded")
+        .end()
+        .find(".stb-nav-drop")
+          .removeClass("expanded");
+    })
+	.find("a.menu-title")
+	.click(function(e) {
+		  e.preventDefault();
+		  e.stopImmediatePropagation();
+		  
+		  $(this).parents('li:first').find(".stb-nav-drop")
+            .toggleClass("expanded")
+          .end()
+          .find("a.menu-title")
+            .toggleClass("expanded")
+          .end()
+          .siblings()
+            .find("a.menu-title")
+              .removeClass("expanded")
+            .end()
+            .find(".stb-nav-drop")
+              .removeClass("expanded");
+	  });
+
+    $(".stb-nav a[target='_blank']").click(function(e) {
+      window.open($(this).attr("href"), "popup", "width=980");
+      e.preventDefault();
+    });
+});  
+</script></div></div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+</div>
+</div>
+<div class="layout-region right-sidebar" id="ctl00_content_ctl00_right-sidebar">
+<div class="layout-region-inner right-sidebar"><div class="content-fragment search-form no-wrapper" id="fragment-173141">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-content">
+
+<div class="field-list-header">
+</div>
+<fieldset class="field-list">
+    <ul class="field-list">
+        <li class="field-item search">
+            <div id="search-allblogs-container">
+                <span class="field-item-input">
+                    <input id="SearchTextBox_AllBlogs" name="SearchTextBox_AllBlogs" type="text" class="searchField" maxlength="64" size="45" autocomplete="off">
+                    <input id="SearchButton_AllBlogs" name="SearchButton_AllBlogs" type="button" class="search-button">
+                </span>
+            </div>
+            <div id="search-thisblog-container">
+                <span class="field-item-input">
+                    <input id="SearchTextBox_ThisBlog" name="SearchTextBox_ThisBlog" type="text" class="searchField" maxlength="64" size="45" autocomplete="off">
+                    <input id="SearchButton_ThisBlog" name="SearchButton_ThisBlog" type="button" class="search-button">
+               </span>
+            </div>
+        </li>
+    </ul>
+</fieldset>
+<div class="field-list-footer">
+    <div id="search-switch-container">
+        <span style="display: inline-block">
+            <input type="radio" name="SearchTypeRadio" value="ThisBlog" id="ThisBlog" checked="checked"><label for="ThisBlog" id="ThisBlogText">Search this blog</label>
+        </span>
+        <span style="display: inline-block">
+            <input type="radio" name="SearchTypeRadio" value="AllBlogs" id="AllBlogs"><label for="AllBlogs" id="AllBlogsText">Search all blogs</label>
+        </span>
+    </div>
+</div>
+<script type="text/javascript">
+(function($){
+  var elmSearchAll = $('#search-allblogs-container').hide();
+  var elmSearchThis = $('#search-thisblog-container');
+  
+  $(document).ready(function() {
+      $('#ThisBlog').click(function () {
+          var self = $(this);
+          if (self.is(':checked')) {
+              elmSearchAll.hide();
+              elmSearchThis.show();
+          }
+      });
+    
+      $('#AllBlogs').click(function () {
+          var self = $(this);
+          if (self.is(':checked')) {
+              elmSearchThis.hide();
+              elmSearchAll.show();
+          }
+      });
+  });
+})(jQuery);
+</script>
+<script type="text/javascript" language="javascript" src="http://i4.services.social.microsoft.com/Search/Widgets/SearchBox.jss?refinement=61&brand=Technet&boxid=SearchTextBox_AllBlogs&btnid=SearchButton_AllBlogs&focusOnInit=false&beta=0&overrideWatermark=false"></script>
+  <script type="text/javascript" language="javascript" src="http://i4.services.social.microsoft.com/Search/Widgets/SearchBox.jss?rn=SQL%20Server%20Team%20Blog&rq=site%3Ablogs.technet.com%2Fb%2Fdataplatforminsider%2F&brand=Technet&boxid=SearchTextBox_ThisBlog&btnid=SearchButton_ThisBlog&focusOnInit=false&beta=0&overrideWatermark=false"></script>
+</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment html-content no-wrapper with-header" id="fragment-173142">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-header"><div>
+Top Server &amp; Tools Blogs
+	</div></div>
+<div class="content-fragment-content">
+
+<div class="user-defined-markup" style="">
+<div class="sxp-feed"><a href="http://weblogs.asp.net/scottgu">ScottGu&#39;s Blog</a></div>
+<div class="sxp-feed"><a href="http://blogs.technet.com/b/in_the_cloud/">Brad Anderson&rsquo;s &quot;In the Cloud&quot; Blog</a></div>
+<div class="sxp-feed"><a href="http://blogs.msdn.com/b/somasegar/">Somasegar&#39;s Blog</a></div>
+<div class="sxp-feed"><a href="http://blogs.msdn.com/b/bharry/">Brian Harry&#39;s Blog</a></div>
+<div class="sxp-feed"><a href="http://blogs.msdn.com/b/stevengu/">Steve &quot;Guggs&quot; Guggenheimer&#39;s Blog</a></div>
+</div>
+		</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment html-content no-wrapper with-header" id="fragment-173143">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-header"><div>
+Related Links
+	</div></div>
+<div class="content-fragment-content">
+
+<div class="user-defined-markup" style="">
+<p style="margin-top:0;"><a href="http://blogs.technet.com/b/machinelearning/">Machine Learning Blog</a></p>
+<p><a href="http://blogs.msdn.com/b/powerbi/">Power BI</a></p>
+</div>
+		</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment raw-html no-wrapper" id="fragment-173144">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-content">
+<div class="user-defined-markup"><!-- SIDEBAR: METRO TILES -->
+<ul class="sidebar-tiles">
+  <li class="first">
+    <a href="http://blogs.technet.com/b/dataplatforminsider/rss.aspx" class="sidebar-tile-subscribe">Subscribe</a>
+  </li>
+  <li class="mid">
+    <a href="https://twitter.com/SQLServer" class="sidebar-tile-twitter">Twitter</a>
+  </li>
+  <li class="last">
+    <a href="http://www.facebook.com/sqlserver" class="sidebar-tile-facebook">Facebook</a>
+  </li>
+</ul></div></div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment blog-links no-wrapper-with-spacing with-header" id="fragment-173145">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-header"><div>
+Menu
+			</div></div>
+<div class="content-fragment-content">
+
+  
+<div class="navigation-list-header"></div>
+<ul class="navigation-list">
+															<li class="navigation-item"><a href="/b/dataplatforminsider/default.aspx" class="internal-link view-application"><span></span>Home</a></li>
+																													<li class="navigation-item"><a href="/b/dataplatforminsider/atom.aspx" class="internal-link rss"><span></span>Atom</a></li>
+																																      																																																							</ul>
+<div class="navigation-list-footer"></div>
+			</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment blog-post-list no-wrapper-with-spacing with-header" id="fragment-173146">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-header"><div>
+Recent Posts
+		</div></div>
+<div class="content-fragment-content">
+
+
+  <style type="text/css">
+			.attribute-value.reply-count ,.count.reply-count {
+				background: url(/cfs-file.ashx/__key/defaultwidgets/03960eaa523b43e68db2c642abc1fa61-141207290dbc473f9c8bdaf31e117a82/icon_2D00_comments.png) 0 50% no-repeat; 
+				padding-left: 18px; 
+				margin-left: 15px;
+			}
+		</style>
+
+
+
+
+
+
+	
+
+    
+
+																				
+	
+
+
+
+
+    <div class="content-list-header simple"></div>
+    <ul class="content-list simple">
+        <li class="content-item simple">
+            <div class="abbreviated-post-header"></div>
+            <div class="abbreviated-post">
+                <h4 class="post-name">
+                    <a href="http://blogs.technet.com/b/dataplatforminsider/archive/2015/09/02/download-the-new-jdbc-4-2-for-sql-server-driver.aspx" class="internal-link view-post">
+                        <span></span>Download the new JDBC 4.2 for SQL Server Driver
+                    </a>
+                </h4>
+                <div class="post-date">
+                    <span class="label">Posted</span>
+                    <span class="value">19 days ago</span>
+                </div>
+                <div class="post-author">
+                    <span class="fiji-post-author-by evolution2-post-author-by">by</span>
+                                            <span class="avatar">
+                            <img src="http://i1.social.s-msft.com/profile/u/avatar.jpg?displayname=sql+server+team&amp;size=large" style="max-height: 32px;max-width: 32px;" border="0" alt="SQL Server Team">
+                        </span>
+                        <span class="user-name">
+                            SQL Server Team
+                        </span>
+                    
+                                            <span class="user-name">
+                            SQL Server Team
+                        </span>
+                                    </div>
+
+                                                    <span class="post-counts">
+                        <a href="http://blogs.technet.com/b/dataplatforminsider/archive/2015/09/02/download-the-new-jdbc-4-2-for-sql-server-driver.aspx#comments">
+                                                            <span class="count reply-count">
+                                    <span class="avatar"></span>1									
+                                </span>
+																	<span>Comment</span>
+								                                                                                </a>
+                    </span>
+                
+            </div>
+            <div class="abbreviated-post-footer"></div>
+        </li>
+        <li class="content-item simple">
+            <div class="abbreviated-post-header"></div>
+            <div class="abbreviated-post">
+                <h4 class="post-name">
+                    <a href="http://blogs.technet.com/b/dataplatforminsider/archive/2015/09/02/introducing-sql-server-2016-community-technology-preview-2-3.aspx" class="internal-link view-post">
+                        <span></span>Introducing: SQL Server 2016 Community Technology Preview 2.3
+                    </a>
+                </h4>
+                <div class="post-date">
+                    <span class="label">Posted</span>
+                    <span class="value">19 days ago</span>
+                </div>
+                <div class="post-author">
+                    <span class="fiji-post-author-by evolution2-post-author-by">by</span>
+                                            <span class="avatar">
+                            <img src="http://i1.social.s-msft.com/profile/u/avatar.jpg?displayname=sql+server+team&amp;size=large" style="max-height: 32px;max-width: 32px;" border="0" alt="SQL Server Team">
+                        </span>
+                        <span class="user-name">
+                            SQL Server Team
+                        </span>
+                    
+                                            <span class="user-name">
+                            SQL Server Team
+                        </span>
+                                    </div>
+
+                                                    <span class="post-counts">
+                        <a href="http://blogs.technet.com/b/dataplatforminsider/archive/2015/09/02/introducing-sql-server-2016-community-technology-preview-2-3.aspx#comments">
+                                                            <span class="count reply-count">
+                                    <span class="avatar"></span>1									
+                                </span>
+																	<span>Comment</span>
+								                                                                                </a>
+                    </span>
+                
+            </div>
+            <div class="abbreviated-post-footer"></div>
+        </li>
+        <li class="content-item simple">
+            <div class="abbreviated-post-header"></div>
+            <div class="abbreviated-post">
+                <h4 class="post-name">
+                    <a href="http://blogs.technet.com/b/dataplatforminsider/archive/2015/09/02/sql-server-2016-community-technology-preview-2-3-is-available.aspx" class="internal-link view-post">
+                        <span></span>SQL Server 2016 Community Technology Preview 2.3 is available
+                    </a>
+                </h4>
+                <div class="post-date">
+                    <span class="label">Posted</span>
+                    <span class="value">19 days ago</span>
+                </div>
+                <div class="post-author">
+                    <span class="fiji-post-author-by evolution2-post-author-by">by</span>
+                                            <span class="avatar">
+                            <img src="http://i1.social.s-msft.com/profile/u/avatar.jpg?displayname=sql+server+team&amp;size=large" style="max-height: 32px;max-width: 32px;" border="0" alt="SQL Server Team">
+                        </span>
+                        <span class="user-name">
+                            SQL Server Team
+                        </span>
+                    
+                                            <span class="user-name">
+                            SQL Server Team
+                        </span>
+                                    </div>
+
+                                                    <span class="post-counts">
+                        <a href="http://blogs.technet.com/b/dataplatforminsider/archive/2015/09/02/sql-server-2016-community-technology-preview-2-3-is-available.aspx#comments">
+                                                            <span class="count reply-count">
+                                    <span class="avatar"></span>4									
+                                </span>
+																	<span>Comments</span>
+								                                                                                </a>
+                    </span>
+                
+            </div>
+            <div class="abbreviated-post-footer"></div>
+        </li>
+        <li class="content-item simple">
+            <div class="abbreviated-post-header"></div>
+            <div class="abbreviated-post">
+                <h4 class="post-name">
+                    <a href="http://blogs.technet.com/b/dataplatforminsider/archive/2015/08/31/new-sql-server-2014-logo-certification-program.aspx" class="internal-link view-post">
+                        <span></span>New SQL Server 2014 Logo Certification Program
+                    </a>
+                </h4>
+                <div class="post-date">
+                    <span class="label">Posted</span>
+                    <span class="value">21 days ago</span>
+                </div>
+                <div class="post-author">
+                    <span class="fiji-post-author-by evolution2-post-author-by">by</span>
+                                            <span class="avatar">
+                            <img src="http://i1.social.s-msft.com/profile/u/avatar.jpg?displayname=sql+server+team&amp;size=large" style="max-height: 32px;max-width: 32px;" border="0" alt="SQL Server Team">
+                        </span>
+                        <span class="user-name">
+                            SQL Server Team
+                        </span>
+                    
+                                            <span class="user-name">
+                            SQL Server Team
+                        </span>
+                                    </div>
+
+                                
+            </div>
+            <div class="abbreviated-post-footer"></div>
+        </li>
+    </ul>
+    <div class="content-list-footer simple"></div>
+
+
+
+		</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment tag-cloud no-wrapper-with-spacing with-header" id="fragment-173147">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-header"><div>
+Tags
+			</div></div>
+<div class="content-fragment-content">
+
+
+		
+
+			
+		
+				
+		
+	
+
+	<div class="tag-list-header"></div>
+	<ul class="tag-list">
+		<li class="tag-item level-4">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/Azure/default.aspx" rel="nofollow tag"><span></span>Azure</a>
+			</li>
+		<li class="tag-item level-5">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/BI/default.aspx" rel="nofollow tag"><span></span>BI</a>
+			</li>
+		<li class="tag-item level-3">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/Big+Data/default.aspx" rel="nofollow tag"><span></span>Big Data</a>
+			</li>
+		<li class="tag-item level-3">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/Business+Intelligence/default.aspx" rel="nofollow tag"><span></span>Business Intelligence</a>
+			</li>
+		<li class="tag-item level-5">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/Community/default.aspx" rel="nofollow tag"><span></span>Community</a>
+			</li>
+		<li class="tag-item level-6">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/Data+Warehousing/default.aspx" rel="nofollow tag"><span></span>Data Warehousing</a>
+			</li>
+		<li class="tag-item level-4">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/Database/default.aspx" rel="nofollow tag"><span></span>Database</a>
+			</li>
+		<li class="tag-item level-3">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/Events/default.aspx" rel="nofollow tag"><span></span>Events</a>
+			</li>
+		<li class="tag-item level-3">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/Hadoop/default.aspx" rel="nofollow tag"><span></span>Hadoop</a>
+			</li>
+		<li class="tag-item level-5">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/HDInsight/default.aspx" rel="nofollow tag"><span></span>HDInsight</a>
+			</li>
+		<li class="tag-item level-2">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/In_2D00_Memory/default.aspx" rel="nofollow tag"><span></span>In-Memory</a>
+			</li>
+		<li class="tag-item level-6">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/OLTP/default.aspx" rel="nofollow tag"><span></span>OLTP</a>
+			</li>
+		<li class="tag-item level-6">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/Parallel+Data+Warehouse/default.aspx" rel="nofollow tag"><span></span>Parallel Data Warehouse</a>
+			</li>
+		<li class="tag-item level-2">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/pass/default.aspx" rel="nofollow tag"><span></span>pass</a>
+			</li>
+		<li class="tag-item level-6">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/pass+summit+2012/default.aspx" rel="nofollow tag"><span></span>pass summit 2012</a>
+			</li>
+		<li class="tag-item level-5">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/SQL/default.aspx" rel="nofollow tag"><span></span>SQL</a>
+			</li>
+		<li class="tag-item level-2">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/SQL+2012/default.aspx" rel="nofollow tag"><span></span>SQL 2012</a>
+			</li>
+		<li class="tag-item level-1">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/SQL+Server/default.aspx" rel="nofollow tag"><span></span>SQL Server</a>
+			</li>
+		<li class="tag-item level-6">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/SQL+Server+2005/default.aspx" rel="nofollow tag"><span></span>SQL Server 2005</a>
+			</li>
+		<li class="tag-item level-2">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/SQL+Server+2008/default.aspx" rel="nofollow tag"><span></span>SQL Server 2008</a>
+			</li>
+		<li class="tag-item level-1">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/SQL+Server+2008+R2/default.aspx" rel="nofollow tag"><span></span>SQL Server 2008 R2</a>
+			</li>
+		<li class="tag-item level-1">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/SQL+Server+2012/default.aspx" rel="nofollow tag"><span></span>SQL Server 2012</a>
+			</li>
+		<li class="tag-item level-1">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/SQL+Server+2014/default.aspx" rel="nofollow tag"><span></span>SQL Server 2014</a>
+			</li>
+		<li class="tag-item level-6">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/SQL+Server+Code+Name+Denali/default.aspx" rel="nofollow tag"><span></span>SQL Server Code Name Denali</a>
+			</li>
+		<li class="tag-item level-5">
+											
+				
+														<a href="/b/dataplatforminsider/archive/tags/SQLServer/default.aspx" rel="nofollow tag"><span></span>SQLServer</a>
+			</li>
+	</ul>
+	<div class="tag-list-footer"></div>
+	</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment raw-html no-wrapper" id="fragment-173148">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-content">
+<div class="user-defined-markup"><!-- SIDEBAR: TAGS MORE/LESS SCRIPT -->
+<script>
+  $(document).ready(function() {
+    $('ul.tag-list > li.tag-item').hide();
+    if ($('ul.tag-list > li.tag-item').length < 1) {
+      $('#TagMoreLink,#TagLessLink').hide();
+    }
+    if ($('ul.tag-list > li.tag-item:visible').length == $('ul.tag-list > li.tag-item').length) {
+      $('#TagMoreLink,#TagLessLink').hide();
+    }
+  });
+</script>
+<a id="TagMoreLink" href="#" onclick="$('ul.tag-list > li.tag-item').show(); $('#TagLessLink').show(); $('#TagMoreLink').hide(); return false;">More <span class="arrowhead">&#9660;</span></a>
+<a id="TagLessLink" href="#" style="display:none" onclick="$('ul.tag-list > li.tag-item').hide(); $('#TagMoreLink').show(); $('#TagLessLink').hide(); return false;">Less <span class="arrowhead">&#9650;</span></a></div></div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment blog-archive-list no-wrapper-with-spacing with-header" id="fragment-173149">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-header"><div>
+Archives
+	</div></div>
+<div class="content-fragment-content">
+
+
+
+<div class="content-list-header"></div>
+<div class="content-list-name">Archives</div>
+<ul class="content-list">
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2015/09.aspx">September 2015</a> (3)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2015/08.aspx">August 2015</a> (3)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2015/07.aspx">July 2015</a> (5)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2015/06.aspx">June 2015</a> (7)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2015/05.aspx">May 2015</a> (5)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2015/04.aspx">April 2015</a> (9)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2015/03.aspx">March 2015</a> (8)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2015/02.aspx">February 2015</a> (5)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2015/01.aspx">January 2015</a> (5)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2014/12.aspx">December 2014</a> (8)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2014/11.aspx">November 2014</a> (10)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2014/10.aspx">October 2014</a> (13)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2014/09.aspx">September 2014</a> (11)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2014/08.aspx">August 2014</a> (3)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2014/07.aspx">July 2014</a> (8)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2014/06.aspx">June 2014</a> (10)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2014/05.aspx">May 2014</a> (11)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2014/04.aspx">April 2014</a> (13)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2014/03.aspx">March 2014</a> (15)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2014/02.aspx">February 2014</a> (12)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2014/01.aspx">January 2014</a> (10)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2013/12.aspx">December 2013</a> (1)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2013/11.aspx">November 2013</a> (12)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2013/10.aspx">October 2013</a> (18)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2013/09.aspx">September 2013</a> (12)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2013/08.aspx">August 2013</a> (8)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2013/07.aspx">July 2013</a> (9)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2013/06.aspx">June 2013</a> (14)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2013/05.aspx">May 2013</a> (7)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2013/04.aspx">April 2013</a> (9)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2013/03.aspx">March 2013</a> (10)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2013/02.aspx">February 2013</a> (10)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2013/01.aspx">January 2013</a> (5)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2012/12.aspx">December 2012</a> (7)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2012/11.aspx">November 2012</a> (16)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2012/10.aspx">October 2012</a> (12)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2012/09.aspx">September 2012</a> (4)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2012/08.aspx">August 2012</a> (7)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2012/07.aspx">July 2012</a> (8)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2012/06.aspx">June 2012</a> (7)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2012/05.aspx">May 2012</a> (10)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2012/04.aspx">April 2012</a> (9)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2012/03.aspx">March 2012</a> (13)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2012/02.aspx">February 2012</a> (11)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2012/01.aspx">January 2012</a> (5)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2011/12.aspx">December 2011</a> (9)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2011/11.aspx">November 2011</a> (8)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2011/10.aspx">October 2011</a> (10)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2011/09.aspx">September 2011</a> (7)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2011/08.aspx">August 2011</a> (12)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2011/07.aspx">July 2011</a> (8)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2011/06.aspx">June 2011</a> (6)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2011/05.aspx">May 2011</a> (3)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2011/04.aspx">April 2011</a> (5)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2011/03.aspx">March 2011</a> (4)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2011/02.aspx">February 2011</a> (5)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2011/01.aspx">January 2011</a> (3)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2010/12.aspx">December 2010</a> (3)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2010/11.aspx">November 2010</a> (11)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2010/10.aspx">October 2010</a> (4)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2010/09.aspx">September 2010</a> (3)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2010/08.aspx">August 2010</a> (3)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2010/07.aspx">July 2010</a> (7)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2010/06.aspx">June 2010</a> (2)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2010/05.aspx">May 2010</a> (7)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2010/04.aspx">April 2010</a> (13)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2010/03.aspx">March 2010</a> (7)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2010/02.aspx">February 2010</a> (5)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2010/01.aspx">January 2010</a> (6)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2009/12.aspx">December 2009</a> (1)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2009/11.aspx">November 2009</a> (12)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2009/10.aspx">October 2009</a> (7)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2009/09.aspx">September 2009</a> (3)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2009/08.aspx">August 2009</a> (4)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2009/07.aspx">July 2009</a> (4)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2009/06.aspx">June 2009</a> (3)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2009/05.aspx">May 2009</a> (4)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2009/04.aspx">April 2009</a> (4)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2009/03.aspx">March 2009</a> (2)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2009/02.aspx">February 2009</a> (8)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2009/01.aspx">January 2009</a> (2)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2008/12.aspx">December 2008</a> (6)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2008/11.aspx">November 2008</a> (3)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2008/10.aspx">October 2008</a> (6)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2008/09.aspx">September 2008</a> (4)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2008/08.aspx">August 2008</a> (4)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2008/07.aspx">July 2008</a> (9)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2008/06.aspx">June 2008</a> (11)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2008/04.aspx">April 2008</a> (6)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2008/03.aspx">March 2008</a> (6)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2008/02.aspx">February 2008</a> (5)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2008/01.aspx">January 2008</a> (6)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2007/12.aspx">December 2007</a> (7)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="/b/dataplatforminsider/archive/2007/11.aspx">November 2007</a> (5)
+	</li>
+</ul>
+<div class="content-list-footer"></div>
+
+	</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment raw-html no-wrapper" id="fragment-173150">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-content">
+<div class="user-defined-markup"><script>
+    $(document).ready(function() {
+      $('.layout-region.right-sidebar .blog-archive-list ul.content-list li.content-item').hide();
+      if ($('.layout-region.right-sidebar .blog-archive-list ul.content-list li.content-item').length < 1) {
+        $('#ArchiveMoreLink,#ArchiveLessLink').hide();
+      }
+      if ($('.layout-region.right-sidebar .blog-archive-list ul.content-list li.content-item:visible').length == $('.layout-region.right-sidebar .blog-archive-list ul.content-list li.content-item').length) {
+        $('#ArchiveMoreLink,#ArchiveLessLink').hide();
+      }
+    });
+</script>
+<a id="ArchiveMoreLink" href="#" onclick="$('.layout-region.right-sidebar .blog-archive-list ul.content-list li.content-item').show(); $('#ArchiveLessLink').show(); $('#ArchiveMoreLink').hide(); return false;">More <span class="arrowhead">&#9660;</span></a>
+<a id="ArchiveLessLink" href="#" style="display:none" onclick="$('.layout-region.right-sidebar .blog-archive-list ul.content-list li.content-item').hide(); $('#ArchiveMoreLink').show(); $('#ArchiveLessLink').hide(); return false;">Less <span class="arrowhead">&#9650;</span></a></div></div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+</div>
+</div>
+<div class="layout-region content" id="ctl00_content_ctl00_content">
+<div class="layout-region-inner content"><div class="content-fragment blog-title full-border" id="fragment-173151">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-content">
+
+	
+	<h1 class="title">Top 3 Features I’m Excited About in SQL Server 2014</h1>
+		</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment blog-post no-wrapper-with-spacing" id="fragment-173152">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-content">
+
+
+
+<div class="full-post-header"></div>
+<div class="full-post">
+    <h3 class="post-name">Top 3 Features I’m Excited About in SQL Server 2014</h3>
+    <div class="post-rating">
+            <span class="ui-rate" data-contentid="89abf5a9-7b14-4217-9d8e-c2d8151f59cf" data-contenttypeid="f7d226ab-d59f-475c-9d22-4a79e3f0ec07" data-readonly="true" data-initialvalue="1" data-initialcount="3" data-configuration="ReadOnly=true"></span>
+        </div>    
+     <div class="post-author">      
+          <span class="avatar" style="height:32px;">                                          
+						  <img src="http://i1.social.s-msft.com/profile/u/avatar.jpg?displayname=sql+server+team&amp;size=large" style="width: 32px;height:0;padding:32px 0 0 0;overflow:hidden;background:url('http://i1.social.s-msft.com/profile/u/avatar.jpg?displayname=sql+server+team&amp;size=large') center center no-repeat;background-size:cover;" border="0" alt="SQL Server Team">                                  
+					</span>	
+          <span class="profile-usercard-hover" data-profile-userid="bcb63aa8-614d-4f84-88bf-f4d6ca6278eb">                     
+							<span class="user-name">
+								  <a href="http://social.technet.microsoft.com/profile/SQL Server Team">SQL Server Team</a>
+							</span>                 
+					</span>             
+    </div>
+    
+    
+
+    <div class="post-date">
+        <span class="value">
+                            5 Mar 2014 9:00 AM
+                    </span>
+    </div>
+    <div class="post-attributes">
+        <div class="attribute-list-header"></div>
+        <ul class="attribute-list">
+             <li class="attribute-item post-reply-count">
+                <span class="attribute-name">Comments</span>
+                <span class="attribute-value"><a href="#comments" class="internal-link view-replies"><span></span>4</a></span>
+             </li>
+             <li class="attribute-item post-like-count">
+                <span class="attribute-name">Likes</span>
+                <span class="attribute-value"></span>
+             </li>
+        </ul>
+        <div class="attribute-list-footer"></div>
+    </div>
+    <div class="post-content user-defined-markup"><p><a href="/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-60-54/Jorgensen_5F00_HeadShot95.jpg"><img width="70" title="SQL Server MVP Adam Jorgensen" style="border-color:currentColor;margin-right:6px;margin-left:6px;float:left;" alt="SQL Server MVP Adam Jorgensen" src="/resized-image.ashx/__size/175x0/__key/communityserver-blogs-components-weblogfiles/00-00-00-60-54/Jorgensen_5F00_HeadShot95.jpg"></a><strong>Guest blog post by</strong>:&nbsp; SQL Server MVP Adam Jorgensen &ndash; PASS Executive Vice President, Finance &amp; Governance, and President of Pragmatic Works &ndash; has been leading innovative SQL Server and Business Intelligence organizations for over a decade. His passion is finding new and creative avenues for clients and the community to embrace innovation and lower barriers to implementation. You can read his blog at&nbsp;<a href="http://AjBigData.com">AjBigData.com</a>&nbsp;and follow him on Twitter at&nbsp;<a href="https://twitter.com/AJbigdata">@AJBigData</a>.</p>
+<p style="text-align:center;">*&nbsp;&nbsp;&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp; *</p>
+<p>SQL Server 2014 is almost here! Many SQL Server professionals have been following the progress of this new release for a long time, and others have been so busy with day-to-day fire-fighting they haven&rsquo;t had a chance to look at what&rsquo;s coming. As the SQL Server team joins with <a href="http://www.sqlpass.org/Home.aspx">PASS</a> Virtual Chapters on a free <a href="http://www.sqlpass.org/ss2014launch/Webinars.aspx">&ldquo;Countdown to SQL Server 2014&rdquo; webinar series</a>, I thought it would be a great time to highlight some of the features I&rsquo;m most excited about.</p>
+<p>Among the host of SQL Server 2014 capabilities that will enable innovative, new application and data platform opportunities, here are three of my favorites I can&rsquo;t wait for the community to try out:</p>
+<p><b>1. Delayed Durability</b><b><br> </b> SQL Server 2014 lets us mark certain transactions as <a href="http://msdn.microsoft.com/en-us/library/dn449490(v=sql.120).aspx">delayed durable</a>, meaning control returns to the client before the log record is written to disk, as opposed to fully durable, which hardens the transaction log to disk before returning control to the client. Also called Lazy Commit, delayed durability can help reduce latency related to log I/O by keeping the transaction log records in memory and writing to the transaction log in batches.&nbsp; If you&rsquo;re experiencing log I/O contention, it can also help reduce waits in the system. This setting &ndash; which we can control at the database, commit, or atomic level &ndash; provides for many new scalability opportunities and challenges. I&rsquo;m looking forward to the solutions our community will create to leverage this capability.</p>
+<p><b>2. New Cardinality Estimation Design</b><b><br> </b>The cardinality estimator has been redesigned in SQL Server 2014 to improve query plan quality and query performance. This new estimator calculates cardinality, essentially the number of rows the optimizer processes in an operation, using assumptions and algorithms that support modern OLTP and data warehousing workloads.&nbsp;The Microsoft SQL Server engineering team did a lot of research on these workloads to deliver a modern algorithm set that is customer tested and proven. You can read more about the new estimator in <a href="http://msdn.microsoft.com/en-us/library/bb510411(v=sql.120).aspx">Books Online: What&rsquo;s New (Database Engine)</a> and in the white paper &ldquo;<a href="http://dl.acm.org/citation.cfm?id=2304526">Testing cardinality estimation models in SQL Server</a>.&rdquo;</p>
+<p><strong>3.</strong> <strong>Clustered Columnstore Indexes</strong><br> Since SQL Server 2012 introduced nonclustered columnstore indexes, many of us have been looking forward to <a href="http://msdn.microsoft.com/en-us/library/gg492088(v=sql.120).aspx">clustered columnstore indexes</a> and seeing this new SQL Server 2014 feature in action in our own environments. A clustered columnstore index will improve data compression and query performance for many data warehousing workloads, especially in read-heavy and bulk-loading scenarios. And because the CCI is updatable, we can perform Selects, Inserts, Updates, and Deletes on these tables while still getting the performance of a clustered columnstore.</p>
+<p>These are just a few of the SQL Server 2014 features I think will be game-changers in many organizations, helping us deliver even higher performing and more highly scalable data systems. Which features are you most excited about? Let us know how you plan to use them. And I hope you&rsquo;ll join PASS and Microsoft to learn more about this new release and how to take full advantage of it &ndash; <a href="http://www.sqlpass.org/ss2014launch/Webinars.aspx">sign up for your favorite webinars today</a>.</p>
+<p>See you out there!<br> Adam</p><div style="clear:both;"></div></div>
+    <div class="post-attachment-viewer">
+            </div>
+    <div class="post-actions">
+        <div class="navigation-list-header"></div>
+        <ul class="navigation-list">            
+            <li class="navigation-item"><a href="http://blogs.technet.com/b/dataplatforminsider/archive/2014/03/05/top-3-features-i-m-excited-about-in-sql-server-2014.aspx#comments" class="internal-link view-replies"><span></span>4 Comments</a></li>
+                                </ul>
+        <div class="navigation-list-footer"></div>
+    </div>
+            <div class="post-tags">
+                        <span class="ui-tag" data-contentid="89abf5a9-7b14-4217-9d8e-c2d8151f59cf" data-contenttypeid="f7d226ab-d59f-475c-9d22-4a79e3f0ec07" data-urlformat="http://blogs.technet.com/b/dataplatforminsider/archive/tags/{tag}/default.aspx" data-readonly="true" data-tags="Adam Jorgensen,SQL Server 2014,Guest Blogger,PASS BAC" data-configuration=""></span>
+        </div>
+    
+			<div class="post-like">
+	    
+	</div>
+</div>
+<div class="full-post-footer"></div>
+        </div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment raw-html no-wrapper" id="fragment-173153">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-content">
+<div class="user-defined-markup"><!-- SHARE WIDGETS -->
+<div class="share-widgets">
+  <div class="share-widget twitter">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-size="large">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </div>
+  <div class="share-widget facebook">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="segoe ui"></div>
+  </div>
+  <div class="share-widget linkedin">
+    <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+    <script type="IN/Share" data-counter="right"></script>
+  </div>
+  <div class="share-widget delicious">
+    <img src="http://www.delicious.com/static/img/delicious.small.gif" height="10" width="10" alt="Delicious">
+    <a href="http://www.delicious.com/save" onclick="window.open('http://www.delicious.com/save?v=5&noui&jump=close&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=550,height=550'); return false;"> Save this on Delicious</a>
+  </div>
+</div></div></div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+<div id="fragment-173154"></div>
+<div class="content-fragment blog-feedback-list msdntechnet no-wrapper-with-spacing" id="fragment-173155">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-content">
+
+
+
+<input type="hidden" id="bflBlogPostId" value='3624274'>
+</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment html-content no-wrapper" id="fragment-173156">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-content">
+
+<div class="user-defined-markup" style="">
+<p><em>Comments in this blog are open and monitored for each post for a period of one week after the posting date. If you have a specific question about a blog post that is older than one week, please submit your question via our Twitter handle <a href="https://twitter.com/sqlserver">@SQLServer</a></em></p>
+</div>
+		</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+</div>
+</div>
+</div>
+<div class="layout-footer"></div>
+</div></div>
+
+            
+			    <div class="footer-fragments-header"></div>
+<div class="footer-fragments minimal">    <div class="footer-fragment copyright-info"><ul class="footer-fragment-links"><li class="message copyright">© 2015 Microsoft Corporation.</li><li class="message termsOfService"><a href="http://technet.microsoft.com/en-US/cc300389.aspx">Terms of Use</a> </li><li class="message trademarks"><a href="http://www.microsoft.com/library/toolbar/3.0/trademarks/en-us.mspx">Trademarks</a> </li><li class="message privacy"><a href="http://go.microsoft.com/fwlink/?LinkId=248681">Privacy &amp; Cookies</a> </li><li class="message version">7.1.507.6741</li></ul>   </div><script>var _daAnalytics = _daAnalytics || {}; _daAnalytics.init = function (d) {        _daAnalytics.Commands = _daAnalytics.Commands || [];        for (var a = function (a) { return function () { _daAnalytics.Commands.push([a].concat(Array.prototype.slice.call(arguments, 0))) } }, b = "siteId trackLinkClicks setUserId setProperty setView trackPage trackAction trackEvent trackView setAppId setAccountId setUserId".split(" "), c = 0; c < b.length; c++)            _daAnalytics[b[c]] = a(b[c]);        _daAnalytics.setAppId(d);        var a = document.createElement("script");        a.type = "text/javascript";        a.src = "//az416426.vo.msecnd.net/scripts/da.js";        a.async = !0;        var b = document.getElementsByTagName("script")[0];        b.parentNode.insertBefore(a, b); };_daAnalytics.init("cba10351-9818-4f0e-8a80-75fa43d96a51");_daAnalytics.trackPage();</script></div><div class="footer-fragments-footer"></div>
+            
+		
+<script type="text/javascript">
+// <![CDATA[
+ctl00_header_ctl00 = new ContentFragmentContainerCustomCallback('ctl00_header_ctl00',new Function('mode','parameters','callback','errorCallback','context','ctl00_header_ctl00_ctl00._doCallback(mode+\':\'+parameters,callback,context,errorCallback);'));
+// ]]>
+</script>	<script type="text/javascript" src="/cfs-filesystemfile.ashx/__key/defaultwidgets/03960eaa523b43e68db2c642abc1fa61-141207290dbc473f9c8bdaf31e117a82/ui.js"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+	jQuery.telligent.evolution.widgets.blogPostList.register({
+		wrapper: "#fragment-173146",
+		listUrl: "/utility/scripted-file.ashx?WeblogApp=dataplatforminsider\u0026y=2014\u0026m=03\u0026d=05\u0026WeblogPostName=top-3-features-i-m-excited-about-in-sql-server-2014\u0026GroupKeys=%2f\u0026_cf=callback-standard-list.vm\u0026_fid=173146\u0026_ct=page\u0026_cp=post\u0026_ctt=a3b17ab0af5f11dda3501fcf55d89593\u0026_ctc=6054\u0026_ctn=bcea08641f214e839c2b31db680d7bfe\u0026_cc=0\u0026AppType=Weblog",
+		detailUrl: "/utility/scripted-file.ashx?WeblogApp=dataplatforminsider\u0026y=2014\u0026m=03\u0026d=05\u0026WeblogPostName=top-3-features-i-m-excited-about-in-sql-server-2014\u0026GroupKeys=%2f\u0026_cf=callback-standard-detail.vm\u0026_fid=173146\u0026_ct=page\u0026_cp=post\u0026_ctt=a3b17ab0af5f11dda3501fcf55d89593\u0026_ctc=6054\u0026_ctn=bcea08641f214e839c2b31db680d7bfe\u0026_cc=0\u0026AppType=Weblog",
+		viewType: "simple"
+	});
+	//]]>
+	</script>
+	<script type="text/javascript" src="/cfs-filesystemfile.ashx/__key/widgetfiles/3b869988ac52405192986e6e26d53e9e-d/ui.js"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+	jQuery(document).ready(function()
+	{
+    var ctxt = {
+			wrapper:jQuery('#pi173155-paged-content'),
+			widget:jQuery('#fragment-173155'),
+			baseUrl:'/b/dataplatforminsider/archive/2014/03/05/top-3-features-i-m-excited-about-in-sql-server-2014.aspx/',
+			loadCommentsUrl:'/utility/scripted-file.ashx?WeblogApp=dataplatforminsider\u0026y=2014\u0026m=03\u0026d=05\u0026WeblogPostName=top-3-features-i-m-excited-about-in-sql-server-2014\u0026GroupKeys=%2f\u0026_cf=load.vm\u0026_fid=173155\u0026_ct=page\u0026_cp=post\u0026_ctt=a3b17ab0af5f11dda3501fcf55d89593\u0026_ctc=6054\u0026_ctn=bcea08641f214e839c2b31db680d7bfe\u0026_cc=0\u0026AppType=Weblog',
+			deleteVerificationText:'Are you sure you want to delete this comment?',
+			errorText:'There was an error saving your comment.',
+			loadingText:'Loading ...',
+			blogId: 6054,
+			blogPostId: 3624274,
+			pagedMessage: 'ui.page.pi173155.paged',
+			pageIndexQueryStringKey: 'pi173155'
+		};
+		jQuery.telligent.evolution.widgets.blogFeedbackList.register(ctxt);
+    jQuery.telligent.evolution.widgets.blogFeedbackList.loadContent(ctxt);
+	});
+	//]]>
+	</script>
+<script type="text/javascript">
+// <![CDATA[
+ctl00_content_ctl00 = new ContentFragmentContainerCustomCallback('ctl00_content_ctl00',new Function('mode','parameters','callback','errorCallback','context','ctl00_content_ctl00_ctl00._doCallback(mode+\':\'+parameters,callback,context,errorCallback);'));
+// ]]>
+</script><script type="text/javascript">
+// <![CDATA[
+ctl00_footer_ctl00 = new ContentFragmentContainerCustomCallback('ctl00_footer_ctl00',new Function('mode','parameters','callback','errorCallback','context','ctl00_footer_ctl00_ctl00._doCallback(mode+\':\'+parameters,callback,context,errorCallback);'));
+// ]]>
+</script>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+rdf:about="http://blogs.technet.com/b/dataplatforminsider/archive/2014/03/05/top-3-features-i-m-excited-about-in-sql-server-2014.aspx"
+dc:identifier="http://blogs.technet.com/b/dataplatforminsider/archive/2014/03/05/top-3-features-i-m-excited-about-in-sql-server-2014.aspx"
+dc:title="Top 3 Features I’m Excited About in SQL Server 2014"
+trackback:ping="http://blogs.technet.com/b/dataplatforminsider/trackback.ashx?WeblogPostID=3624274" />
+</rdf:RDF>
+-->
+<script type="text/javascript">
+// <![CDATA[
+window.ctl00_header_ctl00_ctl00 = new Telligent_CallbackManager('ctl00_header_ctl00_ctl00','ctl00$header$ctl00$ctl00','aspnetForm');
+// ]]>
+</script><script type="text/javascript">
+// <![CDATA[
+window.ctl00_content_ctl00_ctl00 = new Telligent_CallbackManager('ctl00_content_ctl00_ctl00','ctl00$content$ctl00$ctl00','aspnetForm');
+// ]]>
+</script><script type="text/javascript">
+// <![CDATA[
+window.ctl00_footer_ctl00_ctl00 = new Telligent_CallbackManager('ctl00_footer_ctl00_ctl00','ctl00$footer$ctl00$ctl00','aspnetForm');
+// ]]>
+</script></form>
+	</body>
+</html>

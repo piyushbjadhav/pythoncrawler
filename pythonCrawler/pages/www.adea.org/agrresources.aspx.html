@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head id="ctl00_Head1"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	ADEA AGR Resources and Information : American Dental Education Association
+</title><link rel="stylesheet" type="text/css" href="/WorkArea/FrameworkUI/css/ektron.stylesheet.ashx?id=-1759591071" /><meta name="description" /><meta name="Keywords" /><link href="styles/content.css" rel="stylesheet" type="text/css" /><link href="styles/main.css" rel="stylesheet" type="text/css" /><link href="styles/tab.css" rel="stylesheet" type="text/css" /><link href="styles/updates.css" rel="stylesheet" type="text/css" /><link href="styles/policy.css" rel="stylesheet" type="text/css" /><link href="styles/developer.css" rel="stylesheet" type="text/css" /><link rel="stylesheet" href="styles/accordion_menu.css" type="text/css" media="all" /><link rel="stylesheet" href="styles/accordion_menu.css" type="text/css" media="all" /><link rel="stylesheet" href="styles/map.css" type="text/css" media="all" />
+
+    <script type='text/javascript' src='/js/jquery.min.js'></script>
+    <script type='text/javascript' src='/js/util.js'></script>
+    <script type='text/javascript' src='/js/jquery.easing.1.3.js'></script>
+    <script type='text/javascript' src='/js/jquery.hoverIntent.minified.js'></script>
+    <script type="text/javascript" src='/js/cycle.js'></script>
+    <script type="text/javascript" src="/js/organictabs.jquery.js"></script>
+    <script type="text/javascript" src="/js/ddaccordion.js"></script>
+
+    <link rel="shortcut icon" href="http://www.adea.org/favicon.ico" />
+    <!-- Secondary -->
+    <script type="text/javascript">
+        ddaccordion.init({
+            headerclass: "expandable", //Shared CSS class name of headers group that are expandable
+            contentclass: "categoryitems", //Shared CSS class name of contents group
+            revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+            mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+            collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
+            defaultexpanded: [0], //index of content(s) open by default [index1, index2, etc]. [] denotes no content
+            onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+            animatedefault: false, //Should contents open by default be animated into view?
+            persiststate: true, //persist state of opened contents within browser session?
+            toggleclass: ["", "openheader"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+            togglehtml: ["prefix", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+            animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+            oninit: function (headers, expandedindices) { //custom code to run when headers have initalized
+                //do nothing
+            },
+            onopenclose: function (header, index, state, isuseractivated) { //custom code to run whenever a header is opened or closed
+                //do nothing
+            }
+        })
+    </script>
+    <script type='text/javascript'>
+        (function () {
+            var useSSL = 'https:' == document.location.protocol;
+            var src = (useSSL ? 'https:' : 'http:') +
+    '//www.googletagservices.com/tag/js/gpt.js';
+            document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+        })();
+    </script>
+    <script type='text/javascript'>
+        googletag.defineSlot('/35744642/ADEA-Sidebar-160x600', [160, 600], 'div-gpt-ad-1385053093269-0').addService(googletag.pubads());
+        googletag.pubads().enableSyncRendering();
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".welcome_top span").click(function () {
+                $(".member_panel").slideToggle("fast");
+                $(".welcome_top span").toggleClass("expanded");
+            });
+        });
+    </script>
+</head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-N8GDBG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N8GDBG');</script>
+<!-- End Google Tag Manager -->
+    <form method="post" action="/agrresources.aspx" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="EktronClientManager" id="EktronClientManager" value="-1759591071" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE1NTA2ODkyMjkPZBYCZg9kFgICAxBkZBYEAgEPZBYCZg9kFgICAQ8WAh4EaHJlZgVaaHR0cDovL3d3dy5hZGVhLm9yZy9sb2dpbi5hc3B4P2lkPTY2JlJldHVyblVSTD1odHRwOi8vd3d3LmFkZWEub3JnL1NlY29uZGFyeS5hc3B4P2lkPTI2MjgxZAIPD2QWBAIHDw8WAh4HVmlzaWJsZWhkZAIJDw8WAh8BZ2QWDAIBDxYCHgRUZXh0BSJBREVBIEFHUiBSZXNvdXJjZXMgYW5kIEluZm9ybWF0aW9uZAICDxYCHwIFrgY8Y2VudGVyPjxwPjxiciAvPjxhIGhyZWY9Imh0dHBzOi8vYWNjZXNzLmFkZWEub3JnL2FkZWFzc2EvY2Vuc3NhY3VzdG1hc3QuaW5zZXJ0X3BhZ2U/cF9yZXR1cm5fcGFnZT1Mb2dpbl9QYWdlJmFtcDtwX3Zhcm5hbWU9cF92YWxfYXJyJTVCMCU1RCZhbXA7cF9jb2xuYW1lPXBfbGFzdF9ubSZhbXA7cF92YXJuYW1lPXBfdmFsX2FyciU1QjElNUQmYW1wO3BfY29sbmFtZT1wX2FsaWFzJmFtcDtwX3Zhcm5hbWU9cF92YWxfYXJyJTVCMiU1RCZhbXA7cF9jb2xuYW1lPXBfbG9naW5faWQmYW1wO3BfdmFybmFtZT1wX3ZhbF9hcnIlNUIzJTVEJmFtcDtwX2NvbG5hbWU9cF9wYXNzd2QmYW1wO3BfY29udGV4dD1ORVdTTEVUVEVSJmFtcDtwX3N1Y2Nlc3NfdXJsPWNlbnNzYWluZHByb2ZpbGUuc2VjdGlvbl91cGRhdGUlM0ZwX3Byb2ZpbGVfdHklM0RJTkRJVklEVUFMX1BST0ZJTEUlMjZwX3NraXBfY29uZmlybV9mbCUzRFklMjZwX3NlY3Rpb25fbm0lM0ROZXdzbGV0dGVycyUyNnBfZm9ybWF0JTNEMTEwJTI2cF9tc2dfdHh0JTNEJTI2cF9jdXN0X2lkJTNEJTI2cF9yZWZlcnJlciUzRGFkZWFjZW5zc2FsYW5kaW5ncGFnZS5kaXNwbGF5X3BhZ2UlM0ZwX2NvbnRleHQlM0RORVdTTEVUVEVSIj48aW1nIHRpdGxlPSJTdWJzY3JpYmUgdG8gTmV3c2xldHRlcnMiIHNyYz0iaHR0cDovL2VrOS1hZGVhLnN5c2NvbXNlcnZpY2VzLmNvbS9hc3NldHMvMC83Ni8xMzY4LzQ0NDQyLzQ0NDQ1LzgxOTRjMmRlLTM0ZGYtNGZkMy1hM2VhLWM3MmRhMGNmMTg0ZC5wbmciIGFsdD0iU3Vic2NyaWJlIHRvIE5ld3NsZXR0ZXJzIiAvPjwvYT48L3A+PC9jZW50ZXI+ZAIDDxYCHgNzcmMFHS9pbWFnZXMvaWNvbi1hcnJvdy1leHBhbmQucG5nZAIEDxYCHwMFHy9pbWFnZXMvaWNvbi1hcnJvdy1jb2xsYXBzZS5wbmdkAgUPFgIeC18hSXRlbUNvdW50AgIWBGYPZBYCZg8VBgEwHy9pbWFnZXMvaWNvbi1hcnJvdy1jb2xsYXBzZS5wbmcdL2ltYWdlcy9pY29uLWFycm93LWV4cGFuZC5wbmcgPHN0cm9uZz5BR1IgTmV3c2xldHRlcnM8L3N0cm9uZz4BMPsBPHA+PHN0cm9uZz48YSB0YXJnZXQ9Il9ibGFuayIgaHJlZj0iaHR0cDovL3d3dy5hZGVhLm9yZy9CbG9nLmFzcHg/YmxvZ2lkPTE2ODM5Ij5BREVBIDxlbT5XYXNoaW5ndG9uIFVwZGF0ZTwvZW0+PC9hPjwvc3Ryb25nPjwvcD48cD48c3Ryb25nPjxhIHRhcmdldD0iX2JsYW5rIiBocmVmPSJodHRwOi8vd3d3LmFkZWEub3JnL0Jsb2cuYXNweD9ibG9naWQ9MjAxMzIiPkFERUEgPGVtPlN0YXRlIFVwZGF0ZTwvZW0+PC9hPjwvc3Ryb25nPjwvcD5kAgEPZBYCZg8VBgExHy9pbWFnZXMvaWNvbi1hcnJvdy1jb2xsYXBzZS5wbmcdL2ltYWdlcy9pY29uLWFycm93LWV4cGFuZC5wbmcuPHN0cm9uZz5BREVBIFBvbGljeSBMZXR0ZXJzIGFuZCBNZW1vczwvc3Ryb25nPgExsT48aDQ+MjAxNTwvaDQ+PHVsPjxsaT48YSBocmVmPSJodHRwOi8vd3d3LmFkZWEub3JnL2Fzc2V0bWFuYWdlbWVudC9Eb3dubG9hZEFzc2V0LmFzcHg/SUQ9MDJkZTI3ODgtZWNlNi00ZjE0LThkMTYtZjAwYjU0MmVkOTY1JmFtcDt2ZXJzaW9uPWExZTMyZjc0MzMxYTRiY2M5MTU3NWY0Y2VkZjkxYTY2MS5wZGYiIHRpdGxlPSJDb21tZW50czogTklEQ1IgUHJvcG9zZWQgUmVzZWFyY2ggSW5pdGlhdGl2ZXMgZm9yIEZpc2NhbCBZZWFyIDIwMTciPjwvYT48YSBocmVmPSIvV29ya0FyZWEvRG93bmxvYWRBc3NldC5hc3B4P2lkPTI3ODU0IiB0aXRsZT0iMDgtMTktMTUgQ09NTUVOVFMgTklEQ1JfQURFQV9Db21tZW50c18wOF8xOV8yMDE1Ij5Db21tZW50czogTklEQ1IgUHJvcG9zZWQgUmVzZWFyY2ggSW5pdGlhdGl2ZXMgZm9yIEZpc2NhbCBZZWFyIDIwMTc8L2E+PC9saT48bGk+PGEgaHJlZj0iL1dvcmtBcmVhL0Rvd25sb2FkQXNzZXQuYXNweD9pZD0yNzg1NCIgdGl0bGU9IjA4LTE5LTE1IENPTU1FTlRTIE5JRENSX0FERUFfQ29tbWVudHNfMDhfMTlfMjAxNSI+PC9hPjxhIGhyZWY9Ii9Xb3JrQXJlYS9Eb3dubG9hZEFzc2V0LmFzcHg/aWQ9Mjc4NTMiIHRpdGxlPSIwOC0wNy0xNSBDT01NRU5UUyBOSUgtd2lkZSBTdHJhdGVnaWMgUGxhbiBGaW5hbCI+Q29tbWVudHM6IEZyYW1ld29yayBmb3IgTklILXdpZGUgU3RyYXRlZ2ljIFBsYW48L2E+PC9saT48bGk+PGEgaHJlZj0iL1dvcmtBcmVhL0Rvd25sb2FkQXNzZXQuYXNweD9pZD0yNzU3NyIgdGl0bGU9IjA1LTEzLTE1IFNJR05PTiAtIFJlc2VhcmNoIEFtZXJpY2EgLSBOSUggSW5ub3ZhdGlvbiBGdW5kIDIxc3QgQ2VudHVyeSBDdV9fXyI+U2lnbi1vbiBMZXR0ZXI6IDIxPC9hPjxhIGhyZWY9Ii9Xb3JrQXJlYS9Eb3dubG9hZEFzc2V0LmFzcHg/aWQ9Mjc1NzciIHRpdGxlPSIwNS0xMy0xNSBTSUdOT04gLSBSZXNlYXJjaCBBbWVyaWNhIC0gTklIIElubm92YXRpb24gRnVuZCAyMXN0IENlbnR1cnkgQ3VfX18iPjxzdXA+c3Q8L3N1cD48L2E+PGEgaHJlZj0iL1dvcmtBcmVhL0Rvd25sb2FkQXNzZXQuYXNweD9pZD0yNzU3NyIgdGl0bGU9IjA1LTEzLTE1IFNJR05PTiAtIFJlc2VhcmNoIEFtZXJpY2EgLSBOSUggSW5ub3ZhdGlvbiBGdW5kIDIxc3QgQ2VudHVyeSBDdV9fXyI+IENlbnR1cnkgQ3VyZXMKQWN0IC0gTklIIElubm92YXRpb24gRnVuZDwvYT48L2xpPjxsaT48YSBocmVmPSIvV29ya0FyZWEvRG93bmxvYWRBc3NldC5hc3B4P2lkPTI3NTczIiB0aXRsZT0iMDQtMjAtMTUgTkRELUZZMjAxNiBIb3VzZSBMSEhTIDMwMihiKSBGSU5BTCI+U2lnbi1vbiBMZXR0ZXI6IEZZMTYgTGFib3IsIEhIUywgRWR1Y2F0aW9uIGFuZApSZWxhdGVkIEFnZW5jaWVzIEFwcHJvcHJpYXRpb25zIDMwMihiKSBBbGxvY2F0aW9uPC9hPjwvbGk+PGxpPjxhIHRpdGxlPSIwMy0yNC0xNSBTSUdOT04gSFBORUMgTkhTQyBTdGFrZWhvbGRlcnMiIGhyZWY9Ii9Xb3JrQXJlYS9Eb3dubG9hZEFzc2V0LmFzcHg/aWQ9MjY3NzkiPlNpZ24tb24gTGV0dGVyOiBOYXRpb25hbCBIZWFsdGggU2VydmljZSBDb3JwcyBGdW5kaW5nPC9hPjwvbGk+PGxpPjxhIHRpdGxlPSIwMy0xOC0xNSBTSUdOT04gSFBORUMgRlkxNiBUaXRsZSBWSUkgRnVuZGluZyIgaHJlZj0iL1dvcmtBcmVhL0Rvd25sb2FkQXNzZXQuYXNweD9pZD0yNjc3NSI+U2lnbi1vbiBMZXR0ZXI6IEZZMTYgVGl0bGUgVklJIEZ1bmRpbmc8L2E+PC9saT48bGk+PGEgdGl0bGU9IjAyLTIzLTE1IFNJR05PTiBTQUZSUkEiIGhyZWY9Ii9Xb3JrQXJlYS9Eb3dubG9hZEFzc2V0LmFzcHg/aWQ9MjY3ODMiPlNpZ24tb24gTGV0dGVyOiBILlIuIDk3MCwgU3VwcG9ydGluZyBBY2FkZW1pYyBGcmVlZG9tIHRocm91Z2ggUmVndWxhdG9yeSBSZWxpZWYgQWN0PC9hPjwvbGk+PGxpPjxhIGhyZWY9Imh0dHA6Ly9jcXJjZW5nYWdlLmNvbS9hZGVhL2ZpbGUvZXphVVROT0hqdDUvMS03LTE1IFNJR05PTiBUaXRsZSBWSUkgQURBIEFERUEgQUFQRC5wZGYiPlNpZ24tb24gTGV0dGVyOiBUaXRsZSBWSUkgRnVuZGluZzwvYT48L2xpPjxsaT48YSBocmVmPSJodHRwOi8vY3FyY2VuZ2FnZS5jb20vYWRlYS9maWxlLzJzOUQ5ZERZM3lULzEtNS0xNSBTSUdOT04gT01CIEFERUEgU2lnbiBvbiBGWSAxNiBHTUUuUERGIj5TaWduLW9uIExldHRlciAodG8gT01CKTogR01FIEZ1bmRpbmc8L2E+PC9saT48bGk+PGEgaHJlZj0iaHR0cDovL2NxcmNlbmdhZ2UuY29tL2FkZWEvZmlsZS9tQWpxSFNYbGFnOS8xLTUtMTUgU0lHTk9OIERISFMgQURFQSBTaWduIG9uIEZZIDE2IEdNRS5QREYiPlNpZ24tb24gTGV0dGVyICh0byBISFMpOiBHTUUgRnVuZGluZzwvYT48L2xpPjxsaT48YSB0aXRsZT0iU2lnbi1vbiBMZXR0ZXI6IEdyYWR1YXRlIE1lZGljYWwgRWR1Y2F0aW9uIFJlYXV0aG9yaXphdGlvbiIgaHJlZj0iaHR0cDovL3d3dy5hZGVhLm9yZy9Xb3JrQXJlYS9Eb3dubG9hZEFzc2V0LmFzcHg/aWQ9MjYzNzgiPlNpZ24tb24gTGV0dGVyOiBHTUUgUmVhdXRob3JpemF0aW9uPC9hPjwvbGk+PGxpPjxhIGhyZWY9Ii9Xb3JrQXJlYS9Eb3dubG9hZEFzc2V0LmFzcHg/aWQ9Mjc1MjAiIHRpdGxlPSJBREVBIEFwcHJvcHJpYXRpb25zIENvbW1pdHRlZXMgU3VtbWFyeSAtIEp1bHkgMjAxNSI+QURFQSBNZW1vOsKgSG91c2UgYW5kIFNlbmF0ZSBBcHByb3ByaWF0aW9ucyBDb21taXR0ZWVzIEZpc2NhbCBZZWFyIDIwMTYgQmlsbHM8L2E+PC9saT48bGk+PGEgaHJlZj0iL1dvcmtBcmVhL0Rvd25sb2FkQXNzZXQuYXNweD9pZD0yNzUxNCIgdGl0bGU9IktpbmcgdiBCdXJ3ZWxsIE1lbW8gLSBKdW5lIDI2IDIwMTUiPkFERUEgTWVtbzogS2luZyB2LiBCdXJ3ZWxsPC9hPjwvbGk+PGxpPjxhIHRpdGxlPSJQcmVzaWRlbnRzIEZZMTYgQnVkZ2V0IFByb3Bvc2FsIiBocmVmPSIvV29ya0FyZWEvRG93bmxvYWRBc3NldC5hc3B4P2lkPTI2MjgwIj5BREVBIE1lbW86IFByZXNpZGVudCdzIEZZMTYgQnVkZ2V0IFByb3Bvc2FsPC9hPjwvbGk+PGxpPjxhIHRpdGxlPSJBREVBIE1lbW86IENPREEgRGVudGFsIFRoZXJhcHkgU3RhbmRhcmRzIEFwcHJvdmVkIGJ1dCBOb3QgWWV0IEltcGxlbWVudGVkIiBocmVmPSJodHRwOi8vd3d3LmFkZWEub3JnL1dvcmtBcmVhL0Rvd25sb2FkQXNzZXQuYXNweD9pZD0yNjM3OSI+QURFQSBNZW1vOiBDT0RBIERlbnRhbCBUaGVyYXB5IFN0YW5kYXJkcyBBcHByb3ZlZCBidXQgTm90IFlldCBJbXBsZW1lbnRlZDwvYT48L2xpPjxsaT48YSB0aXRsZT0iTm9ydGggQ2Fyb2xpbmEgU3RhdGUgQm9hcmQgb2YgRGVudGFsIEV4YW1pbmVycyB2XyBGZWRlcmFsIFRyYWRlIENvbW1pc3Npb24iIGhyZWY9Ii9Xb3JrQXJlYS9Eb3dubG9hZEFzc2V0LmFzcHg/aWQ9MjY0NDQiPkFERUEgTWVtbzrCoE5vcnRoIENhcm9saW5hIFN0YXRlIEJvYXJkIG9mIERlbnRhbCBFeGFtaW5lcnMgdi4KRmVkZXJhbCBUcmFkZSBDb21taXNzaW9uPC9hPjwvbGk+PGxpPjxhIGhyZWY9Ii9Xb3JrQXJlYS9Eb3dubG9hZEFzc2V0LmFzcHg/aWQ9Mjc1NzYiIHRpdGxlPSIwNS0wOC0xNSBDT01NRU5UUyAtIEFDRSAtIFNlbl8gQWxleGFuZGVyIERhdGEgVHJhbnNwYXJlbmN5IFdoaXRlIFBhcGVyIj5Db21tZW50czogU2VuYXRlIEhFTFAgQ29tbWl0dGVlIERhdGEKVHJhbnNwYXJlbmN5IGFuZCBDb25zdW1lciBJbmZvcm1hdGlvbiBXaGl0ZSBQYXBlcjwvYT48L2xpPjxsaT48YSBocmVmPSIvV29ya0FyZWEvRG93bmxvYWRBc3NldC5hc3B4P2lkPTI3NTc1IiB0aXRsZT0iMDQtMzAtMTUgQ09NTUVOVFMgLSBBQ0UgLSBTZW5fIEFsZXhhbmRlciBBY2NyZWRpdGF0aW9uIFdoaXRlIFBhcGVyIj5Db21tZW50czogU2VuYXRlIEhFTFAgQ29tbWl0dGVlIEFjY3JlZGl0YXRpb24KV2hpdGUgUGFwZXI8L2E+PC9saT48bGk+PGEgaHJlZj0iL1dvcmtBcmVhL0Rvd25sb2FkQXNzZXQuYXNweD9pZD0yNzU3NCIgdGl0bGU9IjA0LTI4LTE1IENPTU1FTlRTIC0gQUNFIC0gU2VuXyBBbGV4YW5kZXIgUmlzayBTaGFyaW5nIFdoaXRlIFBhcGVyIj5Db21tZW50czogU2VuYXRlIEhFTFAgQ29tbWl0dGVlIFJpc2stU2hhcmluZwpXaGl0ZSBQYXBlcjwvYT48L2xpPjxsaT48YSB0aXRsZT0iQURFQSBNZW1vOiBQb3N0c2Vjb25kYXJ5IEluc3RpdHV0aW9uIFJhdGluZ3MgU3lzdGVtIiBocmVmPSJodHRwOi8vd3d3LmFkZWEub3JnL1dvcmtBcmVhL0Rvd25sb2FkQXNzZXQuYXNweD9pZD0yNjM3NyI+Q29tbWVudHM6IFBvc3RzZWNvbmRhcnkgSW5zdGl0dXRpb24gUmF0aW5ncyBTeXN0ZW08L2E+PC9saT48bGk+PGEgdGFyZ2V0PSJfYmxhbmsiIGhyZWY9Imh0dHA6Ly9jcXJjZW5nYWdlLmNvbS9hZGVhL2ZpbGUvUHlOMXRHMWxlRG0vRlkxNiBEZW50YWwgcmVxdWVzdCBTQUMgTEhIUyAyLTktMTUucGRmIj5GWTE2IFJlcXVlc3QgZm9yIEZ1bmRpbmcg4oCTIFNlbmF0ZTwvYT48L2xpPjxsaT48YSB0YXJnZXQ9Il9ibGFuayIgaHJlZj0iaHR0cDovL2NxcmNlbmdhZ2UuY29tL2FkZWEvZmlsZS8xNnZ2Zlo2OGRhZC9GWTE2IERlbnRhbCByZXF1ZXN0IEhBQyBMSEhTIDItOS0xNS5wZGYiPkZZMTYgUmVxdWVzdCBmb3IgRnVuZGluZyDigJMgSG91c2U8L2E+PC9saT48bGk+PGEgdGl0bGU9IkpBREEgR3VlcyBFZGl0b3JpYWw6IEFuIE91bmNlIG9mIFByZXZlbnRpb24iIGhyZWY9Ii9Xb3JrQXJlYS9Eb3dubG9hZEFzc2V0LmFzcHg/aWQ9MjYzODAiPkpBREEgR3Vlc3QgRWRpdG9yaWFsOiBBbiBPdW5jZSBvZiBQcmV2ZW50aW9uPC9hPjwvbGk+PC91bD48aDQ+MjAxNCAgICA8L2g0Pjx1bD48bGk+PGEgdGl0bGU9IjExLTI0LTE0IFNJR05PTiBBQ0UgUGVsbCBHcmFudCBGdW5kaW5nIHRvIFNlbmF0ZSBMYWJvci1ISFMiIGhyZWY9Ii9Xb3JrQXJlYS9Eb3dubG9hZEFzc2V0LmFzcHg/aWQ9MjY3NzMiPlNpZ24tb24gTGV0dGVyOiBQZWxsIEdyYW50IFByb2dyYW0gRnVuZGluZzwvYT48L2xpPjxsaT48YSB0aXRsZT0iMTEtMTctMTQgU0lHTk9OIFN0dWRlbnQgQWlkIEFsbGlhbmNlIEZZMTUgU3R1ZGVudCBBaWQgT21uaWJ1cyIgaHJlZj0iL1dvcmtBcmVhL0Rvd25sb2FkQXNzZXQuYXNweD9pZD0yNjc3NCI+U2lnbi1vbiBMZXR0ZXI6IFN0dWRlbnQgQWlkIFByb2dyYW1zIEZ1bmRpbmc8L2E+PC9saT48bGk+PGEgdGl0bGU9IjExLTEyLTE0IFNJR05PTiBIUE5FQyBGWTE1IFRpdGxlIFZJSSBGdW5kaW5nIiBocmVmPSIvV29ya0FyZWEvRG93bmxvYWRBc3NldC5hc3B4P2lkPTI2NzgyIj5TaWduLW9uIExldHRlcjogRlkxNSBUaXRsZSBWSUkgRnVuZGluZzwvYT48L2xpPjxsaT48YSB0aXRsZT0iMDktMDgtMTQgU0lHTk9OIENISVAgRXh0ZW5zaW9uIiBocmVmPSIvV29ya0FyZWEvRG93bmxvYWRBc3NldC5hc3B4P2lkPTI2Nzc2Ij5TaWduLW9uIExldHRlcjogQ0hJUCBFeHRlbnNpb24gYW5kIEltcHJvdmVtZW50IEFjdCBvZiAyMDE0PC9hPjwvbGk+PGxpPjxhIHRpdGxlPSIwNC0wNC0xNCBTSUdOT04gUGVkaWF0cmljIEdyb3VwcyBGWSAyMDE1IiBocmVmPSIvV29ya0FyZWEvRG93bmxvYWRBc3NldC5hc3B4P2lkPTI2Nzc4Ij5TaWduLW9uIExldHRlcjogQ2hpbGRyZW4ncyBIb3NwaXRhbCBHcmFkdWF0ZSBNZWRpY2FsIEVkdWNhdGlvbiBGdW5kaW5nPC9hPjwvbGk+PGxpPjxhIHRpdGxlPSIwMy0yMS0xNCBTSUdOT04gSFIxNTI3IFN0dWRlbnQgTG9hbiBJbnRlcmVzdCBSZWR1Y3Rpb24iIGhyZWY9Imh0dHA6Ly93d3cuYWRlYS5vcmcvV29ya0FyZWEvRG93bmxvYWRBc3NldC5hc3B4P2lkPTI2NzgwIj5TaWduLW9uIExldHRlcjogSC5SLiAxNTI3LCBTdHVkZW50IExvYW4gSW50ZXJlc3QgRGVkdWN0aW9uIEFjdCBvZiAyMDEzPC9hPjwvbGk+PGxpPjxhIGhyZWY9Imh0dHA6Ly9jcXJjZW5nYWdlLmNvbS9hZGVhL2ZpbGUvRDAxWVRPUEFOVzQvOC0yOC0xNCBTSUdOT04gUHJpbWFyeSBDYXJlIENsaWZmLnBkZiI+U2lnbi1vbiBMZXR0ZXI6IFByaW1hcnkgQ2FyZSBDbGlmZjwvYT48L2xpPjxsaT48YSBocmVmPSJodHRwOi8vY3FyY2VuZ2FnZS5jb20vYWRlYS9maWxlL21Oc0w3cEpKOFFaLzktMTUtMTQgU0lHTk9OIENISVAgRnVuZGluZy5wZGYiPlNpZ24tb24gTGV0dGVyOiBDSElQIEZ1bmRpbmc8L2E+PC9saT48bGk+PGEgaHJlZj0iaHR0cDovL2NxcmNlbmdhZ2UuY29tL2FkZWEvZmlsZS9UajhpSEZsTHYyRC8xLTMxLTE0IFNJR05PTiBEZXBhcnRtZW50IG9mIEVkdWNhdGlvbiBQb3N0LVNlY29uZGFyeSBJbnN0aXR1dGlvbiBSYXRpbmcuLl8ucGRmIj5TaWduLW9uIExldHRlcjogVS5TLiBEZXBhcnRtZW50IG9mIEVkdWNhdGlvbuKAmXMgUGxhbiB0byBSYXRlIENvbGxlZ2VzIGFuZCBVbml2ZXJzaXRpZXM8L2E+PC9saT48bGk+PGEgaHJlZj0iaHR0cDovL2NxcmNlbmdhZ2UuY29tL2FkZWEvZmlsZS9ydjllVnJheW0yYy81LTItMTQgTUVNTyBNYWluZSBHb3Zlcm5vciBTaWducyBEZW50YWwgSHlnZW5lIFRoZXJhcGlzdCBCaWxsLnBkZiI+QURFQSBNZW1vOiBNYWluZSBHb3Zlcm5vciBTaWducyBEZW50YWwgSHlnaWVuZSBUaGVyYXBpc3QgQmlsbDwvYT48L2xpPjxsaT48YSBocmVmPSJodHRwOi8vY3FyY2VuZ2FnZS5jb20vYWRlYS9maWxlL3FGY2RNcHJrWVRuLzgtNS0xNCBNRU1PIEluc3RpdHV0ZSBvZiBNZWRpY2luZSBSZXBvcnQgb24gUmVmb3JtaW5nIEdNRS5QREYiPkFERUEgTWVtbzogSW5zdGl0dXRlIG9mIE1lZGljaW5lIFJlcG9ydCBvbiBSZWZvcm1pbmcgR01FPC9hPjwvbGk+PGxpPjxhIGhyZWY9Imh0dHA6Ly9jcXJjZW5nYWdlLmNvbS9hZGVhL2ZpbGUvbnJja3N2QXZnSDIvMi0yOC0xNCBNRU1PIEFDQSBFbXBsb3llci1CYXNlZCBDb3ZlcmFnZSBVbmRlciB0aGUgQUNBLlBERiI+QURFQSBNZW1vOiBFbXBsb3llci1CYXNlZCBDb3ZlcmFnZSB1bmRlciB0aGUgQUNBPC9hPjwvbGk+PGxpPjxhIGhyZWY9Imh0dHA6Ly9jcXJjZW5nYWdlLmNvbS9hZGVhL2ZpbGUvS1FMQm5ldXhDV0EvMS0xNy0xNCBNRU1PIEZZMTQgQXBwcm9wcmlhdGlvbnMucGRmIj5BREVBIE1lbW86IEZZMTQgQXBwcm9wcmlhdGlvbnM8L2E+PC9saT48bGk+PGEgaHJlZj0iaHR0cDovL2NxcmNlbmdhZ2UuY29tL2FkZWEvZmlsZS9pcG9Ua3haU1I4OC8xLTI5LTE0IE1FTU8gSFJTQSBHcmFudHMgb2YgSW50ZXJlc3QgdG8gdGhlIEFjYWRlbWljIERlbnRhbCBDb21tdW5pdHkucGRmIj5BREVBIE1lbW86IEhSU0EgR3JhbnRzIG9mIEludGVyZXN0IHRvIHRoZSBBY2FkZW1pYyBEZW50YWwgQ29tbXVuaXR5IDwvYT48L2xpPjxsaT48YSBocmVmPSJodHRwOi8vY3FyY2VuZ2FnZS5jb20vYWRlYS9maWxlL2JrUEdtMDNtTTd2LzUtMjctMTQgQ09NTUVOVFMgUHJvcG9zZWQgR2FpbmZ1bCBFbXBsb3ltZW50IFByb3Bvc2VkIFJlZ3VsYXRpb24ucGRmIj5BREVBIENvbW1lbnRzOiBHYWluZnVsIEVtcGxveW1lbnQgUHJvcG9zZWQgUmVndWxhdGlvbjwvYT48L2xpPjxsaT48YSBocmVmPSJodHRwOi8vY3FyY2VuZ2FnZS5jb20vYWRlYS9maWxlL1Y1MVlNTk5FaDZ1LzItMjgtMTQgQ09NTUVOVFMgUnlhbiBXaGl0ZSBQYXJ0IEYgLSBEZW50YWwgU2VydmljZXMgUmVwb3J0LnBkZiI+QURFQSBDb21tZW50czogUnlhbiBXaGl0ZSBISVYvQUlEUyBQcm9ncmFtIFBhcnQgRiDigJMgRGVudGFsIFNlcnZpY2VzIFJlcG9ydDwvYT48L2xpPjxsaT48YSBocmVmPSJodHRwOi8vY3FyY2VuZ2FnZS5jb20vYWRlYS9maWxlL1NnOTFITkFvRUMxLzItMjEtMTQgQ09NTUVOVFMgNTNyZCBQcmVzaWRlbnRpYWwgQWR2aXNvcnkgQ291bmNpbCBNZWV0aW5nIG9uIEhJVi1BSURTIC4uXy5wZGYiPkFERUEgQ29tbWVudHM6IDUzcmQgUHJlc2lkZW50aWFsIEFkdmlzb3J5IENvdW5jaWwgTWVldGluZyBvbiBISVYvQUlEUyAoUEFDSEEpIDwvYT48L2xpPjxsaT48YSBocmVmPSJodHRwOi8vY3FyY2VuZ2FnZS5jb20vYWRlYS9maWxlL0dSRjlMeUExaGptLzItNi0xNCBDT01NRU5UUyB0byBOSURDUiAyMDE0LTIwMTkgU3RyYXRlZ2ljIFBsYW4ucGRmIj5BREVBIENvbW1lbnRzOiBOSURDUiAyMDE0LTIwMTkgU3RyYXRlZ2ljIFBsYW48L2E+PC9saT48L3VsPmQCBg8WAh8CBRE8c3Ryb25nPjwvc3Ryb25nPmRk40OSQE5qiJSshOo5SiyA/lU/Zkn+vcQHbnE7ye/5OT8=" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4E4CC34B" />
+</div>
+        <div>
+            <!-- wrapper starts -->
+            <div id="wrapper">
+                <!-- main starts -->
+                <div class="main">
+                    <!-- header starts -->
+                    <div id="header">
+                        <div class="header_top">
+                            <ul>
+                                
+    <li><a href="http://www.adea.org/login.aspx?id=66&ReturnURL=http://www.adea.org/Secondary.aspx?id=26281" id="ctl00_FunctionalMenu_hrefLogin">Login</a></li>
+
+<li><a href='/contactus/'>Contact Us</a></li><li  class='noBorder'><a href='https://access.adea.org/adeassa/ecssashop.show_home_category?p_cust_id=&amp;p_order_serno=&amp;p_promo_cd=&amp;p_price_cd=&amp;p_session_serno=&amp;p_trans_ty='>Store</a></li>
+
+
+                            </ul>
+                            
+<div>
+    <input type="hidden" value="017971504424133520014:vzqflmsunqo" name="cx" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input id="search" class="search-field" name="q" type="text" />
+    <input type="submit" name="sa" value="Search"  onclick="window.location.href = '/gSearch.aspx?q=' + $('#search').val(); return false;"/>
+    <script src="http://www.google.com/cse/brand?form=cse-search-box&lang=en" type="text/javascript"></script>
+</div>
+<style type="text/css">
+    .search-field {
+        padding: 0px !important;
+    }
+</style>
+
+
+
+
+                             
+
+
+
+<div class="header_social">
+<ul>
+    <li><a target='_blank' href='http://www.facebook.com/pages/American-Dental-Education-Association/21730590909'> <img alt='' src='/uploadedImages/facebook_icon_2.png' alt=''/> </a></li><li><a target='_blank' href='http://twitter.com/adeaweb'> <img alt='' src='/uploadedImages/tab_1_arrow.png' alt=''/> </a></li><li><a target='_blank' href='http://www.youtube.com/user/ADEAweb'> <img alt='' src='/uploadedImages/YouTube_iconRed48.png' alt=''/> </a></li>
+</ul>
+    </div>
+                        </div>
+                        
+
+                        <div id="logo">
+                            <a href='http://www.adea.org'> <img src='/uploadedImages/newLogo13full.png' alt='new logo 2' width='955' height='72'> </a>
+
+                        </div>
+                    </div>
+                    <!-- header end -->
+                    <div id="nav">
+                        
+<ul>
+    <li id='aboutus'><a href='http://www.adea.org/about_adea/Pages/default.aspx' class='drop'>About ADEA</a><ul class='sub_nav'><DIV class="sub_nav_top"><ul class='floatLeft sub_nav_top_left_ul_width'><li><a href='http://www.adea.org/about_adea/who_we_are/Pages/default.aspx' class='sub_nav_headeing'>Who We Are </a></li><li><a href='http://www.adea.org/about_adea/who_we_are/adeainstitutionalmembers/Predoctoral_Dental_Education_Programs,_ADEA_Members.html' >Predoctoral Dental Education Programs, ADEA Members </a></li><li><a href='http://www.adea.org/about_adea/who_we_are/adeainstitutionalmembers/Allied_Dental_Education_Programs,_ADEA_Members.html' >Allied Dental Education Programs, ADEA Members </a></li><li><a href='http://www.adea.org/about_adea/who_we_are/adeainstitutionalmembers/Pages/PostdoctoralDentalEducationPrograms.aspx' >Nonfederal Advanced Dental Education Programs, ADEA Members </a></li><li><a href='http://www.adea.org/about_adea/who_we_are/adeainstitutionalmembers/Pages/FederalDentalServicePrograms.aspx' >ADEA Member U.S. Federal Dental Services </a></li><li><a href='http://www.adea.org/about_adea/who_we_are/adeainstitutionalmembers/ADEA_Corporate_Members.html' >ADEA Corporate Members </a></li><li><a href='http://www.adea.org/about_adea/who_we_are/Pages/JobsatADEA.aspx' >ADEA Career Opportunities </a></li><li><a href='http://www.adea.org/about_adea/who_we_are/ADEA_Divisional_Staff_Directory.html' >ADEA Staff </a></li> </ul> <ul class='floatRight sub_nav_top_right_ul_width'><li><a href='http://www.adea.org/governance/' class='sub_nav_headeing'>ADEA Governance</a></li><li><a href='http://www.adea.org/governance/house-of-delegates.aspx' >ADEA House of Delegates </a></li><li><a href='http://www.adea.org/about_adea/governance/Pages/ADEABoardofDirectors.aspx' >ADEA Board of Directors 2015-16 </a></li><li><a href='http://www.adea.org/governance/councils.aspx' >ADEA Councils </a></li><li><a href='http://www.adea.org/governance' >ADEA Advisory Committees </a></li><li><a href='http://www.adea.org/about_adea/governance/SectionsSIGs/CouncilofSections.aspx' >ADEA Sections and Special Interest Groups </a></li><li><a href='http://www.adea.org/about_adea/governance/Pages/ADEAGovernanceandPublications.aspx' >ADEA Governance Documents and Publications </a></li><li><a href='http://www.adea.org/about_adea/governance/ADEA_Dental_Faculty_Code_of_Conduct.html' >ADEA Dental Faculty Code of Conduct </a></li><li><a href='http://www.adea.org/about_adea/governance/ADEABylaws/Pages/default.aspx' >ADEA Bylaws </a></li> </ul> </DIV><DIV class="sub_nav_bottom"><ul class='floatLeft sub_nav_bottom_left_ul_width'><li><a href='http://www.adea.org/ADEAGiesFoundation/' class='sub_nav_headeing'>ADEAGies Foundation</a></li><li><a href='http://www.adea.org/ADEAGiesFoundation/About.aspx' >About the ADEAGies Foundation </a></li><li><a href='http://www.adea.org/ADEAGiesFoundation/Newsroom.aspx' >ADEAGies Newsroom </a></li><li><a href='http://www.adea.org/ADEAGiesFoundation/Gies-Awards.aspx' >Gies Awards </a></li><li><a href='http://www.adea.org/ADEAGiesFoundation/Awards-and-Fellowships-Funded.aspx' >Grants </a></li> </ul> <ul class='floatRight sub_nav_bottom_right_ul_width'><li><a href='http://www.adea.org/news' class='sub_nav_headeing' >ADEA Newsroom</a></li><li><a href='http://www.adea.org/news/' >ADEA News </a></li><li><a href='http://www.adea.org/about_adea/who_we_are/Pages/StrategicDirections.aspx' >Strategic Directions 2015–18 </a></li><li><a href='http://www.adea.org/dentaledtimeline/' >Contextual Milestones in Dentistry Timeline </a></li><li><a href='http://www.adea.org/about_adea/2014_ADEA_President_s_Report__ADEA_on_the_Move.html' >2014 ADEA President&#39;s Report: ADEA on the Move </a></li> </ul> </DIV> </ul> </li><li><a href='http://www.adea.org/membership/' class='drop'>Membership</a><ul class='sub_nav shift-right'><DIV class="sub_nav_top"><ul class='floatLeft sub_nav_top_left_ul_width'><li><a href='http://www.adea.org/join/' class='sub_nav_headeing'>Join ADEA </a></li><li><a href='https://access.adea.org/adeassa/censsacustmast.insert_page?p_return_page=Login_Page&amp;p_varname=p_val_arr[0]&amp;p_colname=p_last_nm&amp;p_varname=p_val_arr[1]&amp;p_colname=p_alias&amp;p_varname=p_val_arr[2]&amp;p_colname=p_login_id&amp;p_varname=p_val_arr[3]&amp;p_colname=p_passwd&amp;p_context=CEN&amp;p_hidden_fields=p_membership_ty&amp;p_hidden_values=INDIVIDUAL&amp;p_success_url=memssaord.wizstep1?p_cust_id%3D__CUSTID__' >Faculty and Staff Joining ADEA </a></li><li><a href='http://www.adea.org/about_adea/Membership_Information/ADEA_Student_Membership.html' >ADEA Student Membership </a></li><li><a href='http://www.adea.org/about_adea/Membership_Information/Corporate_Membership.html' >Corporate Membership </a></li><li><a href='http://www.adea.org/about_adea/MembershipInformation/Pages/MemberBenefits.aspx' >Individual Membership </a></li><li><a href='http://www.adea.org/about_adea/MembershipInformation/Pages/InstitutionalMembership.aspx' >Institutional Membership </a></li> </ul> <ul class='floatRight sub_nav_top_right_ul_width'><li><a href='http://www.adea.org/Secondary.aspx?id=13856' class='sub_nav_headeing'>Member Benefits</a></li><li><a href='http://www.adea.org/join/faculty-benefits.aspx' >ADEA Member Benefits for Faculty </a></li><li><a href='http://www.adea.org/about_adea/MembershipInformation/Pages/AlliedProgramsMembership.aspx' >ADEA Member Benefits for Allied Dental Programs </a></li><li><a href='http://www.adea.org/about_adea/MembershipInformation/Pages/Dental_school_adea_benefits.aspx' >ADEA Member Benefits for Dental Schools </a></li><li><a href='http://www.adea.org/about_adea/MembershipInformation/Pages/ADVANCED_PROGRAMS_ADEA_BENEFITS.aspx' >ADEA Member Benefits for  Advanced Dental Education Programs </a></li> </ul> </DIV><DIV class="sub_nav_bottom"><ul class='floatLeft sub_nav_bottom_left_ul_width'><li><a href='http://www.adea.org/Secondary.aspx?id=13858' class='sub_nav_headeing'>ADEA Member to Member Recruitment</a></li><li><a href='http://www.adea.org/MemberCenter/recruitment/Pages/Recruitment-Tools-Faculty.aspx' >Faculty and Staff </a></li><li><a href='http://www.adea.org/MemberCenter/recruitment/Pages/Member-Recruitment-Tools-Students.aspx' >Students, Residents, and Fellows </a></li> </ul> <ul class='floatRight sub_nav_bottom_right_ul_width'><li><a href='http://www.adea.org/' class='sub_nav_headeing' >Information For</a></li><li><a href='http://www.adea.org/GoDental' >Prospective Students </a></li><li><a href='http://www.adea.org/students/' >Current Students &amp; Residents </a></li><li><a href='http://www.adea.org/faculty/' >Faculty </a></li><li><a href='http://www.adea.org/deans/' >Deans &amp; Program Directors </a></li><li><a href='http://www.adea.org/Secondary.aspx?id=11239' >ADEA AFASA </a></li> </ul> </DIV> </ul> </li><li><a href='http://www.adea.org/Secondary.aspx?id=17137' class='drop'>Education &amp; Events</a><ul class='sub_nav'><DIV class="sub_nav_top"><ul class='floatLeft sub_nav_top_left_ul_width'><li><a href='http://www.adea.org/events.html' class='sub_nav_headeing'>Educational Meetings </a></li><li><a href='http://www.adea.org/events.html' >Upcoming Events </a></li><li><a href='http://www.adea.org/2016/' >2016 ADEA Annual Session &amp; Exhibition </a></li><li><a href='http://www.adea.org/LeadingConversations/' >Leading Conversations Webinar Series </a></li><li><a href='http://www.adea.org/pastEvents/' >Past Events </a></li> </ul> <ul class='floatRight sub_nav_top_right_ul_width'><li><a href='http://www.adea.org/professional_development/Pages/default.aspx' class='sub_nav_headeing'>Professional Development</a></li><li><a href='http://www.adea.org/ADEALeadershipInstitute/' >ADEA Leadership Institute </a></li><li><a href='http://www.adea.org/LIAA/' >ADEA Leadership Institute Alumni Association (ADEA LIAA) </a></li><li><a href='http://www.adea.org/alliedleadership/' >Allied Dental Faculty Leadership Development Program </a></li><li><a href='http://www.adea.org/professional_development/Pages/EducationScholar.aspx' >Education Scholar </a></li><li><a href='http://www.adea.org/ADEA-AAL-Programs/' >ADEA/AAL Programs </a></li> </ul> </DIV><DIV class="sub_nav_bottom"><ul class='floatLeft sub_nav_bottom_left_ul_width'><li><a href='http://www.adea.org/awards/' class='sub_nav_headeing'>ADEA Scholarships, Awards and Fellowships</a></li><li><a href='http://www.adea.org/dentalfellow/' >ADEA Academic Dental Careers Fellowship Program (ADEA ADCFP) </a></li><li><a href='http://www.adea.org/studentawards/' >For Students </a></li><li><a href='http://www.adea.org/facultyawards/' >For Dental Educators </a></li><li><a href='http://www.adea.org/LIawards/' >For ADEA Leadership Institute Fellows </a></li><li><a href='http://www.adea.org/schoolawards/' >For Dental Schools </a></li> </ul> <ul class='floatRight sub_nav_bottom_right_ul_width'><li><a href='http://www.adea.org/Secondary.aspx?id=18514' class='sub_nav_headeing' >Teaching Resources</a></li><li><a href='http://www.adea.org/crc/' >ADEA Curriculum Resource Center (CRC) </a></li><li><a href='http://www.adea.org/adeacci/Resources/Critical-Thinking-Skills-Toolkit/Pages/default.aspx' >Critical Thinking Skills Toolbox </a></li><li><a href='http://www.adea.org/publications/resourcesforteaching/Pages/default.aspx' >Resources for Teaching </a></li><li><a href='http://www.adea.org/Secondary.aspx?id=17892' >weTeach℠ </a></li><li><a href='http://www.adea.org/Secondary.aspx?id=11526' >MedEdPORTAL </a></li> </ul> </DIV> </ul> </li><li><a href='http://www.adea.org/policy_advocacy/Pages/default.aspx' class='drop'>Policy</a><ul class='sub_nav'><DIV class="sub_nav_top"><ul class='floatLeft sub_nav_top_left_ul_width'><li><a href='http://www.adea.org/policy_advocacy/Pages/default.aspx' class='sub_nav_headeing'>Policy Topics </a></li><li><a href='http://www.adea.org/ADI/' >Access, Diversity and Inclusion </a></li><li><a href='http://www.adea.org/HolisticReview/About.aspx' >Holistic Review </a></li><li><a href='/policy_advocacy/federal_legislative_regulatory_resources/Pages/OralHealthCareReform.aspx' >Oral Health Care </a></li><li><a href='http://www.adea.org/policy_advocacy/workforce_issues/Pages/default.aspx' >Workforce Issues </a></li><li><a href='http://www.adea.org/Secondary.aspx?id=11574' >Financing Dental Education </a></li><li><a href='http://www.adea.org/policy/sex-based-health-differences.aspx' >Sex-based Health Differences </a></li> </ul> <ul class='floatRight sub_nav_top_right_ul_width'><li><a href='http://www.adea.org/adeacci/about-adea-cci.aspx' class='sub_nav_headeing'>Commissions and Task Forces</a></li><li><a href='http://www.adea.org/cci/' >ADEA CCI </a></li><li><a href='http://www.adea.org/policy_advocacy/federal_legislative_regulatory_resources/Pages/ADEALegislativeAdvisoryCommittee.aspx' >ADEA Legislative Advisory Committee </a></li><li><a href='http://www.adea.org/Secondary.aspx?id=11570' >ADEA National Advocacy Network </a></li> </ul> </DIV><DIV class="sub_nav_bottom"><ul class='floatLeft sub_nav_bottom_left_ul_width'><li><a href='http://www.adea.org/policy_advocacy/Pages/default.aspx' class='sub_nav_headeing'>Policy Resources</a></li><li><a href='http://www.adea.org/policy/' >ADEA Policy Center Newsletters </a></li><li><a href='http://www.adea.org/LeadingConversations/' >Leading Conversations Webinar Series </a></li><li><a href='http://www.adea.org/policy/white-papers.aspx' >Policy White Papers and Briefs </a></li><li><a href='http://www.adea.org/HolisticReview/' >Holistic Review Workshops </a></li> </ul> <ul class='floatRight sub_nav_bottom_right_ul_width'><li><a href='http://www.adea.org/policy_advocacy/Pages/default.aspx' class='sub_nav_headeing' >Collaborations</a></li><li><a href='http://www.adea.org/SMDEP/' >Summer Medical and Dental Education Program </a></li><li><a href='http://www.adea.org/PipelineNLI/' >Dental Pipeline National Learning Institute </a></li><li><a href='http://www.adea.org/MDFD/' >Minority Dental Faculty Development Program </a></li> </ul> </DIV> </ul> </li><li><a href='http://adea.org/advocacy' class='drop'>Advocacy</a><ul class='sub_nav'><DIV class="sub_nav_top"><ul class='floatLeft sub_nav_top_left_ul_width'><li><a href='http://cqrcengage.com/adea/federal' class='sub_nav_headeing'>Federal Information </a></li><li><a href='http://cqrcengage.com/adea/federalBills' >Federal Bills </a></li><li><a href='http://cqrcengage.com/adea/keyfederalissue' >Key Federal Issues </a></li><li><a href='http://www.adea.org/federaltoolkit.aspx' >ADEA Federal Advocacy Toolkit </a></li><li><a href='http://www.adea.org/advocacy/federalgrantinfo.aspx' >Federal Grant Information </a></li><li><a href='http://cqrcengage.com/adea/federalblog' >ADEA Federal Blog </a></li> </ul> <ul class='floatRight sub_nav_top_right_ul_width'><li><a href='http://cqrcengage.com/adea/state' class='sub_nav_headeing'>State Information</a></li><li><a href='http://www.adea.org/State-Legislative-Tracker/' >State Legislative Tracking Map </a></li><li><a href='http://www.adea.org/regulatorymap/' >State Regulatory Tracking Map </a></li><li><a href='http://cqrcengage.com/adea/keystateissue' >Key State Issues </a></li><li><a href='http://www.adea.org/state-advocacy-toolkit.aspx' >ADEA State Advocacy Toolkit </a></li><li><a href='http://cqrcengage.com/adea/adeablog' >ADEA State Blog </a></li> </ul> </DIV><DIV class="sub_nav_bottom"><ul class='floatLeft sub_nav_bottom_left_ul_width'><li><a href='http://www.adea.org/agrresources.aspx' class='sub_nav_headeing'>ADEA AGR Resources &amp; Information</a></li><li><a href='http://www.adea.org/Blog.aspx?blogid=16839' >ADEA Washington Update </a></li><li><a href='http://www.adea.org/Blog.aspx?blogid=20132' >ADEA State Update </a></li><li><a href='/agrresources.aspx' >ADEA Policy Letters and Memos </a></li><li><a href='http://www.adea.org/AGRResources/Advocacy-Workshops.aspx' >Advocacy Workshops </a></li> </ul> <ul class='floatRight sub_nav_bottom_right_ul_width'><li><a href='http://cqrcengage.com/adea/canadainfo' class='sub_nav_headeing' >Canadian Information</a></li><li><a href='http://cqrcengage.com/adea/canadentalschools' >Canadian Dental Schools </a></li><li><a href='http://cqrcengage.com/adea/Canadalegprocess' >Canadian Legislative Process </a></li><li><a href='http://cqrcengage.com/adea/canadagrants' >Canadian Grant Funding </a></li><li><a href='http://cqrcengage.com/adea/canadaprovinces' >Canadian Provincial Information </a></li><li><a href='http://cqrcengage.com/adea/canadablog' >Canadian Blog </a></li> </ul> </DIV> </ul> </li><li><a href='http://www.adea.org/publications/Pages/default.aspx' class='drop'>Publications &amp; Data</a><ul class='sub_nav'><DIV class="sub_nav_top"><ul class='floatLeft sub_nav_top_left_ul_width'><li><a href='http://www.adea.org/' class='sub_nav_headeing'>Books and Guides </a></li><li><a href='http://www.adea.org/officialguide/' >2015-2016 ADEA Official Guide to Dental Schools </a></li><li><a href='http://www.adea.org/publications/DIM.aspx' >2014–15 ADEA Directory of Institutional Members and Association Officers </a></li><li><a href='http://www.adea.org/deansbriefing/' >2014–15 Deans&#39; Briefing Book </a></li><li><a href='http://www.adea.org/beyondthecrossroads/' >Beyond the Crossroads: Change and Innovation in Dental Education </a></li><li><a href='http://www.adea.org/InteractionGuidelines/Pages/ADEAGuidelinesforEthicalAcademicandIndustryInteractions.aspx' >ADEA Guidelines for Ethical Academic and Industry Interactions </a></li><li><a href='http://www.adea.org/costandborrowing/' >A Report of the ADEA Presidential Task Force on the Cost of Higher Education and Student Borrowing </a></li><li><a href='http://www.adea.org/forsythexperiment.aspx' >The Forsyth Experiment: An Alternative System for Dental Care </a></li> </ul> <ul class='floatRight sub_nav_top_right_ul_width'><li><a href='http://www.adea.org/publications/Pages/default.aspx' class='sub_nav_headeing'>Newsletters</a></li><li><a href='http://www.adea.org/BDEBlog.aspx?blogid=27619' >Bulletin of Dental Education </a></li><li><a href='http://www.adea.org/about_adea/Pages/ChartingProgress.aspx' >Charting Progress </a></li><li><a href='http://www.adea.org/Blog.aspx?blogid=20741' >CCI Liaison Ledger </a></li><li><a href='http://www.adea.org/washingtonupdate' >ADEA Washington Update </a></li><li><a href='http://www.adea.org/stateupdate' >ADEA State Update </a></li><li><a href='http://www.adea.org/Blog.aspx?blogid=21399' >Around the ADEA Policy Center </a></li> </ul> </DIV><DIV class="sub_nav_bottom"><ul class='floatLeft sub_nav_bottom_left_ul_width'><li><a href='http://www.adea.org/jde/' class='sub_nav_headeing'>Journals</a></li><li><a href='http://www.adea.org/jde/' >Journal of Dental Education® </a></li><li><a href='http://www.adea.org/jde/submit/' >Submitting to the Journal of Dental Education </a></li> </ul> <ul class='floatRight sub_nav_bottom_right_ul_width'><li><a href='http://www.adea.org/data/' class='sub_nav_headeing' >Data, Analysis &amp; Research</a></li><li><a href='http://www.adea.org/publications-and-data/data-analysis-and-research/educational-institutions.aspx' >Educational Institutions </a></li><li><a href='http://www.adea.org/publications-and-data/data-analysis-and-research/applicants-enrollees-and-graduates.aspx' >Applicants, Enrollees and Graduates </a></li><li><a href='http://www.adea.org/publications-and-data/data-analysis-and-research/faculty.aspx' >Faculty </a></li><li><a href='http://www.adea.org/data/seniors/' >Dental School Seniors </a></li> </ul> </DIV> </ul> </li><li><a href='http://www.adea.org/Secondary.aspx?id=17139' class='drop'>Career Center</a><ul class='sub_nav'><DIV class="sub_nav_top"><ul class='floatLeft sub_nav_top_left_ul_width'><li><a href='http://www.adea.org/GoDental' class='sub_nav_headeing'>ADEA GoDental </a></li> </ul> <ul class='floatRight sub_nav_top_right_ul_width'><li><a href='http://explorehealthcareers.org' class='sub_nav_headeing'>ExploreHealthCareers.org</a></li> </ul> </DIV><DIV class="sub_nav_bottom"><ul class='floatLeft sub_nav_bottom_left_ul_width'><li><a href='http://www.adea.org/dental_education_pathways/Pages/default.aspx' class='sub_nav_headeing'>ADEA Application Services</a></li><li><a href='http://www.adea.org/dental_education_pathways/aadsas/Applicants/Pages/default.aspx' >ADEA AADSAS® </a></li><li><a href='http://www.adea.org/CAAPIDapp/' >ADEA CAAPID® </a></li><li><a href='http://www.adea.org/PASSapp/' >ADEA PASS® </a></li><li><a href='http://www.adea.org/dhcas.aspx' >ADEA DHCAS® </a></li> </ul> <ul class='floatRight sub_nav_bottom_right_ul_width'><li><a href='http://www.adea.org/Secondary.aspx?id=17139' class='sub_nav_headeing' >Career Resources</a></li><li><a href='http://www.adea.org/DentEdJobs.aspx' >DentEd Jobs </a></li><li><a href='http://www.adea.org/Secondary.aspx?id=11441' >Placing Ads on DentEd Jobs </a></li><li><a href='http://www.adea.org/Secondary.aspx?id=17875' >Investing Financially in Your Education </a></li><li><a href='http://www.adea.org/DLOC/' >AAMC/ADEA Dental Loan Organizer and Calculator </a></li> </ul> </DIV> </ul> </li>
+</ul>
+
+
+                    </div>
+                    
+
+<div class="information_links">
+                	<ul>
+                    	<li class="noBackground"><strong>Information For:</strong></li>  
+                         
+                         <li><a href='http://www.adea.org/GoDental' >Prospective Students </a> <span><img src='http://www.adea.org/images/information_links_hover_arrow_bg.png' runat='server' id='Prospective Students' alt=''></span></li><li><a href='http://www.adea.org/students/' >Current Students &amp; Residents </a> <span><img src='http://www.adea.org/images/information_links_hover_arrow_bg.png' runat='server' id='Current Students &amp; Residents' alt=''></span></li><li><a href='http://www.adea.org/faculty/' >Faculty </a> <span><img src='http://www.adea.org/images/information_links_hover_arrow_bg.png' runat='server' id='Faculty' alt=''></span></li><li><a href='http://www.adea.org/deans/' >Deans &amp; Program Directors </a> <span><img src='http://www.adea.org/images/information_links_hover_arrow_bg.png' runat='server' id='Deans &amp; Program Directors' alt=''></span></li> 
+                    
+                        
+                    </ul>    
+                </div>
+                </div>
+                <!-- main end -->
+                
+    <div class="inner_banner">
+        <div class="main">
+            
+
+ <div class="add_img">
+                   <img alt='' src='/uploadedImages/2015-16-inner_banner.png' alt='' width='975' height='143'/> </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="body_content">
+            <div class="left_panel_2">
+                
+<div class="arrowlistmenu">
+    <div class='bigh2' ><a href='/agrresources.aspx' style='text-decoration:none;'> <h2 class='left_panel3'>ADEA AGR Resources &amp; Information</h2></a></div>
+    <ul><li><a href='http://www.adea.org/Blog.aspx?blogid=16839'> ADEA Washington Update</a></li></ul><ul><li><a href='http://www.adea.org/Blog.aspx?blogid=20132'> ADEA State Update</a></li></ul><ul><li><a href='/agrresources.aspx'> ADEA Policy Letters and Memos</a></li></ul><ul><li><a href='/AGRResources/Advocacy-Workshops.aspx'> Advocacy Workshops</a></li></ul>
+</div>
+            </div>
+            <div class="center_panel_2">
+                
+			
+                   
+				 <div class="breadCrumbs">
+                  <a href='/default.aspx'>Home</a> | <a href='/'>Advocacy</a>
+               
+                  </div>
+                
+                
+<script type="text/javascript">
+    // toggles icons on default accordion
+    $(window).load(function () {
+        $('#' + 'ctl00_ContentPlaceHolder1_Accordion_cbAcc').children("p").hide();
+        $('#' + 'ctl00_ContentPlaceHolder1_Accordion_cbAcc').children("div").hide();
+        var openImg = $('#' + 'ctl00_ContentPlaceHolder1_Accordion_openImage').attr('src');
+        var closeImg = $('#' + 'ctl00_ContentPlaceHolder1_Accordion_closeImage').attr('src');
+        $(".panel-title a").click(function (e) {
+            e.preventDefault();
+            var link = $(this).attr('href');
+            link = link.replace('#', '');
+            var isVisible = $('#' + link).is(":visible");
+            if (isVisible == false) {
+                $(this).children(':first-child').css('background-image', 'url("' + openImg + '")');
+                $(this).children(':first-child').html('<img src="' + closeImg + '" alt="Collapse">');
+                $('#' + link).show('medium');
+            }
+            else {
+                $(this).children(':first-child').css('background-image', 'url("' + closeImg + '")');
+                $(this).children(':first-child').html('<img src="' + openImg + '" alt="Expand">');
+                $('#' + link).hide('medium');
+            }
+        });
+        $("#expandList").click(function (e) {
+            e.preventDefault();
+            $('.toggle-icon').css('background-image', 'url("' + openImg + '")');
+            $('.toggle-icon').html('<img src="' + closeImg + '" alt="Collapse">');
+            $('.collapse').show('medium');
+        });
+        $("#collapseList").click(function (e) {
+            e.preventDefault();
+            $('.toggle-icon').css('background-image', 'url("' + closeImg + '")');
+            $('.toggle-icon').html('<img src="' + openImg + '" alt="Collapse">');
+            $('.collapse').hide('medium');
+        });
+    });
+</script>
+
+<h2>
+    ADEA AGR Resources and Information
+</h2>
+<center><p><br /><a href="https://access.adea.org/adeassa/censsacustmast.insert_page?p_return_page=Login_Page&amp;p_varname=p_val_arr%5B0%5D&amp;p_colname=p_last_nm&amp;p_varname=p_val_arr%5B1%5D&amp;p_colname=p_alias&amp;p_varname=p_val_arr%5B2%5D&amp;p_colname=p_login_id&amp;p_varname=p_val_arr%5B3%5D&amp;p_colname=p_passwd&amp;p_context=NEWSLETTER&amp;p_success_url=censsaindprofile.section_update%3Fp_profile_ty%3DINDIVIDUAL_PROFILE%26p_skip_confirm_fl%3DY%26p_section_nm%3DNewsletters%26p_format%3D110%26p_msg_txt%3D%26p_cust_id%3D%26p_referrer%3Dadeacenssalandingpage.display_page%3Fp_context%3DNEWSLETTER"><img title="Subscribe to Newsletters" src="http://ek9-adea.syscomservices.com/assets/0/76/1368/44442/44445/8194c2de-34df-4fd3-a3ea-c72da0cf184d.png" alt="Subscribe to Newsletters" /></a></p></center>
+<div class="listControl">
+    <a id="expandList" href="#">Expand All</a>
+    <a id="collapseList" href="#">Collapse All</a>
+</div>
+<span id="Images" style="display: none;">
+    <img src="/images/icon-arrow-expand.png" id="ctl00_ContentPlaceHolder1_Accordion_openImage" alt="open" />
+    <img src="/images/icon-arrow-collapse.png" id="ctl00_ContentPlaceHolder1_Accordion_closeImage" alt="close" />
+</span>
+<div id="accordion_wrap" class="panel-group">
+    
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <a href="#collapse0" class="collapsed">
+                            <span style="background-image: url('/images/icon-arrow-collapse.png');" class="toggle-icon">
+                                <img alt="Expand" src='/images/icon-arrow-expand.png' /></span><strong>AGR Newsletters</strong>
+                  </a>
+                    </div>
+                </div>
+                <div id="collapse0" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p><strong><a target="_blank" href="http://www.adea.org/Blog.aspx?blogid=16839">ADEA <em>Washington Update</em></a></strong></p><p><strong><a target="_blank" href="http://www.adea.org/Blog.aspx?blogid=20132">ADEA <em>State Update</em></a></strong></p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <a href="#collapse1" class="collapsed">
+                            <span style="background-image: url('/images/icon-arrow-collapse.png');" class="toggle-icon">
+                                <img alt="Expand" src='/images/icon-arrow-expand.png' /></span><strong>ADEA Policy Letters and Memos</strong>
+                  </a>
+                    </div>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h4>2015</h4><ul><li><a href="http://www.adea.org/assetmanagement/DownloadAsset.aspx?ID=02de2788-ece6-4f14-8d16-f00b542ed965&amp;version=a1e32f74331a4bcc91575f4cedf91a661.pdf" title="Comments: NIDCR Proposed Research Initiatives for Fiscal Year 2017"></a><a href="/WorkArea/DownloadAsset.aspx?id=27854" title="08-19-15 COMMENTS NIDCR_ADEA_Comments_08_19_2015">Comments: NIDCR Proposed Research Initiatives for Fiscal Year 2017</a></li><li><a href="/WorkArea/DownloadAsset.aspx?id=27854" title="08-19-15 COMMENTS NIDCR_ADEA_Comments_08_19_2015"></a><a href="/WorkArea/DownloadAsset.aspx?id=27853" title="08-07-15 COMMENTS NIH-wide Strategic Plan Final">Comments: Framework for NIH-wide Strategic Plan</a></li><li><a href="/WorkArea/DownloadAsset.aspx?id=27577" title="05-13-15 SIGNON - Research America - NIH Innovation Fund 21st Century Cu___">Sign-on Letter: 21</a><a href="/WorkArea/DownloadAsset.aspx?id=27577" title="05-13-15 SIGNON - Research America - NIH Innovation Fund 21st Century Cu___"><sup>st</sup></a><a href="/WorkArea/DownloadAsset.aspx?id=27577" title="05-13-15 SIGNON - Research America - NIH Innovation Fund 21st Century Cu___"> Century Cures
+Act - NIH Innovation Fund</a></li><li><a href="/WorkArea/DownloadAsset.aspx?id=27573" title="04-20-15 NDD-FY2016 House LHHS 302(b) FINAL">Sign-on Letter: FY16 Labor, HHS, Education and
+Related Agencies Appropriations 302(b) Allocation</a></li><li><a title="03-24-15 SIGNON HPNEC NHSC Stakeholders" href="/WorkArea/DownloadAsset.aspx?id=26779">Sign-on Letter: National Health Service Corps Funding</a></li><li><a title="03-18-15 SIGNON HPNEC FY16 Title VII Funding" href="/WorkArea/DownloadAsset.aspx?id=26775">Sign-on Letter: FY16 Title VII Funding</a></li><li><a title="02-23-15 SIGNON SAFRRA" href="/WorkArea/DownloadAsset.aspx?id=26783">Sign-on Letter: H.R. 970, Supporting Academic Freedom through Regulatory Relief Act</a></li><li><a href="http://cqrcengage.com/adea/file/ezaUTNOHjt5/1-7-15 SIGNON Title VII ADA ADEA AAPD.pdf">Sign-on Letter: Title VII Funding</a></li><li><a href="http://cqrcengage.com/adea/file/2s9D9dDY3yT/1-5-15 SIGNON OMB ADEA Sign on FY 16 GME.PDF">Sign-on Letter (to OMB): GME Funding</a></li><li><a href="http://cqrcengage.com/adea/file/mAjqHSXlag9/1-5-15 SIGNON DHHS ADEA Sign on FY 16 GME.PDF">Sign-on Letter (to HHS): GME Funding</a></li><li><a title="Sign-on Letter: Graduate Medical Education Reauthorization" href="http://www.adea.org/WorkArea/DownloadAsset.aspx?id=26378">Sign-on Letter: GME Reauthorization</a></li><li><a href="/WorkArea/DownloadAsset.aspx?id=27520" title="ADEA Appropriations Committees Summary - July 2015">ADEA Memo: House and Senate Appropriations Committees Fiscal Year 2016 Bills</a></li><li><a href="/WorkArea/DownloadAsset.aspx?id=27514" title="King v Burwell Memo - June 26 2015">ADEA Memo: King v. Burwell</a></li><li><a title="Presidents FY16 Budget Proposal" href="/WorkArea/DownloadAsset.aspx?id=26280">ADEA Memo: President's FY16 Budget Proposal</a></li><li><a title="ADEA Memo: CODA Dental Therapy Standards Approved but Not Yet Implemented" href="http://www.adea.org/WorkArea/DownloadAsset.aspx?id=26379">ADEA Memo: CODA Dental Therapy Standards Approved but Not Yet Implemented</a></li><li><a title="North Carolina State Board of Dental Examiners v_ Federal Trade Commission" href="/WorkArea/DownloadAsset.aspx?id=26444">ADEA Memo: North Carolina State Board of Dental Examiners v.
+Federal Trade Commission</a></li><li><a href="/WorkArea/DownloadAsset.aspx?id=27576" title="05-08-15 COMMENTS - ACE - Sen_ Alexander Data Transparency White Paper">Comments: Senate HELP Committee Data
+Transparency and Consumer Information White Paper</a></li><li><a href="/WorkArea/DownloadAsset.aspx?id=27575" title="04-30-15 COMMENTS - ACE - Sen_ Alexander Accreditation White Paper">Comments: Senate HELP Committee Accreditation
+White Paper</a></li><li><a href="/WorkArea/DownloadAsset.aspx?id=27574" title="04-28-15 COMMENTS - ACE - Sen_ Alexander Risk Sharing White Paper">Comments: Senate HELP Committee Risk-Sharing
+White Paper</a></li><li><a title="ADEA Memo: Postsecondary Institution Ratings System" href="http://www.adea.org/WorkArea/DownloadAsset.aspx?id=26377">Comments: Postsecondary Institution Ratings System</a></li><li><a target="_blank" href="http://cqrcengage.com/adea/file/PyN1tG1leDm/FY16 Dental request SAC LHHS 2-9-15.pdf">FY16 Request for Funding – Senate</a></li><li><a target="_blank" href="http://cqrcengage.com/adea/file/16vvfZ68dad/FY16 Dental request HAC LHHS 2-9-15.pdf">FY16 Request for Funding – House</a></li><li><a title="JADA Gues Editorial: An Ounce of Prevention" href="/WorkArea/DownloadAsset.aspx?id=26380">JADA Guest Editorial: An Ounce of Prevention</a></li></ul><h4>2014    </h4><ul><li><a title="11-24-14 SIGNON ACE Pell Grant Funding to Senate Labor-HHS" href="/WorkArea/DownloadAsset.aspx?id=26773">Sign-on Letter: Pell Grant Program Funding</a></li><li><a title="11-17-14 SIGNON Student Aid Alliance FY15 Student Aid Omnibus" href="/WorkArea/DownloadAsset.aspx?id=26774">Sign-on Letter: Student Aid Programs Funding</a></li><li><a title="11-12-14 SIGNON HPNEC FY15 Title VII Funding" href="/WorkArea/DownloadAsset.aspx?id=26782">Sign-on Letter: FY15 Title VII Funding</a></li><li><a title="09-08-14 SIGNON CHIP Extension" href="/WorkArea/DownloadAsset.aspx?id=26776">Sign-on Letter: CHIP Extension and Improvement Act of 2014</a></li><li><a title="04-04-14 SIGNON Pediatric Groups FY 2015" href="/WorkArea/DownloadAsset.aspx?id=26778">Sign-on Letter: Children's Hospital Graduate Medical Education Funding</a></li><li><a title="03-21-14 SIGNON HR1527 Student Loan Interest Reduction" href="http://www.adea.org/WorkArea/DownloadAsset.aspx?id=26780">Sign-on Letter: H.R. 1527, Student Loan Interest Deduction Act of 2013</a></li><li><a href="http://cqrcengage.com/adea/file/D01YTOPANW4/8-28-14 SIGNON Primary Care Cliff.pdf">Sign-on Letter: Primary Care Cliff</a></li><li><a href="http://cqrcengage.com/adea/file/mNsL7pJJ8QZ/9-15-14 SIGNON CHIP Funding.pdf">Sign-on Letter: CHIP Funding</a></li><li><a href="http://cqrcengage.com/adea/file/Tj8iHFlLv2D/1-31-14 SIGNON Department of Education Post-Secondary Institution Rating.._.pdf">Sign-on Letter: U.S. Department of Education’s Plan to Rate Colleges and Universities</a></li><li><a href="http://cqrcengage.com/adea/file/rv9eVraym2c/5-2-14 MEMO Maine Governor Signs Dental Hygene Therapist Bill.pdf">ADEA Memo: Maine Governor Signs Dental Hygiene Therapist Bill</a></li><li><a href="http://cqrcengage.com/adea/file/qFcdMprkYTn/8-5-14 MEMO Institute of Medicine Report on Reforming GME.PDF">ADEA Memo: Institute of Medicine Report on Reforming GME</a></li><li><a href="http://cqrcengage.com/adea/file/nrcksvAvgH2/2-28-14 MEMO ACA Employer-Based Coverage Under the ACA.PDF">ADEA Memo: Employer-Based Coverage under the ACA</a></li><li><a href="http://cqrcengage.com/adea/file/KQLBneuxCWA/1-17-14 MEMO FY14 Appropriations.pdf">ADEA Memo: FY14 Appropriations</a></li><li><a href="http://cqrcengage.com/adea/file/ipoTkxZSR88/1-29-14 MEMO HRSA Grants of Interest to the Academic Dental Community.pdf">ADEA Memo: HRSA Grants of Interest to the Academic Dental Community </a></li><li><a href="http://cqrcengage.com/adea/file/bkPGm03mM7v/5-27-14 COMMENTS Proposed Gainful Employment Proposed Regulation.pdf">ADEA Comments: Gainful Employment Proposed Regulation</a></li><li><a href="http://cqrcengage.com/adea/file/V51YMNNEh6u/2-28-14 COMMENTS Ryan White Part F - Dental Services Report.pdf">ADEA Comments: Ryan White HIV/AIDS Program Part F – Dental Services Report</a></li><li><a href="http://cqrcengage.com/adea/file/Sg91HNAoEC1/2-21-14 COMMENTS 53rd Presidential Advisory Council Meeting on HIV-AIDS .._.pdf">ADEA Comments: 53rd Presidential Advisory Council Meeting on HIV/AIDS (PACHA) </a></li><li><a href="http://cqrcengage.com/adea/file/GRF9LyA1hjm/2-6-14 COMMENTS to NIDCR 2014-2019 Strategic Plan.pdf">ADEA Comments: NIDCR 2014-2019 Strategic Plan</a></li></ul>
+                    </div>
+                </div>
+            </div>
+        
+</div>
+
+<div style="padding-top:20px;">
+    <strong></strong>
+</div>
+
+            </div>
+            <div class="right_panel_2">
+                
+<h2>
+    Related Links</h2>
+<div class="related_link">
+    <ul>
+        <li><a target="_blank" href="http://cqrcengage.com/adea/federal">Federal Information<a></li><li><a target="_blank" href="http://cqrcengage.com/adea/keyfederalissue">Key Federal Issues<a></li><li><a target="_blank" href="http://cqrcengage.com/adea/state">State Information<a></li><li><a target="_blank" href="http://cqrcengage.com/adea/keystateissue">Key State Issues<a></li>
+    </ul>
+</div>
+
+                
+                <div class="add_img">
+                    
+
+<!-- ADEA-Sidebar-160x600 -->
+<div id='div-gpt-ad-1385053093269-0' style='width:160px; height:600px;'>
+<script type='text/javascript'>
+    googletag.display('div-gpt-ad-1385053093269-0');
+</script>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (document.location.href.indexOf('CouncilofSections.aspx') >= 0) {
+                $('.categoryitems').css('display', 'none');
+                $('span.menuheader.openheader').removeClass();
+                $('.arrowlistmenu h3 span').addClass('menuheader expandable');
+            }
+        });
+        $(window).unload(function () {
+            if (document.location.href.indexOf('CouncilofSections.aspx') >= 0) {
+                $(".categoryitems").Remove();
+            }
+        });
+    </script>
+
+                <!-- footer start -->
+                <div id="footer">
+                    <div class="main">
+                        <div class="add_box">
+                            
+<ul><li><a href='/publications/jde/Pages/default.aspx'> <img alt='' src='/uploadedImages/ADEA WEBSITE BOTTOM BOXES.jpg' alt='' width='190' height='63'/> </a></li><li><a href='http://www.adea.org/BDEBlog.aspx?blogid=27619'> <img alt='' src='/uploadedImages/ADEA WEBSITE BOTTOM BOXES2.jpg' alt='' width='190' height='63'/> </a></li><li><a href='/publications/Pages/OfficialGuide.aspx'> <img alt='' src='/uploadedImages/ADEA WEBSITE BOTTOM BOXES3.jpg' alt='' width='190' height='63'/> </a></li><li class='noMargin_2'><a href='/about_adea/Pages/ChartingProgress.aspx'> <img alt='' src='/uploadedImages/ADEA WEBSITE BOTTOM BOXES4.jpg' alt='' width='190' height='63'/> </a></li></ul>
+
+                        </div>
+                        <div class="footer_menu_holder">
+
+                            
+
+<div class="footer_menu">
+    
+<ul>
+    <li class='footer_menu_heading'><a href='http://www.adea.org/about_adea/Pages/default.aspx'>About ADEA</a></li><li><a href='http://www.adea.org/about_adea/who_we_are/Pages/default.aspx'>Who We Are</a></li><li><a href='http://www.adeagiesfoundation.org'>ADEAGies Foundation</a></li><li><a href='http://www.adea.org/policy_advocacy/Pages/default.aspx'>Policy</a></li><li><a href='http://adea.org/advocacy/?utm_source=maim&amp;utm_medium=ftr&amp;utm_campaign=adv'>Advocacy</a></li><li><a href='http://www.adea.org/DentEdJobs.aspx'>DentEd Jobs</a></li><li><a href='http://www.adea.org/news/'>Newsroom</a></li>
+</ul>
+
+</div>
+<div class="footer_menu">
+    
+<ul>
+    <li class='footer_menu_heading'><a href='http://www.adea.org/dental_education_pathways/Pages/default.aspx'>Application Information</a></li><li><a href='http://www.adea.org/godental/'>ADEA GoDental</a></li><li><a href='http://www.adea.org/aadsasapp/'>ADEA AADSAS</a></li><li><a href='http://www.adea.org/caapidapp/'>ADEA CAAPID</a></li><li><a href='http://www.adea.org/dhcasapp/'>ADEA DHCAS</a></li><li><a href='http://www.adea.org/passapp/'>ADEA PASS</a></li>
+</ul>
+
+</div>
+<div class="footer_menu">
+    
+<ul>
+    <li class='footer_menu_heading'><a href='http://www.adea.org/Secondary.aspx?id=17137'>Events &amp; Professional Development</a></li><li><a href='http://www.adea.org/events.html'>Upcoming Events</a></li><li><a href='http://www.adea.org/LeadingConversations/'>Leading Conversations Webinars</a></li><li><a href='http://www.adea.org/professional_development/Pages/default.aspx'>Professional Development</a></li><li><a href='http://www.adea.org/awards/'>Scholarships, Awards &amp; Fellowships</a></li><li><a href='http://www.adea.org/pastEvents/'>Past Events</a></li>
+</ul>
+
+</div>
+<div class="footer_menu noMargin_2">
+    
+<ul>
+    <li class='footer_menu_heading'><a href='http://www.adea.org/publications/Pages/default.aspx'>Publications &amp; Data</a></li><li><a href='http://www.adea.org/officialguide/?utm_source=maim&amp;utm_medium=ftr&amp;utm_campaign=og'>Official Guide to Dental Schools</a></li><li><a href='http://www.adea.org/BDEBlog.aspx?blogid=27619'>Bulletin of Dental Education</a></li><li><a href='http://www.adea.org/jde/'>Journal of Dental Education</a></li><li><a href='http://www.adea.org/data/'>Data, Analysis &amp; Research</a></li>
+</ul>
+
+</div>
+
+
+                            
+
+                        </div>
+                        <div class="footer_glow">
+                        </div>
+                        <div class="social_icon">
+                            <ul>
+                                <li><strong>Follow Us On: </strong></li>
+                                <li><a target='_blank' href='http://www.facebook.com/pages/American-Dental-Education-Association/21730590909'> <img alt='' src='/uploadedImages/facebook_icon.png' alt='' width='14' height='14'/> </a></li><li><a target='_blank' href='http://twitter.com/adeaweb'> <img alt='' src='/uploadedImages/twitter_icon.png' alt='' width='14' height='14'/> </a></li><li><a target='_blank' href='http://www.youtube.com/user/ADEAweb'> <img alt='' src='/uploadedImages/YouTube-little.png' alt='' width='14' height='14'/> </a></li>
+
+                                <li><a href='/' >Home </a></li><li> | </li><li><a href='/contactus/' >Contact Us </a></li><li> | </li><li><a href='/listservs/' >ADEA Listservs </a></li><li> | </li><li><a href='/about_adea/Pages/privacy.aspx' >Privacy Policy </a></li><li> | </li><li><a href='/about_adea/Pages/termsofuse.aspx' >Terms of Use </a></li><li> | </li><li><a href='http://adea.az1.qualtrics.com/jfe/form/SV_0kM8aW0qjj0bvs9' >Website Feedback </a></li><li> | </li><li><a href='/MemberCenter/Pages/Website-Help-Center.aspx' >Website Help </a></li>
+
+                            </ul>
+                        </div>
+                        <div class="footer_text">
+                            <span>
+                                ©2015 American Dental Education Association® (ADEA), 655 K Street, NW, Suite 800, Washington, DC 20001
+ <a href="tel:+1-202-289-7201">202-289-7201</a> | Site Designed by 
+    <a href="http://www.tmaresourcesinteractive.com/TMARI/">TMA Resources <em>Interactive</em>
+    </a>
+
+                            </span>
+                        </div>
+                    </div>
+                </div>
+             <!-- Crazy EGG-->
+            <script type="text/javascript">
+                setTimeout(function () {
+                    var a = document.createElement("script");
+                    var b = document.getElementsByTagName("script")[0];
+                    a.src = document.location.protocol + "//dnn506yrbagrg.cloudfront.net/pages/scripts/0024/8355.js?" + Math.floor(new Date().getTime() / 3600000);
+                    a.async = true; a.type = "text/javascript"; b.parentNode.insertBefore(a, b)
+                }, 1);
+            </script>
+          <!-- End Crazy EGG-->
+                <!-- </footer>
+        <!-- footer end -->
+            </div>
+            <!-- wrapper end -->
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $("a.arrow").append('<span>&nbsp;</span>');
+                });
+            </script>
+        </div>
+    </form>
+</body>
+</html>

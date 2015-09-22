@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+<link rel="shortcut icon" href="http://www.uwplatt.edu/sites/all/themes/OmegaUWP/images/favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10, minimum-scale=1, user-scalable=yes" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="http://www.uwplatt.edu/its/pass" />
+<link rel="shortlink" href="http://www.uwplatt.edu/node/14124" />
+<meta property="og:site_name" content="University of Wisconsin-Platteville" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.uwplatt.edu/its/pass" />
+<meta property="og:title" content="PASS" />
+  <title>PASS | University of Wisconsin-Platteville</title>  
+  <link rel="stylesheet" href="http://www.uwplatt.edu/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link rel="stylesheet" href="http://www.uwplatt.edu/files/css/css_MKweWeClwJR4CspmZkeVTsObhCxVztmoJWNUTo9MQnM.css" media="all" />
+<link rel="stylesheet" href="http://www.uwplatt.edu/files/css/css_XJufc_Rv2d6QRp5YSl_j-08-HnFvBMUJ0V9uzh037Lo.css" media="all" />
+<link rel="stylesheet" href="http://www.uwplatt.edu/files/css/css_dcnPovq1occdyRrzHPL-hI9V7d5_ZaynADRqppup1JE.css" media="print" />
+<link rel="stylesheet" href="http://www.uwplatt.edu/files/css/css_vYdRaQfltg6ylOGS-duveGWkWqkubhwypX9Tv39tzsU.css" media="all" />
+
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="http://www.uwplatt.edu/sites/all/themes/OmegaUWP/css/ie-lte-8.css?ntqwp4" media="all" />
+<![endif]-->
+
+<!--[if lte IE 7]>
+<link rel="stylesheet" href="http://www.uwplatt.edu/sites/all/themes/OmegaUWP/css/ie-lte-7.css?ntqwp4" media="all" />
+<![endif]-->
+
+<!--[if (lt IE 9)&(!IEMobile)]>
+<link rel="stylesheet" href="http://www.uwplatt.edu/files/css/css_fgvEW2nSf3Jr-ZDWFLkgqKgvkeaNdCJnAXxrv7Fv5Co.css" media="all" />
+<![endif]-->
+
+<!--[if gte IE 9]><!-->
+<link rel="stylesheet" href="http://www.uwplatt.edu/files/css/css_60_at57KPLZLu77d0mzXSuFrlEy6QV-qXaBW-a5OGZ0.css" media="all" />
+<!--<![endif]-->
+  <script src="http://www.uwplatt.edu/sites/all/modules/jquery_update/replace/jquery/1.8/jquery.min.js?v=1.8.3"></script>
+<script src="http://www.uwplatt.edu/misc/jquery.once.js?v=1.2"></script>
+<script src="http://www.uwplatt.edu/misc/drupal.js?ntqwp4"></script>
+<script src="http://www.uwplatt.edu/sites/all/libraries/fitvids/jquery.fitvids.js?ntqwp4"></script>
+<script src="http://www.uwplatt.edu/sites/all/modules/fitvids/fitvids.js?ntqwp4"></script>
+<script src="http://www.uwplatt.edu/sites/all/libraries/colorbox/jquery.colorbox-min.js?ntqwp4"></script>
+<script src="http://www.uwplatt.edu/sites/all/modules/colorbox/js/colorbox.js?ntqwp4"></script>
+<script src="http://www.uwplatt.edu/sites/all/modules/colorbox/styles/default/colorbox_style.js?ntqwp4"></script>
+<script src="http://www.uwplatt.edu/sites/all/modules/colorbox/js/colorbox_load.js?ntqwp4"></script>
+<script src="http://www.uwplatt.edu/sites/all/modules/colorbox/js/colorbox_inline.js?ntqwp4"></script>
+<script src="http://www.uwplatt.edu/sites/all/modules/google_analytics/googleanalytics.js?ntqwp4"></script>
+<script>
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-1833434-1", {"cookieDomain":"www.uwplatt.edu"});ga("send", "pageview");
+</script>
+<script src="http://www.uwplatt.edu/sites/all/themes/OmegaUWP/js/hoverIntent.js?ntqwp4"></script>
+<script src="http://www.uwplatt.edu/sites/all/themes/OmegaUWP/js/superfish.min.js?ntqwp4"></script>
+<script src="http://www.uwplatt.edu/sites/all/themes/OmegaUWP/js/OmegaUWP.js?ntqwp4"></script>
+<script src="http://www.uwplatt.edu/sites/all/themes/omega/omega/js/jquery.formalize.js?ntqwp4"></script>
+<script src="http://www.uwplatt.edu/sites/all/themes/omega/omega/js/omega-mediaqueries.js?ntqwp4"></script>
+<script>
+function pull_image(link, image, img_style, a_style) {
+  jQuery('#zone-branding-wrapper').prepend('<a id="five-one-five-o" style="' + a_style +'" href="' + link +'"><img src="' + image +'" style="' + img_style +'"/></a>');
+  return true;
+}
+
+
+jQuery(document).ready(function() {
+  var link = "https://www.uwplatt.edu/150";
+  var image = "https://www.uwplatt.edu/files/150/150_web_graphic.png";
+  var img_style = "";
+  var a_style = "position:absolute;right:0;";
+  var window_width = 1300;
+  var get_image = false;
+
+
+  if(jQuery(window).width() >= window_width) {
+    get_image = pull_image(link, image, img_style, a_style);
+  }
+
+  jQuery(window).resize(function(){
+    if(jQuery(window).width() < window_width && get_image == true) {
+      jQuery('#five-one-five-o').hide();
+    } else if (get_image == false){
+      get_image = pull_image(link, image, img_style, a_style);
+    } else  if (get_image == true){
+      jQuery('#five-one-five-o').show();
+    }
+  });
+
+});
+
+</script>
+<script>
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"OmegaUWP","theme_token":"H7Y7wJapGpmXKAs2ZhqYVe5qOV8hVfZt3-umK4Ev1x0","js":{"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.8\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/libraries\/fitvids\/jquery.fitvids.js":1,"sites\/all\/modules\/fitvids\/fitvids.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox_inline.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/all\/themes\/OmegaUWP\/js\/hoverIntent.js":1,"sites\/all\/themes\/OmegaUWP\/js\/superfish.min.js":1,"sites\/all\/themes\/OmegaUWP\/js\/OmegaUWP.js":1,"sites\/all\/themes\/omega\/omega\/js\/jquery.formalize.js":1,"sites\/all\/themes\/omega\/omega\/js\/omega-mediaqueries.js":1,"1":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/comment_notify\/comment_notify.css":1,"sites\/all\/modules\/calendar\/css\/calendar_multiday.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/modules\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/fitvids\/fitvids.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"modules\/forum\/forum.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/uwpvcard\/css\/vcard.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/ldap\/ldap_help\/ldap_help.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/themes\/OmegaUWP\/css\/print.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-reset.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-mobile.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-alpha.css":1,"sites\/all\/themes\/omega\/omega\/css\/formalize.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-text.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-branding.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-menu.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-forms.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-visuals.css":1,"sites\/all\/themes\/OmegaUWP\/css\/global.css":1,"sites\/all\/themes\/OmegaUWP\/css\/ie-lte-8.css":1,"sites\/all\/themes\/OmegaUWP\/css\/ie-lte-7.css":1,"ie::normal::sites\/all\/themes\/OmegaUWP\/css\/OmegaUWP-alpha-default.css":1,"ie::normal::sites\/all\/themes\/OmegaUWP\/css\/OmegaUWP-alpha-default-normal.css":1,"ie::normal::sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/normal\/alpha-default-normal-12.css":1,"normal::sites\/all\/themes\/OmegaUWP\/css\/OmegaUWP-alpha-default.css":1,"normal::sites\/all\/themes\/OmegaUWP\/css\/OmegaUWP-alpha-default-normal.css":1,"sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/normal\/alpha-default-normal-12.css":1}},"colorbox":{"transition":"elastic","speed":"350","opacity":"0.60","slideshow":false,"slideshowAuto":true,"slideshowSpeed":"2500","slideshowStart":"start slideshow","slideshowStop":"stop slideshow","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","overlayClose":true,"maxWidth":"100%","maxHeight":"100%","initialWidth":"300","initialHeight":"100","fixed":true,"scrolling":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"jcarousel":{"ajaxPath":"\/jcarousel\/ajax\/views"},"better_exposed_filters":{"views":{"emergency_messages":{"displays":{"block":{"filters":[]}}}}},"fitvids":{"custom_domains":[],"selectors":[".region\r",".uwp-layout-right"],"simplifymarkup":true},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackDomainMode":"1"},"omega":{"layouts":{"primary":"normal","order":["normal"],"queries":{"normal":"all and (min-device-width: 760px)"}}}});
+</script>
+  <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body class="html not-front not-logged-in page-node page-node- page-node-14124 node-type-uwp-page context-its">
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+  <div class="region region-page-top" id="region-page-top">
+  <div class="region-inner region-page-top-inner">
+      </div>
+</div>  <div class="page clearfix" id="page">
+      <header id="section-header" class="section section-header">
+  <div id="zone-user-wrapper" class="zone-wrapper zone-user-wrapper clearfix">  
+  <div id="zone-user" class="zone zone-user clearfix container-12">
+    <div class="grid-8 region region-user-first" id="region-user-first">
+  <div class="region-inner region-user-first-inner">
+    <div class="block block-menu-block block-3 block-menu-block-3 odd block-without-title" id="block-menu-block-3">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="menu-block-wrapper menu-block-3 menu-name-menu-promotion-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first expanded menu-mlid-605"><a href="/admission" title="">Admission</a><ul class="menu"><li class="first leaf menu-mlid-8672"><a href="/admission" title="">Campus</a></li>
+<li class="last leaf menu-mlid-8673"><a href="/distance-education/academic-calendars">Online</a></li>
+</ul></li>
+<li class="expanded menu-mlid-606"><a href="/academics" title="">Academics</a><ul class="menu"><li class="first leaf menu-mlid-8674"><a href="/academics" title="">Campus</a></li>
+<li class="last leaf menu-mlid-8675"><a href="/distance-education/online-programs" title="">Online</a></li>
+</ul></li>
+<li class="leaf menu-mlid-607"><a href="/campus-life" title="">Campus Life</a></li>
+<li class="leaf menu-mlid-608"><a href="/athletics" title="">Athletics</a></li>
+<li class="expanded menu-mlid-609"><a href="/events" title="">Calendars</a><ul class="menu"><li class="first leaf menu-mlid-8676"><a href="/events" title="">Campus</a></li>
+<li class="last leaf menu-mlid-8677"><a href="/distance-education/academic-calendars">Online</a></li>
+</ul></li>
+<li class="last expanded menu-mlid-4224"><a href="/about" title="">About</a><ul class="menu"><li class="first leaf menu-mlid-8680"><a href="/about" title="">Campus</a></li>
+<li class="last leaf menu-mlid-8681"><a href="/distance-education" title="">Online</a></li>
+</ul></li>
+</ul></div>
+    </div>
+  </div>
+</div>  </div>
+</div><div class="grid-4 region region-user-second" id="region-user-second">
+  <div class="region-inner region-user-second-inner">
+    <div class="block block-block block-3 block-block-3 odd block-without-title" id="block-block-3">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <form action="/search-results" class="cse-form" id="cse-search-box">
+	<input autocomplete="off" dir="ltr" name="keywords" size="31" spellcheck="false" type="text" /><input name="sa" type="submit" value="" /></form>
+    </div>
+  </div>
+</div><section class="block block-menu block-menu-shortcuts block-menu-menu-shortcuts even" id="block-menu-menu-shortcuts">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Shortcuts</h2>
+            
+    <div class="content clearfix">
+      <ul class="menu"><li class="first last expanded active-trail"><a href="/shortcuts" title="" class="active-trail">Shortcuts</a><ul class="menu"><li class="first leaf"><a href="http://www.uwplatt.edu/go/email" title="">E-mail</a></li>
+<li class="leaf"><a href="/desire2learn" title="">Desire2Learn</a></li>
+<li class="leaf active-trail"><a href="/its/pass" title="" class="active-trail active">PASS</a></li>
+<li class="leaf"><a href="/alpha" title="">A-to-Z Index</a></li>
+<li class="leaf"><a href="/library" title="">Library</a></li>
+<li class="leaf"><a href="/phonebook" title="">Phonebook</a></li>
+<li class="leaf"><a href="http://uwplatt.collegiatelink.net/" title="">PioneerLink</a></li>
+<li class="leaf"><a href="/student-center/information-center" title="">Information Center</a></li>
+<li class="leaf"><a href="/technical-support" title="">Technical Support</a></li>
+<li class="leaf"><a href="/news" title="">University News</a></li>
+<li class="leaf"><a href="/map" title="">Map and Directions</a></li>
+<li class="leaf"><a href="/transportation">Transportation</a></li>
+<li class="last leaf"><a href="/registrar/transcripts" title="">Transcripts</a></li>
+</ul></li>
+</ul>    </div>
+  </div>
+</section>  </div>
+</div>  </div>
+</div><div id="zone-branding-wrapper" class="zone-wrapper zone-branding-wrapper clearfix">  
+  <div id="zone-branding" class="zone zone-branding clearfix container-12">
+    <div class="grid-12 region region-branding" id="region-branding">
+  <div class="region-inner region-branding-inner">
+        <div class="branding-data clearfix">
+            <div class="logo-img">
+        <a href="/" rel="home" title=""><img src="http://www.uwplatt.edu/sites/all/themes/OmegaUWP/images/logo.png" alt="" id="logo" /></a>      </div>
+                </div>
+        <div class="block block-block block-98 block-block-98 odd block-without-title" id="block-block-98">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <h3 class="two-line">
+	<a href="/">University of Wisconsin-Platteville</a></h3>
+<h2>
+	<a href="/its">Information Technology<br />
+	Services</a></h2>
+<ul class="BreadcrumbsUWP">
+	<li>
+		<a href="/">University Home Page</a> <span>&gt;</span></li>
+	<li>
+		<a href="/administrative-services">Administrative Services</a> <span>&gt;</span></li>
+	<li>
+		<a href="/its">Information Technology Services</a></li>
+</ul>
+    </div>
+  </div>
+</div><div class="block block-menu block-menu-audience block-menu-menu-audience even block-without-title" id="block-menu-menu-audience">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <ul class="menu"><li class="first leaf"><a href="/future-students" title="">Future Students</a></li>
+<li class="leaf"><a href="/students" title="">Current Students</a></li>
+<li class="leaf"><a href="/faculty-staff" title="">Faculty and Staff</a></li>
+<li class="leaf"><a href="/alumni-and-friends" title="">Alumni and Friends</a></li>
+<li class="last leaf"><a href="/community" title="">Community</a></li>
+</ul>    </div>
+  </div>
+</div><section class="block block-block block-6 block-block-6 odd" id="block-block-6">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Mobile Icons</h2>
+            
+    <div class="content clearfix">
+      <a href="#footer-anchor" id="icon-mobile-search-menu" onclick="window.scrollTo(0,jQuery('#footer-anchor').offset().top);return(false);">Search and Menus</a>    </div>
+  </div>
+</section><div class="block block-block block-9 block-block-9 even block-without-title" id="block-block-9">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <ul>
+	<li class="facebook">
+		<a href="/facebook" title="Facebook">Facebook</a></li>
+	<li class="twitter">
+		<a href="/twitter" title="Twitter">Twitter</a></li>
+	<li class="linkedin">
+		<a href="/linkedin" title="LinkedIn">LinkedIn</a></li>
+	<li class="youtube">
+		<a href="/youtube" title="YouTube">YouTube</a></li>
+</ul>    </div>
+  </div>
+</div>  </div>
+</div>  </div>
+</div><div id="zone-menu-wrapper" class="zone-wrapper zone-menu-wrapper clearfix">  
+  <div id="zone-menu" class="zone zone-menu clearfix container-12">
+    <div class="grid-12 region region-menu" id="region-menu">
+  <div class="region-inner region-menu-inner">
+        <section class="block block-menu block-menu-section-oit block-menu-menu-section-oit odd" id="block-menu-menu-section-oit">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Section: ITS</h2>
+            
+    <div class="content clearfix">
+      <ul class="menu"><li class="first expanded"><a href="/its">About</a><ul class="menu"><li class="first leaf"><a href="/its-news" title="">Discover IT</a></li>
+<li class="leaf"><a href="/its/it-prioritizations">IT Prioritizations</a></li>
+<li class="leaf"><a href="https://www.uwplatt.edu/its/it-strategic-plan">IT Strategic Plan</a></li>
+<li class="leaf"><a href="https://kb.uwplatt.edu/search.php?q=policy&amp;cat=2544" title="">Policies</a></li>
+<li class="leaf"><a href="http://www.uwplatt.edu/its/projects">Projects</a></li>
+<li class="leaf"><a href="/its/student-technology-advisory-committee">STAC</a></li>
+<li class="expanded"><a href="/its/its-staff-directory">Staff Directories</a><ul class="menu"><li class="first leaf"><a href="https://www.uwplatt.edu/its/information-systems-reporting-staff">Information Systems &amp; Reporting</a></li>
+<li class="leaf"><a href="/its/its-administration-staff">ITS Administration</a></li>
+<li class="leaf"><a href="/mts/staff">Media Technology Services</a></li>
+<li class="leaf"><a href="/its/its-student-staff">Student Staff</a></li>
+<li class="leaf"><a href="/its/support-services-staff">Support Services</a></li>
+<li class="leaf"><a href="/its/systems-and-infrastructure-staff">Systems and Infrastructure</a></li>
+<li class="last leaf"><a href="/web/web-development-staff">Web Development</a></li>
+</ul></li>
+<li class="last expanded"><a href="/its/its-teams">Team pages</a><ul class="menu"><li class="first leaf"><a href="https://www.uwplatt.edu/its/information-systems-reporting">Information Systems &amp; Reporting</a></li>
+<li class="leaf"><a href="/mts" title="">Media Technology Services</a></li>
+<li class="leaf"><a href="/its/support-services">Support Services</a></li>
+<li class="leaf"><a href="/its/systems-and-infrastructure">Systems and Infrastructure</a></li>
+<li class="last leaf"><a href="/web">Web Development</a></li>
+</ul></li>
+</ul></li>
+<li class="expanded"><a href="/its/get-connected-0">Get Connected</a><ul class="menu"><li class="first leaf"><a href="/its/accounts">Accounts</a></li>
+<li class="leaf"><a href="/its/network-printing">Network Printing</a></li>
+<li class="leaf"><a href="/its/online-storage">Online Storage</a></li>
+<li class="leaf"><a href="/its/passwords">Passwords</a></li>
+<li class="leaf"><a href="/its/wifi">Wi-Fi</a></li>
+<li class="last leaf"><a href="http://www.uwplatt.edu/its/unified-communications-self-service">Unified Communications</a></li>
+</ul></li>
+<li class="expanded"><a href="/its/support-0">Support</a><ul class="menu"><li class="first leaf"><a href="/help-desk" title="">Help Desk</a></li>
+<li class="leaf"><a href="/resnet" title="">ResNet</a></li>
+<li class="last leaf"><a href="/its/training">Training</a></li>
+</ul></li>
+<li class="expanded active-trail"><a href="/its/applications" class="active-trail">Applications</a><ul class="menu"><li class="first leaf"><a href="/its/uw-platteville-business-intelligence">Business Intelligence</a></li>
+<li class="leaf"><a href="/desire2learn">Desire2Learn</a></li>
+<li class="leaf"><a href="/its/email">E-mail</a></li>
+<li class="leaf"><a href="/its/its-issue-tracking" title="ITS Issue Tracking">ITS Issue Tracking</a></li>
+<li class="leaf"><a href="/its/apps" title="">Mobile Apps</a></li>
+<li class="last leaf active-trail"><a href="/its/pass" class="active-trail active">PASS</a></li>
+</ul></li>
+<li class="expanded"><a href="/its/information-security">Information Security</a><ul class="menu"><li class="first leaf"><a href="/its/information-security-policies">Policies</a></li>
+<li class="leaf"><a href="/its/information-security-faqs">FAQ</a></li>
+<li class="last leaf"><a href="/its/information-security-awareness-and-training">Awareness and Training</a></li>
+</ul></li>
+<li class="leaf"><a href="https://kb.uwplatt.edu/" title="">ITS Knowledgebase</a></li>
+<li class="last leaf"><a href="/its/contact">Contact</a></li>
+</ul>    </div>
+  </div>
+</section>  </div>
+</div>
+  </div>
+</div></header>    
+      <section id="section-content" class="section section-content">
+  <div id="zone-content-wrapper" class="zone-wrapper zone-content-wrapper clearfix">  
+  <div id="zone-content" class="zone zone-content clearfix container-12">    
+        
+        <div class="grid-12 region region-content" id="region-content">
+  <div class="region-inner region-content-inner">
+    <a id="main-content"></a>
+                <h1 class="title" id="page-title">PASS</h1>
+                        <div class="block block-system block-main block-system-main odd block-without-title" id="block-system-main">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="panel-display omega-grid omega-12-threecol-4-4-4" >
+  <div class="panel-panel grid-12">
+    <div class="inside uwp-layout-top"><div class="panel-pane pane-block pane-block-301"   class="panel-pane pane-block pane-block-301">
+  
+      
+  
+  <div class="pane-content">
+    <!-- begin olark code --><script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
+f[z]=function(){
+(a.s=a.s||[]).push(arguments)};var a=f[z]._={
+},q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
+f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
+0:+new Date};a.P=function(u){
+a.p[u]=new Date-a.p[0]};function s(){
+a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
+hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
+return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
+b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
+b.contentWindow[g].open()}catch(w){
+c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
+var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
+b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
+loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+/* custom configuration goes here (www.olark.com/documentation) */
+olark.identify('9567-903-10-2315');/*]]>*/</script><noscript><a href="https://www.olark.com/site/9567-903-10-2315/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript><!-- end olark code -->  </div>
+
+  
+  </div>
+</div>
+  </div>
+  <div class="panel-panel EmptyRegionUWP">
+    <div class="inside uwp-layout-left"></div>
+  </div>
+  <div class="panel-panel grid-8"><div class="inside uwp-layout-middle"><div class="panel-pane pane-custom pane-1 clear_float_reuseable"   class="panel-pane pane-custom pane-1 clear_float_reuseable">
+  
+        <h2 class="pane-title">
+      Clear Float    </h2>
+    
+  
+  <div class="pane-content">
+    <p>This pane clears float!</p>
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-node-body"   class="panel-pane pane-node-body">
+  
+      
+  
+  <div class="pane-content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><h3>
+	About PASS</h3>
+<p><span>The Pioneer Administrative Software System (PASS) is used for course registration, payment, financial aid, administrative functions, and more. <a href="/pass">Log in to PASS.</a></span></p>
+<h3>
+	<span>About PASS Express</span></h3>
+<p>PASS Express provides a streamlined interface to PASS, especially for mobile devices.   PASS Express includes some key features for students, faculty and advisors.  Discover what’s there for you. <a href="https://passexpress.uwplatt.edu">Log in to PASS Express.</a></p>
+<h3>
+	PASS Resources</h3>
+<ul><li>
+		<a href="https://kb.uwplatt.edu/search.php?q=&amp;cat=2553">Printable Knowledge Base Documents</a></li>
+	<li>
+		<a href="http://www.uwplatt.edu/registrar/guest-access-classes">Online Class Schedule</a></li>
+	<li>
+		<a href="/distance-education/pass">PASS Resources for Distance Education Students</a></li>
+	<li>
+		<a href="https://kb.uwplatt.edu/page.php?id=30207">Web Browser Support (KB)</a> — <a href="http://www.whatbrowser.org/en/" title="What Browser?">What's a Web Browser?</a></li>
+</ul>
+
+<h3>
+	Questions?</h3>
+<p>Campus Students contact the <a href="http://www3.uwplatt.edu/help-desk">ITS Help Desk</a>.</p>
+<p>Distance Education Students contact the <a href="http://www.uwplatt.edu/disted/help.html">Distance Education Help Desk</a>.</p>
+<h3>
+	UW-Platteville Staff</h3>
+<p><a href="/its/pass-development">PASS Technical Resources</a></p>
+<h3>
+	Scheduled Maintenance</h3>
+<p>Every Friday from 5–6 p.m.</p>
+<p>Any or all systems may be down during this planned outage window.  For a list of specific systems affected each week, check:</p>
+<ul><li>
+		The campus <a href="http://www3.uwplatt.edu/events?field_workbench_access_taxonomy_tid_1%5B%5D=76">Maintenance Calendar</a></li>
+	<li>
+		The Latest News on the <a href="http://www3.uwplatt.edu/help-desk">ITS Help Desk</a> Home page</li>
+	<li>
+		E-mail notifications</li>
+</ul></div></div></div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-custom pane-2 clear_float_reuseable"   class="panel-pane pane-custom pane-2 clear_float_reuseable">
+  
+        <h2 class="pane-title">
+      Clear Float    </h2>
+    
+  
+  <div class="pane-content">
+    <p>This pane clears float!</p>
+  </div>
+
+  
+  </div>
+</div>
+  </div>
+  <div class="panel-panel grid-4">
+    <div class="inside uwp-layout-right"><div class="panel-pane pane-entity-field pane-node-field-body-right-side"   class="panel-pane pane-entity-field pane-node-field-body-right-side">
+  
+      
+  
+  <div class="pane-content">
+    <div class="field field-name-field-body-right-side field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p><a class="ButtonOrangeP-Large" href="http://www.uwplatt.edu/pass">Log Into PASS<br />
+	With NetID</a></p>
+<p><a class="ButtonOrangeP-Large" href="https://passexpress.uwplatt.edu">Pass Express</a></p>
+</div></div></div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-entity-field pane-node-field-reuseables-for-side-pane"   class="panel-pane pane-entity-field pane-node-field-reuseables-for-side-pane">
+  
+      
+  
+  <div class="pane-content">
+    <div class="field field-name-field-reuseables-for-side-pane field-type-entityreference field-label-hidden"><div class="field-items"><div class="field-item even"><article class="node node-reusable-for-side-pane node-published node-not-promoted node-not-sticky author-manwilln odd clearfix" id="node-reusable-for-side-pane-1958">
+        <header>
+    <h2 class="node-title"><a href="/its/help-desk-contact-information" title="Help Desk: Contact Information">Help Desk: Contact Information</a></h2>
+  </header>
+        
+  
+  <div class="content clearfix">
+    <div class="field field-name-field-title-for-display field-type-text field-label-hidden"><div class="field-items"><div class="field-item even">Need Help?</div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p><a href="http://kb.uwplatt.edu">Search our KnowledgeBase</a><br />
+	ITS KnowledgeBase is a searchable database with helpful documentation related to campus technologies.</p>
+<p><a href="/icet/atomic-learning-login">Atomic Learning</a><br />
+	Use your UW-Platteville username and password to access Atomic Learning video tutorials.</p>
+<p><a href="/help-desk"><strong>ITS Help Desk</strong></a><br />
+	107 Karrmann Library<br />
+	Tel: <a href="tel:608.342.1400">608.342.1400</a><br />
+	Email: <a href="mailto:helpdesk@uwplatt.edu">helpdesk@uwplatt.edu</a></p>
+<p><br /><strong>Academic Year Full-Service Hours</strong><br />
+	Monday - Thursday: 7:30am - 7:30pm<br />
+	Friday: 7:30am - 6:00pm<br />
+	Saturday - Sunday: Closed</p>
+<p><strong>Academic Year Phone/Email-Only Hours</strong><br />
+	Mon - Fri: 7:00-9:00am and 7:00-10:00pm<br />
+	Saturday: 10:00am - 5:00pm<br />
+	Sunday: 11:00am - 5:00pm</p>
+</div></div></div>  </div>
+  
+  <div class="clearfix">
+          <nav class="links node-links clearfix"></nav>
+    
+      </div>
+</article>
+</div></div></div>  </div>
+
+  
+  </div>
+</div>
+  </div>
+  <div class="panel-panel grid-12">
+    <div class="inside uwp-layout-bottom"></div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div><section class="block block-block block-7 block-block-7 even" id="block-block-7">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Footer Anchor</h2>
+            
+    <div class="content clearfix">
+      <p><a id="footer-anchor"></a></p>
+    </div>
+  </div>
+</section>      </div>
+</div>  </div>
+</div></section>    
+  
+      <footer id="section-footer" class="section section-footer">
+  <div id="zone-footer-wrapper" class="zone-wrapper zone-footer-wrapper clearfix">  
+  <div id="zone-footer" class="zone zone-footer clearfix container-12">
+    <div class="grid-12 region region-footer-first" id="region-footer-first">
+  <div class="region-inner region-footer-first-inner">
+    <section class="block block-block block-4 block-block-4 odd" id="block-block-4">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Site Search</h2>
+            
+    <div class="content clearfix">
+      <form action="/search-results" class="cse-form" id="cse-search-box-bottom">
+	<input autocomplete="off" dir="ltr" name="keywords" size="31" spellcheck="false" type="text" /><input name="sa" type="submit" value="" /></form>
+    </div>
+  </div>
+</section><section class="block block-menu-block block-2 block-menu-block-2 even" id="block-menu-block-2">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Main Website Pages</h2>
+            
+    <div class="content clearfix">
+      <div class="menu-block-wrapper menu-block-2 menu-name-menu-promotion-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first expanded menu-mlid-605"><a href="/admission" title="">Admission</a><ul class="menu"><li class="first leaf menu-mlid-8672"><a href="/admission" title="">Campus</a></li>
+<li class="last leaf menu-mlid-8673"><a href="/distance-education/academic-calendars">Online</a></li>
+</ul></li>
+<li class="expanded menu-mlid-606"><a href="/academics" title="">Academics</a><ul class="menu"><li class="first leaf menu-mlid-8674"><a href="/academics" title="">Campus</a></li>
+<li class="last leaf menu-mlid-8675"><a href="/distance-education/online-programs" title="">Online</a></li>
+</ul></li>
+<li class="leaf menu-mlid-607"><a href="/campus-life" title="">Campus Life</a></li>
+<li class="leaf menu-mlid-608"><a href="/athletics" title="">Athletics</a></li>
+<li class="expanded menu-mlid-609"><a href="/events" title="">Calendars</a><ul class="menu"><li class="first leaf menu-mlid-8676"><a href="/events" title="">Campus</a></li>
+<li class="last leaf menu-mlid-8677"><a href="/distance-education/academic-calendars">Online</a></li>
+</ul></li>
+<li class="last expanded menu-mlid-4224"><a href="/about" title="">About</a><ul class="menu"><li class="first leaf menu-mlid-8680"><a href="/about" title="">Campus</a></li>
+<li class="last leaf menu-mlid-8681"><a href="/distance-education" title="">Online</a></li>
+</ul></li>
+</ul></div>
+    </div>
+  </div>
+</section><section class="block block-menu-block block-5 block-menu-block-5 odd" id="block-menu-block-5">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Resources for...</h2>
+            
+    <div class="content clearfix">
+      <div class="menu-block-wrapper menu-block-5 menu-name-menu-audience parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first leaf menu-mlid-3729"><a href="/future-students" title="">Future Students</a></li>
+<li class="leaf menu-mlid-674"><a href="/students" title="">Current Students</a></li>
+<li class="leaf menu-mlid-675"><a href="/faculty-staff" title="">Faculty and Staff</a></li>
+<li class="leaf menu-mlid-676"><a href="/alumni-and-friends" title="">Alumni and Friends</a></li>
+<li class="last leaf menu-mlid-677"><a href="/community" title="">Community</a></li>
+</ul></div>
+    </div>
+  </div>
+</section><section class="block block-menu-block block-4 block-menu-block-4 even" id="block-menu-block-4">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Shortcuts</h2>
+            
+    <div class="content clearfix">
+      <div class="menu-block-wrapper menu-block-4 menu-name-menu-shortcuts parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first last expanded active-trail menu-mlid-643"><a href="/shortcuts" title="" class="active-trail">Shortcuts</a><ul class="menu"><li class="first leaf menu-mlid-635"><a href="http://www.uwplatt.edu/go/email" title="">E-mail</a></li>
+<li class="leaf menu-mlid-637"><a href="/desire2learn" title="">Desire2Learn</a></li>
+<li class="leaf active-trail active menu-mlid-636"><a href="/its/pass" title="" class="active-trail active">PASS</a></li>
+<li class="leaf menu-mlid-641"><a href="/alpha" title="">A-to-Z Index</a></li>
+<li class="leaf menu-mlid-638"><a href="/library" title="">Library</a></li>
+<li class="leaf menu-mlid-634"><a href="/phonebook" title="">Phonebook</a></li>
+<li class="leaf menu-mlid-6125"><a href="http://uwplatt.collegiatelink.net/" title="">PioneerLink</a></li>
+<li class="leaf menu-mlid-630"><a href="/student-center/information-center" title="">Information Center</a></li>
+<li class="leaf menu-mlid-631"><a href="/technical-support" title="">Technical Support</a></li>
+<li class="leaf menu-mlid-4682"><a href="/news" title="">University News</a></li>
+<li class="leaf menu-mlid-633"><a href="/map" title="">Map and Directions</a></li>
+<li class="leaf menu-mlid-632"><a href="/transportation">Transportation</a></li>
+<li class="last leaf menu-mlid-640"><a href="/registrar/transcripts" title="">Transcripts</a></li>
+</ul></li>
+</ul></div>
+    </div>
+  </div>
+</section><section class="block block-menu block-menu-social-media block-menu-menu-social-media odd" id="block-menu-menu-social-media">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Social Media</h2>
+            
+    <div class="content clearfix">
+      <ul class="menu"><li class="first leaf"><a href="/facebook">Facebook</a></li>
+<li class="leaf"><a href="/twitter">Twitter</a></li>
+<li class="leaf"><a href="/linkedin">LinkedIn</a></li>
+<li class="last leaf"><a href="/youtube">YouTube</a></li>
+</ul>    </div>
+  </div>
+</section><section class="block block-block block-1 block-block-1 even" id="block-block-1">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Footer</h2>
+            
+    <div class="content clearfix">
+      <div itemscope itemtype="http://schema.org/CollegeOrUniversity">
+<p>Copyright &copy; 1995-2015 <span itemprop="name">University of Wisconsin-Platteville</span> and The Board of Regents - University of Wisconsin System</p>
+<p>Send comments to <a href="/web/web-development-contact-information">Web Development Office</a> - For more information, please call 1.608.342.1491</p>
+<p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">University of Wisconsin-Platteville, <span itemprop="streetAddress">1 University Plaza</span>, <span itemprop="addressLocality">Platteville</span>, <span itemprop="addressRegion">Wisconsin</span> <span itemprop="postalCode">53818-3099</span></p>
+<p>
+<a href="/user/login?destination=node/14124">Log In</a></p>
+</div>    </div>
+  </div>
+</section>  </div>
+</div>  </div>
+</div></footer>  </div>  <div class="region region-page-bottom" id="region-page-bottom">
+  <div class="region-inner region-page-bottom-inner">
+      </div>
+</div></body>
+</html>

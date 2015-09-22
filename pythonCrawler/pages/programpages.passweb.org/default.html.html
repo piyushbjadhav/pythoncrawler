@@ -1,0 +1,1261 @@
+<html>
+<head>
+  <title>CASSchoolPages</title>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  <meta http-equiv="Cache-Control" content="No-Store" />
+  <meta http-equiv="Expires" content="-1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+
+  <link rel="stylesheet" type="text/css" media="all" href="/style/yahoo-reset-min.css"/>
+  <link rel="stylesheet" type="text/css" media="all" href="/style/style.css"/>
+  <link rel="stylesheet" type="text/css" media="all" href="/style/survey.css"/>
+  <link rel="stylesheet" type="text/css" media="print" href="/style/print.css"/>
+  
+  <link href="/images/favicon.png" rel="shortcut icon" />
+  <link href="/images/favicon.png" rel="icon" />
+
+  <script src="/js/jquery-1.4.2.min.js"></script>
+  <script src="/js/jquery.tablesorter.min.js"></script>
+  <script src="/js/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
+  <script src="/js/tinymce/jscripts/tiny_mce/jquery.tinymce.js"></script>
+  <script src="/js/leaf.js"></script>
+  <script src="/js/main.js"></script>
+
+
+<script type="text/javascript" src="/js/jquery-ui-1.8.1.custom/js/jquery-ui-1.8.1.custom.min.js"></script>
+<link type="text/css" href="/js/jquery-ui-1.8.1.custom/css/smoothness/jquery-ui-1.8.1.custom.css" rel="stylesheet" />
+<script type='text/javascript' src='/js/jquery.cookie.js' ></script>
+<script type='text/javascript' src='/js/fancybox/jquery.fancybox-1.3.1.js' ></script>
+<link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+<script type="text/javascript" src="/js/tinymce/jscripts/tiny_mce/jquery.tinymce.js"></script>
+<script type='text/javascript' src='/js/plugins/jquery.textareaCounter.plugin.js'></script>
+<script type='text/javascript' src='/js/cas_school_pages.js'></script>
+<script type='text/javascript' src='/js/jquery-tooltip/jquery.tooltip.js'></script>
+<script type="text/javascript" src="/js/jquery.json-2.2.min.js"></script>
+<script type="text/javascript" src="/js/one-to-many.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<!-- script type="text/javascript" src="/js/tinymce/jscripts/tiny_mce/tiny_mce.js"></script -->
+<link rel="stylesheet" type="text/css" href="/js/jquery-tooltip/jquery.tooltip.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" media="all" href="/style/casschoolpages.css"/>
+
+<script src="/js/cahme.js"></script>
+
+<script type="text/javascript">
+
+	 $(document).ready(function(){ 
+		/* Dsiable the portlet sorting */
+		$(".column").sortable({ disabled: true });
+
+        /* Initialize TinyMCE */
+        $('textarea.tinymce').tinymce({
+            //script_url : '/js/tinymce/jscripts/tiny_mce/tiny_mce.js',
+            mode  : "textareas",
+            theme : 'advanced',
+            plugins : "paste",
+            theme_advanced_buttons1 : "bold,italic,underline,strikethrough,|,bullist,numlist,separator,outdent,indent,|,fontsizeselect,forecolor,|,justifyleft,justifycenter,justifyright,justifyfull,|,pasteword",
+            theme_advanced_buttons2 : "",
+            theme_advanced_buttons3 : "",
+            theme_advanced_buttons4 : "",
+            theme_advanced_toolbar_location : "top",
+            theme_advanced_toolbar_align : "left",
+            theme_advanced_statusbar_location : "bottom",
+            theme_advanced_path : false,
+            setup : function(ed) {
+               ed.onKeyUp.add(function(ed, e){
+               var strip = (tinyMCE.activeEditor.getContent()).replace(/(<([^>]+)>)/ig,"");
+               var text = strip.split(' ').length + " Words, " +  strip.length + " Characters";
+            tinymce.DOM.setHTML(tinymce.DOM.get(tinyMCE.activeEditor.id + '_path_row'), text);
+     });
+     }
+  });
+
+        });
+        
+		/* Initialize Tooltips */			
+		SetupTooltips();
+
+		
+</script>
+
+
+<style type="text/css">
+  body {
+    background-color: white;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: 1px solid #01724E;
+
+  }
+
+//#009e60;
+  #tabs div#subtabs {
+    background-color: ##F87431;
+    height: 24px;
+  }
+
+  #subtabs #back_button {
+    color: #fdf8f4;
+    font-size: 10px;
+    font-family: verdana,arial,helvetica,san-serif;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 24px;
+    margin-left: 10px;
+  }
+
+</style>
+
+<script>
+$(function(){ $('#subtabs').append('<a id="back_button" href="http://programpages.passweb.org/login">BACK TO PROGRAM PAGES LOGIN</a>'); });
+</script>
+
+
+
+
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  	      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  	   ga('create', 'UA-34291661-16', 'auto');
+  	   ga('send', 'pageview');
+
+</script>
+
+
+</head>
+
+<body id="top">
+
+<!--[if IE 6]>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  
+<div style="background-color:#ff8888; font-weight:bold; text-align:center; padding:10px; margin-bottom:10px">
+  You appear to be using Internet Explorer 6, an outdated and unsupported web browser.  
+  <br/>
+  <br/>
+  For best results, please access this site using a modern browser such as 
+  <a href="http://getfirefox.com">Mozilla Firefox</a>,
+  <a href="http://www.google.com/chrome">Google Chrome</a>,
+  <a href="http://www.apple.com/safari/">Apple Safari</a>,
+  <br/>
+  or a more recent version of 
+  <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx">Microsoft Internet Explorer</a>.
+  <br/>
+  <br/>
+  If you must continue using Internet Explorer 6, please install the free
+  <a href="http://www.google.com/chromeframe" target="_blank" 
+   onclick="CFInstall.check({mode:'popup'}); return false">Google Chrome Frame</a>
+  plugin.
+</div>
+<![endif]-->
+  
+<!-- div style="background-color:#ff8888; font-weight:bold; font-size: 12px; text-align:left; padding:15px; margin-bottom:10px; font-family: Georgia, times, serif; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.47), 0 0 40px rgba(0, 0, 0, 0.16) inset; border:#9aa;">
+       Logins are now disabled while we make improvements to the school pages for the 2013-2014 application cycle. <br />
+       We apologize for any inconvenience this may cause and appreciate your patience during this scheduled maintenance period.
+</div -->
+
+
+
+<!--div style="background-color:#ff8888; font-weight:bold; font-size: 12px; text-align:left; padding:15px; margin-bottom:10px; font-family: Georgia, times, serif; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.47), 0 0 40px rgba(0, 0, 0, 0.16) inset; border:#9aa;">
+<p> 
+This system will be unavailable later tonight (Friday, 06/05/2015) from 12.00AM until 4.00AM (Eastern Daylight Time) as we perform system maintenance.
+We apologize for any inconvenience this may cause and appreciate your patience during this maintenance period. </p>
+</div-->
+
+
+  
+  
+  <div id="header">
+  
+<a href="/"><img src="/images/pass_logo.png" class="logo" alt="CASSchoolPages logo"></a>
+
+
+
+<span id="user_info">
+
+
+
+
+  </div><!-- #header -->
+  
+  <div id="main">
+  <div id="tabs">
+<!-- <a href="#" onclick="LEAF.help_text('search'); return false"><img id="help-image" src="/images/question-mark_22x22.png"></a> -->
+<a href="#" onclick="window.print(); return false"><img id="print-image" src="/images/printer_22x22.png"></a>
+
+<ul class="tabs">
+
+</ul>
+
+
+<div id="subtabs">
+
+  &nbsp;
+
+</div><!-- #subtabs -->
+
+</div><!-- #main > #tabs -->
+
+<div id="status_msg_container">
+  <div id="status_msg">
+    
+  </div><!-- #status_msg -->
+</div><!-- #status_msg_container -->
+
+
+<div class="under-tabs">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<div></div>
+
+
+<div class="under-tabs">
+    <div id="profile">
+        
+        <p>
+        Welcome to the ADEA PASS Search Engine. Here you can find: </p>
+        <ul>
+            <li>       Program profiles for the over 650 participating programs</li>
+            <li>       Deadline dates</li>
+            <li>       Contact information</li>
+            <li>       Program requirements and supplemental materials</li> 
+        </ul>
+        <br />
+        <p>For application instructions, details on the Personal Potential Index (PPI), or information about the Match, please visit <a href="http://www.adeapass.org" style="no_underline">www.adeapass.org</a>. </p>
+        <br />
+        <p>To begin the ADEA PASS application, visit <a href="http://portal.passweb.org">https://portal.passweb.org</a>. </p>
+        <br />
+        <p>Disclaimer: Individual programs provide the content of their ADEA PASS Program Search Engine entries. All programs are responsible for the accuracy of their program information; ADEA advises applicants to contact the programs directly if there are further questions or discrepancies. </p>
+        <br />        
+        <p>Define your search from any one or more options presented below. </p>
+        
+<p>
+        
+ 
+<br><br/>
+
+</p>
+<h1>Search</h1>
+
+
+<form method="POST">
+
+<label for="school"> Program Name: </label>
+<select name="school">
+<option value=""></option>
+
+  <option  value="3553">A.T. Still Univ.- Arizona School of Dentistry</option>
+
+  <option  value="3954">A.T. Still Univ.- College of Graduate Health Studies</option>
+
+  <option  value="3475">Abington Memorial Hospital</option>
+
+  <option  value="3955">Alameda Health System</option>
+
+  <option  value="3401">Albert Einstein Medical Center</option>
+
+  <option  value="3337">Allegheny General Hospital</option>
+
+  <option  value="3437">Ann & Robert H. Lurie Children's Hospital of Chicago</option>
+
+  <option  value="3432">Banner Good Samaritan Medical Center</option>
+
+  <option  value="3524">Bay Pines Veterans Administration Medical Center</option>
+
+  <option  value="3792">Bellevue Hospital Center</option>
+
+  <option  value="3281">Berkshire Medical Center</option>
+
+  <option  value="3600">Bon Secours St Mary's Hospital of Richmond</option>
+
+  <option  value="3286">Boston University Henry M Goldman School of Dental Medicine</option>
+
+  <option  value="3801">Boston University Henry M Goldman School of Dental Medicine (Digital Dentistry)</option>
+
+  <option  value="3354">Bronx Lebanon Hospital Center</option>
+
+  <option  value="3470">Brookdale Univ. Hospital and Medical Center </option>
+
+  <option  value="3517">Cambridge Health Alliance/Harvard School of Dental Medicine</option>
+
+  <option  value="3566">Carilion Clinic</option>
+
+  <option  value="3287">Carle Foundation Hospital</option>
+
+  <option  value="3380">Carolinas Medical Center</option>
+
+  <option  value="3348">Case Western Reserve University</option>
+
+  <option  value="3305">Cedars Sinai Medical Center</option>
+
+  <option  value="3760">Children's Hospital Boston</option>
+
+  <option  value="3451">Children's Hospital Colorado</option>
+
+  <option  value="3428">Children's Hospital of Michigan</option>
+
+  <option  value="3521">Children's Hospital of Pittsburgh</option>
+
+  <option  value="3487">Children's Hospital of Wisconsin</option>
+
+  <option  value="3466">Children's Mercy Hospital and Clinics in Kansas City Missouri</option>
+
+  <option  value="3391">Children's National Hospital Center</option>
+
+  <option  value="3349">Christiana Care Health System</option>
+
+  <option  value="3364">Cincinnati Children's Hospital Medical Center</option>
+
+  <option  value="3564">Cleveland Clinic Foundation</option>
+
+  <option  value="3446">Columbia University College of Dental Medicine</option>
+
+  <option  value="3296">Community Medical Center - Fresno California</option>
+
+  <option  value="3335">Connecticut Children's Med Ctr & University of Connecticut Health Ctr</option>
+
+  <option  value="3301">Cook County Hospital</option>
+
+  <option  value="3794">Dade County Dental Research Clinic (DBA) Florida Institute</option>
+
+  <option  value="3506">Danbury Hospital</option>
+
+  <option  value="3333">Denver Health Medical Center</option>
+
+  <option  value="3563">Department of Veterans Affairs Medical Center at Togus, Maine</option>
+
+  <option  value="3473">Dept. of Veteran's Affairs Hospital, San Antonio</option>
+
+  <option  value="3567">Detroit Receiving Hospital</option>
+
+  <option  value="3526">Drexel University College of Medicine</option>
+
+  <option  value="3316">East Carolina University School of Dental Medicine</option>
+
+  <option  value="3291">Ellis Hospital</option>
+
+  <option  value="3568">Emory University</option>
+
+  <option  value="3371">Erie County Medical Center</option>
+
+  <option  value="3550">Evanston Hospital</option>
+
+  <option  value="3467">Faxton - St. Luke's Healthcare</option>
+
+  <option  value="3757">Flushing Hospital Medical Center</option>
+
+  <option  value="3381">Geisinger Medical Center</option>
+
+  <option  value="3407">George E. Wahlen Dept. of Veterans Affairs Medical Center</option>
+
+  <option  value="3393">Georgia Regents University formerly Georgia Health Sciences University</option>
+
+  <option  value="3345">Gundersen Lutheran</option>
+
+  <option  value="3449">Hackensack University Medical Center</option>
+
+  <option  value="3460">HackensackUMC Mountainside</option>
+
+  <option  value="3264">Harbor-UCLA Medical Center</option>
+
+  <option  value="3384">Harlem Hospital Center</option>
+
+  <option  value="3514">Hartford Hospital Dental Clinic</option>
+
+  <option  value="3268">Harvard School of Dental Medicine</option>
+
+  <option  value="3791">Helen Hayes Hospital</option>
+
+  <option  value="3483">Hennepin County Medical Center</option>
+
+  <option  value="3398">Hospital of the University of Pennsylvania</option>
+
+  <option  value="659">Howard University</option>
+
+  <option  value="3544">Idaho State University</option>
+
+  <option  value="3299">Illinois Masonic Medical Center</option>
+
+  <option  value="3385">Indiana University</option>
+
+  <option  value="3308">Interfaith Medical Center</option>
+
+  <option  value="3504">J. F. K. Medical Center</option>
+
+  <option  value="3436">Jackson Memorial Hospital</option>
+
+  <option  value="3534">Jacksonville University</option>
+
+  <option  value="3377">Jacobi Medical Center</option>
+
+  <option  value="3295">Jamaica Hospital</option>
+
+  <option  value="3459">Jersey City Medical Center</option>
+
+  <option  value="3383">Jersey Shore Medical Center</option>
+
+  <option  value="3835">Jesse Brown V.A. Great  Lakes - Milwaukee/Green Bay, WI</option>
+
+  <option  value="3837">Jesse Brown V.A. Great Lakes, Chicago, IL</option>
+
+  <option  value="3565">Johns Hopkins Hospital</option>
+
+  <option  value="3448">Kings County Hospital Center</option>
+
+  <option  value="3489">Kingsbrook Jewish Medical Center</option>
+
+  <option  value="3471">Lancaster General Hospital</option>
+
+  <option  value="3488">Lehigh Valley Hospital and Health Network</option>
+
+  <option  value="3307">Lincoln Medical & Mental Health Center</option>
+
+  <option  value="664">Loma Linda University</option>
+
+  <option  value="3418">Loma Linda Veterans Administration Medical Center</option>
+
+  <option  value="3351">Long Island Jewish Medical Center</option>
+
+  <option  value="3411">Louisiana State Health Sciences Center</option>
+
+  <option  value="3290">Louisiana State University School of Dentistry</option>
+
+  <option  value="3298">Loyola University Medical Center</option>
+
+  <option  value="3962">Lutheran Medical Center  (NYU Lutheran) - Dover, NJ</option>
+
+  <option  value="3959">Lutheran Medical Center  (NYU Lutheran) - Immokalee, FL</option>
+
+  <option  value="3960">Lutheran Medical Center  (NYU Lutheran) - LECOM, FL</option>
+
+  <option  value="3963">Lutheran Medical Center  (NYU Lutheran) - Missouri Region</option>
+
+  <option  value="3848">Lutheran Medical Center (NYU Lutheran) - Anchorage, AK Site</option>
+
+  <option  value="3877">Lutheran Medical Center (NYU Lutheran) - Arizona</option>
+
+  <option  value="3863">Lutheran Medical Center (NYU Lutheran) - Atlanta, GA</option>
+
+  <option  value="3851">Lutheran Medical Center (NYU Lutheran) - Baltimore, MD</option>
+
+  <option  value="3880">Lutheran Medical Center (NYU Lutheran) - Boston, MA</option>
+
+  <option  value="3904">Lutheran Medical Center (NYU Lutheran) - Brooklyn, NY</option>
+
+  <option  value="3873">Lutheran Medical Center (NYU Lutheran) - Cape Cod, MA</option>
+
+  <option  value="3872">Lutheran Medical Center (NYU Lutheran) - Chicopee, MA</option>
+
+  <option  value="3934">Lutheran Medical Center (NYU Lutheran) - Cleveland, OH</option>
+
+  <option  value="3860">Lutheran Medical Center (NYU Lutheran) - Colorado</option>
+
+  <option  value="3942">Lutheran Medical Center (NYU Lutheran) - Community Dental Care Dallas, TX</option>
+
+  <option  value="3878">Lutheran Medical Center (NYU Lutheran) - Davis, CA</option>
+
+  <option  value="3943">Lutheran Medical Center (NYU Lutheran) - East Bakersfield, CA</option>
+
+  <option  value="3902">Lutheran Medical Center (NYU Lutheran) - El Paso, TX</option>
+
+  <option  value="3939">Lutheran Medical Center (NYU Lutheran) - El Rito, NM</option>
+
+  <option  value="3936">Lutheran Medical Center (NYU Lutheran) - Espanola, NM</option>
+
+  <option  value="3929">Lutheran Medical Center (NYU Lutheran) - Federalsburg, MD</option>
+
+  <option  value="3870">Lutheran Medical Center (NYU Lutheran) - Findlay, OH</option>
+
+  <option  value="3931">Lutheran Medical Center (NYU Lutheran) - Fitchburg, MA</option>
+
+  <option  value="3898">Lutheran Medical Center (NYU Lutheran) - Flint, MI</option>
+
+  <option  value="3956">Lutheran Medical Center (NYU Lutheran) - Foundry Dental Center, Bessemer, AL</option>
+
+  <option  value="3852">Lutheran Medical Center (NYU Lutheran) - Gallup, New Mexico</option>
+
+  <option  value="3899">Lutheran Medical Center (NYU Lutheran) - Grand Junction, CO</option>
+
+  <option  value="3933">Lutheran Medical Center (NYU Lutheran) - Greenville, OH</option>
+
+  <option  value="3895">Lutheran Medical Center (NYU Lutheran) - Half Moon Bay, CA</option>
+
+  <option  value="3908">Lutheran Medical Center (NYU Lutheran) - Hawaii Site</option>
+
+  <option  value="3948">Lutheran Medical Center (NYU Lutheran) - Hawaii, Oahu - Kalihi</option>
+
+  <option  value="3944">Lutheran Medical Center (NYU Lutheran) - Hayward, CA</option>
+
+  <option  value="3859">Lutheran Medical Center (NYU Lutheran) - Jacskon, MI</option>
+
+  <option  value="3916">Lutheran Medical Center (NYU Lutheran) - Jersey City, NJ</option>
+
+  <option  value="3928">Lutheran Medical Center (NYU Lutheran) - Keaau, HI</option>
+
+  <option  value="3906">Lutheran Medical Center (NYU Lutheran) - LMC Campus</option>
+
+  <option  value="3915">Lutheran Medical Center (NYU Lutheran) - Los Angeles, CA</option>
+
+  <option  value="3941">Lutheran Medical Center (NYU Lutheran) - Louisville, KY</option>
+
+  <option  value="3930">Lutheran Medical Center (NYU Lutheran) - Lynn, MA</option>
+
+  <option  value="3912">Lutheran Medical Center (NYU Lutheran) - Maryland Region</option>
+
+  <option  value="3910">Lutheran Medical Center (NYU Lutheran) - Massachusetts</option>
+
+  <option  value="3927">Lutheran Medical Center (NYU Lutheran) - Maui Wailuku, HI</option>
+
+  <option  value="3884">Lutheran Medical Center (NYU Lutheran) - Memphis, Tennessee</option>
+
+  <option  value="3858">Lutheran Medical Center (NYU Lutheran) - Metropolitan, NY</option>
+
+  <option  value="3853">Lutheran Medical Center (NYU Lutheran) - Miami, FL</option>
+
+  <option  value="3864">Lutheran Medical Center (NYU Lutheran) - Middletown, OH</option>
+
+  <option  value="3896">Lutheran Medical Center (NYU Lutheran) - Montana Region</option>
+
+  <option  value="3887">Lutheran Medical Center (NYU Lutheran) - Nashville, TN</option>
+
+  <option  value="3947">Lutheran Medical Center (NYU Lutheran) - New York</option>
+
+  <option  value="3926">Lutheran Medical Center (NYU Lutheran) - Oahu Waimanalo, HI</option>
+
+  <option  value="3925">Lutheran Medical Center (NYU Lutheran) - Oahu Wainae, HI</option>
+
+  <option  value="3856">Lutheran Medical Center (NYU Lutheran) - Oakland, CA</option>
+
+  <option  value="3894">Lutheran Medical Center (NYU Lutheran) - Othello, WA</option>
+
+  <option  value="3935">Lutheran Medical Center (NYU Lutheran) - Penasco, NM</option>
+
+  <option  value="3893">Lutheran Medical Center (NYU Lutheran) - Phoenix, AZ</option>
+
+  <option  value="3881">Lutheran Medical Center (NYU Lutheran) - Princess Anne, MD</option>
+
+  <option  value="3903">Lutheran Medical Center (NYU Lutheran) - Providence, RI Site</option>
+
+  <option  value="3868">Lutheran Medical Center (NYU Lutheran) - Pueblo, CO</option>
+
+  <option  value="3857">Lutheran Medical Center (NYU Lutheran) - Puerto Rico</option>
+
+  <option  value="3945">Lutheran Medical Center (NYU Lutheran) - Rancho Mirage, CA</option>
+
+  <option  value="3879">Lutheran Medical Center (NYU Lutheran) - Redding, CA</option>
+
+  <option  value="3865">Lutheran Medical Center (NYU Lutheran) - Renton, WA</option>
+
+  <option  value="3907">Lutheran Medical Center (NYU Lutheran) - San Diego, CA</option>
+
+  <option  value="3886">Lutheran Medical Center (NYU Lutheran) - San Francisco, CA</option>
+
+  <option  value="3891">Lutheran Medical Center (NYU Lutheran) - San Francisco, CA-UCSF Campus</option>
+
+  <option  value="3888">Lutheran Medical Center (NYU Lutheran) - San Jose, CA</option>
+
+  <option  value="3885">Lutheran Medical Center (NYU Lutheran) - Santa Barbara, CA</option>
+
+  <option  value="3937">Lutheran Medical Center (NYU Lutheran) - Santa Fe, NM</option>
+
+  <option  value="3919">Lutheran Medical Center (NYU Lutheran) - Sarrell Dental Center Athens, AL</option>
+
+  <option  value="3950">Lutheran Medical Center (NYU Lutheran) - Sarrell Dental Center Boaz & Anniston, AL</option>
+
+  <option  value="3921">Lutheran Medical Center (NYU Lutheran) - Sarrell Dental Center Dothan, AL</option>
+
+  <option  value="3922">Lutheran Medical Center (NYU Lutheran) - Sarrell Dental Center Montgomery, AL</option>
+
+  <option  value="3923">Lutheran Medical Center (NYU Lutheran) - Sarrell Dental Center Tuscaloosa, AL</option>
+
+  <option  value="3890">Lutheran Medical Center (NYU Lutheran) - Seattle, WA</option>
+
+  <option  value="3949">Lutheran Medical Center (NYU Lutheran) - Shingle Springs, CA</option>
+
+  <option  value="3940">Lutheran Medical Center (NYU Lutheran) - Snow Hill/Greenville, NC</option>
+
+  <option  value="3875">Lutheran Medical Center (NYU Lutheran) - South Dakota</option>
+
+  <option  value="3882">Lutheran Medical Center (NYU Lutheran) - Southeast Alaska</option>
+
+  <option  value="3897">Lutheran Medical Center (NYU Lutheran) - Southwest Florida</option>
+
+  <option  value="3964">Lutheran Medical Center (NYU Lutheran) - Spokane, WA</option>
+
+  <option  value="3913">Lutheran Medical Center (NYU Lutheran) - Springfield, MO</option>
+
+  <option  value="3866">Lutheran Medical Center (NYU Lutheran) - Tacoma, WA</option>
+
+  <option  value="3914">Lutheran Medical Center (NYU Lutheran) - Tampa, FL</option>
+
+  <option  value="3932">Lutheran Medical Center (NYU Lutheran) - Toledo, OH</option>
+
+  <option  value="3909">Lutheran Medical Center (NYU Lutheran) - Tucson, AZ</option>
+
+  <option  value="3867">Lutheran Medical Center (NYU Lutheran) - US Virgin Islands - St. Croix</option>
+
+  <option  value="3862">Lutheran Medical Center (NYU Lutheran) - Upstate, NY</option>
+
+  <option  value="3901">Lutheran Medical Center (NYU Lutheran) - Ventura, CA</option>
+
+  <option  value="3871">Lutheran Medical Center (NYU Lutheran) - Visalia, CA</option>
+
+  <option  value="3876">Lutheran Medical Center (NYU Lutheran) - Waco, TX</option>
+
+  <option  value="3892">Lutheran Medical Center (NYU Lutheran) - Winslow, AZ</option>
+
+  <option  value="3889">Lutheran Medical Center (NYU Lutheran) - Yakima Valley, WA</option>
+
+  <option  value="3419">Maimonides Medical Center</option>
+
+  <option  value="3378">Marquette University</option>
+
+  <option  value="3677">Marshfield Clinic</option>
+
+  <option  value="3453">Massachusetts General Hosp.Harvard General Practice Residency in Dentistry</option>
+
+  <option  value="3477">Massachusetts General Hospital</option>
+
+  <option  value="3417">Mayo Graduate School of Medicine</option>
+
+  <option  value="3340">Medical College of Wisconsin</option>
+
+  <option  value="3310">Medical University of South Carolina</option>
+
+  <option  value="3826">Meharry Medical College</option>
+
+  <option  value="3397">Mercy Medical Center</option>
+
+  <option  value="3277">MetroHealth Medical Center</option>
+
+  <option  value="3511">Miami Valley Hospital</option>
+
+  <option  value="3509">Monmouth Medical Center</option>
+
+  <option  value="3405">Montefiore Medical Center/Albert Einstein College of Medicine</option>
+
+  <option  value="3946">Morristown Medical Center</option>
+
+  <option  value="3776">Mount Sinai BI / Jacobi / Albert Einstein College of Medicine</option>
+
+  <option  value="3327">Mountain Area Health Education Center</option>
+
+  <option  value="3838">NSLIJ General Practice Dentistry</option>
+
+  <option  value="3484">Nassau University Medical Center</option>
+
+  <option  value="3505">National Institute of Dental and Craniofacial Research</option>
+
+  <option  value="3495">New York Hospital, Queens</option>
+
+  <option  value="3400">New York Medical College</option>
+
+  <option  value="3439">New York Medical College: Manhattan-Westchester Consortium</option>
+
+  <option  value="3372">New York Methodist Hospital</option>
+
+  <option  value="3408">New York Presbyterian Hospital - Columbia University Medical Center</option>
+
+  <option  value="3445">New York Presbyterian Hospital - Weill Cornell Campus</option>
+
+  <option  value="3429">New York University College of Dentistry</option>
+
+  <option  value="3497">New York University College of Dentistry/Bellevue Hospital Center</option>
+
+  <option  value="3486">Newark Beth Israel Medical Center</option>
+
+  <option  value="3839">Nicklaus Children's Hospital</option>
+
+  <option  value="3525">Northside Medical Center Dental Services</option>
+
+  <option  value="3259">Northwest Dental Residency</option>
+
+  <option  value="3454">Northwestern Memorial Hospital</option>
+
+  <option  value="674">Nova Southeastern University</option>
+
+  <option  value="3366">OSF St. Francis Medical Center</option>
+
+  <option  value="3552">OU Medical Center</option>
+
+  <option  value="3294">Olin E. Teague Veterans Center</option>
+
+  <option  value="3274">Oregon Health & Science University</option>
+
+  <option  value="3546">Overlook Hospital</option>
+
+  <option  value="3457">Palmetto Health Richland</option>
+
+  <option  value="3427">Penobscot Community Dental Clinic</option>
+
+  <option  value="3515">Philadelphia Veteran's Administration Medical Center</option>
+
+  <option  value="3787">Primary Children's Hospital</option>
+
+  <option  value="3313">Queens Hospital</option>
+
+  <option  value="3356">Rancho Los Amigos National Rehabilitation Center</option>
+
+  <option  value="3844">Rhode Island Hospital/Samuels Sinclair Dental Center</option>
+
+  <option  value="3492">Richard L. Roudebush Veterans Administration Medical Center</option>
+
+  <option  value="3482">Robert Wood Johnson University Hospital</option>
+
+  <option  value="3303">Roseman University of Health Sciences -  Nevada Campus</option>
+
+  <option  value="3785">Roswell Park Cancer Institute</option>
+
+  <option  value="3374">Rutgers School of Dental Medicine</option>
+
+  <option  value="3267">Sacred Heart Hospital</option>
+
+  <option  value="3388">Seton Hill University</option>
+
+  <option  value="3416">Southern Illinois University</option>
+
+  <option  value="3280">St. Barnabas Hospital</option>
+
+  <option  value="3284">St. Charles Hospital & Rehabilitation Center</option>
+
+  <option  value="3560">St. Christopher's Hospital for Children</option>
+
+  <option  value="3426">St. Elizabeth Health Center</option>
+
+  <option  value="3341">St. Elizabeth's Hospital</option>
+
+  <option  value="3474">St. Francis Hospital and Medical Center</option>
+
+  <option  value="3347">St. John Health</option>
+
+  <option  value="3494">St. John's Mercy Medical Center</option>
+
+  <option  value="3330">St. Joseph Hospital Health Center</option>
+
+  <option  value="3344">St. Joseph Medical Center</option>
+
+  <option  value="3583">St. Joseph Mercy Oakland</option>
+
+  <option  value="3271">St. Joseph's Regional Medical Center</option>
+
+  <option  value="3324">St. Luke's Hospital & Health Network</option>
+
+  <option  value="3458">St. Luke's Roosevelt Hospital Center</option>
+
+  <option  value="3531">St. Mary's Hospital</option>
+
+  <option  value="3462">St. Peter's Hospital</option>
+
+  <option  value="3800">St. Vincent Charity Medical Center</option>
+
+  <option  value="3421">State University of New York at Buffalo</option>
+
+  <option  value="3350">State University of New York at Buffalo School of Dental Medicine</option>
+
+  <option  value="3315">Staten Island University Hospital</option>
+
+  <option  value="3319">Stony Brook University - School of Dental Medicine</option>
+
+  <option  value="3491">Stony Brook University Hospital</option>
+
+  <option  value="3360">Summa Health System</option>
+
+  <option  value="3359">Swedish Medical Center</option>
+
+  <option  value="3353">Temple University Hospital</option>
+
+  <option  value="3263">Temple University, Kornberg School of Dentistry</option>
+
+  <option  value="3778">Texas A&M University Baylor College of Dentistry</option>
+
+  <option  value="3551">The Brooklyn Hospital Center</option>
+
+  <option  value="3361">The Mount Sinai Hospital</option>
+
+  <option  value="694">The Ohio State University</option>
+
+  <option  value="3415">The Ohio State University & Children's Hospital</option>
+
+  <option  value="3358">The Rochester General Hospital</option>
+
+  <option  value="3533">The University of Colorado School of Dental Medicine</option>
+
+  <option  value="3423">The University of Iowa Hospital and Clinic</option>
+
+  <option  value="3769">The University of Mississippi Medical Center</option>
+
+  <option  value="697">The University of New Mexico</option>
+
+  <option  value="3569">Thomas Jefferson University Hospital</option>
+
+  <option  value="3323">Truman Medical Center - Lakewood</option>
+
+  <option  value="3402">Tufts University</option>
+
+  <option  value="3790">Tufts University - Maine</option>
+
+  <option  value="3789">Tufts University - Massachusetts</option>
+
+  <option  value="3513">U. of Minnesota, Fairview</option>
+
+  <option  value="3469">UCSF-Fresno Oral & Maxillofacial Surgery Residency Program</option>
+
+  <option  value="3404">UPMC Presbyterian/Shady Side Dental Center</option>
+
+  <option  value="3288">USC Ostrow School of Dentistry</option>
+
+  <option  value="3561">Univ. Hospital SUNY Health Science Center, Syracuse</option>
+
+  <option  value="3530">University Medical Center SUNY Stony Brook</option>
+
+  <option  value="3262">University of Alabama at Birmingham</option>
+
+  <option  value="743">University of Arkansas for Medical Sciences</option>
+
+  <option  value="3278">University of California, Los Angeles</option>
+
+  <option  value="3368">University of California, Los Angeles - Venice Clinic</option>
+
+  <option  value="3362">University of California, San Francisco</option>
+
+  <option  value="3485">University of Cincinnati Medical Center</option>
+
+  <option  value="711">University of Connecticut</option>
+
+  <option  value="3331">University of Connecticut Health Center</option>
+
+  <option  value="3502">University of Detroit Mercy</option>
+
+  <option  value="3389">University of Detroit Mercy Dental School</option>
+
+  <option  value="3279">University of Florida, Gainesville</option>
+
+  <option  value="3496">University of Florida, Hialeah</option>
+
+  <option  value="3528">University of Florida, Jacksonville</option>
+
+  <option  value="3508">University of Florida, Naples</option>
+
+  <option  value="3334">University of Florida, University Partnership Center, Seminole</option>
+
+  <option  value="3282">University of Illinois at Chicago</option>
+
+  <option  value="3297">University of Iowa</option>
+
+  <option  value="715">University of Kentucky</option>
+
+  <option  value="3376">University of Louisville</option>
+
+  <option  value="716">University of Maryland</option>
+
+  <option  value="3375">University of Maryland, MD - Integrated OMS Residency</option>
+
+  <option  value="3587">University of Miami Hospital</option>
+
+  <option  value="718">University of Michigan</option>
+
+  <option  value="3478">University of Michigan Hospital</option>
+
+  <option  value="719">University of Minnesota</option>
+
+  <option  value="3357">University of Missouri-Kansas City, School of Dentistry</option>
+
+  <option  value="721">University of Nebraska Medical Center</option>
+
+  <option  value="3309">University of Nevada, Las Vegas</option>
+
+  <option  value="3306">University of North Carolina - Chapel Hill</option>
+
+  <option  value="3367">University of Oklahoma Health Science Center</option>
+
+  <option  value="3326">University of Pennsylvania</option>
+
+  <option  value="724">University of Pittsburgh</option>
+
+  <option  value="3455">University of Pittsburgh Medical Center</option>
+
+  <option  value="746">University of Puerto Rico</option>
+
+  <option  value="3269">University of Rochester Eastman Dental Center</option>
+
+  <option  value="3422">University of Tennessee Graduate School of Medicine, Knoxville </option>
+
+  <option  value="3325">University of Tennessee Health Science Center, College of Dentistry, Memphis</option>
+
+  <option  value="3355">University of Texas Health Science Center at San Antonio</option>
+
+  <option  value="3465">University of Texas Medical Branch at Galveston</option>
+
+  <option  value="3265">University of Texas School of Dentistry at Houston</option>
+
+  <option  value="3413">University of Texas Southwestern Medical Center</option>
+
+  <option  value="3329">University of Toledo</option>
+
+  <option  value="3409">University of Utah</option>
+
+  <option  value="3302">University of Vermont/Fletcher Allen Healthcare</option>
+
+  <option  value="3444">University of Virginia</option>
+
+  <option  value="731">University of Washington</option>
+
+  <option  value="3379">University of Washington, Seattle</option>
+
+  <option  value="3756">University of the Pacific Arthur A. Dugoni School of Dentistry</option>
+
+  <option  value="3332">University of the Pacific, San Francisco</option>
+
+  <option  value="3392">University of the Pacific, Union City</option>
+
+  <option  value="3827">V.A. Greater Los Angeles Healthcare System</option>
+
+  <option  value="3272">V.A. Hudson Valley Medical Center, Castle Point</option>
+
+  <option  value="3394">V.A. Hudson Valley Medical Center, Montrose</option>
+
+  <option  value="3338">V.A. Long Beach Healthcare System</option>
+
+  <option  value="3784">V.A. Medical Center - Lebanon, PA</option>
+
+  <option  value="3490">V.A. Medical Center, Albany</option>
+
+  <option  value="3275">V.A. Medical Center, Baltimore</option>
+
+  <option  value="3390">V.A. Medical Center, Birmingham</option>
+
+  <option  value="3266">V.A. Medical Center, Bronx (Mt. Sinai Medical Center)</option>
+
+  <option  value="3493">V.A. Medical Center, Brooklyn</option>
+
+  <option  value="3304">V.A. Medical Center, Cleveland</option>
+
+  <option  value="3314">V.A. Medical Center, DC</option>
+
+  <option  value="3480">V.A. Medical Center, Dallas</option>
+
+  <option  value="3601">V.A. Medical Center, Dayton</option>
+
+  <option  value="3285">V.A. Medical Center, Denver</option>
+
+  <option  value="3758">V.A. Medical Center, Fayetteville</option>
+
+  <option  value="3311">V.A. Medical Center, Gainesville</option>
+
+  <option  value="3461">V.A. Medical Center, Hampton VA</option>
+
+  <option  value="3387">V.A. Medical Center, Houston</option>
+
+  <option  value="3547">V.A. Medical Center, Miami</option>
+
+  <option  value="3501">V.A. Medical Center, Minneapolis</option>
+
+  <option  value="3562">V.A. Medical Center, New York</option>
+
+  <option  value="3424">V.A. Medical Center, Northport</option>
+
+  <option  value="3468">V.A. Medical Center, Oklahoma City</option>
+
+  <option  value="3572">V.A. Medical Center, Orlando</option>
+
+  <option  value="3538">V.A. Medical Center, Portland</option>
+
+  <option  value="3510">V.A. Medical Center, Providence</option>
+
+  <option  value="3450">V.A. Medical Center, San Francisco</option>
+
+  <option  value="3399">V.A. Medical Center, West Los Angeles</option>
+
+  <option  value="3463">V.A. Medical Center, West Palm Beach</option>
+
+  <option  value="3536">V.A. Medical Center/Virginia Commonwealth University</option>
+
+  <option  value="3472">V.A. New Jersey Health Care System</option>
+
+  <option  value="3507">V.A. Northern California Health Care System, Mare Island</option>
+
+  <option  value="3386">V.A. Palo Alto Health Care System</option>
+
+  <option  value="3498">V.A. Pittsburgh Healthcare System</option>
+
+  <option  value="3283">V.A. Puget Sound Health Care System-Seattle</option>
+
+  <option  value="3443">V.A. San Diego Healthcare System</option>
+
+  <option  value="3442">V.A. System of Clinics - Sepulveda</option>
+
+  <option  value="3420">V.A. Western New York Healthcare System</option>
+
+  <option  value="3570">Vanderbilt University Medical Center</option>
+
+  <option  value="734">Virginia Commonwealth University</option>
+
+  <option  value="3261">Wake Forest University School of Medicine Bowman Gray Campus</option>
+
+  <option  value="3396">Washington Hospital Center</option>
+
+  <option  value="3440">West Jersey Health System, Camden</option>
+
+  <option  value="737">West Virginia University</option>
+
+  <option  value="3773">Wichita State University</option>
+
+  <option  value="3599">Winthrop University Hospital</option>
+
+  <option  value="3370">Woodhull Medical Center</option>
+
+  <option  value="3363">Wyckoff Heights Medical Center</option>
+
+  <option  value="3276">Yale-New Haven Hospital</option>
+
+  <option  value="3554">Yale-New Haven Hospital (St. Raphael Campus)</option>
+
+  <option  value="3292">York Hospital</option>
+
+  <option  value="3834">Zablocki V.A. Great Lakes - Crown Point, IN</option>
+
+  <option  value="3833">Zablocki V.A. Great Lakes - Green Bay, WI</option>
+
+  <option  value="3829">Zablocki V.A. Great Lakes - Milwaukee, WI</option>
+
+</select>
+
+<!-- br>
+<label for="l_name">Program Number:</label> 
+<select name="prog_number">
+<option value=""></option>
+
+</select -->
+
+<br>
+<label for="p_name">Program Type:</label>
+<select name="programs">
+<option value=""></option>
+
+<option  value="Advanced Education in General Dentistry (12 month) - Optional 2nd Year">Advanced Education in General Dentistry (12 month) - Optional 2nd Year</option>
+
+<option  value="Advanced Education in General Dentistry (12 months)">Advanced Education in General Dentistry (12 months)</option>
+
+<option  value="Advanced Education in General Dentistry (24 months)">Advanced Education in General Dentistry (24 months)</option>
+
+<option  value="Anesthesiology">Anesthesiology</option>
+
+<option  value="Clinical Research Fellowship">Clinical Research Fellowship</option>
+
+<option  value="Craniofacial Orthodontic Fellowship">Craniofacial Orthodontic Fellowship</option>
+
+<option  value="Dental Public Health">Dental Public Health</option>
+
+<option  value="Endodontics">Endodontics</option>
+
+<option  value="General Practice Residency (12 months)">General Practice Residency (12 months)</option>
+
+<option  value="General Practice Residency (24 months)">General Practice Residency (24 months)</option>
+
+<option  value="Geriatric Dentistry">Geriatric Dentistry</option>
+
+<option  value="Implant Dentistry">Implant Dentistry</option>
+
+<option  value="Operative Dentistry">Operative Dentistry</option>
+
+<option  value="Oral Biology">Oral Biology</option>
+
+<option  value="Oral Medicine">Oral Medicine</option>
+
+<option  value="Oral and Maxillofacial Pathology">Oral and Maxillofacial Pathology</option>
+
+<option  value="Oral and Maxillofacial Radiology">Oral and Maxillofacial Radiology</option>
+
+<option  value="Oral and Maxillofacial Surgery">Oral and Maxillofacial Surgery</option>
+
+<option  value="Oral and Maxillofacial Surgery - (1 Yr. Internship)">Oral and Maxillofacial Surgery - (1 Yr. Internship)</option>
+
+<option  value="Orofacial Pain (2 Years)">Orofacial Pain (2 Years)</option>
+
+<option  value="Orofacial Pain/Oral Medicine (3 Years)">Orofacial Pain/Oral Medicine (3 Years)</option>
+
+<option  value="Orthodontics">Orthodontics</option>
+
+<option  value="Pediatric Dentistry">Pediatric Dentistry</option>
+
+<option  value="Periodontics">Periodontics</option>
+
+<option  value="Periodontics Prosthesis">Periodontics Prosthesis</option>
+
+<option  value="Prosthodontics">Prosthodontics</option>
+
+</select>
+
+
+
+<br>
+<label for="state">State:</label>
+<select name="state">
+<option value=""></option>
+
+  <option  value="1">Alabama</option>
+
+  <option  value="2">Alaska</option>
+
+  <option  value="3">Arizona</option>
+
+  <option  value="4">Arkansas</option>
+
+  <option  value="5">California</option>
+
+  <option  value="6">Colorado</option>
+
+  <option  value="7">Connecticut</option>
+
+  <option  value="8">Delaware</option>
+
+  <option  value="9">District of Columbia</option>
+
+  <option  value="10">Florida</option>
+
+  <option  value="11">Georgia</option>
+
+  <option  value="12">Hawaii</option>
+
+  <option  value="13">Idaho</option>
+
+  <option  value="14">Illinois</option>
+
+  <option  value="15">Indiana</option>
+
+  <option  value="16">Iowa</option>
+
+  <option  value="17">Kansas</option>
+
+  <option  value="18">Kentucky</option>
+
+  <option  value="19">Louisiana</option>
+
+  <option  value="20">Maine</option>
+
+  <option  value="21">Maryland</option>
+
+  <option  value="22">Massachusetts</option>
+
+  <option  value="23">Michigan</option>
+
+  <option  value="24">Minnesota</option>
+
+  <option  value="25">Mississippi</option>
+
+  <option  value="26">Missouri</option>
+
+  <option  value="27">Montana</option>
+
+  <option  value="28">Nebraska</option>
+
+  <option  value="29">Nevada</option>
+
+  <option  value="30">New Hampshire</option>
+
+  <option  value="31">New Jersey</option>
+
+  <option  value="32">New Mexico</option>
+
+  <option  value="33">New York</option>
+
+  <option  value="34">North Carolina</option>
+
+  <option  value="35">North Dakota</option>
+
+  <option  value="36">Ohio</option>
+
+  <option  value="37">Oklahoma</option>
+
+  <option  value="38">Oregon</option>
+
+  <option  value="39">Pennsylvania</option>
+
+  <option  value="40">Rhode Island</option>
+
+  <option  value="41">South Carolina</option>
+
+  <option  value="42">South Dakota</option>
+
+  <option  value="43">Tennessee</option>
+
+  <option  value="44">Texas</option>
+
+  <option  value="45">Utah</option>
+
+  <option  value="46">Vermont</option>
+
+  <option  value="47">Virginia</option>
+
+  <option  value="66">Virgin Islands</option>
+
+  <option  value="48">West Virginia</option>
+
+  <option  value="49">Washington</option>
+
+  <option  value="50">Wisconsin</option>
+
+  <option  value="51">Wyoming</option>
+
+  <option  value="52">Alberta</option>
+
+  <option  value="53">British Columbia</option>
+
+  <option  value="54">Manitoba</option>
+
+  <option  value="55">New Brunswick</option>
+
+  <option  value="56">Newfoundland and Labrador</option>
+
+  <option  value="57">Northwest Territories</option>
+
+  <option  value="58">Nova Scotia</option>
+
+  <option  value="59">Nunavut</option>
+
+  <option  value="60">Ontario</option>
+
+  <option  value="61">Prince Edward Island</option>
+
+  <option  value="62">Quebec</option>
+
+  <option  value="63">Saskatchewan</option>
+
+  <option  value="64">Yukon</option>
+
+  <option  value="65">Puerto Rico</option>
+
+</select>
+
+<br><br />
+  <div style="float: left; width: 10%; text-align: left;"> 
+         <button type="Submit">Search</button> 
+  </div>
+  <div style="float: left; width: 48%; text-align: left;"-->
+         <button type="Reset">Clear Form</button>
+  </div>
+</div><!-- #Profile -->
+</div> <br>
+
+
+</form>
+
+
+<div style="clear: both"></div>
+</div><!-- #main > .under-tabs -->
+
+  </div><!-- #main -->
+
+  
+  <div id="footer">
+  
+  </div><!-- #footer -->
+  </body>
+
+</html>
+
+

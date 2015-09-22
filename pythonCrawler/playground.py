@@ -1,65 +1,46 @@
-from __future__ import division
-import urllib
-import HTMLParser
+from math import log,sqrt
 import re
-import robotparser
-import Queue as Q
-from urlparse import urlparse
-from pygoogle import pygoogle
 
-def isValidUrl(url):
-    validUrl = re.compile(
-        r'^(?:http|ftp)s?://'  # http:// or https://
-        # domain...
-        r'(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+(?:[A-Z]{2,6}\.?|[A-Z0-9-]{2,}\.?)|'
-        r'localhost|'  # localhost...
-        r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})'  # ...or ip
-        r'(?::\d+)?'  # optional port
-        r'(?:/?|[/?]\S+)$', re.IGNORECASE)
+def get_score(document,query):
+    query_terms = re.findall("\w+", query.lower())
+    score = 0.0
+    mag = 0.0
+    for term in query_terms:
+        idf = get_idf(term)
+        doc_tfid = termFrequency(term,document) * idf
+        score += doc_tfid * idf
+        mag += sqrt(idf*idf) + sqrt(doc_tfid * doc_tfid)
+    return score/mag
 
-    if validUrl.match(url):
-        return True
+def get_idf(term):
+    if term in wordlist:
+        print term," present"
+        no_of_occurences = wordlist[term]
     else:
-        return False
+        print term," absent"
+        no_of_occurences = 100
+    idf = 1.0 + log((1229245740 / no_of_occurences))
+    return idf 
 
-def getLinks(url, html):
-    try:
-        parsed = urlparse(url)
-        rp = robotparser.RobotFileParser()
-        rp.set_url(parsed.scheme + "://" + parsed.netloc + "/robots.txt")
-        rp.read()
-        links = []
-        # Define HTML Parser
+def termFrequency(term, document):
+    normalizeDocument = document.lower().split()
+    return normalizeDocument.count(term.lower()) / float(len(normalizeDocument))
 
-        class extractLink(HTMLParser.HTMLParser):
 
-            def handle_starttag(self, tag, attrs):
-                if(tag == "a"):
-                    print "HyperLink Found"
-                    for attr in attrs:
-                        if attr[0] == "href":
-                            if rp.can_fetch("*", attr[1]):
-                                if isValidUrl(attr[1]):
-                                    links.append(attr[1])
-                                else:
-                                    if(url.endswith("/")):
-                                        newurl = url + attr[1]
-                                    else:
-                                        newurl = url + "/" + attr[1]
-                                    if (isValidUrl(newurl)):
-                                        links.append(newurl)
-                            else:
-                                print "Robot.txt disallows crawling url"
+wordlist ={}
+wordlist['4540'] = 1
+print "getting ready"
+with open('wikipedia_wordfreq.txt','r') as f:
+    for line in f:
+        i = line.split("\t")
+        term = i[0]
+        freq = i[1]
+        if(i[0].strip() == 'cats'):
+            print 'yay'
+        wordlist[term] = int(freq)
+ 
+print "Initialized"
+doc = "This is a document about cats and dogs dogs dogs and all nice things in the world"
+query = "dogs"
 
-        # Create instance of HTML parser
-        lParser = extractLink()
-        lParser.feed(html.read())
-        print links
-        return links
-    except Exception as e:
-        print "Failed to Parse Page : " + str(e)
-    return None
-
-url = "http://www.cars.com"
-html = urllib.urlopen(url)
-print getLinks(url,html)
+print get_score(doc,query)

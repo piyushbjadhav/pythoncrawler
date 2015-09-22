@@ -1,0 +1,86 @@
+<HTML><HEAD> 
+		<TITLE>Efficient indexing and querying over versioned text</TITLE> 
+		</HEAD><BODY BGCOLOR="#FFFFFF"> 
+		<center> 
+			<h1>Indexing and querying over versioned text</h1> 
+			<P> 
+		</center> 
+		<p> 
+		Current Information Retrieval systems use inverted index
+		structures for effcient query processing. Due to the extremely large size of many data sets, these index structures
+		are usually kept in compressed form, and many techniques
+		for optimizing compressed size and query processing speed
+		have been proposed. In this work, we focus on versioned
+		document collections, that is, collections where each document is modified over time, resulting in multiple versions of
+		the document. Such examples include Wikipedia and historical web pages stored in Internet Archive.
+
+		We categorize our work into the following serveral layers.
+		<ul>
+			<li><strong>Effective index representation.</strong> In versioned collections, a document usually is represented by multiple versions which may potienally make the index size very big.
+			In our exploration, we find that usually consecutive versions of the same document are similar, and several researchers have explored ideas
+			for exploiting this similarity to decrease index size. We propose new index compression techniques for versioned document collections that achieve reductions in index size over previous methods.
+			<li><strong>Efficient index traversal.</strong> Based on the efficient index compression. We build an efficient query processing on top by employing the index structure.
+			<li><strong>Support for temporal range queries.</strong> Search queries over versioned document collections often use keywords as well as temporal constraints, most commonly a time range of interest.
+			TemaOn top of the efficient query processing on versioned document. By employing our index structure and index traversal over versioned text, we achieved a faster temporal queires compared to 
+			the previous research.		 
+			<li><strong>Aggregate temporal query processing.</strong> On top of the temporal range queries, there are even more complicated query processing. e.g durable Top-k (U. etc 2010) which required to fetch
+			top-k documents in a range of time. We show that such query processing can be efficiently support by our temporal range queries framework.
+			<p>
+			people to contact <a href="jinru.htm">Jinru He </a>
+			<p> 
+			Primary publications:
+			<ul> 
+				<p> 
+				<li> 
+				<a href="jinru.htm">J. He</a>,
+				<a href="http://cis.poly.edu/~hyan/">H. Yan</a>, and 
+				<a href="http://cis.poly.edu/suel/">T. Suel</a>.  (2009) 
+				<b><a href="archive.pdf">Compact 
+						Full-Text Indexing of Versioned Document Collections</a></b>.
+				In <i>Proceedings of the <a 
+						href="http://www.comp.polyu.edu.hk/conference/cikm2009/about/">18th ACM 
+						Conference on Information and Knowledge Management (CIKM)</a></i>,
+				pp. 415-424,
+				Hong Kong, ACM Press, November.
+				<P> 
+
+				<li> 
+				<a href="jinru.htm">J. He</a>,
+				<a href="http://pdc-amd01.poly.edu/~jzeng04/junyuan.html">J. Zeng</a> 
+				and 
+				<a href="http://cis.poly.edu/suel/">T. Suel</a>.  (2010) 
+				<b><a href="version.pdf"> 
+						Improved Index Compression
+						Techniques for Versioned Document Collections</a></b>.
+				In <i> Proceedings of the 
+					<a href="http://www.yorku.ca/cikm10/">19th ACM
+						Conference on Information and Knowledge Management (CIKM)</a></i>, 
+				pages 1239-1248, 
+				Toronto, Canada, October.
+				<p> 
+
+
+				<li> 
+				<a href="jinru.htm">J. He</a> 
+				and 
+				<a href="http://cis.poly.edu/suel/">T. Suel</a>.  (2011) 
+				<b><a href="range.pdf">Faster Temporal Range Queries over Versioned Text</a></b>.
+				To be published in <i>Proceedings of the
+					<a href="http://www.sigir2011.org/">34th Annual International ACM
+						SIGIR Conference on Research and
+						Development on Information Retrieval</a></i>, Beijing, China, July.
+
+			</ul> 
+
+			<p> 
+			Source codes used in CIKM09 and CIKM10 paper can be found here: <a href="version.zip">CIKM.zip</a> 
+
+			<p>
+			This research was supported by NSF Grant IIS-0803605, "Efficient and Effective Search Services over ArchivalWebs", a grant from Google, and by NYU seed grant. We also thank the Internet Archive
+			for providing access to the Ireland data set.
+			<hr> 
+			<font size=1> 
+				Last modified: 18 June 2011</font> 
+		</body> 
+	</html> 
+

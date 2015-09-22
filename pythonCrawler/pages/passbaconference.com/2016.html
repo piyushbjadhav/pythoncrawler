@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html  lang="en-US">
+<head id="Head"><title>
+	PASS Business Analytics Conference 2016 > Home
+</title><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><meta content="text/javascript" http-equiv="Content-Script-Type" /><meta content="text/css" http-equiv="Content-Style-Type" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta id="MetaDescription" name="DESCRIPTION" content="Learn tools and techniques for integrating, analyzing, visualizing and reporting on data, as well as unlocking the power and promise of Big Data at the PASS Business Analytics Conference. " /><meta id="MetaKeywords" name="KEYWORDS" content="business analytics, data analytics, business analytics conference, analytics training, big data, data visualization, dashboards, Excel, PowerBI" /><meta id="MetaCopyright" name="COPYRIGHT" content="Copyright 2015 by PASS" /><meta id="MetaAuthor" name="AUTHOR" content="PASS Business Analytics Conference 2016" /><meta name="RESOURCE-TYPE" content="DOCUMENT" /><meta name="DISTRIBUTION" content="GLOBAL" /><meta id="MetaRobots" name="ROBOTS" content="INDEX, FOLLOW" /><meta name="REVISIT-AFTER" content="1 DAYS" /><meta name="RATING" content="GENERAL" /><meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" /><style id="StylePlaceholder" type="text/css"></style><link href="/Portals/_default/default.css?cdv=96" type="text/css" rel="stylesheet"/><link href="/Portals/906/Skins/Flatna/skin.css?cdv=96" type="text/css" rel="stylesheet"/><link href="/Portals/906/Containers/Flatna/container.css?cdv=96" type="text/css" rel="stylesheet"/><link href="/Portals/906/portal.css?cdv=96" type="text/css" rel="stylesheet"/><link href="/Portals/906/Skins/Flatna/vendor/owl-carousel/owl.settings.css?cdv=96" type="text/css" rel="stylesheet"/><link href="/Portals/906/Skins/Flatna/vendor/slit-slider/css/style.css?cdv=96" type="text/css" rel="stylesheet"/><link href="/Portals/906/Skins/Flatna/css/elements.css?cdv=96" type="text/css" rel="stylesheet"/><link href="/Portals/906/Skins/Flatna/vendor/owl-carousel/owl.theme.css?cdv=96" type="text/css" rel="stylesheet"/><link href="/Portals/906/Skins/Flatna/css/animate.min.css?cdv=96" type="text/css" rel="stylesheet"/><link href="/Portals/906/Skins/Flatna/fonts/icomoon/style.css?cdv=96" type="text/css" rel="stylesheet"/><link href="/Portals/906/Skins/Flatna/css/bootstrap.css?cdv=96" type="text/css" rel="stylesheet"/><link href="/Portals/906/Skins/Flatna/css/jquery.fancybox-1.3.1.css?cdv=96" type="text/css" rel="stylesheet"/><link href="/Portals/906/Skins/Flatna/vendor/revolution-slider/css/rev.css?cdv=96" type="text/css" rel="stylesheet"/><link href="/Portals/906/Skins/Flatna/vendor/flexslider/fs-settings.css?cdv=96" type="text/css" rel="stylesheet"/><link href="/Portals/906/Skins/Flatna/vendor/flexslider/flexslider.css?cdv=96" type="text/css" rel="stylesheet"/><script src="/Resources/Shared/Scripts/jquery/jquery.min.js?cdv=96" type="text/javascript"></script><script src="/Resources/Shared/Scripts/jquery/jquery-ui.min.js?cdv=96" type="text/javascript"></script><link rel='SHORTCUT ICON' href='/Portals/906/BAC-favicon_AL.ico' type='image/x-icon' />     
+        
+			    <script type="text/javascript">
+			      var _gaq = _gaq || [];
+			      _gaq.push(['_setAccount', 'UA-3210692-44']);
+			      _gaq.push(['_trackPageview']);
+			 
+			      (function() {
+				    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			      })();
+			    </script>
+        
+		  <meta name="viewport" content="width=device-width,initial-scale=1" /><link rel="stylesheet" type="text/css" href="/Portals/906/Skins/Flatna/StandardPills/superfish.css"></link><link rel="stylesheet" type="text/css" href="/Portals/906/Skins/Flatna/StandardMobile/jquery.roxMobile.css"></link><style type="text/css">
+	.roxMobile li { list-style-type: none }
+</style></head>
+<body id="Body">
+    
+    <form method="post" action="/2016/Home.aspx" id="Form" enctype="multipart/form-data">
+<div class="aspNetHidden">
+<input type="hidden" name="StylesheetManager_TSSM" id="StylesheetManager_TSSM" value="" />
+<input type="hidden" name="ScriptManager_TSM" id="ScriptManager_TSM" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNzQ3NTU0MDE2D2QWCGYPFgIeBFRleHQFDzwhRE9DVFlQRSBodG1sPmQCAg8WAh8ABQ0gbGFuZz0iZW4tVVMiZAIED2QWDgIGDxYCHgdWaXNpYmxlaGQCBw8WAh4HY29udGVudAW8AUxlYXJuIHRvb2xzIGFuZCB0ZWNobmlxdWVzIGZvciBpbnRlZ3JhdGluZywgYW5hbHl6aW5nLCB2aXN1YWxpemluZyBhbmQgcmVwb3J0aW5nIG9uIGRhdGEsIGFzIHdlbGwgYXMgdW5sb2NraW5nIHRoZSBwb3dlciBhbmQgcHJvbWlzZSBvZiBCaWcgRGF0YSBhdCB0aGUgUEFTUyBCdXNpbmVzcyBBbmFseXRpY3MgQ29uZmVyZW5jZS4gZAIIDxYCHwIFjwFidXNpbmVzcyBhbmFseXRpY3MsIGRhdGEgYW5hbHl0aWNzLCBidXNpbmVzcyBhbmFseXRpY3MgY29uZmVyZW5jZSwgYW5hbHl0aWNzIHRyYWluaW5nLCBiaWcgZGF0YSwgZGF0YSB2aXN1YWxpemF0aW9uLCBkYXNoYm9hcmRzLCBFeGNlbCwgUG93ZXJCSWQCCQ8WAh8CBRZDb3B5cmlnaHQgMjAxNSBieSBQQVNTZAIKDxYEHwJkHwFoZAILDxYCHwIFJ1BBU1MgQnVzaW5lc3MgQW5hbHl0aWNzIENvbmZlcmVuY2UgMjAxNmQCDg8WAh8CBQ1JTkRFWCwgRk9MTE9XZAIGD2QWAgIBD2QWAgIHD2QWAmYPZBZiAgwPZBYCZg8PFgQeB1Rvb2xUaXAFJ1BBU1MgQnVzaW5lc3MgQW5hbHl0aWNzIENvbmZlcmVuY2UgMjAxNh4LTmF2aWdhdGVVcmwFKmh0dHA6Ly9wYXNzYmFjb25mZXJlbmNlLmNvbS8yMDE2L0hvbWUuYXNweGRkAg0PZBYEZg9kFgYCAQ8QDxYGHghDc3NDbGFzcwUMU2VhcmNoQnV0dG9uHgRfIVNCAgIfAWhkZGRkAgMPEA8WBh8FBQxTZWFyY2hCdXR0b24fBgICHwFoZGRkZAIHDw8WBh8FBQxTZWFyY2hCdXR0b24fAAUGU2VhcmNoHwYCAmRkAgIPZBYCAgIPDxYGHwUFDFNlYXJjaEJ1dHRvbh8ABQZTZWFyY2gfBgICZGQCEA9kFgRmD2QWBgIBDxAPFgYfBQUMU2VhcmNoQnV0dG9uHwYCAh8BaGRkZGQCAw8QDxYGHwUFDFNlYXJjaEJ1dHRvbh8GAgIfAWhkZGRkAgcPDxYGHwUFDFNlYXJjaEJ1dHRvbh8ABQZTZWFyY2gfBgICZGQCAg9kFgICAg8PFgYfBQUMU2VhcmNoQnV0dG9uHwAFBlNlYXJjaB8GAgJkZAIRD2QWAmYPFgIeBWNsYXNzBSxEbm5Nb2R1bGUgRG5uTW9kdWxlLUROTl9IVE1MIERubk1vZHVsZS00OTQ4NRYCAgEPZBYCAgEPZBYCAgEPD2QWAh8HBRxETk5Nb2R1bGVDb250ZW50IE1vZEROTkhUTUxDZAISD2QWBGYPFgIfBwUsRG5uTW9kdWxlIERubk1vZHVsZS1ETk5fSFRNTCBEbm5Nb2R1bGUtNDk0NzcWAgIBD2QWBAIBD2QWAgICDxYCHwFoZAIDD2QWAgIBDw9kFgIfBwUcRE5OTW9kdWxlQ29udGVudCBNb2RETk5IVE1MQ2QCAQ8WAh8HBSxEbm5Nb2R1bGUgRG5uTW9kdWxlLUROTl9IVE1MIERubk1vZHVsZS00OTQ3OBYCAgEPZBYCAgEPZBYCAgEPD2QWAh8HBRxETk5Nb2R1bGVDb250ZW50IE1vZEROTkhUTUxDZAITDxYCHwcFI1BhbmUtUGFkZGluZyBjb2wteHMtMTIgRE5ORW1wdHlQYW5lZAIUD2QWAmYPFgIfBwUsRG5uTW9kdWxlIERubk1vZHVsZS1ETk5fSFRNTCBEbm5Nb2R1bGUtNDk0ODgWAgIBD2QWAgIBD2QWAgIBDw9kFgIfBwUcRE5OTW9kdWxlQ29udGVudCBNb2RETk5IVE1MQ2QCFQ8WAh8HBSNQYW5lLVBhZGRpbmcgY29sLXhzLTEyIEROTkVtcHR5UGFuZWQCFg8WAh8HBSJQYW5lLVBhZGRpbmcgY29sLXNtLTYgRE5ORW1wdHlQYW5lZAIXDxYCHwcFIlBhbmUtUGFkZGluZyBjb2wtc20tNiBETk5FbXB0eVBhbmVkAhgPZBYEZg8WAh8HBSxEbm5Nb2R1bGUgRG5uTW9kdWxlLUROTl9IVE1MIERubk1vZHVsZS00OTQ3NBYCAgEPZBYCAgEPZBYCAgIPD2QWAh8HBRxETk5Nb2R1bGVDb250ZW50IE1vZEROTkhUTUxDZAIBDxYCHwcFLERubk1vZHVsZSBEbm5Nb2R1bGUtRE5OX0hUTUwgRG5uTW9kdWxlLTQ5NDc2FgICAQ9kFgICAQ8WAh8HBQ5ETk5BbGlnbmNlbnRlchYCAgEPD2QWAh8HBRxETk5Nb2R1bGVDb250ZW50IE1vZEROTkhUTUxDZAIZDxYCHwcFIlBhbmUtUGFkZGluZyBjb2wtc20tNCBETk5FbXB0eVBhbmVkAhoPFgIfBwUiUGFuZS1QYWRkaW5nIGNvbC1zbS00IEROTkVtcHR5UGFuZWQCGw8WAh8HBSJQYW5lLVBhZGRpbmcgY29sLXNtLTQgRE5ORW1wdHlQYW5lZAIcDxYCHwcFI1BhbmUtUGFkZGluZyBjb2wteHMtMTIgRE5ORW1wdHlQYW5lZAIdDxYCHwcFIlBhbmUtUGFkZGluZyBjb2wtc20tOCBETk5FbXB0eVBhbmVkAh4PFgIfBwUiUGFuZS1QYWRkaW5nIGNvbC1zbS00IEROTkVtcHR5UGFuZWQCHw8WAh8HBTBQYXJhbGxheFBhbmUgUGFuZS1QYWRkaW5nIGNvbC14cy0xMiBETk5FbXB0eVBhbmVkAiAPFgIfBwUjUGFuZS1QYWRkaW5nIGNvbC14cy0xMiBETk5FbXB0eVBhbmVkAiEPFgIfBwUjUGFuZS1QYWRkaW5nIGNvbC14cy0xMiBETk5FbXB0eVBhbmVkAiIPFgIfBwUiUGFuZS1QYWRkaW5nIGNvbC1zbS02IEROTkVtcHR5UGFuZWQCIw8WAh8HBSJQYW5lLVBhZGRpbmcgY29sLXNtLTYgRE5ORW1wdHlQYW5lZAIkDxYCHwcFI1BhbmUtUGFkZGluZyBjb2wteHMtMTIgRE5ORW1wdHlQYW5lZAIlDxYCHwcFI1BhbmUtUGFkZGluZyBjb2wteHMtMTIgRE5ORW1wdHlQYW5lZAImDxYCHwcFMFBhcmFsbGF4UGFuZSBQYW5lLVBhZGRpbmcgY29sLXhzLTEyIEROTkVtcHR5UGFuZWQCJw8WAh8HBSFjb2wteHMtMTIgbm8tcGFkZGluZyBETk5FbXB0eVBhbmVkAigPFgIfBwUZUGFuZS1QYWRkaW5nIEROTkVtcHR5UGFuZWQCKQ8WAh8HBRVjb2wtc20tNiBETk5FbXB0eVBhbmVkAioPFgIfBwUVY29sLXNtLTYgRE5ORW1wdHlQYW5lZAIrDxYCHwcFIlBhbmUtUGFkZGluZyBjb2wtc20tOCBETk5FbXB0eVBhbmVkAiwPFgIfBwUiUGFuZS1QYWRkaW5nIGNvbC1zbS00IEROTkVtcHR5UGFuZWQCLQ8WAh8HBSJQYW5lLVBhZGRpbmcgY29sLXNtLTMgRE5ORW1wdHlQYW5lZAIuDxYCHwcFIlBhbmUtUGFkZGluZyBjb2wtc20tOSBETk5FbXB0eVBhbmVkAi8PZBYCZg8WAh8HBSxEbm5Nb2R1bGUgRG5uTW9kdWxlLUROTl9IVE1MIERubk1vZHVsZS00OTQ4NhYCAgEPZBYCAgEPZBYCAgEPD2QWAh8HBRxETk5Nb2R1bGVDb250ZW50IE1vZEROTkhUTUxDZAIwD2QWAmYPFgIfBwUsRG5uTW9kdWxlIERubk1vZHVsZS1ETk5fSFRNTCBEbm5Nb2R1bGUtNDk0NzkWAgIBD2QWAgIBD2QWAgIBDw9kFgIfBwUcRE5OTW9kdWxlQ29udGVudCBNb2RETk5IVE1MQ2QCMQ8WAh8HBTBQYXJhbGxheFBhbmUgUGFuZS1QYWRkaW5nIGNvbC14cy0xMiBETk5FbXB0eVBhbmVkAjIPFgIfBwUwUGFyYWxsYXhQYW5lIFBhbmUtUGFkZGluZyBjb2wteHMtMTIgRE5ORW1wdHlQYW5lZAIzDxYCHwcFI1BhbmUtUGFkZGluZyBjb2wteHMtMTIgRE5ORW1wdHlQYW5lZAI0DxYCHwcFI1BhbmUtUGFkZGluZyBjb2wteHMtMTIgRE5ORW1wdHlQYW5lZAI1DxYCHwcFFmNvbC14cy0xMiBETk5FbXB0eVBhbmVkAjYPFgIfBwUiZm9vdC1QYWRkaW5nIGNvbC1zbS00IEROTkVtcHR5UGFuZWQCNw8WAh8HBSJmb290LVBhZGRpbmcgY29sLXNtLTQgRE5ORW1wdHlQYW5lZAI4DxYCHwcFImZvb3QtUGFkZGluZyBjb2wtc20tNCBETk5FbXB0eVBhbmVkAjkPZBYCZg8WAh8HBSxEbm5Nb2R1bGUgRG5uTW9kdWxlLUROTl9IVE1MIERubk1vZHVsZS00OTgyNhYCAgEPZBYCAgEPZBYCAgEPD2QWAh8HBRxETk5Nb2R1bGVDb250ZW50IE1vZEROTkhUTUxDZAI6D2QWAmYPFgIfBwUsRG5uTW9kdWxlIERubk1vZHVsZS1ETk5fSFRNTCBEbm5Nb2R1bGUtNDk4MzAWAgIBD2QWAgIBD2QWAgIBDw9kFgIfBwUcRE5OTW9kdWxlQ29udGVudCBNb2RETk5IVE1MQ2QCOw9kFgJmDxYCHwcFLERubk1vZHVsZSBEbm5Nb2R1bGUtRE5OX0hUTUwgRG5uTW9kdWxlLTQ5ODI3FgICAQ9kFgICAQ9kFgICAQ8PZBYCHwcFHEROTk1vZHVsZUNvbnRlbnQgTW9kRE5OSFRNTENkAjwPZBYCZg8WAh8HBSxEbm5Nb2R1bGUgRG5uTW9kdWxlLUROTl9IVE1MIERubk1vZHVsZS00OTgyOBYCAgEPZBYCAgEPZBYCAgEPD2QWAh8HBRxETk5Nb2R1bGVDb250ZW50IE1vZEROTkhUTUxDZAI9DxYCHwcFI2Zvb3QtUGFkZGluZyBjb2wtc20tMTIgRE5ORW1wdHlQYW5lZAI/DxYCHwcFIlNvY2lhbEJvdHRvbSBjb2wteHMtNiBETk5FbXB0eVBhbmVkZD9O+9octEn32aJ5AnjYKGD7rjgJ" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form'];
+if (!theForm) {
+    theForm = document.Form;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=nN31kf057Bc-tuaMqOWpssY3RYAEWZ9B3m59e3Ijf4Qt9bgWek7kDjhajUSumPOqpUTLRaoWfkBrY8200&amp;t=635764066408064791" type="text/javascript"></script>
+
+<script type="text/javascript">if (!(window.jQuery && window.jQuery.fn && window.jQuery.fn.hoverIntent)) document.write(unescape('%3Cscript src="/Portals/906/Skins/Flatna/StandardPills/hoverIntent.js" type="text/javascript"%3E%3C/script%3E'));</script><script type="text/javascript">if (!(window.jQuery && window.jQuery.fn && window.jQuery.fn.superfish)) document.write(unescape('%3Cscript src="/Portals/906/Skins/Flatna/StandardPills/superfish.js" type="text/javascript"%3E%3C/script%3E'));</script><script type="text/javascript">if (!(window.jQuery && window.jQuery.fn && window.jQuery.fn.supersubs)) document.write(unescape('%3Cscript src="/Portals/906/Skins/Flatna/StandardPills/supersubs.js" type="text/javascript"%3E%3C/script%3E'));</script><script type="text/javascript">if (!(window.jQuery && window.jQuery.fn && window.jQuery.fn.roxMobile)) document.write(unescape('%3Cscript src="/Portals/906/Skins/Flatna/StandardMobile/jquery.roxMobile.js" type="text/javascript"%3E%3C/script%3E'));</script>
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ScriptManager_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3a47de63c8-89d4-489c-bfde-4185a11627a3%3aea597d4b%3ab25378d2" type="text/javascript"></script>
+<script src="/js/dnn.js" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAdABDDBL5SUcFDPZ9TqUcWV+gQ8Ja7cbEoPnZc9jOMEjpVIBYBtn2EIbjQmyk9OaqFNDOE1YzEYJZ+6oMkP5T6xQxBmuWGxRKgbk2pLz0vjSlfJ82cLYuNHga3Vmj3QvawglYTgmyD61+C5CtBsuVtAkgoPGmyZ2TEMRobby9lk1zbCbpI=" />
+</div><script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager', 'Form', [], [], [], 90, '');
+//]]>
+</script>
+
+        <script src="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js?cdv=96" type="text/javascript"></script><script src="/Resources/Shared/Scripts/dnn.jquery.js?cdv=96" type="text/javascript"></script><script src="/js/dnncore.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/vendor/slit-slider/js/modernizr.custom.79639.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/js/fluidvids.js?cdv=96" type="text/javascript"></script>
+        
+        
+    <!-- Mobile Specific Metas -->
+    
+    
+    <!--[if lt IE 9]> <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+    <!--[if lt IE 9]> <link rel="stylesheet" href="/Portals/906/Skins/Flatna/fonts/font-awesome/css/font-awesome-ie7.min.css"> <![endif]-->
+    <!--[if lte IE 7]><script src="/Portals/906/Skins/Flatna/fonts/icomoon/lte-ie7.js"></script><![endif]-->
+    <!--[if IE 8]><style>.Mobile-Nav-Row{ display: none; }</style><![endif]-->  
+
+     <!-- Fancy Google Fonts -->  
+    <link href='//fonts.googleapis.com/css?family=Great+Vibes|Pacifico|Damion|Lobster+Two:400,700,700italic,400italic|Anonymous+Pro:400,400italic,700,700italic|Pinyon+Script' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,300,300italic,100,100italic,500,700|Roboto+Condensed:400,300,700|Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom Elements -->
+    
+
+    <!-- Boostrap Stylesheet -->
+     
+
+    <!-- Font Icons -->
+    
+
+    <!-- CSS 3 Animation -->
+     
+
+    <!-- Fancybox -->
+    
+
+    <!-- Flex Slider -->
+    
+    
+
+    <!-- Revolution Slider -->
+    
+
+    <!-- Slit Slider -->
+    
+
+    <!-- Owl Carousel -->
+    
+    
+
+     
+    <div class="PageWidth">  
+        
+        <div class="clearfix cleared"></div>
+
+        <div class="nav-container">
+            <nav> 
+              
+                <div class="Header-Row row">
+                    <div class="container"> 
+                        <div class="row">
+                        
+                            <div class="Logo-Box col-sm-3"> 
+                                <div id="Logo">
+                                          <a id="dnn_dnnLOGO_hypLogo" title="PASS Business Analytics Conference 2016" href="http://passbaconference.com/2016/Home.aspx"><img id="dnn_dnnLOGO_imgLogo" src="/Portals/906/logo.png" alt="PASS Business Analytics Conference 2016" style="border-width:0px;" /></a>
+                                </div><!--/Logo-->
+                            </div>
+                            
+                            <div id="Nav-Bar" class="col-sm-9 no-left-padding no-right-padding">
+                            <!-- <div id="search">
+                                <p>Search</p>
+                                <div id="search-box">
+ 			                       <span id="dnn_dnnSearch_ClassicSearch">
+    
+    
+    <input name="dnn$dnnSearch$txtSearch" type="text" maxlength="255" size="20" id="dnn_dnnSearch_txtSearch" class="NormalTextBox" onkeydown="return __dnn_KeyDown(&#39;13&#39;, &#39;javascript:__doPostBack(%27dnn$dnnSearch$cmdSearch%27,%27%27)&#39;, event);" />
+	<a id="dnn_dnnSearch_cmdSearch" class="SearchButton" href="javascript:__doPostBack(&#39;dnn$dnnSearch$cmdSearch&#39;,&#39;&#39;)">Search</a>
+</span>
+
+
+
+                                </div>
+                            </div> -->
+                                <!-- DDRmenu v02.00.01 - StandardPills template --><script type="text/javascript">
+			jQuery(function($) {
+				$("#dnn_menuTop").superfish(
+					{onShow:function() { if ($.browser.msie) this[0].style.removeAttribute('filter'); },MenuStyle:"StandardPills"}
+				);
+			});
+		</script><ul class="sf-menu" id="dnn_menuTop">
+  <li><a href="#" onclick="return false">About</a><ul>
+      <li><a href="http://passbaconference.com/2016/About/WhyAttend.aspx" target="">Why Attend?</a></li>
+      <li><a href="http://passbaconference.com/2016/About/WhoAttends.aspx" target="">Who Attends?</a></li>
+      <li><a href="http://passbaconference.com/2016/About/Travel.aspx" target="">Travel</a></li>
+      <li><a href="http://passbaconference.com/2016/About/Policies.aspx" target="">Policies</a></li>
+    </ul>
+  </li>
+  <li><a href="#" onclick="return false">Sessions</a><ul>
+      <li><a href="http://passbaconference.com/2016/Sessions/Tracks.aspx" target="">Tracks</a></li>
+    </ul>
+  </li>
+  <li><a href="#" onclick="return false">Speakers</a><ul>
+      <li><a href="http://passbaconference.com/2016/Speakers/CallForSpeakers.aspx" target="">Call For Speakers</a></li>
+    </ul>
+  </li>
+  <li><a href="#" onclick="return false">Learn</a><ul>
+      <li><a href="http://passbaconference.com/2016/Learn/BAWebinars.aspx" target="">BA Webinars</a></li>
+      <li><a href="http://passbaconference.com/BAInsights.aspx" target="_new">BA Insights</a></li>
+      <li><a href="http://passbaconference.com/2016/Learn/MailingList.aspx" target="">Mailing List</a></li>
+    </ul>
+  </li>
+  <li><a href="#" onclick="return false">Sponsors</a><ul>
+      <li><a href="http://passbaconference.com/2016/Sponsors/Sponsors.aspx" target="">Sponsors</a></li>
+    </ul>
+  </li>
+</ul>
+                            </div>
+
+                        	<div id="menu-icon"></div>
+                            
+                        </div><!-- Row-Fluid  -->                    
+                    </div><!-- End Container  -->
+                </div><!-- End Header-Row  --> 
+
+            </nav>                              
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="Mobile-Nav-Row row">
+            <div class="container content-box">
+            <div id="mobile-nav">
+                    <!-- DDRmenu v02.00.01 - StandardMobile template --><ul class="roxMobile roxFile" id="dnn_mobileTop">
+  <li class="closed">About<ul style="list-item-style:none">
+      <li class="closed"><a href="http://passbaconference.com/2016/About/WhyAttend.aspx">Why Attend?</a></li>
+      <li class="closed"><a href="http://passbaconference.com/2016/About/WhoAttends.aspx">Who Attends?</a></li>
+      <li class="closed"><a href="http://passbaconference.com/2016/About/Travel.aspx">Travel</a></li>
+      <li class="closed"><a href="http://passbaconference.com/2016/About/Policies.aspx">Policies</a></li>
+    </ul>
+  </li>
+  <li class="closed">Sessions<ul style="list-item-style:none">
+      <li class="closed"><a href="http://passbaconference.com/2016/Sessions/Tracks.aspx">Tracks</a></li>
+    </ul>
+  </li>
+  <li class="closed">Speakers<ul style="list-item-style:none">
+      <li class="closed"><a href="http://passbaconference.com/2016/Speakers/CallForSpeakers.aspx">Call For Speakers</a></li>
+    </ul>
+  </li>
+  <li class="closed">Learn<ul style="list-item-style:none">
+      <li class="closed"><a href="http://passbaconference.com/2016/Learn/BAWebinars.aspx">BA Webinars</a></li>
+      <li class="closed"><a href="http://passbaconference.com/BAInsights.aspx">BA Insights</a></li>
+      <li class="closed"><a href="http://passbaconference.com/2016/Learn/MailingList.aspx">Mailing List</a></li>
+    </ul>
+  </li>
+  <li class="closed">Sponsors<ul style="list-item-style:none">
+      <li class="closed"><a href="http://passbaconference.com/2016/Sponsors/Sponsors.aspx">Sponsors</a></li>
+    </ul>
+  </li>
+</ul><script type="text/javascript">
+        jQuery(function($) {
+          $("#dnn_mobileTop").roxMobile(
+            {animated:100,MenuStyle:"StandardMobile"}
+          );
+        });
+      </script>
+                <!-- <div id="mobile-search-box">
+ 			        <span id="dnn_dnnSearch1_ClassicSearch">
+    
+    
+    <input name="dnn$dnnSearch1$txtSearch" type="text" maxlength="255" size="20" id="dnn_dnnSearch1_txtSearch" class="NormalTextBox" onkeydown="return __dnn_KeyDown(&#39;13&#39;, &#39;javascript:__doPostBack(%27dnn$dnnSearch1$cmdSearch%27,%27%27)&#39;, event);" />
+	<a id="dnn_dnnSearch1_cmdSearch" class="SearchButton" href="javascript:__doPostBack(&#39;dnn$dnnSearch1$cmdSearch&#39;,&#39;&#39;)">Search</a>
+</span>
+
+
+
+                </div> -->
+            </div>
+            </div>
+        </div> <!-- End Mobile-Nav-Row  --> 
+        <div class="clearfix"></div>
+
+        <div class="Slider-Row row">
+            <div id="dnn_SliderPane" class="SliderPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-49485"><a name="49485"></a>
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr49485_ContentPane"><!-- Start_Module_49485 --><div id="dnn_ctr49485_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr49485_HtmlModule_lblContent" class="Normal">
+	<!-- Slider -->
+<section class="flexslider bac-home-slider">
+<ul class="slides">
+    <li>
+    <img alt="" src="http://sqlpass.org/portals/906/images/Banner1.jpg" />
+    <div class="caption">
+    <div class="container">
+    <div class="span10 offset6 text-left">
+    <h2 style="margin-bottom: -25px; margin-top: -30px;"><span style="font-size: 92px; font-weight: lighter; font-family: 'Segoe UI'; color: #ffffff;">JOIN US IN 2016</span></h2>
+    <a class="large tango rox_short_button" href="http://passbaconference.com/2016/register.aspx">Register</a>
+    <a class="large dark rox_short_button" href="http://passbaconference.com/2016/Learn/MailingList.aspx">Sign up for Conference News<em class="icon-chevron-right"></em></a>
+    <a class="large dark rox_short_button" href="mailto:sales@passbaconference.com?subject=Please send me a prospectus for BAC 2016 sponsorship opportunities">Request Sponsorship Info<em class="icon-chevron-right"></em></a>
+    </div>
+    <div class="span10">
+    <br />
+    </div>
+    </div>
+    </div>
+    </li>
+    <li>
+    <img alt="" src="http://sqlpass.org/portals/400/images/Banner3.png" />
+    <div class="caption">
+    <div class="container">
+    <div class="span10 offset6 text-right">
+    <h3>Relive the Experience</h3>
+    <br />
+    <p>Get a recap of the 2015 PASS Business Analytics Conference</p>
+    <br />
+    <a class="large tango rox_short_button" href="http://passbaconference.com/BAInsights/TabId/33164/artmid/49832/articleid/207/Announcing-the-PASS-Business-Analytics-Conference-2016.aspx">READ MORE</a>
+    <a class="large dark rox_short_button" href="http://passbaconference.com/2016/Register.aspx">
+    Register Now<em class="icon-chevron-right"></em>
+    </a>
+    </div>
+    </div>
+    </div>
+    </li>
+</ul>
+</section>
+<div class="clearfix"></div>
+</div>
+
+</div><!-- End_Module_49485 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+        </div><!-- End Slider-Row  --> 
+
+        <section class="Top-Shaded-Row row">
+            <div class="container">
+            	<div id="dnn_Top_Shaded" class="Pane-Padding col-xs-12"><div class="DnnModule DnnModule-DNN_HTML DnnModule-49477"><a name="49477"></a>	
+    <div class="section-head">
+    <span class="flatna-title"><span id="dnn_ctr49477_dnnTITLE_titleLabel" class="flatna-01"> </span>
+
+
+</span>
+    <div id="dnn_ctr49477_ContentPane" class="flatna-content"><!-- Start_Module_49477 --><div id="dnn_ctr49477_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr49477_HtmlModule_lblContent" class="Normal">
+	<h2 class="text-center" style="margin-bottom: -40px;">
+<p><span style="font-weight: normal; font-family: 'Segoe UI'; font-size: 16px; color: #262626;">
+</span></p>
+<div class="content">
+<h2><span style="color: #262626;">Data. Insights. Action.</span></h2>
+</div>
+<p class="text-center subtitle"><span style="color: #262626;"><strong>The Fairmont San Jose | Pre-Conference: May 2 | General Sessions: May 3-4, 2016</strong></span></p>
+</h2>
+</div>
+
+</div><!-- End_Module_49477 --></div>
+    </div>
+    <div class="clearfix"></div>
+</div><div class="DnnModule DnnModule-DNN_HTML DnnModule-49478"><a name="49478"></a>
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr49478_ContentPane"><!-- Start_Module_49478 --><div id="dnn_ctr49478_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr49478_HtmlModule_lblContent" class="Normal">
+	<div class="col-sm-8">
+<p class="text-left subtitle"><span style="color: #262626;">
+Technology and analytics are rapidly merging, and the business world is embracing this new culture of data. Leading organizations are leveraging business and data analytics to transform their businesses, uncover new value within their industries, and remain competitive within their space.<br />
+<br />
+Business and data analytics professionals are in high demand. A recent Computerworld survey reported that 24% of respondents were planning to hire data analytics professionals by the end of 2015. Yet all those respondents also expected this skill to be the most difficult to find.<br />
+<br />
+Whether you&rsquo;re just starting out in the data analytics field, are a data pro who sees the value in expanding your skillset, or are a seasoned business analytics pro, the PASS Business Analytics Conference is the place to be.</span></p>
+</div>
+<div class="row space80 nspace-20">
+<div class="col-sm-4 no-left-padding">
+<div class="col-xs-12">
+<em class="micon-statistics micons-box2 grey"></em>
+<h5 class="box2-title">Improve ROI.</h5>
+<p>Through expert sessions and hands-on labs, unleash the analytics power within Excel, PowerBI, SQL, Hive, and other technologies to drive performance and optimization in your organization.&nbsp;</p>
+</div>
+<div class="col-xs-12 space20">
+<em class="micon-tools micons-box2 grey"></em>
+<h5 class="box2-title">Expand your skillset. </h5>
+<p>Learn tools and techniques to unleash the power of data and boost the performance and accuracy of predictive analysis.</p>
+</div>
+<div class="col-xs-12 space20">
+<em class="micon-users-3 micons-box2 grey"></em>
+<h5 class="box2-title">Grow your network.</h5>
+<p>Meet experts and peers from around the globe. Hear about other challenges--and solutions--from like-minded attendees who share your passion for analytics.</p>
+<p>&nbsp;</p>
+<center>
+<a href="http://passbaconference.com/2016/register.aspx" class="jumbo tango rox_short_button" target="_self">Register</a>
+</center>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- End_Module_49478 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+			</div><!-- End Container -->  
+        </section><!-- End Top-Shaded-Row  --> 
+
+        <div class="Top-Colored-Row row" class="">
+            <div class="container">
+            	<div id="dnn_Top_Colored" class="Pane-Padding col-xs-12 DNNEmptyPane"></div>
+			</div><!-- End Container -->  
+        </div><!-- End Shaded-Row  -->
+        <div class="clearfix"></div> 
+
+        <section class="Top-Accent-Row  row">
+            <div class="container">
+            	<div id="dnn_Top_Accent" class="Pane-Padding col-xs-12"><div class="DnnModule DnnModule-DNN_HTML DnnModule-49488"><a name="49488"></a>
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr49488_ContentPane"><!-- Start_Module_49488 --><div id="dnn_ctr49488_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr49488_HtmlModule_lblContent" class="Normal">
+	<div class="content">
+<h2><span style="color: #262626;">Interested in Sponsoring?</span></h2>
+</div>
+<p class="text-center subtitle"><span style="color: #262626;">Learn more about the sponsorship opportunities at the PASS Business Analytics Conference 2016. Contact us and we will send you a copy of the Prospectus as soon as it's released.</span></p>
+<br />
+<center>
+<a target="_self" class="jumbo tango rox_short_button" href="mailto:sales@passbaconference.com?subject=Please send me a prospectus for BAC 2016 sponsorship opportunities">Learn about Sponsorship Opportunities</a>
+</center>
+</div>
+
+</div><!-- End_Module_49488 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+			</div><!-- End Container -->  
+        </section><!-- End Shaded-Row  --> 
+
+        <section class="Content-Row row">
+          <div class="container">
+          
+                <div id="dnn_ContentPane" class="Pane-Padding col-xs-12 DNNEmptyPane"></div>
+
+                <div class="row">     
+                    <div id="dnn_Half_Col_A" class="Pane-Padding col-sm-6 DNNEmptyPane"></div>
+                    <div id="dnn_Half_Col_B" class="Pane-Padding col-sm-6 DNNEmptyPane"></div>
+                </div><!-- End OneHalf Row  --> 
+
+                <div id="dnn_ContentPane_2" class="Pane-Padding col-xs-12"><div class="DnnModule DnnModule-DNN_HTML DnnModule-49474"><a name="49474"></a>
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr49474_ContentPane"><!-- Start_Module_49474 --><center><div id="dnn_ctr49474_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr49474_HtmlModule_lblContent" class="Normal">
+	<div class="content">
+<h2><span style="color: #262626;">The Analyst's Journey</span></h2>
+</div>
+<p class="text-center subtitle"><span style="color: #262626;">Join leading experts in BA as they share insights and education across four tracks to give you real-world knowledge and experience you can put to work immediately.</span></p>
+</div>
+
+</div></center><!-- End_Module_49474 --></div>
+	<div class="clear"></div>
+</div>
+</div><div class="DnnModule DnnModule-DNN_HTML DnnModule-49476"><a name="49476"></a>
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr49476_ContentPane" class="DNNAligncenter"><!-- Start_Module_49476 --><div id="dnn_ctr49476_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr49476_HtmlModule_lblContent" class="Normal">
+	<center>
+<div class="row">
+<div class="col-md-12" style="padding-bottom: 20px;">
+<img alt="" class="team-img" src="http://passbaconference.com/Portals/906/images/Analysts-Journey-Tracks.png" />
+</div>
+</div>
+</center>
+<center>
+<a target="_self" class="jumbo tango rox_short_button" href="http://passbaconference.com/2016/Sessions/tracks.aspx"> Explore the Tracks</a>
+</center>
+</div>
+
+</div><!-- End_Module_49476 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+                    
+                <div class="row">     
+                    <div id="dnn_Three_Col_A" class="Pane-Padding col-sm-4 DNNEmptyPane"></div>
+                    <div id="dnn_Three_Col_B" class="Pane-Padding col-sm-4 DNNEmptyPane"></div>
+                    <div id="dnn_Three_Col_C" class="Pane-Padding col-sm-4 DNNEmptyPane"></div>
+                </div><!-- End OneThird Row  -->
+                                        
+                <div id="dnn_ContentPane_3" class="Pane-Padding col-xs-12 DNNEmptyPane"></div>
+
+                <div class="row">
+                    <div id="dnn_Top_8th_L" class="Pane-Padding col-sm-8 DNNEmptyPane"></div>
+                    <div id="dnn_Top_4th_R" class="Pane-Padding col-sm-4 DNNEmptyPane"></div>
+                </div><!-- End Bottom 8-Col/4-Col Row  -->
+                    
+           </div><!-- End Content Container  --> 
+        </section><!-- End Top-Content-row  -->
+
+        <section id="Parallax-gridbg" class="bg_Parallax row" data-type="background" data-speed="10">
+          	<div class="container">
+				<div id="dnn_Parallax_GridBG" class="ParallaxPane Pane-Padding col-xs-12 DNNEmptyPane"></div>
+          	</div><!-- End Parallax Container  -->
+            <div class="gridoverlay"></div>
+        </section> <!-- End Parallax-Section 2  --> 
+
+        <section class="Content-Row row">
+          <div class="container">
+                <div id="dnn_ContentPane_4" class="Pane-Padding col-xs-12 DNNEmptyPane"></div>        
+           </div><!-- End Content Container  --> 
+        </section><!-- End Content-row  -->
+
+        <section class="Middle-Shaded-Row pattern-cubes row">
+            <div class="container">
+
+                <div id="dnn_Middle_Shade" class="Pane-Padding col-xs-12 DNNEmptyPane"></div>
+
+                <div class="row">     
+                    <div id="dnn_Shaded_Half_L" class="Pane-Padding col-sm-6 DNNEmptyPane"></div>
+                    <div id="dnn_Shaded_Half_R" class="Pane-Padding col-sm-6 DNNEmptyPane"></div>
+                </div><!-- End Shaded_Half Row  --> 
+
+            </div><!-- End Container -->  
+        </section><!-- End Middle-Shaded-Row  --> 
+
+        <section class="Dark-Row row">
+            <div class="container">
+            	<div id="dnn_Middle_Dark" class="Pane-Padding col-xs-12 DNNEmptyPane"></div>
+			</div><!-- End Container -->  
+        </section><!-- End Middle-Dark-Row-Row  -->
+
+        <section class="Middle-Colored-Row row">
+            <div class="container">
+            	<div id="dnn_Middle_Colored" class="Pane-Padding col-xs-12 DNNEmptyPane"></div>
+			</div><!-- End Container --> 
+        </section><!-- End Middle-Colored-Row  -->
+
+        <section id="Parallax-books" class="bg_Parallax row" data-type="background" data-speed="10">
+          	<div class="container">
+				<div id="dnn_Parallax_Middle" class="ParallaxPane Pane-Padding col-xs-12 DNNEmptyPane"></div>
+          	</div><!-- End Parallax Container  -->
+            <div class="pattern-overlay"></div>
+        </section> <!-- End Parallax-Section 1  --> 
+
+        <section class="Extended-Shaded row">
+            <div id="dnn_Extended_Shade" class="col-xs-12 no-padding DNNEmptyPane"></div>
+        </section><!-- End Shaded-Row  --> 
+
+        <section class="Content-Row row">
+          <div class="container">
+  
+                    <div id="dnn_Lower_ContentPane" class="Pane-Padding DNNEmptyPane"></div>
+
+                    <div class="row">    
+                        <div id="dnn_Bottom_Half_L" class="col-sm-6 DNNEmptyPane"></div>
+                        <div id="dnn_Bottom_Half_R" class="col-sm-6 DNNEmptyPane"></div>
+                    </div><!-- End Bottom 6-Col/6-Col Row  --> 
+                    
+                    <div class="row">
+                        <div id="dnn_Bottom_8th_L" class="Pane-Padding col-sm-8 DNNEmptyPane"></div>
+                        <div id="dnn_Bottom_4th_R" class="Pane-Padding col-sm-4 DNNEmptyPane"></div>
+                    </div><!-- End Bottom 8-Col/4-Col Row  -->
+
+                    <div class="row">
+                        <div id="dnn_Bottom_3th_L" class="Pane-Padding col-sm-3 DNNEmptyPane"></div>
+                        <div id="dnn_Bottom_9th_R" class="Pane-Padding col-sm-9 DNNEmptyPane"></div>
+                    </div><!-- End Bottom 4-Col/8-Col Row  -->
+                    
+                    <div id="dnn_Bottom_ContentPane" class="Pane-Padding col-xs-12"><div class="DnnModule DnnModule-DNN_HTML DnnModule-49486"><a name="49486"></a>
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr49486_ContentPane"><!-- Start_Module_49486 --><div id="dnn_ctr49486_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr49486_HtmlModule_lblContent" class="Normal">
+	<div class="col-md-4 testi">
+<div class="testi-bubble">An important aspect of the challenge in filling [data] jobs lies in the fact that enterprises need people with new skills &mdash; data management, analytics and business expertise and non-traditional skills necessary for extracting the value of [data], as well as artists and designers for data visualization.</div>
+<div class="person">
+<h3 class="no-margin-bottom">Gartner</h3>
+<h4 class="jobTitle">Technology Predictions for 2014, 2015 and 2016</h4>
+</div>
+</div>
+<div class="col-md-4 testi">
+<div class="testi-bubble">Shortage of skilled staff will persist. In the U.S. alone there will be 181,000 deep analytics roles in 2018 and five times that many positions requiring related skills in data management and interpretation.</div>
+<div class="person">
+<h3 class="no-margin-bottom">IDC</h3>
+<p><span>
+<h4 class="jobTitle">IDC FutureScape: Worldwide Big Data and Analytics 2015 Predictions</h4>
+</span></p>
+</div>
+</div>
+<div class="col-md-4 testi">
+<div class="testi-bubble">What is clear is that organizations large and small are tapping data to better understand and improve their operations, financial models, customer relationships, supply chain, workforce, business opportunities, and competitive standing.</div>
+<div class="person">
+<h3 class="no-margin-bottom">Deloitte</h3>
+<h4 class="jobTitle">Analytics Advantage Report</h4>
+</div>
+</div>
+</div>
+
+</div><!-- End_Module_49486 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+                 
+           </div><!-- End Content Container  --> 
+        </section><!-- End Content-row  -->
+
+        <section class="Bottom-Accent-Row  row">
+            <div class="container">
+            	<div id="dnn_Bottom_Accent" class="Pane-Padding col-xs-12"><div class="DnnModule DnnModule-DNN_HTML DnnModule-49479"><a name="49479"></a>
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr49479_ContentPane"><!-- Start_Module_49479 --><div id="dnn_ctr49479_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr49479_HtmlModule_lblContent" class="Normal">
+	<a href="#register"></a>
+<h2 class="text-center light nomargin"><span style="color: white;">Ready to dive into the world of analytics?</span></h2>
+<br />
+<center>
+<a target="_self" class="jumbo tango rox_short_button" href="http://passbaconference.com/2016/register.aspx"> Register</a>
+</center>
+</div>
+
+</div><!-- End_Module_49479 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+			</div><!-- End Container -->  
+        </section><!-- End Shaded-Row  --> 
+
+        <section id="Parallax-3" class="bg_Parallax row" data-type="background" data-speed="10">
+          	<div class="container">
+				<div id="dnn_Parallax_Bottom" class="ParallaxPane Pane-Padding col-xs-12 DNNEmptyPane"></div>
+          	</div><!-- End Parallax Container  -->
+        </section> <!-- End Parallax-Section 3  --> 
+
+        <section id="Parallax-x" class="bg_Parallax row" data-type="background" data-speed="10">
+          	<div class="container">
+				<div id="dnn_Parallax_x" class="ParallaxPane Pane-Padding col-xs-12 DNNEmptyPane"></div>
+          	</div><!-- End Parallax Container  -->
+        </section> <!-- End Parallax-Section Bottom-x  --> 
+
+        <section class="Bottom-Dark-Row row">
+            <div class="container">
+            	<div id="dnn_Bottom_Dark" class="Pane-Padding col-xs-12 DNNEmptyPane"></div>
+			</div><!-- End Container -->  
+        </section><!-- End Shaded-Row  --> 
+                           
+        <section class="Bottom-Shaded-Row row">
+            <div class="container">
+            	<div id="dnn_Bottom_Shaded" class="Pane-Padding col-xs-12 DNNEmptyPane"></div>
+			</div><!-- End Container -->  
+        </section><!-- End Shaded-Row  --> 
+                           
+        <section class="Bottom-Colored-Row row">
+            <div class="container">
+            	<div id="dnn_Bottom_Colored" class="col-xs-12 DNNEmptyPane"></div>
+			</div><!-- End Container -->  
+        </section><!-- End Bottom-Colored-Row  --> 
+
+                <div id="Footer-Row" class="row">
+            <div class="container">
+
+                    <div class="row">
+                        <div id="dnn_Foot_3Col_A" class="foot-Padding col-sm-4 DNNEmptyPane"></div>
+                        <div id="dnn_Foot_3Col_B" class="foot-Padding col-sm-4 DNNEmptyPane"></div>
+                        <div id="dnn_Foot_3Col_C" class="foot-Padding col-sm-4 DNNEmptyPane"></div>
+                    </div>
+                    
+                    <div class="row">
+                        <div id="dnn_Foot_4Col_A" class="foot-Padding col-md-3 col-sm-6"><div class="DnnModule DnnModule-DNN_HTML DnnModule-49826"><a name="49826"></a>
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr49826_ContentPane"><!-- Start_Module_49826 --><div id="dnn_ctr49826_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr49826_HtmlModule_lblContent" class="Normal">
+	<div class="footer_text">
+<span style="font-family: 'Segoe UI'; color: #ffffff;">PASS is a not-for-profit organization that empowers data professionals who leverage Microsoft technologies to connect, share, and learn through networking, knowledge sharing, and peer-based learning.&nbsp; <a href="http://passbaconference.com/2016/AboutPASS.aspx">Read more.</a><br />
+</span></div>
+</div>
+
+</div><!-- End_Module_49826 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+                        <div id="dnn_Foot_4Col_B" class="foot-Padding col-md-3 col-sm-6"><div class="DnnModule DnnModule-DNN_HTML DnnModule-49830"><a name="49830"></a>
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr49830_ContentPane"><!-- Start_Module_49830 --><div id="dnn_ctr49830_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr49830_HtmlModule_lblContent" class="Normal">
+	
+</div>
+
+</div><!-- End_Module_49830 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+                        <div id="dnn_Foot_4Col_C" class="foot-Padding col-md-3 col-sm-6"><div class="DnnModule DnnModule-DNN_HTML DnnModule-49827"><a name="49827"></a>
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr49827_ContentPane"><!-- Start_Module_49827 --><div id="dnn_ctr49827_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr49827_HtmlModule_lblContent" class="Normal">
+	<p class="footer_text">
+<span style="font-family: 'Segoe UI'; color: #6d6d6d;">
+<a href="//passbaconference.com/2016/AboutPASS.aspx">About PASS</a><br />
+<a href="//passbaconference.com/PrivacyPolicy.aspx" target="_blank">Privacy Policy</a><br />
+<a href="//passbaconference.com/TermsofUse.aspx" target="_blank">Terms of Use</a>&nbsp;<br />
+<a href="//passbaconference.com/2016/contactus.aspx">Contact Us</a>&nbsp;<br />
+</span></p>
+</div>
+
+</div><!-- End_Module_49827 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+                        <div id="dnn_Foot_4Col_D" class="foot-Padding col-md-3 col-sm-6"><div class="DnnModule DnnModule-DNN_HTML DnnModule-49828"><a name="49828"></a>
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr49828_ContentPane"><!-- Start_Module_49828 --><div id="dnn_ctr49828_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr49828_HtmlModule_lblContent" class="Normal">
+	<html>
+    <head>
+    </head>
+    <body gramm_id="f0773d84-2e10-f537-37ae-9f4dc6b31b3d" gramm="gramm" spellcheck="false" class="__gram" style="position: static;">
+        <ul class="social-icons-bottom">
+            <div style="text-align: center;"><br />
+            </div>
+            <a id="stay"></a>
+            <a href="http://twitter.com/passbac">
+            <li class="micon-twitter" style="text-align: center;"> </li>
+            </a> <a href="https://www.facebook.com/passbaconference">
+            <li class="micon-facebook" style="text-align: center;"> </li>
+            </a> <a href="http://www.linkedin.com/groups/PASS-Business-Analytics-Conference-4666225">
+            <li class="micon-linkedin" style="text-align: center;"> </li>
+            </a> </ul>
+            <br />
+            <br />
+        </body>
+    </html>
+</div>
+
+</div><!-- End_Module_49828 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div id="dnn_FooterPane" class="foot-Padding col-sm-12 DNNEmptyPane"></div>
+ 
+            </div><!-- Container  -->   
+        </div><!-- End Footer-Row  -->
+        <section class="Copyright-Row">
+            <div class="container">
+                <div class="row">
+                
+                    <div id="Copyright" class="col-xs-6">
+                        <div class="copyright">
+                            <span id="dnn_dnnCopyright_lblCopyright" class="SkinObject">Copyright 2015 by PASS</span>
+
+                        </div><!--/Copyright-->
+                    </div>
+                    
+                    <div id="dnn_SocialBottom" class="SocialBottom col-xs-6 DNNEmptyPane"></div>
+                    
+                </div><!-- Row  -->  
+            </div><!-- Container  -->
+        </section><!-- End Copyright-Row  -->
+
+    </div><!-- End PageWidth  -->
+
+    <a id="to-top"><i class="micon-angle-up"></i></a>
+
+    <div class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+              <i class="micon-cancel"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="" alt="" class="item-featured-image">
+            <div class="item-meta">
+              <h4 class="modal-title">Modal title</h4>
+              <p class="item-description"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	<!-- Map JS CDN -->
+    <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+    
+	<!-- Bootstrap -->   
+    
+
+    <!-- Slit Slider -->
+    
+    
+    
+
+    <!-- Revolution Slider -->
+    
+    
+
+    <!-- Animated Thumbnails -->
+    
+    
+    
+    <!-- Flex Slider -->
+    
+    
+    <!-- Flickr feed -->
+     
+     
+
+    <!-- Twitter Feed -->
+    
+    
+    
+    <!-- Testimonial Slider -->
+    
+
+    <!-- IOS slider -->
+    
+
+    <!-- Owl Carousel -->
+    
+
+    <!-- Sticky Header -->
+    
+    
+
+    <!-- Rest of Scripts -->
+    
+    
+    
+    
+    
+    
+    
+    
+
+<!-- Google Code for Remarketing Tag -->
+<!--
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+-->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 999514664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/999514664/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+        <input name="ScrollTop" type="hidden" id="ScrollTop" />
+        <input name="__dnnVariable" type="hidden" id="__dnnVariable" autocomplete="off" value="`{`__scdoff`:`1`}" />
+        <script src="/Portals/906/Skins/Flatna/js/stickyheader/waypoints.min.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/js/stickyheader/navbar.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/js/easy.pie.chart.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/vendor/swapmyli/swapmyli.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/vendor/iosslider/_src/jquery.iosslider.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/vendor/owl-carousel/owl.carousel.min.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/js/jquery.easing.1.3.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/js/mapmarker/mapmarker.jquery.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/js/custom.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/js/jquery.mixitup.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/js/prettify.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/js/jquery.videobackground.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/vendor/revolution-slider/js/jquery.themepunch.plugins.min.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/vendor/revolution-slider/js/jquery.themepunch.revolution.min.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/vendor/animated-grid/js/modernizr.custom.26633.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/js/bootstrap.min.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/vendor/slit-slider/js/jquery.ba-cond.min.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/vendor/slit-slider/js/jquery.slitslider.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/vendor/jquery-flickr/jquery.flickr.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/vendor/tweetable/tweetable.jquery.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/vendor/tweetable/jquery.timeago.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/vendor/animated-grid/js/jquery.gridrotator.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/vendor/flexslider/jquery.flexslider.js?cdv=96" type="text/javascript"></script><script src="/Portals/906/Skins/Flatna/vendor/jquery-flickr/jquery.fancybox-1.3.1.pack.js?cdv=96" type="text/javascript"></script>
+    
+<script type="text/javascript" src="/Resources/Shared/scripts/initWidgets.js" ></script></form>
+    
+    
+    
+        <!-- Google Tag Manager -->
+            <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5355RT"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            <script>(function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-5355RT');</script>
+        <!-- End Google Tag Manager -->
+    
+</body>
+</html>
